@@ -2,7 +2,7 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8" />
-    <title>Fourteenth Summer School on Formal Techniques</title>
+    <title>Fifteenth Summer School on Formal Techniques</title>
     <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
@@ -11,10 +11,10 @@
     <header id="banner" class="body">
       <hgroup>
 	<div id="hdiv">
-	  <h1 id="fssft">Fourteenth Summer School on Formal Techniques</h1>
+	  <h1 id="fssft">Fifteenth Summer School on Formal Techniques</h1>
 	</div>
 	<h2 class="strapline">
-	  May 24-30, 2025
+	  May 23-29, 2026
 	  <!-- <br/>
 	       <a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA -->
 	</h2>
@@ -44,22 +44,16 @@
 
     <section id="description" class="body">
       <p>
-	Techniques based on formal logic, such as model checking,
-	satisfiability, static analysis, and automated theorem proving, are
-	finding a broad range of applications in modeling, analysis,
-	verification, and synthesis. This school, the fourteenth in the
-	series, will focus on the principles and practice of formal
-	techniques, with a strong emphasis on the hands-on use and
-	development of this technology. It primarily targets graduate
-	students and young researchers who are interested in studying and
-	using formal techniques in their research.  A prior background in
-	formal methods is helpful but not required. Participants at the
-	school can expect to have a seriously fun time experimenting with
-	the tools and techniques presented in the lectures during laboratory
-	sessions.  The main lectures will run from Monday May 26 to Friday
-	May 30. They will be preceded by a background course "Speaking
-	Logic" taught by Natarajan Shankar and St&eacute;phane
-	Graham-Lengrand (SRI CSL) on May 24/25.
+Techniques based on formal logic, such as model checking, satisfiability, static analysis, and
+automated theorem proving, are finding a broad range of applications in modeling, analysis,
+verification, and synthesis. This school, the fifteenth in the series, focuses on the principles
+and practice of formal techniques, with a strong emphasis on the hands-on use and development of
+this technology. It primarily targets graduate students and young researchers who are interested in
+studying and using formal techniques in their research.  A prior background in formal methods is
+helpful but not required. Participants at the school can expect to have a seriously fun time
+experimenting with the tools and techniques presented in the lectures during the laboratory
+sessions.  The main lectures run from Monday May 25 to Fri May 29.  They are preceded by a
+background course "Speaking Logic" on May 23/24.
 	<!-- The summer school will be
 	     immediately followed by a two-day Bootcamp to reinforce some of the
 	     skills acquired during the school.  Participants in the Bootcamp
@@ -69,91 +63,90 @@
       </p>
       <p>Week-long lectures by:</p>
       <ul>
-	<li>Joost-Pieter Katoen - Deductive Verification of Probabilistic Programs with Caesar</li>
-	<li>Erika Abraham - Understanding and using SAT and SMT solvers</li>
-	<li>Kristin Yvonne Rozier - Runtime Verification with R2U2</li>
-	<li>Philippa Gardner - Compositional Verification using the Gillian Platform</li>
-	<li>Nate Foster - Programming and Reasoning with Kleene Algebra with Tests</li>
+	<li>Aws Albarghouti - Compilers for Quantum Computers</li>
+	<li>Cas Cremers - Analyzing Cryptographic Protocols with Tamarin</li>
+	<li>Cesar Munoz - Developing and Proving Algorithms with PVS</li>
+	<li>Ruzica Piskac - Privacy-Preserving Reasoning</li>
+	<li>Chris Hawblitzel - Verifying Rust code with Verus</li>
       </ul>
-      <p>Invited talks by:</p>
-      <ul>
-	<li>Tai-Danae Bradley - An Enriched Category Theory of Language</li>
-	<li>Robert Shostak - On Mechanical Program Verification</li>
-	<li>Vigyan Singhal - Formal Verification (FV) In Chip Design</li>
-	<li>Susmit Jha - Towards Scalable, Trustworthy, and Collaborative AI</li>
-      </ul>
+      <!-- <p>Invited talks by:</p> -->
+      <!-- <ul> -->
+      <!-- 	<li>Tai-Danae Bradley - An Enriched Category Theory of Language</li> -->
+      <!-- 	<li>Robert Shostak - On Mechanical Program Verification</li> -->
+      <!-- 	<li>Vigyan Singhal - Formal Verification (FV) In Chip Design</li> -->
+      <!-- 	<li>Susmit Jha - Towards Scalable, Trustworthy, and Collaborative AI</li> -->
+      <!-- </ul> -->
 
-      <h2 id="prev"><a href="materials/20250515_sri_fm_long.pdf">Formal Methods @ SRI</a></h2>
+      <!-- <h2 id="prev"><a href="materials/20250515_sri_fm_long.pdf">Formal Methods @ SRI</a></h2> -->
       
-      <h2 id="lecturers">Lectures</h2> <a href="materials/zoom.txt">(Recordings)</a>
+      <h2 id="lecturers">Lectures</h2> <!-- <a href="materials/zoom.txt">(Recordings)</a> -->
 
       <ul>
 	<li>
 	  <span class="lecture">
-	    Deductive Verification of Probabilistic Programs with Caesar
+	    Compilers for Quantum Computers
 	  </span><br/>
 	  <span class="lecturer">
-	    Joost-Pieter Katoen (RWTH Aachen)
+	    Aws Albarghouti (University of Wisconsin-Madison)
 	  </span><br/>
 	  <!-- <span class="materials">
 	       <a href="reference.pdf">References</a><br/>
 	       <a href="aLecture1.pdf">Lecture 1</a><br/>
 	       <a href="aLecture2.pdf">Lecture 2</a><br/>
 	  </span><br/> -->
-	  <b>Abstract</b>: Probabilistic programs encode randomized algorithms, robot controllers,
-	  learning components, security mechanisms, and much more. They are 
-	  however hard to grasp. Not only by humans, also by computers: checking 
-	  elementary properties related to e.g., termination are "more 
-	  undecidable" than for ordinary programs. The analysis of probabilistic 
-	  programs requires manipulating irrational or even transcendental numbers.
-	  <p>
-	    Although this all sounds like a no-go for (semi-)automated analysis, I 
-	    will present a deductive verification technique to analyse probabilistic 
-	    programs. In contrast to simulation (like MCMC), this analysis yields 
-	    exact results. Our technique is based on weakest precondition reasoning. 
-	    We will explain the foundations of this approach, present some proof 
-	    rules to reason about probabilistic while-loops, and discuss how the 
-	    analysis can be automated---either fully or with the help of invariants.
-	  </p>
-	  <p>
-	    Hands-on experiments will be carried out using the deductive verifier 
-	    Caesar, see <a href="https://www.caesarverifier.org">"https://www.caesarverifier.org</a>.
-	  </p>
+	  <b>Abstract</b>: Quantum computers have the potential to transform drug discovery,
+	  materials design, energy production, and beyond. Recent breakthroughs in
+	  physical implementations have brought this technology closer to reality.
+	  In this course, we will learn about the problem of compiling quantum programs to
+	  run on quantum processors. Even though state-of-the-art quantum computers are still
+	  experimental and small in scale, the compilation problem is critical for
+	  understanding the resources required for running different applications on
+	  different emerging hardware and architectures. The course begins with a brief
+	  introduction to quantum computing fundamentals and then transitions to discussing
+	  two key phases of quantum compilation: (1) circuit optimization and (2) mapping and routing.
+	  <!-- <p> -->
+	  <!--   Although this all sounds like a no-go for (semi-)automated analysis, I  -->
+	  <!--   will present a deductive verification technique to analyse probabilistic  -->
+	  <!--   programs. In contrast to simulation (like MCMC), this analysis yields  -->
+	  <!--   exact results. Our technique is based on weakest precondition reasoning.  -->
+	  <!--   We will explain the foundations of this approach, present some proof  -->
+	  <!--   rules to reason about probabilistic while-loops, and discuss how the  -->
+	  <!--   analysis can be automated---either fully or with the help of invariants. -->
+	  <!-- </p> -->
+	  <!-- <p> -->
+	  <!--   Hands-on experiments will be carried out using the deductive verifier  -->
+	  <!--   Caesar, see <a href="https://www.caesarverifier.org">"https://www.caesarverifier.org</a>. -->
+	  <!-- </p> -->
 	  <br/>
-	  <b>Bio</b>: Joost-Pieter Katoen is a distinguished professor at RWTH Aachen 
-	  University, leading the Software Modeling and Verification (MOVES) 
-	  group. He is part-time affiliated to the University of Twente. His main 
-	  research contributions are in model checking, concurrency theory, 
-	  probabilistic computation, and formal semantics.
-	  <p>
-	    His book Principles of Model Checking (with Christel Baier) is a 
-	    bestseller in formal verification. He received numerous best paper 
-	    awards and other honors, most recently the JCL Award 2023 in Dependable 
-	    Computing. He is a member of the Academia Europaea, the Royal Holland 
-	    Society of Sciences and Humanities (KHMW) and the German Academy of 
-	    Sciences (2024). He received an honorary doctorate from Aalborg 
-	    University (2017) and is an ACM Fellow (2020).
-	  </p>
+	  <b>Bio</b>: Aws Albarghouthi is an associate professor of computer science at the University of
+Wisconsin-Madison. He works in the field of programming languages and formal methods, where he
+develops new techniques for automatically building reliable and secure software systems. He received
+his PhD from the University of Toronto in 2015. He has received several paper awards for his work
+(PLDI, FSE, UIST, and FAST), an NSF CAREER award, and multiple awards from industry (Meta, Google,
+and Amazon). He also received the Class of 1955 Teaching Excellence Award, one of the University of
+Wisconsin’s highest teaching honors.
 	  <br/>
-	  <b>Materials</b>:
+	  <b>Materials/References</b>:
 	  <ul>
-	    <li><a href="materials/KeY25-Symposium.pdf">KeY'24 Symposium: Dijkstra Goes Random</a></li>
-	    <li><a href="materials/expected_runtime_analyis_by_program_verification.pdf">Foundations of Probabilistic Programming Ch. 6: Expected Runtime Analysis by Program Verification</a></li>
-	    <li>Annabelle McIver, Carroll Morgan, Benjamin Lucien Kaminski, Joost-Pieter Katoen: A new proof rule for almost-sure termination. Proc. ACM Program. Lang. 2(POPL): 33:1-33:28 (2018)</li>
-	    <li>Joost-Pieter Katoen, Friedrich Gretz, Nils Jansen, Benjamin Lucien Kaminski, Federico Olmedo: Understanding Probabilistic Programs. Correct System Design 2015: 15-32</li>
-	    <li>Joost-Pieter Katoen: Deductive Veriifcation of Probabilistic Programs: From Theory to Automation. Tutorial at ETAPS 2023, see https://www.youtube.com/watch?v=I3sOp_mbs8k</li>
-	    <li><a href="materials/SSFT25-katoen.pdf">Lecture Slides: Deductive Verification of Probabilistic Programs</a></li>
-	    <li><a href="materials/Caesar Exercises 1 and 2.pdf">Caesar Lab 1 and 2</a></li>
+	    <li>"Speaker's papers and tools on the topic: https://qqq-wisc.github.io/</li>
+	    <li> Students are encouraged to go through the following quantum computing tutorial: https://quantum.country/</li>
+	    <!-- <li><a href="materials/KeY25-Symposium.pdf">KeY'24 Symposium: Dijkstra Goes Random</a></li> -->
+	    <!-- <li><a href="materials/expected_runtime_analyis_by_program_verification.pdf">Foundations of Probabilistic Programming Ch. 6: Expected Runtime Analysis by Program Verification</a></li> -->
+	    <!-- <li>Annabelle McIver, Carroll Morgan, Benjamin Lucien Kaminski, Joost-Pieter Katoen: A new proof rule for almost-sure termination. Proc. ACM Program. Lang. 2(POPL): 33:1-33:28 (2018)</li> -->
+	    <!-- <li>Joost-Pieter Katoen, Friedrich Gretz, Nils Jansen, Benjamin Lucien Kaminski, Federico Olmedo: Understanding Probabilistic Programs. Correct System Design 2015: 15-32</li> -->
+	    <!-- <li>Joost-Pieter Katoen: Deductive Veriifcation of Probabilistic Programs: From Theory to Automation. Tutorial at ETAPS 2023, see https://www.youtube.com/watch?v=I3sOp_mbs8k</li> -->
+	    <!-- <li><a href="materials/SSFT25-katoen.pdf">Lecture Slides: Deductive Verification of Probabilistic Programs</a></li> -->
+	    <!-- <li><a href="materials/Caesar Exercises 1 and 2.pdf">Caesar Lab 1 and 2</a></li> -->
 	  </ul>
 	  <br/>
 	</li>
 	
 	<li>
 	  <span class="lecture">
-	    Understanding and using SAT and SMT solvers
+	     Analyzing Cryptographic Protocols with Tamarin
 	  </span><br/>
 	  <span class="lecturer">
-	    Erika Abraham (RWTH Aachen)
+	    Prof. Dr. Cas Cremers (CISPA Helmholtz Center for Information Security)
 	  </span><br/>
 	  <!-- <span class="materials">
 	       <a href="https://link.springer.com/chapter/10.1007/978-3-642-39799-8_1">
@@ -163,345 +156,187 @@
 	       <a href="VampireCookies.pdf">Vampire Cookies</a><br/>
 	       <a href="Exercises_with_Solutions.pdf">Exercises with Solutions</a>
 	  </span><br/> -->
-	  <b>Abstract</b>: Satisfiability checking is a research area
-	  devoted to the development and implementation of algorithms that
-	  allow to check the satisfiability of logical formulas.
-	  <p>
-	    For propositional logic formulas, which are Boolean combinations
-	    of Boolean variables, we could enumerate and check all possible
-	    variable assignments. However, due to its bad average complexity,
-	    this exploration approach is not applicable in
-	    practice. Alternatively, the proof system of Boolean resolution
-	    can be applied, but the applicability of this method is also
-	    restricted to rather small problems. In the 90s, an elegant
-	    combination of these two methods has been suggested, where the
-	    proof construction is guided by an exploration of the assignment
-	    space equipped with a smart look-ahead mechanism. This idea
-	    allowed to develop impressively powerful SAT solvers, which are
-	    able to effectively solve huge problems at industrial scale.</p>
-	  <p>
-	    The effectivity of SAT solvers gave motivation to extend to scope
-	    of solver technologies to formulas of quantifier-free first-order
-	    logic over different theories. On the one hand, eager SMT solving
-	    approaches have been proposed for certain theories to transform
-	    their formulas to propositional logic and use SAT solving to check
-	    the result for satisfiability. On the other hand, (full/less) lazy
-	    SMT solving uses SAT solving to explore the Boolean structure of
-	    the formula, and employs theory solvers to check the consistency
-	    of Boolean assignments in the theory domains. SMT solvers can be
-	    used as general-purpose off-the-shelf tools. Due to their
-	    impressive efficiency, they are nowadays frequently used in a wide
-	    variety of applications.  A typical application encodes real-world
-	    problems as logical formulas, whose solutions can be decoded to
-	    solutions of the real-world problem.</p>
-	  Recently, the idea of symbiotic combination of exploration and
-	  proof construction has been also generalized to theories, most
-	  notably quantifier-free real algebra, in the framework of the
-	  model constructing satisfiability calculus (MCSAT). In this
-	  approach, exploration-guided proof construction is designed to run
-	  both in the Boolean space and in the theory domain, simultaneously
-	  in a consistent manner.
-	  <p>
-	    In this unit we give an introduction to the above mechanisms of
-	    SAT and SMT solving, discuss some interesting ideas behind recent
-	    developments, and illustrate the usage of SMT solvers on some
-	    application examples.
-	  </p>
+	  <b>Abstract</b>: The Tamarin prover is a state-of-the-art tool for cryptographic protocol analysis.
+	  Protocols are specified using multiset rewriting, and a subset of first order logic is used to
+	  specify protocol properties.  Tamarin then supports the automated analysis of protocols with respect
+	  to their specified properties.  Tamarin enjoys a large user community and it has been successfully
+	  used to analyze numerous industry protocols and standards, leading either to the discovery of subtle
+	  attacks or automated proofs.
 	  <br/>
-	  <b>Bio</b>: Erika Abraham graduated in Computer Science at the
-	  Christian-Albrechts-University Kiel (Germany), and received her
-	  PhD from the University of Leiden (The Netherlands) for her work
-	  on the verification of concurrent programs. Then she moved to the
-	  Albert-Ludwigs-University Freiburg (Germany), where she started to
-	  work on the automated solution of arithmetic problems (SAT and SMT
-	  solvers). Since 2008 she is professor at RWTH Aachen University
-	  (Germany), with main research focus on SMT solving for real and
-	  integer arithmetic, and formal methods for probabilistic and
-	  hybrid systems.
+	  <!-- <b>Bio</b>: Erika Abraham graduated in Computer Science at the -->
+	  <!-- Christian-Albrechts-University Kiel (Germany), and received her -->
+	  <!-- PhD from the University of Leiden (The Netherlands) for her work -->
+	  <!-- on the verification of concurrent programs. Then she moved to the -->
+	  <!-- Albert-Ludwigs-University Freiburg (Germany), where she started to -->
+	  <!-- work on the automated solution of arithmetic problems (SAT and SMT -->
+	  <!-- solvers). Since 2008 she is professor at RWTH Aachen University -->
+	  <!-- (Germany), with main research focus on SMT solving for real and -->
+	  <!-- integer arithmetic, and formal methods for probabilistic and -->
+	  <!-- hybrid systems. -->
 	</li>
 	<br/>
-	<b>Materials</b>: Prior to the start of the lab sessions, please install
-	Python and Z3 on your computers. Instructions can be found here:
-	<a href="https://github.com/exercism/z3/blob/main/docs/INSTALLATION.md">https://github.com/exercism/z3/blob/main/docs/INSTALLATION.md</a>
-	<p>
-	  <ul>
-	    <li>
-	      <a href="materials/abraham-SSFT25-slides.pdf">Lecture slides: Understanding and using SAT and SMT solvers</a>
-	    </li>
-	  </ul>
-	</p>
+	<b>Materials</b>: In this tutorial, we will explain how to use Tamarin to specify and reason about cryptographic
+	protocols and show how to use the tool. Tamarin is open-source software and further information,
+	including the manual, the Tamarin book, Tamarin's source code, and scientific papers are available
+	at https://tamarin-prover.com/ . For some examples of its real-world use, see
+	https://hal.archives-ouvertes.fr/hal-03586826/document .
+	<!-- <p> -->
+	<!--   <ul> -->
+	<!--     <li> -->
+	<!--       <a href="materials/abraham-SSFT25-slides.pdf">Lecture slides: Understanding and using SAT and SMT solvers</a> -->
+	<!--     </li> -->
+	<!--   </ul> -->
+	<!-- </p>H -->
 	<br/>
 	
 	<li>
 	  <span class="lecture">
-	    Runtime Verification with R2U2
+	    Developing and Proving Algorithms with PVS
 	  </span><br/>
 	  <span class="lecturer">
-	    Kristin Yvonne Rozier (Iowa State)
+	    Dr. Cesar Munoz (NASA Langley Research Center)
 	  </span><br/>
 	  <!-- <span class="materials">
 	       <a href="https://www.tptp.org/">TPTP</a><br/>
 	  </span> -->
 	  <b>Abstract</b>:
-	  R2U2, the Realizable Responsive Unobtrusive Unit was designed to fill a 
-	  gap in real-world, and flight-certifiable, runtime verification. It 
-	  enables realizable verification of an easy, expressive specification 
-	  language based on Mission-time Linear Temporal Logic (MLTL), with a 
-	  generic interface that is highly adaptable to a wide range of missions 
-	  and platforms. System designers can configure R2U2 once, then change the 
-	  properties under test while the system, and R2U2, are running, without 
-	  reconfiguration or re-upload, a critical feature for many aerospace 
-	  applications. R2U2 is real-time responsive, continuously monitoring the 
-	  system and detecting anomalies in real-time, or even ahead of real time 
-	  with minimal estimation, to enable effective mitigation or rescue 
-	  measures. It is also uniquely unobtrusive, designed not to change system 
-	  behavior, certifiabiity, timing, tolerances, cost, or other mission 
-	  parameters.
-	  <p>
-	    Today R2U2 is the only space-flight-certified runtime verification 
-	    engine, and it has launched into space on several missions, including 
-	    NASA's Lunar Gateway, Robonaut2 on the International Space Station, and 
-	    a JAXA satellite. Lectures will feature the algorithms and architecture 
-	    of the tool, while highlighting successful applications. There are 
-	    multiple implementations of R2U2, and it is highly configurable to the 
-	    specific needs of the mission under analysis; we will survey the options 
-	    for specialization and analysis. Labs will offer an opportunity to 
-	    configure and run R2U2 on realistic case studies, utilizing the 
-	    human-facing C2PO interface.
-	  </p>
+	  These lectures provide a practical introduction to specifying, verifying, and validating
+	  algorithms using the Prototype Verification System (PVS), an interactive environment for system
+	  specification and verification. PVS features a strongly typed specification language based on
+	  Higher-Order Logic, with a type system that supports predicate sub-types, dependent types, inductive
+	  data types, parametric types, prenex polymorphism, and built-in types and data-structures such as
+	  numbers, booleans, strings, records, unions, tuples, arrays, sequences, sets, and lists. The PVS
+	  theorem prover includes decision procedures for linear arithmetic, propositional logic, and temporal
+	  logic, and users can conservatively extend its deductive capabilities through custom proof
+	  strategies. NASALib is a comprehensive library of fundamental mathematics developed in PVS, along
+	  with utilities for proving and animating specifications. These lectures focus on the development and
+	  verification of algorithms through examples inspired by actual NASA verification projects. The
+	  lectures provide a gentle introduction to advanced PVS features including proving techniques such as
+	  induction-less induction, modeling with deep and shallow embeddings, and differential testing via
+	  model animation.
 	  <br/>
 	  <b>Bio</b>:
-	  Professor Kristin Yvonne Rozier heads the Laboratory for Temporal Logic 
-	  in Aerospace Engineering at Iowa State University; previously she spent 
-	  14 years as a Research Scientist at NASA and three semesters as an 
-	  Assistant Professor at the University of Cincinnati. She earned her 
-	  Ph.D. from Rice University and B.S. and M.S. degrees from The College of 
-	  William and Mary. Dr. Rozier's research focuses on automated techniques 
-	  for the formal specification, validation, and verification of safety 
-	  critical systems. Her primary research interests include: design-time 
-	  checking of system logic and system requirements; runtime system health 
-	  management; and safety and security analysis.
-	  <p>
-	    Her advances in computation for the aerospace domain earned her many 
-	    awards including: the NSF CAREER Award; the NASA Early Career Faculty 
-	    Award; American Helicopter Society's Howard Hughes Award; Women in 
-	    Aerospace Inaugural Initiative-Inspiration-Impact Award; two NASA Group 
-	    Achievement Awards; two NASA Superior Accomplishment Awards; Lockheed 
-	    Martin Space Operations Lightning Award; AIAA's Intelligent Systems 
-	    Distinguished Service Award; Building a World of Difference faculty 
-	    fellowship. She holds an endowed position as Dennis and Rebecca 
-	    Muilenburg Professor, is an Associate Fellow of AIAA, and is a Senior 
-	    Member of IEEE, ACM, and SWE. Dr. Rozier has served on the NASA Formal 
-	    Methods Symposium Steering Committee since working to found that 
-	    conference in 2008.
-	  </p>
+	  Dr. Cesar Munoz is a Research Computer Scientist at NASA, leading the Formal Methods Team at
+	  NASA Langley Research Center. He earned his PhD in Computer Science from the University of Paris 7
+	  (currently Paris Cité University) in France. Dr. Munoz began his NASA career as a contractor in 1999
+	  before transitioning to a civil servant role in 2009. Between 2021 and 2023, he served as Senior
+	  Principal Applied Scientist at Amazon Web Services, managing the S3 Automated Reasoning Team. He
+	  returned to NASA in 2023 to advance the development and application of formal methods for designing,
+	  analyzing, implementing, and verifying safety-critical systems relevant to NASA missions.  Dr. Munoz
+	  is a recognized expert in SRI's Prototype Verification System (PVS) and has developed numerous
+	  strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS
+	  include Interval Arithmetic (proof-producing strategies for numerical approximations), ACCoRD (a
+	  library of aircraft conflict detection and resolution algorithms), PVSio (an animation tool),
+	  ProofLite (a batch proving tool), and Extrategies (a library of strategy combinators).
 	  <br/>
-	  <b>Materials</b>: R2U2 is open-source software, available for download from its website (<a href="https://r2u2.temporallogic.org/">https://r2u2.temporallogic.org/</a>). There are currently three implementations of R2U2 (hardware/VHDL, C, and embedded Rust); we will use the embedded Rust version. There are several support tools for better specification elicitation, validation, and debugging of R2U2's primary specification logic Mission-time Linear Temporal Logic (MLTL); we will use the WEST GUI (tool download: <a href="https://github.com/zwang271/WEST">https://github.com/zwang271/WEST</a> website: https://west.temporallogic.org). In addition to directly interfacing with R2U2 to configure runtime verification, we will utilize the new R2U2 Playground (<a href="https://r2u2.temporallogic.org/playground/">https://r2u2.temporallogic.org/playground/</a>), an interactive web-based playground that provides visualization of R2U2 monitors. The R2U2 Playground provides stepwise execution coupled with reactive timeline plotting and visualization of its internal abstract syntax tree architecture.
-	  <br/>
-	  <p>
-	  <ul>
-	    <li>
-	      <a href="https://temporallogic.org/AllAboutR2U2_2025.pdf">Lecture slides: Runtime Verification with R2U2</a>
-	    </li>
-	  </ul>
-	</p>
+	  <!-- <b>Materials</b>: R2U2 is open-source software, available for download from its website (<a href="https://r2u2.temporallogic.org/">https://r2u2.temporallogic.org/</a>). There are currently three implementations of R2U2 (hardware/VHDL, C, and embedded Rust); we will use the embedded Rust version. There are several support tools for better specification elicitation, validation, and debugging of R2U2's primary specification logic Mission-time Linear Temporal Logic (MLTL); we will use the WEST GUI (tool download: <a href="https://github.com/zwang271/WEST">https://github.com/zwang271/WEST</a> website: https://west.temporallogic.org). In addition to directly interfacing with R2U2 to configure runtime verification, we will utilize the new R2U2 Playground (<a href="https://r2u2.temporallogic.org/playground/">https://r2u2.temporallogic.org/playground/</a>), an interactive web-based playground that provides visualization of R2U2 monitors. The R2U2 Playground provides stepwise execution coupled with reactive timeline plotting and visualization of its internal abstract syntax tree architecture. -->
+	  <!-- <br/> -->
+	  <!-- <p> -->
+	  <!--   <ul> -->
+	  <!--     <li> -->
+	  <!-- 	<a href="https://temporallogic.org/AllAboutR2U2_2025.pdf">Lecture slides: Runtime Verification with R2U2</a> -->
+	  <!--     </li> -->
+	  <!--   </ul> -->
+	  <!-- </p> -->
 	</li>
 	<li>
 	  <span class="lecture">
-	    Compositional Verification using the Gillian Platform
+	    Privacy-Preserving Reasoning
 	  </span><br/>
 	  <span class="lecturer">
-	    Philippa Gardner (Imperial)
+	    Prof. Ruzica Piskac (Yale University)
 	  </span><br/>
-	  <b>Abstract</b>: One of the main challenges that modern program
-	  analysis tools must face is scalability, that is, the ability to
-	  tractably analyse large, dynamically changing codebases. Such
-	  scalability requires techniques and tools that are functionally
-	  compositional (or simply compositional) where the analysis works
-	  on functions in isolation, at any point in the codebase, and then
-	  records the results in simple function specifications that can be
-	  used in broader calling contexts. However, the traditional tools
-	  based on first-order logic can only be compositional for functions
-	  that manipulate the variable store, but not for functions that
-	  manipulate the heap, limiting their usability.
-	  <p>
-	    A key insight is that, to obtain compositionality, the analysis
-	    should work with function specifications that are local, in that
-	    they should describe the function behaviour only on the partial
-	    states or resources that the function accesses or manipulates, and
-	    a mechanism for using such specifications when the function is
-	    called by code working on a larger state. This insight was first
-	    introduced in separation logic (SL, [1]), a modern
-	    over-approximating (OX) program logic for compositional
-	    verification of correctness properties, which features local
-	    function specifications that can be called on larger state with
-	    the help of the frame rule. Recently, these ideas have been
-	    adapted to under-approximate (UX) reasoning in the context of
-	    incorrectness separation logic (ISL, [3,2]) for compositional true
-	    bug-finding.
-	  </p>
-	  <p>
-	    Ideas from SL and ISL have led to the development of efficient
-	    compositional symbolic execution tools and platforms in academia
-	    and industry, such as VeriFast, Viper and CN for semi-automatic OX
-	    verification based on SL, Meta’s Infer-Pulse for automatic UX true
-	    bug-finding based on ISL, and Gillian for both. Gillian [5,6,7,8]
-	    is unique in that it is parametric on the memory model of the
-	    language and its compositional symbolic execution engine is
-	    underpinned by strong mathematical foundations [4]. It has been
-	    instantiated to the C, JavaScript and Rust languages, and applied
-	    to industrial code.
-	  </p>
-	  <b>Course Outline</b>:
-	  This course will provide a whirl-wind tour of separation logic,
-	  compositional symbolic execution and Gillian. It is adapted from
-	  my MSc course on “Scalable Verified Software: Separation Logic”
-	  that I have been teaching at Imperial for many years.
-	  <p>
-	    The lectures will comprise:
-	    <ul>
-	      <li> An introduction to SL and ISL for reasoning about mutable
-		data structures. You will learn how to write program
-		specifications and prove properties of programs, both informally
-		using sketch proofs and formally using rigorous proofs.
-	      </li>
-	      <li>
-		An introduction to compositional symbolic execution which creates
-		and uses function specifications from underlying separation logics
-		such as SL and ISL, and provides a sound theoretical foundation
-		for, and indeed was partially inspired by, the Gillian platform.
-	      </li>
-	    </ul>
-	  </p>
-	  <p>
-	    The labs will concentrate on compositional OX verification based
-	    on SL, and will give you hands-on experience of using Gillian. For
-	    the last three years, we have had experience holding a lab on
-	    Gillian as part of my MSc course, made possible due to the
-	    addition of a symbolic debugger for Gillian. The labs will
-	    comprise:
-	    <ul>
-	      <li>
-		Experience with using the WiSL tool, a Gillian instantiation
-		to a small while language with a simple block-offset memory
-		model, exploring many exercises to transition from the
-		informal proof sketches introduced in the lectures to the
-		semi-automatic Gillian proofs that sometimes require the
-		insertion of tactics.
-	      </li>
-	      <li>
-		Experience with using the Gillian-C tool, working with more
-		complex examples from the lectures and (hopefully, it’s a little
-		ambitious) the real-world Collections-C library.
-	      </li>
-	    </ul>
-	    Before the Course Please install Gillian on your laptops before
-	    the course starts; installation instructions for Gillian can be
-	    found at the link
-	    <a href="https://gillianplatform.github.io/sphinx/index.html">
-	      https://gillianplatform.github.io/sphinx/index.html
-	    </a>
-	  </p>
-	  <b>Materials</b>: Slides, labs, tools, etc. can be found at <a href="https://gillianplatform.github.io/sphinx/labs/ssft25/index.html">https://gillianplatform.github.io/sphinx/labs/ssft25/index.html</a><br/>
-	  <b>References</b>:
-	  <ul>
-	    <li>Separation Logic: A Logic for Shared Mutable Sata Structures, John Reynolds, https:: www.cs.cmu.edu/~jcr/seplogic.pdf</li>
-	    <li>Incorrectness Logic, Peter O'Hearn, POPL’20.</li>
-	    <li>Local Reasoning about the Presence of Bugs: Incorrectness Separation Logic, Azalea Raad, Josh
-	      Berdine, Hoang-Hai Dang, Derek Dreyer, Peter O'Hearn and Jules Villard, CAV’20.</li>
-	    <li>Compositional Symbolic Execution (CSE) for Correctness and
-	      Incorrectness Reasoning, Andreas L\"{o}\"{o}w, Daniele Sobrinho,
-	      Sacha-Elie Ayoung, Petar Maksimovic and Philippa Gardner,
-	      ECOOP'2024, distinguished paper. This paper centred on simple
-	      language and memory model. We are currently extending this work to
-	      be mechanised and parametric on the memory model, with a
-	      submission deadline in November 2024.</li>
-	    <li>
-	      For the Gillian tool, see my lecture at the College de France:
-	      <a href="https://vtss.doc.ic.ac.uk/2021/04/15/collegedefrance.html">
-		https://vtss.doc.ic.ac.uk/2021/04/15/collegedefrance.html
-	      </a>
-	    </li>
-	    <li>
-	      Symbolic Debugging with Gillian, Nat Karmios, Sacha-Elie Ayoun and Philippa Gardner, DEBT 2023.
-	    </li>
-	    <li>
-	      Gillian, Part I: A Multi-language Platform for Symbolic
-	      Execution, José Fragoso Santos Petar Maksimovic, Sacha-Élie
-	      Ayoun and Philippa Gardner, PLDI 2020.
-	    </li>
-	    <li>
-	      Gillian, Part II: Real-World Verification for JavaScript and C, Petar Maksimovic, Sacha-Élie Ayoun,
-	      José Fragoso Santos and Philippa Gardner, CAV 2021.
-	    </li>
-	  </ul>
+	  <b>Abstract</b>: Formal methods offer a vast collection of techniques to analyze and ensure the correctness
+	  of software and hardware systems against a given specification. In fact, modern formal methods tools
+	  scale to industrial applications. Despite this significant success, privacy requirements are not
+	  considered in the design of these tools. For example, when using automated reasoning tools, the
+	  implicit requirement is that the formula to be proved is public. This raises an issue if the formula
+	  itself reveals information that is supposed to remain private to one party. To overcome this issue,
+	  we propose the concept of privacy-preserving automated reasoning.
+
+	  In these lectures students will learn how to incorporate cryptographic primitives into automated
+	  reasoning. We will present privacy-preserving Boolean satisfiability solver, which allows mutually
+	  distrustful parties to evaluate the conjunction of their input formulas while maintaining
+	  privacy. Additionally, we will also show how to prove the unsatisfiability of formulas by using
+	  zero-knowledge protocols. We will discuss how the full formal verification workflow can be applied
+	  in privacy-preserving settings.
+	  <!-- <b>Materials</b>:  -->
+	  <!-- <b>References</b>: -->
 	  <br/>
-	  <b>Bio</b>: Philippa Gardner’s work has brought scientific and
-	  mathematical method to the specification and analysis of open
-	  software at scale. She has built trustworthy mechanisations of
-	  language standards, leading to the correction of definitions and
-	  the formal proofs of properties within the W3C WebAssembly formal
-	  specification. She has developed compositional analysis techniques
-	  and well-engineered tools for both semi-automatic verification and
-	  automatic true bug-finding in industrial and open-source
-	  software. She has introduced program logics for verifying complex
-	  concurrent algorithms, which underpin tools now used by hundreds
-	  of specialist users. Her contributions represent over three
-	  decades of sustained investment, all focussed on achieving
-	  machine-proven guarantees about the safety and correctness of
-	  real, deployed software, grounded in mathematical foundations.
-	  <p>
-	    After completing her PhD thesis at Edinburgh in 1992 and holding
-	    research positions in both Edinburgh and Cambridge, Gardner
-	    became a lecturer at Imperial in 2001 and a professor in
-	    2009. She held fellowships spanning over twenty years, including
-	    a UKRI Established Research Fellowship from 2018 to 2023 at
-	    Imperial, and was elected a Fellow of the Royal Academy of
-	    Engineering in 2020. She won the British Computer Society
-	    Lovelace Medal in 2024, and was the founding director of the UK
-	    Research Institute of Verified Trustworthy Software Systems,
-	    funded by GCHQ and now directed by Azalea Raad and Brijesh
-	    Dongol.
-	  </p>
+	  <b>Bio</b>:  Ruzica Piskac is a Professor of Computer Science at Yale University, where she leads the
+	  Rigorous Software Engineering (ROSE) group. Her research interests span the areas of software
+	  verification, security and applied cryptography, automated reasoning, and code synthesis. Much of
+	  her research has focused on using formal techniques to improve software reliability and
+	  trustworthiness. Piskac joined Yale’s Department of Computer Science in 2013. She was previously an
+	  Independent Research Group Leader at the Max Planck Institute for Software Systems in Germany. Her
+	  research has received a range of professional honors, including multiple Amazon Research Awards,
+	  Yale University’s Ackerman Award for Teaching and Mentoring, the Facebook Communications and
+	  Networking Award, and the Microsoft Research Award for the Software Engineering Innovation
+	  Foundation (SEIF). In 2019, Yale named Piskac the Donna L. Dubinsky Associate Professor of Computer
+	  Science. Piskac holds a Ph.D. from the Swiss Federal Institute of Technology (EPFL), where her
+	  dissertation won the Patrick Denantes Prize. Her current and recent professional activities include
+	  service as Program Chair of the 37th International Conference on Computer Aided Verification and the
+	  Steering Committee of the Formal Methods in Computer-Aided Design conference. Piskac has graduated
+	  six PhD students, four of them are currently being a faculty members.
 	  <br/>
 	</li>
 	<li>
 	  <span class="lecture">
-	    Programming and Reasoning with Kleene Algebra with Tests
+	    Verifying Rust code with Verus
 	  </span><br/>
 	  <span class="lecturer">
-	    Nate Foster (Cornell University)
+	    Dr. Chris Hawblitzel (Microsoft Research)
 	  </span><br/>
-	  <b>Abstract</b>: Kleene algebra with tests (KAT) is an algebraic
-	  framework that can be used to reason about imperative programs. It
-	  has been applied across a wide variety of areas including program
-	  transformations, concurrency control, compiler optimizations,
-	  cache control, networking, and more. These lectures will provide
-	  an overview of Kleene Algebra with Tests, including the syntax,
-	  semantics, and the coalgebraic theory underlying decision
-	  procedures for program equivalence. We will illustrate how it can
-	  be used as a core framework for network verification, including
-	  successful extensions and fundamental limitations.<br/>
-	  <b>Bio</b>: <a href="https://www.cs.cornell.edu/~jnfoster/bio/">here</a>
+	  <b>Abstract</b>: <p>The Rust programming language is rapidly gaining acceptance as a modern, type-safe
+	    alternative to C and C++ for low-level systems programming.  Rust includes an advanced type system,
+	    similar to languages like Haskell and ML, that makes formal reasoning more elegant and natural.
+	    Most importantly, Rust implements a novel ownership checker that manages aliasing and mutation,
+	    allowing safe manual deallocation of unaliased values and prohibiting mutation of aliased values.
+	    This ownership methodology is ideal for formal verification: it allows a verifier to reason about
+	    values rather than mutable heap locations, making verification of Rust code similar to verification
+	    of purely functional high-level languages.</p>
+
+	  <p>This course will introduce Verus, a verifier for Rust code.  With Verus, programmers express proofs
+	    and specifications using the Rust language, allowing proofs to take advantage of Rust's type
+	    checking and ownership checking.  The course will describe how to write such specifications and
+	    proofs and how the Verus tool translates these specifications and proofs into formulas that can be
+	    efficiently checked by an SMT solver.  It will describe how to write proofs that take advantage of
+	    Rust's ownership to express separation and permissions in a style similar to separation logic, and
+	    how to use this style to verify safe Rust code, unsafe Rust code, and concurrent Rust code.</p>
+
+	  <p>The course will include both lectures and hands-on exercises.  Students can install Verus on any
+	    Linux, MacOS, or Windows laptop to edit and verify Rust code during the course.  No knowledge of
+	    Rust is required beforehand.</p>
 	  <br/>
-	  <b>Materials</b>:
-	  <ul>
-	    <li>
-	      KAT [TOPLAS 19(3), May '97]: <a href="https://dl.acm.org/doi/10.1145/256167.256195">
-		https://dl.acm.org/doi/10.1145/256167.256195</a>
-	    </li>
-	    <li>
-	      NetKAT [POPL '14]: <a href="https://dl.acm.org/doi/10.1145/2578855.2535862">
-		https://dl.acm.org/doi/10.1145/2578855.2535862</a>
-	    </li>
-	    <li>
-	      Course website: <a href="https://netkat.org/ssft25">https://netkat.org/ssft25</a>
-	    </li>
-	  </ul>
+	  <b>Bio</b>:Chris Hawblitzel is a Senior Principal Researcher at Microsoft Research in Redmond, WA.  His
+	  research focuses on using programming language techniques and formal verification to enforce the
+	  safety and security of systems software.  He has worked on projects like the Singularity OS, the
+	  Verve verified OS, the Ironclad/IronFleet verified software stack, the Everest verified TLS project,
+	  and the Verus verifier for Rust.  He has co-authored papers receiving best paper awards for Verve at
+	  PLDI and Verus at OSDI, a CACM research highlight for IronFleet, distinguished paper awards for Vale
+	  at USENIX Security and for Linear Dafny at OOPSLA, and distinguished artifact awards for
+	  Verus-related projects at SOSP, OSDI, and OOPSLA.  He received a B.A. in physics from UC-Berkeley in
+	  1993, received a Ph.D. in computer science from Cornell in 2000, taught at Dartmouth College until
+	  2004, and has been a researcher at Microsoft Research since 2005.
 	  <br/>
-	  <ul>
+	  <!-- <b>Materials</b>: -->
+	  <!-- <ul> -->
+	  <!--   <li> -->
+	  <!--     KAT [TOPLAS 19(3), May '97]: <a href="https://dl.acm.org/doi/10.1145/256167.256195"> -->
+	  <!-- 	https://dl.acm.org/doi/10.1145/256167.256195</a> -->
+	  <!--   </li> -->
+	  <!--   <li> -->
+	  <!--     NetKAT [POPL '14]: <a href="https://dl.acm.org/doi/10.1145/2578855.2535862"> -->
+	  <!-- 	https://dl.acm.org/doi/10.1145/2578855.2535862</a> -->
+	  <!--   </li> -->
+	  <!--   <li> -->
+	  <!--     Course website: <a href="https://netkat.org/ssft25">https://netkat.org/ssft25</a> -->
+	  <!--   </li> -->
+	  <!-- </ul> -->
+	  <!-- <br/> -->
+	  <!-- <ul> -->
 	    
-	  </ul>
+	  <!-- </ul> -->
 	</li>
 	<li>
 	  <h2 id="splogic">
@@ -554,30 +389,10 @@
 	assistants, and model checkers.
       </p>
       -->
-      <h2 id="invited">Invited Speakers</h2>
-      <ul>
-	<li>
-	  <span class="lecture">An Enriched Category Theory of Language</span><br/>
-	  <span class="lecturer">Tai-Danae Bradley</span><br/>
-	  <b>Abstract</b>: The success of large language models is striking, especially given that the training data consists of raw, unstructured text. In this talk, we will propose that category theory can provide a natural framework for investigating this passage from texts, and probability distributions on them, to a more semantically meaningful space. Equipped with motivation from an analogy between linear algebra and category theory, we will define a category of expressions in language enriched over the unit interval and afterwards pass to enriched copresheaves on that category. We will see that the latter setting has rich mathematical structure and comes with ready-made tools in which to explore that structure.
-	  <span class="materials"><a href="materials/bradley.pdf">Slides</a></span><br/>
-	</li>
-	<li>
-	  <span class="lecture">On Mechanical Program Verification</span><br/>
-	  <span class="lecturer">Robert Shostak</span><br/>
-	  <span class="materials"><a href="materials/shostak.pptx">Slides</a></span><br/>
-	</li>
-	<li>
-	  <span class="lecture">Formal Verification (FV) In Chip Design</span><br/>
-	  <span class="lecturer">Vigyan Singhal</span><br/>
-	  <span class="materials"><a href="materials/singhal.pdf">Slides</a></span><br/>
-	</li>
-	<li>
-	  <span class="lecture">Towards Scalable, Trustworthy, and Collaborative AI</span><br/>
-	  <span class="lecturer">Susmit Jha</span><br/>
-	  <span class="materials"><a href="materials/jha.pdf">Slides</a></span><br/>
-	</li>
-      </ul>
+      <h2 id="invited">Invited Speakers (TBD)</h2>
+      <!-- <ul> -->
+      <!-- 	<> -->
+      <!-- </ul> -->
       
       <h2 id="schedule">
 	<a href="https://docs.google.com/spreadsheets/d/14dgsLv8OJ04YOQm7Sihl9jwvrNulHm91QiFrIj1Dt8Q/edit?usp=sharing">Schedule</a>
@@ -609,6 +424,7 @@
 	Information about previous Summer Schools on Formal Techniques can
 	be found at
 	<ul>
+	  <li><a href="http://localhost:8000/old/2025/index.html">SSFT25</a></li>
 	  <li><a href="http://fm.csl.sri.com/SSFT24">SSFT24</a></li>
 	  <li><a href="http://fm.csl.sri.com/SSFT23">SSFT23</a></li>
 	  <li><a href="http://fm.csl.sri.com/SSFT22">SSFT22</a></li>
@@ -631,7 +447,7 @@
       </p>
       <hr width="80%">
       <h2 id="registration">
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSfQfqFfU8KR1nDJC6ewTpZHnniQbZzIec_ZUDgvZIgznS7gvg/viewform?usp=dialog">
+	<a href="https://forms.gle/rhkCoe9XSnkAAq596">
 	  Registration
 	</a>
       </h2>
@@ -639,34 +455,25 @@
 	   Applicants are welcome to register for virtual participation. -->
       
       <hr width="80%">
-      <p>
-	This year, the school/bootcamp will take place in a hybrid mode:
-	the lectures and labs will be live-streamed and recorded. We
-	strongly encourage in-person participation so that you can benefit
-	from interactions outside the classroom. We have funding from NSF
-	to cover transportation/food/lodging expenses for selected
-	US-based students. Non-student and non-US in-person participants
-	are expected to cover their own transportation and will be charged
-	a fee (around $150/day) to cover the cost of food and lodging.</p>
-      <p>
-	The 2025 Summer School on Formal Techniques will be presented in a
-	hybrid format. We encourage those students who can attend in
-	person to do so. Those who cannot be there in person can still
-	participate virtually but they will need to synchronize with the
-	Pacific Daylight Savings Time. Applications should be submitted
-	together with names of two references (preferably advisors,
-	professors, or senior colleagues).</p>
-      <p>
-	Applicants are urged to submit their applications before March 31,
-	2025, since there are only a limited number of spaces available.
-	Those needing invitation letters for visa purposes are encouraged
-	to complete their applications as early as possible.  We strongly
-	encourage the participation of women and under-represented
-	minorities in the summer school.</p>
-      <p>
-	The nearest airport to the summer school is SFO. Use Supershuttle
-	for ground transportation to/from SFO - we should have a discount
-	code shortly.</p>
+      <p> The 2026 Summer School on Formal Techniques will take place in a hybrid mode: the lectures and labs
+	will be live-streamed and recorded. We strongly encourage in-person participation so that you can
+	benefit from interactions outside the classroom. We have funding from NSF to cover
+	transportation/food/lodging expenses for selected US-based students. Non-student and non-US
+	in-person participants are expected to cover their own transportation and will be charged a fee
+	(around $150/day) to cover the cost of food and lodging.</p>
+      <p> Applicants are urged to submit their applications as early as possible (no later than March 31,
+	2026), since there are only a limited number of spaces available.  Those needing invitation letters
+	for visa purposes should complete their applications as early as possible.  We strongly encourage
+	the participation of women and under-represented minorities in the summer school.  The Summer School
+	follows the Title IX Sexual Misconduct & Sexual Harassment Policy & Procedures spelled out at 
+	https://menlo.edu/title-ix/.</p>
+      <!-- <p> -->
+      <!-- 	Applicants are urged to submit their applications before March 31, -->
+      <!-- 	2025, since there are only a limited number of spaces available. -->
+      <!-- 	Those needing invitation letters for visa purposes are encouraged -->
+      <!-- 	to complete their applications as early as possible.  We strongly -->
+      <!-- 	encourage the participation of women and under-represented -->
+      <!-- 	minorities in the summer school.</p> -->
 
       <!-- We expect to provide support for the travel and accommodation for (a
 	   limited number of) students registered at US universities. We
