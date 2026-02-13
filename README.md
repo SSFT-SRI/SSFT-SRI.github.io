@@ -1,4 +1,4 @@
-## Repository/Website for SRI's Summer School for Formal Techniques (SSFT), 2025
+## Repository/Website for SRI's Summer School for Formal Techniques (SSFT)
 
 <!--
 **SSFT-SRI/SSFT-SRI** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
