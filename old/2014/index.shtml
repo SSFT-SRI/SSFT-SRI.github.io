@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Fourth Summer School on Formal Techniques</title>
+  </script>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Fourth Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 19 - May 23, 2014<br>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+      <h5><a
+      href="../2014/">http://fm.csl.sri.com/SSFT14</a>
+      </h5>
+    </hgroup>
+
+  </header>
+
+  <center>
+    <a href="DSC_6164.jpg"><img id="Group Photo" src="DSC_6164.jpg" width="648" height="364"/></a>
+  </center>
+
+  <section id="description" class="body">
+    <p>
+Techniques based on formal logic, such as model checking,
+satisfiability, static analysis, and automated theorem proving, are
+finding a broad range of applications in modeling, analysis,
+verification, and synthesis.  This school, the fourth in the series,
+will focus on the principles and practice of formal techniques, with a
+strong emphasis on the hands-on use and development of this
+technology.  It primarily targets graduate students and young
+researchers who are interested in developing and using formal
+techniques in their research.  A prior background in formal methods
+is helpful but not required.   Participants at the school will have a
+seriously fun time experimenting with the tools and techniques
+presented in the lectures during laboratory sessions.
+<p>
+The lecturers at the school include:
+<ul>
+<li>
+<span class="lecturer">Nikolaj Bjorner (MSR Redmond)</span>:<br/>
+<span class="lecture">Software verification with SMT
+(<a href = "SSFT14-1.pdf">Slides1</a>,
+<a href = "SSFT14-2.pdf">Slides2</a>,
+<a href = "smt-application-chapter.pdf">SMT Applications</a>,
+<a href = "samples.zip">samples.zip</a>)
+</span><br/>
+<b>Abstract</b>: Satisfiability Modulo Theories (SMT) solvers offer a
+  compelling match for static software analysis, since several common
+  software constructs map directly into supported theories.  The
+  lecture takes as starting point the state-of-the art SMT solver Z3,
+  developed at Microsoft Research and the use of it for software
+  verification.  In the first lecture we examine connections from
+  program logics to SMT solving.  We use the VeriCon tool as starting
+  point for illustrating verification condition generation.  VeriCon
+  is a prototype tool for verification of Software Defined Network
+  controller programs.  In the second lecture we revisit a central
+  problem in program analysis, model checking and verification -
+  synthesizing sufficient inductive invariants. It is formulated as
+  solving satisfiability of Horn clauses: We exploit that models of
+  constrained Horn clauses correspond directly to certificates of
+  program correctness. We examine algorithms used in software model
+  checking as strategies for solving Horn clauses. These algorithms
+  include, variants of bounded model checking, symbolic execution,
+  bottom-up saturation with finite relations, such as hash tables,
+  BDDs and three-valued bit-vectors, backwards chaining with tabling,
+  fold-unfold transformations, variants inspired by IC3 and
+  interpolation procedures. Z3 contains implementations of most of
+  these algorithms and they are used in various program and network
+  analysis applications.  In the lab exercises we will rely on Z3’s
+  Python bindings to complete encodings of various program analysis
+  problems.
+
+</li>
+<li>
+<span class="lecturer">Veronique Cortier (LORIA, France)</span>:<br/>
+<span class="lecture">Formal analysis of security
+protocols: Models, Techniques, and Tools</span><br/>
+<b>Abstract</b>:
+Security protocols aims at securing communications over
+  untrusted networks such as Internet. Their design is notoriously
+  error-prone, with flaws discovered years later. Formal methods have
+  been successful in reasoning about the security of protocols and
+  detect attacks. Automatic tools have been designed and applied to
+  many protocols, from academic ones to deployed protocols such as SSL
+  or Kerberos.  In these lectures, we explain how security protocols
+  can be modeled in symbolic models such as Horn clauses (a fragment
+  of first-order logic) or applied-pi calculus (a process algebra). We
+  describe and discuss decision techniques to automatically verify
+  properties such as authentication or confidentiality.
+<p>
+  These lectures will also be the opportunity to play a "security
+  game" where students design security protocols of their own and find
+  flaws in other protocols using some existing automatic tools.
+</p>
+ </li>
+<li>
+<span class="lecturer">Gerard Holzmann (JPL/Caltech)</span>:<br/>
+<span class="lecture">Verifying Safety Critical Code (<a href="http://spinroot.com/courses/summer/">Resources</a>)</span><br/>
+<b>Abstract</b>:
+Formal software verification, for instance based on
+  automata-theoretic verification and logic model checking, is not
+  just interesting from a purely academic point of view, it has also
+  become a necessity in the development of safety critical code.
+  Failure of safety critical code can endanger lives, or have
+  significant economic consequences. We'll discuss some new approaches
+  to this decades old problem that target the verification of
+  implementation level source code directly, using model extraction,
+  and massively parallel search algorithms.
+ </li>
+<li>
+<span class="lecturer">Gerwin Klein (NICTA Australia)</span>:<br/>
+<span class="lecture">Programming language semantics in Isabelle
+(<a href = "exercises.pdf">Exercises</a>,
+<a href = "solutions.zip">Solutions</a>,
+<a href = "Reg.thy">Reg.thy</a>,
+<a href = "demos.zip">Demos</a>)
+</span><br/>
+<b>Abstract</b>: After a brief crash course on the interactive proof
+  assistant Isabelle, this lecture will show how to formalise the
+  semantics of a small imperative programming language in the theorem
+  prover, and how to use Isabelle to reason about programs and
+  programming languages. The lecture will cover the topics of big and
+  small-step operational semantics, their equivalence, a small type
+  system, and a type soundness proof. Further, deeper reaching
+  teaching material is available.
+</li>
+<li>
+<span class="lecturer">Marta Kwiatkowska (University of Oxford)</span>:<br/>
+<span class="lecture">Probabilistic model checking with PRISM (<a href = "http://www.prismmodelchecker.org/courses/ssft14/">Resources</a>)</span><br/>
+<b>Abstract</b>: Probabilistic model checking is a formal verication technique for
+  the analysis of systems that exhibit stochastic behaviour. Such
+  behaviour occurs, for example, due to component failure or
+  randomisation, commonly used as a symmetry breaker in distributed
+  coordination and communication protocols. The techniques have been
+  implemented in PRISM (www.prismmodelchecker.org) and enable a range
+  of quantitative analyses of probabilistic models against
+  specifications such as the worst-case probability of failure within
+  10 seconds or the minimum expected power consumption over all
+  possible schedulings. This tutorial will give an introduction to
+  probabilistic model checking, explaining the underlying theory and
+  algorithms for model checking and strategy synthesis. The material
+  will be illustrated with several case studies that have been
+  modelled and analysed in PRISM.
+</li>
+<li>
+<span class="lecturer">Natarajan Shankar (SRI CSL)</span>:<br/>
+<span class="lecture">Speaking Logic (<a href="speaklogicV3.pdf">Slides</a>)</span><br/>
+<b>Abstract</b>:
+Formal logic has become the lingua franca of computing. It
+  is used for specifying digital systems, annotating programs with
+  assertions, defining the semantics of programming languages, and
+  proving or refuting claims about software or hardware systems.
+  Familiarity with the language and methods of logic is a foundation
+  for research into formal aspects of computing.  This course covers
+  the basics of logic focusing on the use of logic as a medium for
+  formalization and proof.
+ </li>
+</ul>
+<p>
+Invited speakers at the school include:
+<ul>
+<li>
+<span class="lecturer">Dana Scott (CMU)</span>:<br/>
+<span class="lecture">Lambda Calculus: History, Models, Future
+(<a href = "http://www.csl.sri.com/users/shankar/SSFT14/ScottTypesBlack.pdf">Handout</a>,
+<a href = "http://www.csl.sri.com/users/shankar/SSFT14/ScottACMTuring.pdf">ACMTuring</a>,
+<a href = "http://www.csl.sri.com/users/shankar/SSFT14/ScottJAL2014.pdf">JAL2014</a>,
+<a href = "http://www.csl.sri.com/users/shankar/SSFT14/ScottTypes.pdf">Types</a>)</span>
+</li>
+<li>
+<span class="lecturer">Emina Torlak (UC Berkeley)</span>:<br/>
+<span class="lecture">Programming for Everyone:  From Solvers to Solver-Aided Languages and Beyond (<a href = "rosette-lecture.pdf">Slides</a>)</span>
+</li>
+</ul>
+<p>
+Student presentations include:
+<ul>
+<li>
+<span class="lecturer">Srinivas Neduri (Rice University)</span>:<br/>
+<span class="lecture">ROBOSYNTH: SMT-Based Synthesis of Integrated Task and Motion
+Plans from Plan Outlines (<a href = "SSFT.pptx">Slides</a>)</span>
+</li>
+<li>
+<span class="lecturer">Vũ Lê (UC Davis)</span>:<br/>
+<span class="lecture">Compiler Validation via Equivalence Modulo Input
+(<a href = "PLDI14-Orion.pdf">Slides</a>)</span>
+</li>
+<li>
+<span class="lecturer">Nimit Singhania (U Penn)</span>:<br/>
+<span class="lecture">Piecewise Afﬁne Models from Input-Output Data
+(<a href = "Slides.pdf">Slides</a>)</span>
+</li>
+<li>
+<span class="lecturer">Amer Tahat (Michigan Technological University)</span>:<br/>
+<span class="lecture">Mechanical Verification of Avicenna’s Proof on
+the Existence of a Necessary Existent and Its Unity
+(<a href = "Avicenna’s Proof .pdf">Slides</a>,
+<a href = "http://asd.cs.mtu.edu/projects/mechVerif/Avicenna_on_God.pvs">PVS Specification</a>)</span>
+</li>
+<li>
+<span class="lecturer">Ulya Bayram (U Miami)</span>:<br/>
+<span class="lecture">Predictive Modeling
+(<a href = "Ulya_Presentation.ppt">Slides</a>
+)</span>
+</li>
+<li>
+<span class="lecturer">Paolo Masci (Queen Mary University of London)</span>:<br/>
+<span class="lecture">Formal Verification of medical user interface software in PVS
+(<a href = "masci-SSFT2014.pdf">Slides</a>
+)</span>
+</li>
+</ul>
+<p>
+  <section id="schedule" class="body">
+    <h2><a href="schedule.html">Schedule</a></h2>
+
+<p>
+Information about the first three Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2011/">SSFT11</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+</ul>
+    </p>
+    <p>
+We expect to provide support for the travel and accommodation for a
+limited number of students from US universities, but welcome
+applications from non-US students as well as non-students.  Non-US
+students will have to cover their own travel and will be charged
+around &#36;500 for meals and lodging.  Applications should be submitted
+using the form below.
+    </p>
+    <p>
+Applicants are encouraged to submit their applications before April
+30, 2014, since there are only a limited number of spaces available.
+Non-US applicants requiring US visas are requested to apply early.
+    </p>
+<hr/>
+<p>
+  <b>Registration is now closed</b><hr/>
+</p>
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+<!--
+<p>
+  <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked name="gender" value="male">
+    Female<input class="but" type="radio" name="gender" value="female">
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes">
+    No<input class="but" type="radio" checked name="minority" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Did you attend last year?</label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="attendedbefore" value="yes">
+    No<input class="but" type="radio" checked name="attendedbefore" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows=4 cols=79></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size=80 maxlength=100></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information">
+  <input type="reset" value="Clear The Form">
+</center>
+</p>
+<hr width=80%>
+</form>
+
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> refers to blacks, Hispanics,
+American Indians/Alaska Natives, and Native Hawaiians/Other Pacific Islanders.</p>
+-->
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<!-- <li><a href="http://www.csl.sri.com/users/shankar/pub/DeductionModelChecking.pdf">http://www.csl.sri.com/users/shankar/pub/DeductionModelChecking.pdf</a></li> -->
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+</div>
+
+</body>

@@ -1,0 +1,24 @@
+<!--#if expr="$base = ''" -->
+<!--#set var="base" value="" -->
+<!--#endif -->
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta name="author" content="Sam Owre" />
+<meta name="description" content="AFM08 Workshop" />
+<meta name="keywords" content="PVS ICS SAL HybridSAL verification" />
+<link rel="stylesheet" href="fm-style.css" type="text/css" />
+<title><!--#echo var="title" --></title>
+</head>
+
+<body>
+
+<!--#if expr="$HTTP_USER_AGENT = /Mozilla/4.*/ && $HTTP_USER_AGENT != /.*MSIE.*/" -->
+<!--#set var="oldbrowser" value="yes" -->
+<!--#endif -->
+
+<!--#include file="afm-navbar.shtml" -->
+
+<h1><!--#echo var="title" --></h1>

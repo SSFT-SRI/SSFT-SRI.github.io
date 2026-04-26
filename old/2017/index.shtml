@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Seventh Summer School on Formal Techniques</title>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Seventh Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 21 - May 26, 2017<br/>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+<!--      <h5><a
+      href="../2017/">http://fm.csl.sri.com/SSFT17</a>
+      </h5> -->
+    </hgroup>
+
+  </header>
+  <!-- <center> -->
+  <!--   <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a> -->
+  <!-- </center> -->
+
+<section id="description" class="body">
+  <p>
+Techniques based on formal logic, such as model checking,
+satisfiability, static analysis, and automated theorem proving, are
+finding a broad range of applications in modeling, analysis,
+verification, and synthesis.  This school, the seventh in the series,
+will focus on the principles and practice of formal techniques, with a
+strong emphasis on the hands-on use and development of this
+technology.  It primarily targets graduate students and young
+researchers who are interested in developing and using formal
+techniques in their research.  A prior background in formal methods
+is helpful but not required.   Participants at the school will have a
+seriously fun time experimenting with the tools and techniques
+presented in the lectures during laboratory sessions.</p>
+<p>
+<b>Note:</b> The school is preceded by the <a
+href="https://ti.arc.nasa.gov/events/nfm-2017/">9th NASA Formal
+Methods Symposium (NFM) 2017</a> and the associated <a
+href="http://fm.csl.sri.com/AFM17/">sixth Automated Formal Methods
+(AFM) workshop</a>.  On May 20 there will be an AFM tutorial
+day that students are encouraged to attend.</p>
+
+<!-- <h2>Background Course on Logic</h2> -->
+<!-- <ul> -->
+<!-- <li> -->
+<!-- <span class="lecturer">Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</span>:<br/> -->
+<!-- <span class="lecture">Speaking Logic</span> -->
+<!-- <br/>(<span class="materials"> -->
+<!-- <a href="speaklogicV6.pdf">Speaking Logic</a>, -->
+<!-- <a href="Main.pdf">Type Theory</a>, -->
+<!-- <a href="coq-files.tgz">Coq Files</a>, -->
+<!-- <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qVzY4XYAAAAJ&cstart=20&pagesize=80&authuser=1&citation_for_view=qVzY4XYAAAAJ:_B80troHkn4C">Reading</a>,  -->
+<!-- <a href="PVScourse.pdf">PVS Course</a>, -->
+<!-- <a href="http://pvs.csl.sri.com">PVS</a> -->
+<!-- </span>) -->
+
+<!-- <br/> -->
+<!-- <b>Abstract</b>: -->
+<!-- Formal logic has become the lingua franca of computing. It is used for -->
+<!-- specifying digital systems, annotating programs with assertions, -->
+<!-- defining the semantics of programming languages, and proving or -->
+<!-- refuting claims about software or hardware systems. Familiarity with -->
+<!-- the language and methods of logic is a foundation for research into -->
+<!-- formal aspects of computing. This course covers the basics of logic -->
+<!-- focusing on the use of logic as a medium for formalization and proof. -->
+<!-- </li> -->
+<!-- </ul> -->
+
+<h2>Lecturers</h2>
+<p>
+Stephanie Delaune (IRISA France),
+Marijn Heule (University of Texas at Austin),
+K. Rustan M. Leino (Microsoft Research, Redmond WA),
+Sam Blackshear (Facebook),
+and Ashish Tiwari (SRI)
+</p>
+
+<ul>
+
+<li>
+<span class="lecturer">Stephanie Delaune (IRISA France)</span>:<br/>
+<span class="lecture">Verification of security protocols: from confidentiality to privacy</span><br/>
+(<span class="materials"><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></span>)
+<br/>
+<b>Abstract</b>:
+Security protocols are widely used today to secure transactions that
+take place through public channels like the Internet. Typical
+functionalities are the transfer of a credit card number or the
+authentication of a user on a system. Because of their increasing
+ubiquity in many important applications (e.g. electronic commerce,
+smartphone, government-issued ID . . . ), a very important research
+challenge consists in developing methods and verification tools to
+increase our trust on security protocols, and so on the applications
+that rely on them.
+<p>
+Formal methods offer symbolic models to carefully analyse security
+protocols, together with a set of proof techniques and efficient tools
+such as ProVerif.  These methods build on techniques from
+model-checking, automated reasoning and concurrency theory.  We will
+explain how security protocols as well as the security properties they
+are supposed to achieve are formalised in symbolic models.  Then, we
+will describe and discuss techniques to automatically verify different
+kinds of security properties. The lab sessions will be the opportunity
+to play with the ProVerif verification tool.</p>
+<b>Bio</b>:
+Dr. Stephanie Delaune is a CNRS researcher at IRISA Rennes.
+She received her PhD in 2006 and presented her Habilitation thesis in 2011.
+She won a France Telecom award for her PhD thesis.  Dr. Delaune has a
+made a number of significant contributions to the modeling and automated
+verification of cryptographic protocols.
+</li>
+
+<li>
+<span class="lecturer">Marijn Heule (University of Texas at Austin)</span>:<br/>
+<span class="lecture">State-of-the-art SAT Solving</span>
+<br/>
+(<span class="materials">
+<a href = "http://www.labri.fr/perso/lsimon/downloads/softwares/glucose-3.0.tgz">Glucose 3.0</a> (not the later versions),
+<a href = "SSFT-Heule1.pdf">Slides1</a>,
+<a href = "SSFT-Heule2.pdf">Slides2</a></span>)
+<br/>
+<b>Abstract</b>:
+Satisfiability (SAT) solvers have become powerful search engines to
+solve a wide range of applications in fields such as formal
+verification, planning and bio-informatics. Due to the elementary
+representation of SAT problems, many low-level optimizations can be
+implemented. At the same time, there exist clause-based techniques
+that can simulate several high-level reasoning methods. The teaching
+session focuses on the search procedures in successful conflict-driven
+clause learning SAT solvers. It shows how to learn from conflicts and
+provides an overview of effective heuristics for variable and value
+selection. Additionally, the teaching session covers recent
+developments, in particular a technique used in today's strongest
+solvers: the alternation between "classic" depth-first search with
+learning, and breadth-first search for simplification.
+<br/>
+<b>Bio</b>:
+Dr. Marijn J.H. Heule is a Research Scientist at the University of
+Texas at Austin.  He received his PhD at Delft University of
+Technology in the Netherlands in 2008. His research focuses on solving
+hard combinatorial problems in areas such as formal verification,
+number theory, and combinatorics.  Most of his contributions are
+related to theory and practice of satisfiability (SAT) solving. He has
+developed award-winning SAT solvers (see http://satcompetition.org/),
+and his preprocessing techniques are used in most state-of-the-art SAT
+solvers.
+</li>
+
+<li>
+<span class="lecturer">K. Rustan M. Leino (Microsoft Research, Redmond WA)</span>:<br/>
+<span class="lecture">Verified programs and proofs in Dafny</span>
+<br/>(<span class="materials"><a href = "https://github.com/Microsoft/dafny">Dafny</a></span>)
+<br/>
+<b>Abstract</b>:
+In these lectures, you will learn and practice the
+foundations of program verification, like pre- and postcondition
+specifications, loop invariants, termination, proofs, and induction.
+Dafny is a programming language that includes specifications and
+proof-authoring features.  The lectures and labs will give you
+hands-on experience in using the Dafny to write and specify programs,
+both imperative and functional, and to write mechanically checked
+proofs.
+<br/>
+<b>Before the Lectures</b>:
+Please install Dafny on your laptop before the lectures.  The binaries
+and plug-ins for Visual Studio and Emacs are found here: <a href =
+"https://github.com/Microsoft/dafny">https://github.com/Microsoft/dafny</a>
+<p>
+<b>Optional</b>: Try out the Dafny tutorial online (<a href =
+"http://rise4fun.com/dafny">http://rise4fun.com/dafny</a>) and check
+out the following reading material:
+<ul>
+  <li>"Dafny: An Automatic Program Verifier for Functional Correctness", K.R.M. Leino, LPAR-16, 2010.</li>
+  <li>"Developing Verified Programs with Dafny", K.R.M. Leino, tutorial notes ICSE 2013 (3 pages).</li>
+  <li>"Verified Calculations", K.R.M. Leino and N. Polikarpova, VSTTE 2013.</li>
+  <li>"Automating Induction with an SMT Solver", K.R.M. Leino, VMCAI 2012.</li>
+</ul></p>
+<p>
+Going beyond these lectures, the following papers describe
+applications of Dafny:
+<ul>
+  <li> "Ironclad Apps: End-to-End Security via Automated Full-System Verification", C. Hawblitzel, J. Howell, J.R. Lorch, A. Narayan, B. Parno, D. Zhang, and B. Zing, OSDI 2014.</li>
+  <li>"IronFleet: proving practical distributed systems correct", C. Hawblitzel, J. Howell, M. Kapritsos, J.R. Lorch, B. Parno, M.L. Roberts, S.T.V. Setty, and B. Zill, SOSP 2015.</li>
+</ul> </p>
+<p>
+Here are some texts on more advanced subjects:
+<ul>
+  <li>"Automating Theorem Proving with SMT", K.R.M. Leino, ITP 2013.</li>
+  <li>" Well-founded Functions and Extreme Predicates in Dafny: A Tutorial", K.R.M. Leino, IWIL-2015.</li>
+</ul> </p>
+<p>
+And here is some reading material that explains the technology
+underlying Dafny:
+<ul>
+  <li>"Specification and verification of object-oriented software", K.R.M. Leino, lecture notes, Marktoberdorf International Summer School 2008.</li>
+  <li>"Computing with an SMT solver", N. Amin, K.R.M. Leino, and T. Rompf, TAP 2014.</li>
+  <li>"Trigger Selection Strategies to Stabilize Program Veriﬁers", K.R.M. Leino and C. Pit--Claudel, CAV 2016.</li>
+  <li>"Fine-grained Caching of Veriﬁcation Results", K.R.M. Leino and V. Wüstholz, CAV 2015.</li>
+</ul> </p>
+<b>Bio</b>:
+<p>
+K. Rustan M. Leino is Principal Researcher in the Research in Software
+Engineering (RiSE) group at Microsoft Research, Redmond and Visiting
+Professor in the Department of Computing at Imperial College
+London. He is known for his work on programming methods and program
+verification tools, and is a world leader in building automated
+program verification tools. These include the languages and tools
+Dafny, Chalice, Jennisys, Spec#, Boogie, Houdini, ESC/Java, and
+ESC/Modula-3.  He is an ACM Fellow.</p>
+<p>
+Prior to Microsoft Research, Leino worked at DEC/Compaq SRC. He
+received his PhD from Caltech (1995), before which he designed and
+wrote object-oriented software as a technical lead in the Windows NT
+group at Microsoft. Leino collects thinking puzzles on a popular web
+page and hosts the Verification Corner channel on youtube. In his
+spare time, he plays music and likes to cook.</p>
+</li>
+
+<li>
+<span class="lecturer">Sam Blackshear (Facebook)</span>:<br/>
+<span class="lecture">Building compositional static analyzers with Infer</span>
+<br/>(<span class="materials">
+<a href = "http://fbinfer.com/">Infer</a>, <a href="infer-instr.html">Lab Instructions</a></span>)
+<br/>
+<b>Abstract</b>:
+Infer is an open-source static analysis tool used to find bugs in
+Java, Objective-C, and C++ code at Facebook. Recently, Infer has
+transitioned from a standalone separation logic-based analyzer into a
+general framework for quickly developing modular and compositional
+interprocedural analyses. The framework lifts a simple intraprocedural
+abstract interpreter that computes the summary for a single procedure
+to a compositional interprocedural analysis that scales to millions of
+lines of code.
+<br/>
+<b>Bio</b>:
+Dr. Sam Blackshear has a PhD in Compute Science from the Universit of
+Colorado, Boulder.  He works on the Infer static analyzer at Facebook.
+</li>
+
+<li>
+<span class="lecturer">Ashish Tiwari (SRI International Computer Science Laboratory)</span>:<br/>
+<span class="lecture">Formal Techniques for Analyzing Hybrid Systems</span>
+<br/>(<span class="materials">
+<b>Slides:</b>
+<a href="http://www.csl.sri.com/~tiwari/slides/model_checking_problem.pdf">
+Model Checking: Problem Definition</a>,
+<a href="http://www.csl.sri.com/~tiwari/slides/model_checking_example.pdf">
+Model Checking: Example </a>,
+<a href="http://www.csl.sri.com/~tiwari/slides/hybrid_systems.pdf">
+Hybrid Systems: Definition</a>,
+<a href="http://www.csl.sri.com/~tiwari/slides/model_checking_techniques.pdf">
+Model Checking: Techniques for Hybrid Systems</a><br/>
+<b>Tools:</b>
+<a href="http://sal.csl.sri.com">SAL</a>,
+<a href="http://www.csl.sri.com/~tiwari/hybridsal/index.html">HybridSAL
+qualitative abstractor</a>, and
+<a
+href="http://www.csl.sri.com/~tiwari/relational-abstraction/index.html">HybridSAL
+relational abstractor</a>
+</span>)
+<br/>
+<b>Abstract</b>:
+Hybrid dynamical systems combine discrete state transition
+systems with continuous dynamical systems.  They are used
+to model complex systems that have interacting discrete and
+continuous components, or systems that are broadly referred
+to as cyber-physical systems.  This course will cover the
+basics of hybrid systems, and it will delve deeper into the
+verification problem and the various approaches for analyzing
+hybrid systems.  The lab sessions will involve using tools
+for verification of hybrid systems.
+<br/>
+<b>Bio</b>:
+Dr. Ashish Tiwari is a senior computer scientist at SRI International.
+His contributions span automated reasoning, term rewriting, computer algebra,
+program synthesis, model checking, hybrid systems, systems biology,
+and cyber-physical systems.
+</li>
+</ul>
+
+<h2>Background Course on Logic</h2>
+<ul>
+<li>
+<span class="lecturer">Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</span>:<br/>
+<span class="lecture">Speaking Logic</span>
+<br/>
+(<span class="materials">
+<a href="speaklogicV7.pdf">Speaking Logic</a>
+</span>)
+
+<br/>
+<b>Abstract</b>:
+Formal logic has become the lingua franca of computing. It is used for
+specifying digital systems, annotating programs with assertions,
+defining the semantics of programming languages, and proving or
+refuting claims about software or hardware systems. Familiarity with
+the language and methods of logic is a foundation for research into
+formal aspects of computing. This course covers the basics of logic
+focusing on the use of logic as a medium for formalization and proof.
+</li>
+</ul>
+
+<h2>Invited Speakers</h2>
+<ul>
+<li>
+<span class="lecturer">Paolo Mancosu (UC Berkeley Philosophy)</span>:<br/>
+<span class="lecture">Assigning 'sizes' to infinite sets: some historical and
+systematic considerations</span><br/>
+<b>Abstract</b>:
+In this talk, I will give a survey of recent work I have done
+on the historical, mathematical, and philosophical problems related to
+the assignment of 'sizes' to infinite sets. I will focus in particular
+on infinite sets of natural numbers. The historical part of the
+presentation will take its start from Greek and Arabic contributions to
+the possibility of measuring infinite sets according to size and sketch
+some developments spanning the period between Galileo and Cantor. In the
+systematic part of the talk, I will discuss recent theories of
+numerosities that preserve the part-whole principle in the assignment of
+sizes to infinite sets of natural numbers and show how the historical
+and mathematical considerations yield benefits in the philosophy of
+mathematics. In this latter part of the talk, I will focus especially on
+neo-logicism.<br/>
+<b>Bibliography</b>:
+P. Mancosu, /Abstraction and Infinity/, Oxford University Press, 2017<br/>
+<b>Bio</b>:
+Paolo Mancosu is Willis S. and Marion Slusser Professor of Philosophy at
+the University of California at Berkeley. He is the author of numerous
+articles and books in logic and philosophy of mathematics. He is also
+the author of <i>Inside the Zhivago Storm. The editorial adventures of
+Pasternak's masterpiece</i> (Feltrinelli, Milan, 2013). During his career
+he has taught at Stanford, Oxford, and Yale. He has been a fellow of the
+<i>Humboldt Stiftung</i>, of the <i>Wissenschaftskolleg zu Berlin</i>, of the
+<i>Institute for Advanced Study</i> in Princeton, and of the <i>Institut
+d'Études Avancées</i> in Paris. He has received grants from the <i>Guggenheim
+Foundation</i>, the <i>NSF</i>, and the <i>CNRS</i>.
+<br/>
+</li>
+
+<li>
+<span class="lecturer">Maria Paola Bonacina (Universita` degli Studi di Verona)</span>:<br/>
+<span class="lecture">On interpolation in theorem proving</span><br/>
+<b>Abstract</b>:
+An interpolant is a formula I that lies between two formulae A and B,
+meaning that A implies I, I implies B, and I is made of symbols that
+appear in both A and B. If A and B are inconsistent, a reverse interpolant
+is a formula I such that A implies I, and I and B are inconsistent.
+This lecture is an introduction to the problem of extracting a reverse
+interpolant from a refutation of A and B. We consider proofs by
+resolution in propositional logic and ground proofs in first-order
+logic with equality. Applications of interpolation include program
+analysis (e.g., abstraction refinement for model checking), program
+synthesis (e.g., invariant generation), and explanation of conflicts
+in conflict-driven satisfiability procedures.
+<!-- <br/>
+<b>Bio</b>:
+-->
+</li>
+
+<li>
+<span class="lecturer">Vaughan Pratt (Stanford)</span>:<br/>
+<span class="lecture">Formality and rigor in treatments of global warming</span><br/>
+<b>Abstract</b>:
+In the early 1950s Turing and von Neumann proposed respectively chess
+and numerical weather prediction as applications of computers.  The
+premise for both problems is that they are sufficiently complex that,
+/when suitably formalized, a sufficiently powerful computer should be
+able to do deal with their myriad details better than humans.
+<p>
+This has recently proved to be the case for chess.  However the 35 or so
+participants in CMIP5, the Coupled Model Intercomparison Project serving
+as a basis for the Fifth Assessment Report of the International Panel on
+Climate Change in 2013, all hindcast to 1900 poorly, raising doubts as
+to their ability to forecast with any usable reliability to 2100.</p>
+<p>
+In this talk we raise the possibility that climate forecasting is
+intrinsically harder for computers to treat as a formally stated problem
+amenable to raw computing power than it is for humans to treat with more
+conventional mathematical and statistical rigor applicable to today's
+data using only the computing machinery of 60 years ago, if even that.
+Equal time will be given to audience interaction.</p>
+<!-- <br/>
+<b>Bio</b>:
+-->
+</li>
+</ul>
+
+<hr/>
+<!-- <p> -->
+<!--   <section id="schedule" class="body"> -->
+<!--     <h2><a href="ssft17-schedule.html">Schedule</a></h2> -->
+
+<p>
+Information about previous Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2016/">SSFT16</a></li>
+<li><a href="../2015/">SSFT15</a></li>
+<li><a href="../2014/">SSFT14</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2011/">SSFT11</a></li>
+</ul>
+</p>
+
+<p>
+We expect to provide support for the travel and accommodation for a
+limited number of students registered at US universities, but welcome
+applications from non-US students as well as non-students (if space
+permits).  Non-US students will have to cover their own travel and
+will be charged around US$600-700 for meals and lodging.  Applications
+should be submitted at the website http://fm.csl.sri.com/SSFT17
+</p>
+<p>
+<a href="https://docs.google.com/spreadsheets/d/1z57yFPns4SqjRBzTB3sHO_8_RIvjMtBN7c7EMo1x2C0/edit?usp=sharing">Schedule</a>
+<p>
+
+Applicants are urged to submit their applications before April 30,
+2017, since there are only a limited number of spaces available.
+Non-US applicants requiring US visas are requested to apply early.  We
+strongly encourage the participation of women and under-represented
+minorities in the summer school.
+
+</p>
+<hr/>
+<p>
+<b>Registration is now closed</b><hr/>
+</p>
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+
+<!-- <p> -->
+<!--   <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py"> -->
+<!-- <center> <b>Note that all fields are required</b></center> -->
+<!-- <table> -->
+<!-- <tr> -->
+<!--   <td><label>Name</label></td> -->
+<!--   <td><input name="name" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Gender</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Male<input class="but" type="radio" checked="checked" name="gender" value="male"/> -->
+<!--     Female<input class="but" type="radio" name="gender" value="female"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Minority<sup>&dagger;</sup></label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="minority" value="yes"/> -->
+<!--     No<input class="but" type="radio" checked="checked" name="minority" value="no"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="email" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Affiliation</label></td> -->
+<!--   <td><input name="affiliation" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Education</label></td> -->
+<!--   <td><input name="education" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Graduate Advisor</label></td> -->
+<!--   <td><input name="advname" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Did you attend last year?</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="attendedbefore" value="yes"/> -->
+<!--     No<input class="but" type="radio" checked="checked" name="attendedbefore" value="no"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Research Interests</label></td> -->
+<!--   <td><textarea name="interests" rows="4" cols="79"></textarea></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname1" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail1" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname2" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail2" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- </table> -->
+<!-- <center> -->
+<!--   <input type="submit" value="Send Information"/> -->
+<!--   <input type="reset" value="Clear The Form"/> -->
+<!-- </center> -->
+<!-- <hr width="80%"/> -->
+<!-- </form> -->
+<!-- </p> -->
+
+<!-- <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> -->
+<!-- refers to African Americans, Mexican-Americans, Native Americans -->
+<!-- (American Indians, Alaska Natives, and Native Hawaiians), -->
+<!-- Pacific Islanders, and mainland Puerto Ricans. -->
+<!-- </p> -->
+
+</section>
+
+<!-- <section id="Questions" class="body"> -->
+<!--#include virtual="qanda.shtml" -->
+
+<!--
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+-->
+<!--
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+-->
+
+</body>
+</html>
