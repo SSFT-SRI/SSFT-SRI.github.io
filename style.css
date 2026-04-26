@@ -8,6 +8,10 @@
   --heading-blue: #0000cd;
   --speaker-blue: #06166c;
   --lecture-red: #801008;
+  --lab-green: #12783d;
+  --lab-green-bg: #e8f6ec;
+  --logic-purple: #6f3bb3;
+  --logic-purple-bg: #f5efff;
   --link-red: #c74350;
   --hover-blue: #0481b5;
   --selection-gold: #f6cf74;
@@ -373,8 +377,13 @@ i {
 }
 
 .schedule-type-lab {
-  border-left-color: var(--speaker-blue);
-  background: #f1f5ff;
+  border-left-color: var(--lab-green);
+  background: var(--lab-green-bg);
+}
+
+.schedule-type-speaking-logic {
+  border-left-color: var(--logic-purple);
+  background: var(--logic-purple-bg);
 }
 
 .schedule-type-break {
