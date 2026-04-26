@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Summer Formal: First Summer School on Formal Techniques</title>
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+	<!-- <img id="menlogif" src="images/menlo.gif"/> -->
+	<h1 id="fssft">First Summer School on Formal Techniques</h1>
+	<img id="nsfgif" src="images/nsf.gif"/>
+      </div>
+      <h2 class="strapline">
+	May 22-27, 2011<br>
+	<a href="http://menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+    </hgroup>
+
+  </header>
+
+  <section id="description" class="body">
+    <p>
+Formal verification techniques such as model checking, satisfiability, and
+static analysis have matured rapidly in recent years.  This school will
+focus on the principles and practice of formal verification, with a strong
+emphasis on the hands-on use and development of this technology. It
+primarily targets graduate students and young researchers who are interested
+in using verification technology in their own research in computing as well
+as engineering, biology, and mathematics.  Students at the school will have
+the opportunity to experiment with the tools and techniques presented in the
+lectures.
+</p>
+
+<p>
+We have NSF support for the travel and accommodation for students from US
+universities, but welcome applications from graduate students at non-US
+universities as well.
+    </p>
+  </section>
+
+<section id="Lecturers" class="body">
+<p>
+The lecturers at the school include
+<ul>
+  <li>
+    <span class="lecturer">Leonardo de Moura and Bruno Dutertre</span>:
+    <span class="lecture">Satisfiability Modulo Theories (<a href="lecture1.pdf">lecture1</a>, <a href="lecture2.pdf">lecture2</a>)</span>
+  [Software: <a
+    href="http://research.microsoft.com/en-us/um/redmond/projects/z3/">
+    Z3</a> and <a href="http://fm.csl.sri.com/yices"> Yices</a>]
+    [Lab: <a href="ex.pdf">Exercises</a>]
+  </li>
+  <li>
+    <span class="lecturer">Jason Baumgartner</span>:
+    <span class="lecture"><a href=
+    "FV_Summer_School2011__HW_Verif.ppt">Hardware Verification</a>
+    (<a href="FV_Summer_School2011__HW_Verif.pdf"> .pdf</a>)
+    </span>
+    [Software: <a href= "http://www.eecs.berkeley.edu/~alanmi/abc/">ABC</a>,
+      <a href="http://fmv.jku.at/aiger/aiger-20071012.zip">AIGER</a>,
+      <a href="hw-linux-32bit.tar.bz2">32-bit</a>, <a href="hw-linux-64bit.tar.bz2">64-bit</a>]
+      [Lab: <a href="HW_and_Lab__-FV_Summer_School2011__HW_Verif.ppt">.ppt </a>, <a href="Lab_FV_Summer_School2011__HW_Verif.tar.gz">.tgz </a>]
+  </li>
+  <li>
+    <span class="lecturer">David Monniaux</span>:
+    <span class="lecture"><a href="Monniaux_Menlo_Park_2011.pdf">Static
+    Analysis</a></span>
+    [Software: <a
+    href="http://pop-art.inrialpes.fr/people/bjeannet/bjeannet-forge/interproc/index.html">
+    Interproc Site</a>, <a href="interproc_examples.zip">Examples</a>, <a href="interproc_manual.pdf"> Manual</a>, <a href="interproc_linux.zip">Linux</a>]
+  </li>
+  <li>
+    <span class="lecturer">Ken McMillan</span>:
+    <span class="lecture"><a href="AICslides_ppt2010.pptx">Abstraction, Interpolation, and Composition</a></span>
+    [Software: <a href="smv_fedora.tar.gz">SMV Linux</a>, <a href="smv_windows.exe">SMV Windows</a>]
+    [Lab: <a href="AIClab.zip">AIClab.zip</a>]
+  </li>
+  <li>
+    <span class="lecturer">Neha Rungta and Peter Mehlitz</span>:
+    <span class="lecture"><a href="JPFIntro.pdf">Java Pathfinder 1</a>
+    & <a href="JPF-lecture-2.pdf">Lecture 2</a> and <a href="ss_3-11.pdf">Java Pathfinder 3</a></span>
+    <br/>[Software: <a href="http://babelfish.arc.nasa.gov/trac/jpf/">JPF site</a> -
+    <a href="jpf-core.tar.bz2">tar file</a>]
+    [Lab: <a href="JPF-lab.pdf">Slides</a>, <a href="jpf-lab.zip">Zip</a>]
+  </li>
+  <li>
+    <span class="lecturer">Natarajan Shankar</span>:
+    <span class="lecture"><a href="ITPSummerFormal2011.pdf">Interactive Theorem
+    Proving</a></span>
+    [Software: <a href="http://fm.csl.sri.com/pvs"> PVS </a>]
+  </li>
+</ul>
+</p>
+</section>
+<section id="Registration" class="body">
+  <p>
+We also have invited talks by
+<ul>
+  <li> Cesare Tinelli (Iowa): <a href="Tinelli.pdf"> SMT-based model checking</a> </li>
+  <li> Lenore Zuck (UIC): <a href="UV.pdf">Verification Applied to Security, Dependability, and Reliability</a>
+  <li> Carolyn Talcott (SRI): <a href="carolyn-pl-ssb-fm.pdf"> Symbolic Systems Biology:
+       Using Formal Methods Tools to Model Biological Processes</a>
+  <li> Dimitra Giannakopoulou (CMU/NASA):
+       <a href="DimitraFMschoolMay2011.pdf"> Automating Compositional Verification</a>
+</ul>
+
+The schedule of lectures is at <a href="Schedule.pdf"> here </a>.
+More information on the school can be found at
+<a href="../2011/">http://fm.csl.sri.com/SSFT11</a>.
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+<!--
+<form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft11_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked name="gender" value="male">
+    Female<input class="but" type="radio" name="gender" value="female">
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes">
+    No<input class="but" type="radio" checked name="minority" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Advisor email</label></td>
+  <td><input name="advemail" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows=4 cols=79></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size=80 maxlength=100></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information">
+  <input type="reset" value="Clear The Form">
+</center>
+</p>
+<hr width=80%>
+</form>
+
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> refers to blacks, Hispanics,
+American Indians/Alaska Natives, and Native Hawaiians/Other Pacific Islanders.</p>
+-->
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+-->
+</div>
+
+</body>

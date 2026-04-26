@@ -1,0 +1,136 @@
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <title>First Formal Methods in the Field (FMiTF) Bootcamp</title>
+    <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body id="index" class="home">
+
+    <header id="banner" class="body">
+      <hgroup>
+	<div id="hdiv">
+	  <h1 id="fmitf">First Formal Methods in the Field (FMiTF) Bootcamp</h1>
+	</div>
+	<!-- <h2 class="strapline">
+	     May 23-28, 2020<br/>
+	     <a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+	     </h2> -->
+	<p>
+	  <b>
+	    Due to the ongoing Covid-19 pandemic, the Tenth Summer School
+	    and Formal Techniques and the First Formal Methods in the Field
+	    Bootcamp have been postponed until further notice. Registration will
+	    be closed for now and will reopen once the event has been rescheduled.
+	    If you have already registered, we will contact you when we have a new
+	    schedule.
+	  </b>
+	</p>
+	<h4>(Colocated with the
+	  <a href="index.html">Tenth Summer School on Formal Techniques</a> Postponed)</h4>
+      </hgroup>
+
+      <!-- <p id="toc-nav">
+	   Table of Contents
+	   <a href="#lecturers">Lecturers</a>
+	   <a href="">Schedule</a>
+	   <a href="#prev">Previous Summer Schools</a>
+	   <a href="#registration">Registration</a>
+      </p> -->
+    </header>
+    <section id="description" class="body">
+      <p>
+	The first FMitF Bootcamp will cover two themes, &quot;Building Verified
+	JIT Compilers&quot; and &quot;Formally verifying low-level programs in F*&quot;.
+	The exercises in the Bootcamp assume that the students have a working
+	knowledge of formal techniques. The main focus of the Bootcamp is on
+	applying this knowledge to some domain-specific challenge problems.
+      </p>
+
+      <h2 id="lecturers">Lecturers</h2>
+
+      <ul>
+	<li>
+	  <span class="lecture">Building Verified JIT Compilers</span><br/>
+	  <span class="lecturer">
+	    <a href="https://homes.cs.washington.edu/~emina">Emina Torlak</a> and
+	    <a href="https://homes.cs.washington.edu/~xi">Xi Wang</a></span>
+	  <span class="materials"> </span>
+	  <br/>
+	  <b>Abstract</b>: Modern operating systems (OSes) can be customized
+	  with user programs that implement functionality like system call
+	  whitelisting and power management.  For portability and safety,
+	  such programs are written in domain-specific languages (DSLs), and
+	  the OS kernel executes them via just-in-time (JIT) compilation to
+	  native code. The correctness of these in-kernel JITs is critical
+	  for OS security because adversaries can exploit miscompilation
+	  bugs to compromise the kernel.
+	  <p>
+	    The goal of this bootcamp is to build a verified JIT compiler
+	    for the Linux <a href="https://lwn.net/Articles/740157/">ePBF language</a>,
+	    targeting <a href="https://riscv.org/specifications/">RISC-V</a>. The
+	    project will build on<a href="https://unsat.cs.washington.edu/projects/serval/">Serval</a>,
+	    a framework for verifying low-level systems, and
+	    <a href="https://emina.github.io/rosette/">Rosette</a>, a
+	    language for building verifiers. The bootcamp will start with a
+	    tutorial on Serval, Rosette, and the verified JIT challenge. The
+	    participants will then build and verify the JIT in stages,
+	    starting with arithmetic instructions, and if the time allows,
+	    adding memory instructions and peephole optimizations.  Expect
+	    to learn fast, work hard, and type a lot of parentheses!</p>
+	  <br/>
+	  <b>Bios</b>:
+	  <a href="https://homes.cs.washington.edu/~emina">Emina Torlak</a>,
+	  and <a href="https://homes.cs.washington.edu/~xi">Xi Wang</a>
+	  are members of the <a href="https://unsat.cs.washington.edu/">UNSAT</a>
+	  group at the University of Washington. The UNSAT group aims to
+	  develop foundational technologies for improving the correctness
+	  and performance of practical computer systems. Our research spans
+	  the areas of formal methods, programming languages, and operating
+	  systems. We build verification and synthesis tools and use these
+	  tools to build efficient, reliable, and secure systems.</li>
+	<li>
+	  <span class="lecture">Formally verifying low-level programs in F*</span><br/>
+	  <span class="lecturer">
+	    Jonathan Protzenko and Nikhil Swamy (Microsoft)</span>
+	  <span class="materials">
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: This three-day tutorial will teach students about
+	  the F* framework, along with its Low* subset that compiles to
+	  C. Students will get to hack on a simplified, yet representative
+	  sample application which we will provide. The application will be
+	  a pared-down messaging client between two parties. We expect that
+	  at the end of these three-days, students will be familiar with the
+	  F* universe, and will be able to head home with enough material
+	  that they can set out to verify their own applications.
+	  <p>
+	    <b>Detailed program:</b></p>
+	  <p>
+	    The first day will cover F* basics, starting with the functional
+	    subset of F*.  Students will be tasked with filling out a
+	    partial specification of our communication protocol,
+	    implementing missing operations at the spec level. We will also
+	    review how to prove properties about specifications, using
+	    various lemmas related to our messaging protocol as examples.</p>
+	  <p>
+	    The second day will cover low-level programming, showing how to
+	    use the Low* subset of F* to author stateful programs that can
+	    be compiled and extracted to C. We will work on small examples
+	    and cover basic data structures, e.g. arrays, and our C-like
+	    memory model.</p>
+	  <p>
+	    For the final day, students will fill out larger chunks of the
+	    application code, authoring core parts of the low-level
+	    implementation. As a bonus task, students will have to
+	    opportunity to try to prove a few properties related to
+	    cryptographic security for this toy protocol.</p>
+	</li>
+      </ul>
+      <h2 id="registration">Registration</h2>
+      <!-- <p>Click <a href="index.html#registration">here</a> to register for
+	   this and/or the summer school.</p> -->
+      <p><b>Postponed</b>
+    </section>
+  </body>
+</html>

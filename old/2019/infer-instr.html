@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Infer Lab Instructions</title>
+</head>
+<body style="margin-right:60%">
+<h2>Infer Lab Instructions</h2>
+<p>
+Note: Infer works on Linux and MacOSX. If you use Windows, you'll need
+to run Infer in a Linux VM.
+</p>
+<p>
+(1) Install Infer according to the instructions here:
+<a href="https://github.com/facebook/infer/blob/master/INSTALL.md">https://github.com/facebook/infer/blob/master/INSTALL.md</a>. Follow the
+"Install Infer from source" variant of the instructions rather than the
+"Pre-compiled clang" variant.
+</p>
+<p>
+(2) Run the tests to make sure everything works: <tt>make -j test</tt>.
+</p>
+<p>
+(3) Set up your OCaml development environment by following the
+"Development dependency" instructions here:
+<a href="https://github.com/facebook/infer/blob/master/CONTRIBUTING.md">https://github.com/facebook/infer/blob/master/CONTRIBUTING.md</a>. After
+doing this, open an ML file (e.g., <tt>infer/src/checkers/ThreadSafety.ml</tt>)
+and make sure syntax highlighting, jump-to-definition, etc. are working
+correctly.
+</p>
+<p>
+(4) An optional part of the lab will involve using your new Infer
+analysis to find bugs in open-source Android code. Doing the following
+will make this easier:
+<ul>
+<li>Download the Android SDK: <a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a></li>
+<li>Download SDK tools: run `android` to launch SDK manager UI, check the
+latest few versions of "Android SDK Tools"/"Android SDK Build-tools",
+and click "Install"</li>
+<li>Download some Android apps. Here's a few ideas, but pick any apps that
+interest you! Tip: since many open-source Android apps use submodules,
+it's usually a good idea to clone with
+<tt>git clone --recursive</tt>
+<ul>
+  <li> https://github.com/WhisperSystems/Signal-Android </li>
+  <li> https://github.com/duckduckgo/Android </li>
+  <li> https://github.com/DrKLO/Telegram </li>
+  <li> https://github.com/wordpress-mobile/WordPress-Android </li>
+  <li> https://github.com/k9mail/k-9 </li>
+  <li> https://github.com/owncloud/android </li>
+  <li> https://github.com/google/iosched </li>
+  <li> https://f-droid.org/ (list of open-source apps) </li>
+  <li> https://github.com/pcqpcq/open-source-android-apps (another list of open-source apps) </li>
+</ul>
+</li>
+<li>Try building an app: <tt>./gradlew assembleDebug</tt>, then try running Infer
+on it: <tt>infer -- ./gradlew assembleDebug</tt></li>
+</ul>
+</p>
+</body>
+</html>

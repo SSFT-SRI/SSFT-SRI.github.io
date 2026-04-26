@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Summer Formal: Second Summer School on Formal Techniques</title>
+  </script>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Second Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 27- June 1, 2012<br>
+	<a href="http://menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+    </hgroup>
+
+  </header>
+  <center>
+    <a href="GroupPhoto.jpg"><img id="Group Photo" src="GroupPhoto.jpg" width="648" height="364"/></a>
+  </center>
+
+  <section id="description" class="body">
+    <p>
+Formal verification techniques such as model checking, satisfiability, and
+static analysis have matured rapidly in recent years.  This school, the
+second in the series, will focus on the principles and practice of formal
+verification, with a strong emphasis on the hands-on use and development of
+this technology. It primarily targets graduate students and young
+researchers who are interested in using verification technology in their own
+research in computing as well as engineering, biology, and mathematics.
+Students at the school will have the opportunity to experiment with the
+tools and techniques presented in the lectures.</p>
+<p>
+The first Summer Formal school (<a href="../2011/">SSFT11</a>) was held in May 2011. This year, the
+school starts on Sun May 27 with a background course on Logic in Computer
+Science taught by Natarajan Shankar (SRI). The course is optional but
+highly recommended - it covers the prerequisites for the main lectures.
+<p>
+<span class="lecturer">N. Shankar</span>:
+<span class="lecture"><a href="speaklogic.pdf">Speaking Logic</a></span><br/>
+</p>
+<section id="Schedule" class="body">
+  <h2><a href="schedule.html">Schedule</a></h2>
+</section>
+<hr/>
+
+<section id="Lecturers" class="body">
+  <h2>Lectures</h2>
+<p>
+<ul>
+  <li>
+    <span class="lecturer">Leonardo de Moura (MSR Redmond) and Bruno Dutertre (SRI)</span>:<br/>
+    <span class="lecture">Satisfiability Modulo Theories</span><br>
+    [Slides:
+    <a href="introduction.pdf">Introduction</a>,
+    <a href="smt-euf-arithmetic.pdf">Theory Solving</a>,
+    <a href="quantifiers.pdf">Quantifiers</a>,
+    <a href="smt-applications-challenges.pdf">Applications</a>]<br/>
+    <b>Abstract</b>: We present an overview of the theory and practice of
+    satisfiability solving modulo theories (SMT), covering the basics
+    of propositional satisfiability, theory-specific solvers, and their
+    integration into an SMT solver;  the effective ways of applying
+    SMT technology in formal verification and constraint solving; and
+    the current research challenges in scaling SMT technology to handle
+    larger problems and a broader range of problems.
+  </li>
+  <li>
+    <span class="lecturer">Sumit Gulwani (MSR)</span>:<br/>
+    <span class="lecture">Dimensions in Program Synthesis</span><br/>
+    [Slides: Lecture 1
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part1.pptx">(ppt)</a>,
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part1.pdf">(pdf)</a>,
+    Lecture 2
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part2.pptx">(ppt)</a>,
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part2.pdf">(pdf)</a>,
+    Lecture 3
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part3.pptx">(ppt)</a>,
+    <a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/Dimensions-Part3.pdf">(pdf)</a>]<br/>
+
+    <b>Abstract</b>: Program Synthesis is the task of searching for a
+    program in some underlying domain that matches the user's intent. These
+    lectures will describe three key dimensions in program synthesis: (a)
+    User Interaction Model: The user may specify the intent using examples,
+    demonstrations, logical specifications, keywords, natural language,
+    sketch, or partial/inefficient programs. A key challenge here is to
+    design a user interactional model that can deal with inherent
+    ambiguities in under-specification (b) Search technique: We will cover
+    techniques that have been developed in various communities including use
+    of SAT/SMT solvers (formal methods community), version space algebras
+    (machine learning community), and A*-style goal-directed heuristics (AI
+    community). (c) Underlying domain of programs that can range from
+    straight-line programs to programs with restricted form of
+    loops/conditionals/events. These concepts will be illustrated via a
+    variety of applications in algorithm/software development (e.g.,
+    Bitvector algorithms, Program inverses) and end-user programming (e.g.,
+    Spreadsheet/drawing macros, Smartphone scripts). We will also present
+    some surprising applications in the area of automating education
+    including solution generation, problem generation, automated grading,
+    and content creation in a variety of math and science domains.
+  </li>
+  <li>
+    <span class="lecturer">Daniel Kroening (Oxford)</span>:<br/>
+    <span class="lecture">Verifying Concurrent Programs</span>
+    [Slides: <a href="slides-concurrency.pdf">Verifying Concurrent Programs</a>,
+    <a href="predabs-SSFT12.pdf">Predicate Abstraction</a>]
+    <br/>
+    <b>Abstract</b>: Concurrent software model checking is one of the most
+    challenging problems facing the verification community today. Not only
+    does software generally suffer from data state explosion. Concurrent
+    software in particular is susceptible to state explosion due to the need
+    to track arbitrary thread interleavings, whose number grows
+    exponentially with the number of executing threads.
+<p>
+    Predicate abstraction was introduced as a way of dealing with data state
+    explosion: the program state is approximated via the values of a finite
+    number of predicates over the program variables. Predicate abstraction
+    turns C programs into finite-state Boolean programs, which can be model
+    checked. Predicate abstraction is typically embedded into a
+    counterexample-guided abstraction refinement (CEGAR) framework. The
+    feasibility of the overall approach was convincingly demonstrated for
+    sequential software by the success of the SLAM project at Microsoft,
+    which was able to discover numerous control-dominated errors in
+    low-level operating system code. We will provide an introduction to
+    predicate abstraction, CEGAR, and then discuss the extensions required
+    to deal with concurrent software.
+</li>
+  <li>
+    <span class="lecturer">Ken McMillan</span>:<br/>
+    <span class="lecture">Abstraction, Decomposition, and Relevance</span><br/>
+    <b>Abstract</b>: Proofs of large and complex systems can be daunting.
+    We can make complex proofs manageable by a process of decomposition and
+    abstraction. We first break the proofs of the system's specification down
+    into a collection of simpler properties. Then for each property, we
+    abstract away details about the system that are not relevant to that
+    particular property, thus simplifying the proof effort.  In these lectures
+    we will consider:
+<ul>
+<li> How to decompose large proofs into simple properties</li>
+<li> How to apply abstraction to eliminate irrelevant detail</li>
+<li> How to determine automatically what information is relevant to a given property.</li>
+</ul>
+  </p><p>
+    We will see that the problem of relevance can be approached by generalizing
+    from particular cases, applying the principle of Occam's razor. This idea will
+    be illustrated using a method called Craig Interpolation that allows us to
+    construct simple proofs in various forms that abstract away from irrelevant detail.
+  </p>
+    </li>
+  <li>
+    <span class="lecturer">Corina Pasareanu, Dimitra Giannakopoulou, Neha Rungta, Peter Mehlitz,
+    and Oksana Tkachuk</span>:<br/>
+    <span class="lecture">Verifying Components in the Right Context</span></br>
+    [slides: (Pasareanu): <a href="CV-School2012-Corina.pdf">Compositional Verification</a>,
+    (Mehlitz,Tkachuk): PathFinder <a href="SSFM-12-JPF-lecture-envgen.pdf">Part 1</a>,
+    <a href="SSFM-12-JPF-lecture.pdf">Part 2</a>,
+    <a href="SSFM-12-JPF-lab.pdf">Part 3</a>]
+    <br/>
+    <b>Abstract</b>: Model checking is typically applied to the verification
+    of critical components in large systems. However, components are
+    fundamentally "open"; their behavior is dependent on the environment in
+    which they operate, i.e., on the external events and on values defined
+    outside the component but referenced inside. A key challenge in
+    component verification is modeling the component environment. In
+    particular, a good environment model (the "right context") should enable
+    sufficiently precise yet tractable verification. <p>
+
+    We will present techniques for automatically creating component
+    environments, including abstraction and learning approaches, among
+    others.  We will discuss environment implementations based on various
+    formalisms, ranging from event scripting languages and framework
+    abstractions, to temporal logic specifications and finite state
+    automata. Environment modeling and component verification will be
+    illustrated within the Java PathFinder verification tool-set.
+    </li>
+</ul>
+</p>
+</section>
+<section id="InvitedTalks" class="body">
+
+<h2>Invited Talks</h2>
+<p>
+
+<ul>
+  <li>
+    <span class="lecturer">Aaron Bradley</span>:<br/>
+    <span class="lecture">IC3 and Beyond: Incremental, Inductive Verification</span>
+    [Slides: <a href="Understanding_IC3_slides.pdf">IC3</a>]
+    <br/>
+    <b>Abstract</b>: In "Temporal Verification of Reactive Systems: Safety," Zohar Manna
+    and Amir Pnueli discuss two strategies for strengthening an invariant
+    property to be inductive: "(1) Use a stronger assertion, or (2)
+    Conduct an incremental proof, using previously established
+    invariants."  They "strongly recommend" the use of the second approach
+    "whenever applicable," its advantage being "modularity."  Yet they
+    note that it is not always applicable, as a conjunction of assertions
+    can be inductive while none of its components, on its own, need be
+    inductive.  In manual proofs, an experienced verifier follows this
+    recommendation by iterating the following steps until a complete proof
+    is discovered: first, identify a reason why the current lemmas are
+    insufficient to prove the desired property; second, develop a new
+    lemma to address that reason.
+    <p>
+    However, until IC3, successful algorithmic approaches to model
+    checking followed the first approach.  For example, k-induction
+    strengthens the property by unrolling; an interpolating model checker
+    iterates an interpolant-based approximate post-image computation until
+    convergence, refining through further unrolling.  While both rely on
+    the conflict-clause learning of the underlying SAT solver, neither use
+    induction to discover intermediate lemmas as Manna and Pnueli
+    recommend.  Only their ultimate convergence relies on induction.
+    </p><p>
+    IC3 was a result of asking the question: if an incremental strategy is
+    better for humans, might it not be better for algorithms as well?  The
+    fundamental issue in applying the second approach directly, though, is
+    the situation in which two or more essential lemmas are mutually
+    inductive but not independently so.  They must be discovered together.
+    IC3 addresses this problem by introducing stepwise-relative inductive
+    lemma generation: if the reason that the current lemma set is
+    insufficient cannot be addressed with an inductive lemma, address it
+    with a lemma that holds for a certain number of transitions, and keep
+    looking.  IC3 thus smoothly transitions between Manna's and Pnueli's
+    second approach, when possible, and their first approach, when
+    necessary.
+    </p><p>
+    In this talk, we discuss how incremental, inductive verification (IIV)
+    has motivated new algorithms for model checking safety properties
+    (IC3), omega-regular properties (FAIR), and CTL properties (IICTL).
+  </p>
+  </li>
+  <li>
+    <span class="lecturer">Alex Aiken</span>:<br/>
+    <span class="lecture">New Applications of Underapproximations in Static Analysis</span>
+  </li>
+  <li>
+    <span class="lecturer">Dawn Song</span>:<br/>
+    <span class="lecture">BitBlaze-WebBlaze-DroidBlaze: Automatic Security
+    Analysis in Binary, Web and Android</span>    <br/>
+    <b>Abstract</b>: I will present the BitBlaze project, describing how
+we build a unified binary program analysis platform and use it to
+provide novel solutions to computer security problems, including
+automatic vulnerability discovery and defense, in-depth malware
+analysis, and automatic extraction of
+security models for analysis and verification. The BitBlaze Binary
+Analysis Infrastructure is a fusion of static and dynamic analysis
+techniques and enables a set of powerful, novel symbolic reasoning
+techniques on program binaries.   I will also talk about BitTurner,
+the first public cloud-based
+service for automatic test case generation and security audit powered
+by dynamic symbolic execution on program binaries.
+<p>
+I will give an overview of the WebBlaze project, aiming at designing
+and developing new techniques and tools to improve web
+security, including automatic dynamic symbolic execution on JavaScript
+for in-depth vulnerability detection in rich web applications.
+Finally, I will describe some ongoing efforts in DroidBlaze, an
+automatic security analysis infrastructure for Android apps.
+More information about BitBlaze and WebBlaze is available at
+<a href="http://bitblaze.cs.berkeley.edu">http://bitblaze.cs.berkeley.edu</a>
+and <a href="http://webblaze.cs.berkeley.edu">http://webblaze.cs.berkeley.edu</a>.
+</p>
+  </li>
+</ul>
+<hr/>
+<p>
+  <b>Registration is now closed</b><hr/>
+</p>
+  </section>
+
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+<!--
+<p>
+  <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked name="gender" value="male">
+    Female<input class="but" type="radio" name="gender" value="female">
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes">
+    No<input class="but" type="radio" checked name="minority" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Did you attend last year?</label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="attendedbefore" value="yes">
+    No<input class="but" type="radio" checked name="attendedbefore" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows=4 cols=79></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size=80 maxlength=100></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information">
+  <input type="reset" value="Clear The Form">
+</center>
+</p>
+<hr width=80%>
+</form>
+
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> refers to blacks, Hispanics,
+American Indians/Alaska Natives, and Native Hawaiians/Other Pacific Islanders.</p>
+-->
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+-->
+</div>
+
+</body>

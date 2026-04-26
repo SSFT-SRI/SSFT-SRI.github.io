@@ -1,0 +1,619 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Eighth Summer School on Formal Techniques</title>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Eighth Summer School on Formal Techniques</h1>
+
+      </div>
+      <br/>
+      <h2 class="strapline">
+	May 19 - May 25, 2018<br/>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+<!--      <h5><a
+      href="../2018/">http://fm.csl.sri.com/SSFT18</a>
+      </h5> -->
+    </hgroup>
+
+  </header>
+  <!-- <center> -->
+  <!--   <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a> -->
+  <!-- </center> -->
+
+<section id="description" class="body">
+  <p>
+Techniques based on formal logic, such as model checking,
+satisfiability, static analysis, and automated theorem proving, are
+finding a broad range of applications in modeling, analysis,
+verification, and synthesis.  This school, the eighth in the series,
+will focus on the principles and practice of formal techniques, with a
+strong emphasis on the hands-on use and development of this
+technology.  It primarily targets graduate students and young
+researchers who are interested in developing and using formal
+techniques in their research.  A prior background in formal methods
+is helpful but not required.   Participants at the school will have a
+seriously fun time experimenting with the tools and techniques
+presented in the lectures during laboratory sessions.  The main
+lectures in the school which take place during May 21-25, 2018,
+are preceded by a background course on logic during May 19-20, 2018.
+
+  </p>
+<p>
+
+<hr>
+<!-- <h2>Background Course on Logic</h2> -->
+<!-- <ul> -->
+<!-- <li> -->
+<!-- <span class="lecturer">Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</span>:<br/> -->
+<!-- <span class="lecture">Speaking Logic</span> -->
+<!-- <br/>(<span class="materials"> -->
+<!-- <a href="speaklogicV6.pdf">Speaking Logic</a>, -->
+<!-- <a href="Main.pdf">Type Theory</a>, -->
+<!-- <a href="coq-files.tgz">Coq Files</a>, -->
+<!-- <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qVzY4XYAAAAJ&cstart=20&pagesize=80&authuser=1&citation_for_view=qVzY4XYAAAAJ:_B80troHkn4C">Reading</a>,  -->
+<!-- <a href="PVScourse.pdf">PVS Course</a>, -->
+<!-- <a href="http://pvs.csl.sri.com">PVS</a> -->
+<!-- </span>) -->
+
+<!-- <br/> -->
+<!-- <b>Abstract</b>: -->
+<!-- Formal logic has become the lingua franca of computing. It is used for -->
+<!-- specifying digital systems, annotating programs with assertions, -->
+<!-- defining the semantics of programming languages, and proving or -->
+<!-- refuting claims about software or hardware systems. Familiarity with -->
+<!-- the language and methods of logic is a foundation for research into -->
+<!-- formal aspects of computing. This course covers the basics of logic -->
+<!-- focusing on the use of logic as a medium for formalization and proof. -->
+<!-- </li> -->
+<!-- </ul> -->
+
+<h2>Lecturers</h2>
+<p>
+<!-- Stephanie Delaune (IRISA France), -->
+<!-- Marijn Heule (University of Texas at Austin), -->
+<!-- K. Rustan M. Leino (Microsoft Research, Redmond WA), -->
+<!-- Sam Blackshear (Facebook), -->
+<!-- and Ashish Tiwari (SRI) -->
+</p>
+
+<ul>
+
+<li>
+<span class="lecturer"><b>Emina Torlak (University of Washington)</b></span>:<br/>
+<span class="lecture"><i>Solver-Aided Programming</i></span><br/>
+(<span class="materials"><a href="https://emina.github.io/rosette/">Rosette
+    homepage</a>,
+  <a href="https://github.com/emina/rosette">Rosette github</a>,
+  <a href="https://emina.github.io/rosette/rosette-guide/">Rosette Guide</a>,
+  <a href="https://homes.cs.washington.edu/~emina/pubs/rosette.pldi14.pdf">Rosette
+    PLDI'14 paper</a>
+</span>)
+<br/>
+<b>Abstract</b>:
+Solver-aided tools have automated the verification and
+synthesis of practical programs in many domains, from high-performance
+computing to executable biology. These tools work by reducing
+verification and synthesis tasks to satisfiability queries, which
+involves compiling (bounded) programs to logical constraints. The
+first lecture will cover the basics of symbolic compilation for
+(bounded) program verification and synthesis. The second lecture will
+cover an advanced, and rapid, way to construct solver-aided tools by
+embedding them in Rosette, a solver-aided programming language. Since
+its release in 2014, Rosette has enabled a wide range of programmers,
+from professional developers to high school students, to quickly
+create a variety of practical solver-aided tools, from a verifier for
+radiation therapy software to a synthesizer for algebra tutoring
+rules. The lab sessions will use Rosette to demonstrate key ideas
+behind symbolic compilation and solver-aided programming.
+<br/>
+<br/>
+<b>Bio</b>:
+Emina Torlak is an Assistant Professor at the University of
+Washington, working on new languages and tools for computer-aided
+design, verification, and synthesis of software. She received her
+Bachelors (2003), Masters (2004), and Ph.D. (2009) degrees from MIT,
+and subsequently worked at IBM Research, LogicBlox, and as a research
+scientist at U.C. Berkeley. Emina is the creator of the Kodkod solver,
+which has been used in over 70 academic and industrial tools for
+software engineering. Her current work integrates solvers into the
+Rosette programming language, enabling programmers to create their own
+solver-aided tools for all kinds of systems, from radiotherapy
+machines to automated algebra tutors. Emina is a recipient of the NSF
+CAREER Award (2017), Sloan Research Fellowship (2016), and the AITO
+Dahl-Nygaard Junior Prize (2016).
+</li>
+<hr>
+<li>
+<span class="lecturer"><b>Mooly Sagiv (Tel Aviv University)</b></span>:<br/>
+<span class="lecture"><i>Modularity for Decidability: Implementing and
+Semi-Automatically Verifying Distributed Systems</i></span>
+<br/>
+(<span class="materials">
+<a href = "sri18-l1.pdf">Slides</a>,
+<a href = "http://www.cs.tau.ac.il/~odedp/ivy-sri18.ova">VM</a>)
+<br/>
+<b>Abstract</b>:
+Proof automation can substantially increase productivity in the formal
+verification of complex systems. However, the unpredictablility of
+automated provers in handling quantified formulas presents a major
+hurdle to usability of these tools. Here, we propose to solve this
+problem not by improving the provers, but by using a modular proof
+methodology that allows us to produce decidable verification
+conditions. Decidability greatly improves the predictability of proof
+automation, resulting in a more practical verification approach. We
+apply this methodology to develop verified implementations of
+distributed protocols with competitive performance, showing its
+effectiveness.
+<p>
+This is a joint work with Marcelo Taube (TAU), Giuliano Losa(UCLA),
+Ken McMillan(Microsoft Research), Oded Padon and Sharon Shoham(TAU).
+The techniques have been implemented in IVY
+https://www.microsoft.com/en-us/research/project/ivy/
+</p>
+
+<b>Bio</b>:
+Professor Mooly Sagiv works at the School of Computer Science,
+Tel Aviv University, where his research focuses broadly on easing the
+task of developing reliable and efficient programs via program
+analysis.
+</li>
+<hr>
+<li>
+<span class="lecturer"><b>Nikhil Swamy and Jonathan Protzenko (Microsoft Research)</b></span>:<br/>
+<span class="lecture"><i>Programming and Proving in F* and Low*</i></span>
+<br/>(<span class="materials"><a href = "http://prosecco.gforge.inria.fr/personal/hritcu/teaching/epit2018/">Program verification with F*</a></span>)
+<br/>
+<b>Abstract</b>:
+F* is an ML-like programming language aimed at program
+verification. At its core is a type system based on dependent types,
+refinement types and Hoare-style logics for user-defined monadic
+effects. Together, these features allow expressing precise and compact
+specifications for programs, including functional correctness and
+security properties. The F* type-checker aims to prove that programs
+meet their specifications using a combination of SMT solving, user
+provided proof terms, as well as interactive proofs using tactics.
+<p>
+This tutorial provides a general introduction to F* followed by a
+focus on Low*, a subset of F* that extracts to C code for efficient,
+low-level programming. The examples we present are drawn from Project
+Everest, an ongoing effort using F* and Low* to verify and deploy
+secure components in the HTTPS ecosystem, including protocols such TLS
+and the cryptographic algorithms that underlie it.
+</p>
+
+<b>Bio</b>:
+Nikhil Swamy is a Senior Researcher in the RiSE group at MSR
+Redmond. My work covers various topics including type systems, program
+logics, functional programming, program verification and interactive
+theorem proving. I often think about how to use these techniques to
+build provably secure programs, including web applications, web
+browsers, crypto protocol implementations, and low-level systems code.
+<br/>
+Jonathan Protzenko is a Researcher in the RiSE group at Microsoft
+Research Redmond. My main areas of interest are programming languages,
+type systems and verification. My current work focuses on verified
+low-level programming using Low*, a subset of F* that compiles to
+verified, readable C via my KreMLin compiler. The flagship application
+is HACL*, a verified cryptographic library that is integrated in
+Firefox. Previously, I worked on the BBC micro:bit, a small device
+handed out to a million kids in the UK to teach them the basics of
+programming. I did my PhD at INRIA, where I designed and implemented
+the Mezzo programming language with Dr François Pottier.
+</li>
+<hr>
+<li>
+<span class="lecturer"><b>Andreas Abel (Chalmers/Gothenburg University)</b></span>:<br/>
+<span class="lecture"><i>Introduction to Dependent Types and Agda</i></span>
+<br/>(<span class="materials">
+<a href = "http://www.cse.chalmers.se/~abela/ssft18/index.html">Material</a>)
+<br/>
+<b>Abstract</b>:
+Dependent types integrate programming with rich types, specifications,
+and verification into a single language.  Dependent types allow to
+express arbitrary logical properties of programs, and correctness
+proofs can be woven into the code.
+<p>
+In this tutorial, I will give a brief introduction to dependent types
+and the dependently-typed language Agda developed at Chalmers.  We
+will understand the theoretical concepts as we walk through some
+representative use cases.  In the first part, we will learn how to
+elegantly represent binary search trees and their ordering invariant
+in Agda.  In the second part, we will look at examples from
+programming language, like representation of expressions, evaluation,
+and equational reasoning.
+</p>
+<p>
+  The tutorial is accompanied by Agda programming and reasoning exercises.
+</p>
+
+<b>Bio</b>:
+Dr. Andreas Abel has a Diploma, PhD, and Habilitation from
+Ludwig-Maximilians-University (LMU), Munich, Germany.  He is a Senior
+lecturer at Chalmers / Gothenburg University where he has been since
+2013.  He has been active in the development of Agda since 2004.  He
+has over 70 publications on types, programming languages, semantics,
+and verification.
+<li>
+<span class="lecturer"><b>Dirk Beyer (Ludwig Maximilian University, Munich, Germany; <a>https://www.sosy-lab.org/people/beyer/</a>)</b> </span>:<br/>
+<span class="lecture"><i>Configurable Software Model Checking --- A Unifying View</i></span>
+<br/>(<span class="materials">
+<a href = "http://www.cip.ifi.lmu.de/~spiesslm/CPAchecker-1.7-svn_28007M-unix.tar.bz2">CPAchecker Tutorial</a>,
+<a href = "https://www.sosy-lab.org/Teaching/2018-SummerSchool-SSFT18/">Material</a></span>)
+<p><b>Abstract</b>:
+The goal of this lecture is to bridge the gap between verification research and
+software engineering.  Consequently, the lecture starts with theory and concepts,
+continues with a unifying view on several different verification algorithms,
+and finally addresses some practical problems that occur in software verification.
+The first part gives an introduction of the framework
+of configurable program analysis and shows how state-of-the-art concepts
+like cartesian and boolean abstraction, lazy abstraction, CEGAR, interpolation,
+and large-block encoding can be integrated in a configurable way.
+The second part consolidates knowledge and we show how to express the four different
+``schools of thought'' of software verification in one unifying framework:
+bounded model checking, k-induction, predicate abstraction, and lazy abstraction with interpolants.
+We also shed light on practical aspects of software model checking and explain approaches
+like regression verification, witness-based result validation, conditional model checking,
+and reducer-based verification.
+</p>
+<b>Bio</b>:
+Dirk Beyer is Full Professor of Computer Science and has a Research Chair for Software and Computational Systems at LMU Munich, Germany (since
+2016). Before, he was Full Professor of Computer Science at University of Passau, Germany (2009-2016). He was Assistant and Associate Professor
+at Simon Fraser University, B.C., Canada (2006-2009), and Postdoctoral Researcher at EPFL in Lausanne, Switzerland (2004-2006) and at the
+University of California, Berkeley, USA (2003-2004) in the group of Tom Henzinger. Dirk Beyer holds a Dipl.-Inf. degree (1998) and a Dr. rer.
+nat. degree (2002) in Computer Science from the Brandenburg University of Technology in Cottbus, Germany. In 1998 he was Software Engineer with
+Siemens AG, SBS Dept. Major Projects in Dresden, Germany. His research focuses on models, algorithms, and tools for the construction and
+analysis of reliable software systems. He is the architect, designer, and implementor of several successful tools. For example, CrocoPat is the
+first efficient interpreter for relational programming, CCVisu is a successful tool for visual clustering, and CPAchecker and BLAST are two
+well-known and successful software model checkers.
+<br/>
+
+</li>
+</ul>
+<hr>
+<h2>Speaking Logic: Background Course (May 19-20, 2018)</h2>
+<ul>
+<li>
+<span class="lecturer"><b>Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</b></span>:<br/>
+<span class="lecture"><i>Speaking Logic</i></span>
+<br/>
+(<span class="materials">
+<a href="speaklogicV8.pdf">Speaking Logic</a>,
+<a href="CAS2017.pdf">PVS Tutorial</a>
+</span>)
+
+<br/>
+<b>Abstract</b>:
+Formal logic has become the lingua franca of computing. It is used for
+specifying digital systems, annotating programs with assertions,
+defining the semantics of programming languages, and proving or
+refuting claims about software or hardware systems. Familiarity with
+the language and methods of logic is a foundation for research into
+formal aspects of computing. This course covers the basics of logic
+focusing on the use of logic as a medium for formalization and proof.
+</li>
+</ul>
+
+
+<!-- <li> -->
+<!-- <span class="lecturer"> ()</span>:<br/> -->
+<!-- <span class="lecture"></span> -->
+<!-- <br/>(<span class="materials"> -->
+<!-- <b>Slides:</b> -->
+<!-- <a href="http://www.csl.sri.com/~tiwari/slides/model_checking_problem.pdf"> -->
+<!-- Model Checking: Problem Definition</a>, -->
+<!-- <a href="http://www.csl.sri.com/~tiwari/slides/model_checking_example.pdf"> -->
+<!-- Model Checking: Example </a>, -->
+<!-- <a href="http://www.csl.sri.com/~tiwari/slides/hybrid_systems.pdf"> -->
+<!-- Hybrid Systems: Definition</a>, -->
+<!-- <a href="http://www.csl.sri.com/~tiwari/slides/model_checking_techniques.pdf"> -->
+<!-- Model Checking: Techniques for Hybrid Systems</a><br/> -->
+<!-- <b>Tools:</b> -->
+<!-- <a href="http://sal.csl.sri.com">SAL</a>, -->
+<!-- <a href="http://www.csl.sri.com/~tiwari/hybridsal/index.html">HybridSAL -->
+<!-- qualitative abstractor</a>, and -->
+<!-- <a -->
+<!-- href="http://www.csl.sri.com/~tiwari/relational-abstraction/index.html">HybridSAL -->
+<!-- relational abstractor</a> -->
+<!-- </span>) -->
+<!-- <br/> -->
+<!-- <b>Abstract</b>: -->
+<!-- <br/> -->
+<!-- <b>Bio</b>: -->
+<!-- </li> -->
+
+<!-- <h2>Background Course on Logic</h2> -->
+<!-- <ul> -->
+<!-- <li> -->
+<!-- <span class="lecturer">Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</span>:<br/> -->
+<!-- <span class="lecture">Speaking Logic</span> -->
+<!-- <br/> -->
+<!-- (<span class="materials"> -->
+<!-- <a href="speaklogicV7.pdf">Speaking Logic</a> -->
+<!-- </span>) -->
+
+<!-- <br/> -->
+<!-- <b>Abstract</b>: -->
+<!-- Formal logic has become the lingua franca of computing. It is used for -->
+<!-- specifying digital systems, annotating programs with assertions, -->
+<!-- defining the semantics of programming languages, and proving or -->
+<!-- refuting claims about software or hardware systems. Familiarity with -->
+<!-- the language and methods of logic is a foundation for research into -->
+<!-- formal aspects of computing. This course covers the basics of logic -->
+<!-- focusing on the use of logic as a medium for formalization and proof. -->
+<!-- </li> -->
+<!-- </ul> -->
+<hr>
+<h2>Invited Speakers</h2>
+<ul>
+<li>
+<span class="lecturer"><b>Nina Narodytska (VMWare Research)</b></span>:<br/>
+<span class="lecture"><i>Verifying Properties of Binarized Deep Neural Networks</i></span><br/>
+<p><b>Abstract</b>:
+Understanding properties of deep neural networks is an
+important challenge in deep learning. In this paper, we take a step in
+this direction by proposing a rigorous way of verifying properties of
+a popular class of neural networks, Binarized Neural Networks, using
+the well-developed means of Boolean satisfiability. Our main
+contribution is a construction that creates a representation of a
+binarized neural network as a Boolean formula. Our encoding is the
+first exact Boolean representation of a deep neural network. Using
+this encoding, we leverage the power of modern SAT solvers along with
+a proposed counterexample-guided search procedure to verify various
+properties of these networks. A particular focus will be on the
+critical property of robustness to adversarial perturbations. For this
+property, our experimental results demonstrate that our approach
+scales to medium-size deep neural networks used in image
+classification tasks. To the best of our knowledge, this is the first
+work on verifying properties of deep neural networks using an exact
+Boolean encoding of the network.
+</p>
+<b>Bio</b>:
+Nina Narodytska is a researcher at VMware Research. Prior to VMWare
+Research, she was a researcher at Samsung Research America, a
+postdoctoral researcher in the Carnegie Mellon University School of
+Computer Science and the University of Toronto. She received her PhD
+from the University of New South Wales in 2011 and she was a member of
+the NICTA Optimisation group. Nina works on developing efficient search
+algorithms for decision and optimization problems. She was named one of
+“AI’s 10 to Watch” young researchers in the field of AI.
+<br/>
+</li>
+<hr>
+<li>
+<span class="lecturer"><b>Gordon Plotkin (U. Edinburgh)</b></span>:<br/>
+<span class="lecture"><i>Some Principles of Differentiable Programming Languages</i></span><br/>
+<b>Abstract</b>:
+Languages for learning pose interesting foundational challenges. We
+look at one case: the foundations of differentiable programming
+languages with a first-class differentiation operator. Graphical and
+linguistic facilities for differentiation have proved their worth over
+recent years for deep learning (deep learning makes use of gradient
+descent optimisation methods to choose weights in neural
+nets). Automatic differentiation, also known as algorithmic
+differentiation, goes much further back, at least to the early 1960s,
+and provides efficient techniques for differentiation, e.g., via
+source code transformation. It seems fair to say, however, that
+differentiable programming languages have begun to appear only
+recently. It seems further fair to say that, while there has certainly
+been some foundational study of differentiable programming languages,
+there is ample opportunity to do more.
+<p>
+We investigate the semantics of a simple first-order functional
+programming language with reals, product types, and a first-class
+reverse-mode differentiation operator (reverse-mode differentiation
+generalises gradients). The semantics employs a standard concept of
+real analysis: smooth multivariate functions with open domain. It
+turns out that such partial functions fit well with programming
+constructs such as conditionals and recursion; indeed they form a
+complete partial order, and so standard fixed-point methods can be
+applied. From a programming language point of view, however, many
+types are lacking, particularly sum types and recursive types, such as
+list types. We conclude with a brief presentation of notions of
+shapely datatypes and smooth functions. These can be used to give the
+semantics of such types and the usual functions between them while
+retaining first-class differentiation.
+</p>
+
+<b>Bio</b>:
+Gordon David Plotkin, FRS, FRSE is a
+theoretical computer scientist in the School of Informatics at the
+University of Edinburgh. Plotkin is probably best known for his
+introduction of structural operational semantics (SOS) and his work on
+denotational semantics. In particular, his notes on A Structural
+Approach to Operational Semantics were very influential.
+<p>
+Plotkin was elected a Fellow of the Royal Society in 1992, is a Fellow
+of the Royal Society of Edinburgh and a Member of the Academia
+Europæa. He received the 2012 Royal Society Milner Award for “his
+fundamental research into programming semantics with lasting impact on
+both the principles and design of programming languages.” and the
+2010, ACM SIGPLAN Programming Languages Achievement Award.
+</p>
+</li>
+<hr>
+<li>
+<span class="lecturer"><b>Edward A. Lee (UC Berkeley)</b></span>:<br/>
+<span class="lecture"><i>Plato and the Nerd - The Creative Partnership of
+Humans and Technology</i></span><br/>
+<b>Bio</b>
+ Edward A. Lee is the Robert S. Pepper Distinguished Professor in Electrical Engineering and Computer Sciences (EECS) at the University of California at Berkeley, where he has been on the faculty since 1986. He is the author of Plato and the Nerd - The Creative Partnership of Humans and Technology (MIT Press, 2017), a number of textbooks and research monographs, and more than 300 papers and technical reports. Lee has delivered more than 170 keynote and other invited talks at venues worldwide and has graduated at least 35 PhD students. Professor Lee's research group studies cyber-physical systems, which integrate physical dynamics with software and networks. His focus is on the use of deterministic models as a central part of the engineering toolkit for such systems. He is the director of the nine-university TerraSwarm Research Center (http://terraswarm.org), a director of iCyPhy, the Berkeley Industrial Cyber-Physical Systems Research Center, and the director of the Berkeley Ptolemy project. From 2005-2008, he served as chair of the EE Division and then chair of the EECS Department at UC Berkeley. He has led the development of several influential open-source software packages, notably Ptolemy and its various spinoffs. He received his BS degree in 1979 from Yale University, with a double major in Computer Science and Engineering and Applied Science, an SM degree in EECS from MIT in 1981, and a PhD in EECS from UC Berkeley in 1986. From 1979 to 1982 he was a member of technical staff at Bell Labs in Holmdel, New Jersey, in the Advanced Data Communications Laboratory. He is a co-founder of BDTI, Inc., where he is currently a Senior Technical Advisor, and has consulted for a number of other companies. He is a Fellow of the IEEE, was an NSF Presidential Young Investigator, won the 1997 Frederick Emmons Terman Award for Engineering Education, and received the 2016 Outstanding Technical Achievement and Leadership Award from the IEEE Technical Committee on Real-Time Systems (TCRTS).
+<!-- <b>Abstract</b>: -->
+<!-- <br/>
+<b>Bio</b>:
+-->
+</li>
+</ul>
+
+<hr/>
+<p>
+<section id="schedule" class="body">
+<h2><a href="https://docs.google.com/spreadsheets/d/19JMXJwKS6wSMYGfj3eHiK6Iyg8GVHDPAfsxixIzhQrE/edit#gid=0">Schedule</a></h2>
+
+<p>
+<section id="vm" class="body">
+  <h2><a href="http://fm.csl.sri.com/SSFT18/ssft18-vm.ova">SSFT18 VM</a></h2><p>
+  3.5GB ova file for VirtualBox, sha1 hash d843805da3406dfc38d8906f8b783b540796726e</p>
+
+<p>
+Information about previous Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2017/">SSFT17</a></li>
+<li><a href="../2016/">SSFT16</a></li>
+<li><a href="../2015/">SSFT15</a></li>
+<li><a href="../2014/">SSFT14</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2011/">SSFT11</a></li>
+</ul>
+</p>
+
+<p>
+We expect to provide support for the travel and accommodation for (a
+limited number of students) registered at US universities. We also welcome
+applications from non-US students as well as non-students (if space
+permits).  Non-US students will have to cover their own travel and
+will be charged around US$800 for meals and lodging.  Applications
+should be submitted together with names of two references (preferably
+advisors, professors, or senior colleagues) using the form below.
+</p>
+<p>
+<!-- <a href="https://docs.google.com/spreadsheets/d/1z57yFPns4SqjRBzTB3sHO_8_RIvjMtBN7c7EMo1x2C0/edit?usp=sharing">Schedule</a> -->
+<!-- <p> ..>
+
+Applicants are urged to submit their applications before April 30,
+2018,  since there are only a limited number of spaces available.
+Non-US applicants requiring US visas are requested to apply early.  We
+strongly encourage the participation of women and under-represented
+minorities in the summer school.
+
+</p>
+<hr/>
+<!-- <p> -->
+<!-- <b>Registration is now closed</b><hr/> -->
+<!-- </p> -->
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+
+<p>
+  <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked="checked" name="gender" value="male"/>
+    Female<input class="but" type="radio" name="gender" value="female"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes"/>
+    No<input class="but" type="radio" checked="checked" name="minority" value="no"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Did you attend last year?</label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="attendedbefore" value="yes"/>
+    No<input class="but" type="radio" checked="checked" name="attendedbefore" value="no"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows="4" cols="79"></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size="80" maxlength="100"/></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information"/>
+  <input type="reset" value="Clear The Form"/>
+</center>
+<hr width="80%"/>
+</form>
+</p>
+
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i>
+refers to African Americans, Mexican-Americans, Native Americans
+(American Indians, Alaska Natives, and Native Hawaiians),
+Pacific Islanders, and mainland Puerto Ricans.
+</p>
+<hr width="80%"/>
+
+</section>
+
+<!-- <section id="Questions" class="body"> -->
+<!--#include virtual="qanda.shtml" -->
+
+<!--
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+-->
+<!--
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+-->
+
+</body>
+</html>

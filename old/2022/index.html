@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <title>Eleventh Summer School on Formal Techniques</title>
+    <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body id="index" class="home">
+
+    <header id="banner" class="body">
+      <hgroup>
+	<div id="hdiv">
+	  <h1 id="fssft">Eleventh Summer School on Formal Techniques</h1>
+	</div>
+	<h2 class="strapline">
+	  May 30 - June 5, 2022
+	  <!-- <br/>
+	       <a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA -->
+	</h2>
+	<!-- <h4>(Colocated with the first <a href="FMiTF.html">Formal Methods in the Field (FMiTF) Bootcamp</a>)</h4> -->
+      </hgroup>
+
+      <p id="toc-nav">
+	Table of Contents
+	<a href="#lecturers">Lecturers</a>
+	<a href="#splogic">Speaking Logic</a>
+	<a href="#bootcamp">Bootcamp</a>
+	<a href="#invited">Invited Speakers</a>
+	<a href="#schedule">Schedule</a>
+	<a href="#schedule">Logistics</a>
+	<a href="#prev">Previous SSFTs</a>
+	<a href="#registration">Registration</a>
+      </p>
+
+    </header>
+    <center>
+      <a href="http://fm.csl.sri.com/SSFT22/group.jpg"><img id="group-photo" src="http://fm.csl.sri.com/SSFT22/group.jpg" width="800" height="600"/></a>
+    </center>
+    <hr width="800">
+
+    <section id="description" class="body">
+      <p>
+	Techniques based on formal logic, such as model checking,
+	satisfiability, static analysis, and automated theorem proving, are
+	finding a broad range of applications in modeling, analysis,
+	verification, and synthesis. This school, the eleventh in the series,
+	will focus on the principles and practice of formal techniques, with
+	a strong emphasis on the hands-on use and development of this
+	technology. It primarily targets graduate students and young
+	researchers who are interested in studying and using formal
+	techniques in their research. A prior background in formal methods
+	is helpful but not required. Participants at the school can expect
+	to have a seriously fun time experimenting with the tools and
+	techniques presented in the lectures during laboratory sessions.
+      </p>
+
+      <h2 id="lecturers">Lectures</h2>
+
+      <ul>
+	<li>
+	  <span class="lecture">
+	    Symbolic Analysis and its Application to Machine Learning Models
+	  </span><br/>
+	  <span class="lecturer">
+	    Corina Pasareanu (NASA Ames/CMU West)
+	  </span>
+	  <span class="materials"><p>
+	    <b>Slides:</b>
+	    <a href="http://fm.csl.sri.com/SSFT22/SymbolicProbabilisticSummerSchool.pdf">Symbolic Execution and Probabilistic Reasoning</a>,
+	    <a href="http://fm.csl.sri.com/SSFT22/SafeDNN%20Talk.pdf">SafeDNN</a><br/>
+	    <b>Videos:</b>
+	    <a href="https://youtu.be/KRsXQ2b6SgA">Lecture 1</a>,
+	    <a href="https://youtu.be/8rXIVf4onC0">Lecture 2</a>,
+	    <a href="https://youtu.be/j2UQw2lpya0">Lecture 3</a>,
+	    <a href="https://youtu.be/l1rdHFwVyfU">Lecture 4</a>,
+	    <a href="https://www.youtube.com/watch?v=seal8fG78LI">NeuroSPF Video</a><br/>
+	    <b>Lab Materials:</b>
+	    <a href="https://github.com/corinus/neurospf">NeoruSPF Github</a>,
+	    <a href="http://fm.csl.sri.com/SSFT22/SchoolLabs.pdf">Lab Problem Slides</a>
+	  </p></span>
+
+	  <b>Abstract</b>: In this lecture we focus on symbolic execution, a systematic
+	  program analysis technique which explores multiple program behaviors by
+	  solving symbolic constraints collected from conditions in the program. The
+	  obtained solutions can be used as test inputs that execute feasible program
+	  paths. Symbolic execution has been used to uncover subtle errors and unknown
+	  vulnerabilities in many software systems. Furthermore, symbolic execution
+	  has been extended with probabilistic reasoning enabling quantitative
+	  checking of software. This probabilistic information can be used for example
+	  to compute the reliability of a controller under different environment
+	  conditions or to quantify information leakage a software system. In this
+	  lecture we review newer applications of symbolic execution and its
+	  probabilistic variant, to the analysis of machine learning models, with
+	  respect to safety, robustness, and fairness properties.
+	  <br/>
+	  <b>Bio</b>: Corina Pasareanu is doing research in software engineering at NASA
+	  Ames, in the Robust Software Engineering group. She is employed by KBR,
+	  where she is Technical Professional Leader - Data Science. She is also
+	  affiliated with Carnegie Mellon University (CMU), CMU CyLab, CMU Silicon
+	  Valley, and CMU ECE. Her research interests are in formal methods, software
+	  testing, security and machine learning
+	  <br/>
+	  <b>Abstract</b>: -->
+	</li>
+
+	<li>
+	  <span class="lecture">Trustworthy Boolean Reasoning</span><br/>
+	  <span class="lecturer">Randy Bryant (CMU)</span>
+	  <br/>
+	  <span class="materials"><p>
+	    <a href="lecture-1a-intro.pdf">Lecture 1A: (Un)Satisfiability</a> -
+	    <a href="https://youtu.be/P2B9Wo7oZeY">Video 1A</a>,<br/>
+	    <a href="lecture-1b-proof.pdf">Lecture 1B: Unsatisfiability Proofs</a> -
+	    <a href="https://youtu.be/ZaPbdPFeH3c">Video 1B</a>,<br/>
+	    <a href="lecture-2a-bdd-intro.pdf">Lecture 2A: Introduction to BDDs</a> -
+	    <a href="https://youtu.be/_whY1J7qje4">Video 2A</a>,<br/>
+	    <a href="lecture-2b-bdd-proof.pdf">Lecture 2B: Proof Generation with BDDs</a> -
+	    <a href="https://youtu.be/um6BZxvw9b4">Video 2B</a></p>
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: Like all complex software systems, automated reasoning tools are
+	  prone to bugs.  In seeking to maximize their performance, developers may
+	  attempt optimizations that are either unsound or are incorrectly
+	  implemented.  These bugs presents challenges for both the developers and the
+	  users, especially when the tools are used for formal verification or to
+	  support mathematical proofs.  Some tools have been developed within formal
+	  frameworks that ensure their trustworthiness, but these must often operate
+	  with lower capacity and speed than can be achieved by those implemented with
+	  conventional programming methods.  An alternative is to ensure the
+	  trustworthiness of individual executions of the tool by having it produce a
+	  checkable proof of each result.  Such a proof provides a detailed,
+	  step-by-step justification expressed in a standard proof framework.  A much
+	  simpler proof checker, possibly one that has been formally verified, can
+	  then validate the outcome.
+	  <br/>
+	  Proof generation has become a standard capability for Boolean
+	  satisfiability (SAT) solvers when they encounter unsatisfiable
+	  formulas.  Proof frameworks have been developed to support SAT
+	  solvers based using conflict-driven, clause-learning (CDCL)
+	  algorithms.  Recent work has shown that these frameworks can also
+	  be used for proof generation by solvers using ordered binary
+	  decision diagrams (OBDDs) and pseudo-Boolean reasoning.  These
+	  approaches can handle classes of problems for which CDCL performs
+	  poorly.  We have also incorporated proof generation into an
+	  OBDD-based quantified Boolean formula (QBF) solver, enabling it to
+	  prove that the formula is either true or false.
+	  <br/>
+	  <b>Bio</b>: Randal E. Bryant is the Founders University Professor of Computer
+	  Science Emeritus at Carnegie Mellon University.  He has been on the faculty
+	  there since 1984.  Prior to that he received his PhD from MIT and was an
+	  assistant professor at Caltech.  He is best known for the development of
+	  Boolean reasoning methods based on Ordered Binary Decision Diagrams (OBDDs).
+	  These have found widespread use in formal verification, design automation,
+	  and reliability analysis.  He is a fellow of the IEEE and ACM, and a member
+	  of the National Academy of Engineering.
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    Formal Modeling, Verification, Synthesis, and Learning with UCLID5
+	  </span><br/>
+	  <span class="lecturer">Sanjit Seshia (UC Berkeley)</span>
+	  <br/>
+	  <span class="materials"><p>
+	    <a href="https://people.eecs.berkeley.edu/~sseshia/ssft2022/">
+	      UCLID5</a>
+	  </p></span>
+	  <br/>
+	  <b>Abstract</b>: The field of formal methods is being impacted by
+	  the confluence of three interesting trends. First, certain classes
+	  of systems, such as trusted hardware-software platforms, motivate
+	  a heterogeneous approach to formal modeling and
+	  specification. Second, algorithmic methods for verification are
+	  being transformed by advances in algorithmic synthesis. Third,
+	  dramatic advances in machine learning are fueling their
+	  integration with more traditional, deductive reasoning
+	  engines. This lecture series will address the challenges and
+	  opportunities presented by this confluence. Specifically, we will
+	  cover approaches to multi-modal modeling of systems, verification
+	  by reduction to synthesis, and integration of inductive learning
+	  with deductive reasoning.  These ideas have been implemented in
+	  the open source UCLID5 toolkit, and the tutorial will include
+	  several exercises in UCLID5.
+	  <br/>
+	  <b>Bio</b>: Sanjit A. Seshia is a Professor in the Department of
+	  Electrical Engineering and Computer Sciences at the University of
+	  California, Berkeley. His research interests are in formal methods
+	  for dependable and secure computing, with a current focus on the
+	  areas of cyber-physical systems, computer security, machine
+	  learning, and robotics. He has made pioneering contributions to
+	  the areas of satisfiability modulo theories (SMT), SMT-based
+	  verification, and inductive program synthesis. He is co-author of
+	  a widely-used textbook on embedded, cyber-physical systems and has
+	  led the development of technologies for cyber-physical systems
+	  education based on formal methods. His awards and honors include a
+	  Presidential Early Career Award for Scientists and Engineers
+	  (PECASE), an Alfred P. Sloan Research Fellowship, the Frederick
+	  Emmons Terman Award for contributions to electrical engineering
+	  and computer science education, the Donald O. Pederson Best Paper
+	  Award for the IEEE Transactions on CAD, the IEEE Technical
+	  Committee on Cyber-Physical Systems (TCCPS) Mid-Career Award, and
+	  the Computer-Aided Verification (CAV) Award for pioneering
+	  contributions to the foundations of SMT solving. He is a Fellow of
+	  the ACM and the IEEE.
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    SMT-based Verification of Heap-manipulating Programs
+	  </span><br/>
+	  <span class="lecturer">Ruzica Piskac (Yale University)</span>
+	  <br/>
+	  <span class="materials"><p>
+	    <b>Slides:</b>
+	    <a href="http://fm.csl.sri.com/SSFT22/piskac-lectures01.pdf">Lecture 1</a>
+	    <a href="http://fm.csl.sri.com/SSFT22/lecture2-new.pdf">Lecture 2 (new)</a><br/>
+	    <b>Videos:</b>
+	    <a href="https://youtu.be/W_o8hzPkFCE">Video 1</a>
+	    <a href="https://youtu.be/kYGZCfGpSjI">Video 2</a>
+	    <a href="https://youtu.be/wCD0HAPzRxU">Video 3</a>
+	    <a href="https://youtu.be/SnSdw7pz5Vc">Video 4</a><br/>
+	    <b><a href="http://fm.csl.sri.com/SSFT22/homework.pdf">Homework</a></b><br/>
+	    <b><a href="http://fm.csl.sri.com/SSFT22/cs454-master.zip">cs454-master.zip</a></b>
+
+	  </p></span>
+	  <br/>
+	  <b>Abstract</b>: The goal of this course is to introduce the
+	  students to the theory and practice of program analysis and
+	  software verification. We will introduce the basic vocabulary of
+	  program verification; students will become familiar with
+	  assertions, pre- and post-conditions, and inductive
+	  invariants. They will learn how to derive mathematical formulas
+	  from the code and annotations (so called "verification
+	  conditions"). We will explore some state-of-the art tools used for
+	  program verification and we will provide more detailed insights
+	  into algorithms and paradigms on which those tools are based such
+	  as SMT solvers and decision procedures. Finally, we will discuss
+	  how to reason about programs that manipulate dynamically allocated
+	  data structures, such as lists or trees.
+	  <br/>
+	  <b>Bio</b>: Ruzica Piskac is an associate professor of computer
+	  science at Yale University. Her research interests span the areas
+	  of programming languages, software verification, automated
+	  reasoning, and code synthesis. A common thread in Ruzica's
+	  research is improving software reliability and trustworthiness
+	  using formal techniques. Ruzica joined Yale in 2013 as an
+	  assistant professor and professor, and prior to that she was an
+	  independent research group leader at the Max Planck Institute for
+	  Software Systems in Germany. Ruzica has received various
+	  recognitions for research and teaching, including the Patrick
+	  Denantes Prize for her PhD thesis, a CACM Research Highlight
+	  paper, an NSF CAREER award, the Facebook Communications and
+	  Networking award, the Microsoft Research Award for the Software
+	  Engineering Innovation Foundation (SEIF), the Amazon Research
+	  Award, and the 2019 Ackerman Award for Teaching and Mentoring.
+	</li>
+
+	<li>
+	  <span class="lecture">Neurosymbolic Programming</span><br/>
+	  <span class="lecturer">Mayur Naik (U. of Pennsylvania)</span>
+	  <span class="materials"><p>
+	    <a href="https://scallop-lang.github.io/ssft22/index.html">
+	      Scallop @SSFT22</a>
+	  </p></span>
+	  <br/>
+	  <b>Abstract</b>: While deep learning approaches continue to make
+	  strides in domains such as vision and natural language processing,
+	  the logical reasoning ability of such models remains a fundamental
+	  open problem. On the other hand, formal methods and symbolic
+	  reasoning tools are appealing for their completeness and
+	  generalizability.  Neurosymbolic methods combine the best of both
+	  worlds by connecting neural models and logical reasoning
+	  programs. In this tutorial, we will introduce a Datalog-based
+	  differentiable logical reasoning engine, Scallop, that can be
+	  integrated with deep neural models like convolutional neural
+	  networks (CNN) and transformers. We will describe how to write
+	  neurosymbolic programs with Scallop that can facilitate better
+	  learning for tasks that involve both perception and reasoning.
+	  <br/>
+	  <b>Bio</b>: Mayur Naik is Professor and Graduate Chair in the
+	  department of Computer and Information Science at the University
+	  of Pennsylvania.  He conducts research in programming languages
+	  and machine learning, with a current focus on programming
+	  abstractions and tools for integrating deep learning and symbolic
+	  reasoning.  His past research contributions span the areas of
+	  program analysis, program synthesis, and testing.  He holds a
+	  Ph.D. in Computer Science from Stanford University in 2008.
+
+	</li>
+
+	<!-- <li>
+	     <span class="lecture"> </span><br/>
+	     <span class="lecturer"> </span>
+	     <span class="materials">
+	     ()
+	     </span>
+	     <br/>
+	     <b>Abstract</b>:
+	     </li>
+	-->
+      </ul>
+
+      <h2 id="splogic">Speaking Logic: Background Course</h2>
+      The main lectures in the summer school will be preceded by a background course on logic
+      <ul>
+	<li>
+	  <span class="lecture">Speaking Logic</span><br/>
+	  <span class="lecturer">Natarajan Shankar and St&eacute;phane Graham-Lengrand (SRI CSL)</span>:<br/>
+	  <span class="materials"><p>
+	    <a href="http://fm.csl.sri.com/SSFT22/speaklogicV11.pdf">Speaking Logic</a> - Videos:
+	    <a href="https://youtu.be/2rlabN32Ff4">Speaking Logic Part 1 (2021)</a>,
+	    <a href="https://youtu.be/gpyC83VJ2OE">Propositional Logic</a><br/>
+	    <a href="CAS2017.pdf">PVS Tutorial</a>,<br/>
+	    <a href="TypeTheory.pdf">Type Theory</a>,<br/>
+	    <a href="vscode-pvs-tutorial.pdf">VSCode-PVS Tutorial</a> -
+	    <a href="http://fm.csl.sri.com/SSFT22/vscode-pvs-tutorial.mov">VSCode-PVS Video</a><br/>
+	    <a href="http://fm.csl.sri.com/SSFT22/pvs-license.html?tgzfile=pvs-strings-ix86-MacOSX-allegro.tgz">PVS Mac (strings branch)</a><br/>
+	    <a href="http://fm.csl.sri.com/SSFT22/pvs-license.html?tgzfile=pvs-strings-ix86_64-Linux-allegro.tgz">PVS Linux (strings branch)</a>
+	  </p>
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: Formal logic has become the lingua franca of
+	  computing. It is used for specifying digital systems, annotating
+	  programs with assertions, defining the semantics of programming
+	  languages, and proving or refuting claims about software or hardware
+	  systems. Familiarity with the language and methods of logic is a
+	  foundation for research into formal aspects of computing. This course
+	  covers the basics of logic focusing on the use of logic as a medium for
+	  formalization and proof.
+	</li>
+      </ul>
+      <h2 id="bootcamp">Bootcamp</h2>
+      <p>
+	<a href="http://fm.csl.sri.com/SSFT22/Bootcamp.pdf">Bootcamp Problems</a><br/>
+	<a href="https://scallop-lang.github.io/ssft22/bootcamp.html">Scallop @SSFT22 Bootcamp</a><br/>
+	<a href="http://fm.csl.sri.com/SSFT22/ssft22_bootcamp_uclid5.pdf">SSFT '22: UCLID5 Lab</a><br/>
+	<a href="http://fm.csl.sri.com/SSFT22/warm-up.vpr">warm-up.vpr</a><br/>
+	<a href="http://fm.csl.sri.com/SSFT22/advanced.vpr">advanced.vpr</a><br/>
+      </p>
+
+      <h2 id="invited">Invited Speakers</h2>
+      <ul>
+	<li>
+	  <span class="lecture">
+	    Reasoning Principles for Verifying Concurrent Search Structures
+	  </span><br/>
+	  <span class="lecturer">
+	    Thomas Wies (New York University, Courant Institute of
+	    Mathematical Sciences)</span>
+	  <!-- <span class="materials">
+	       ()
+	       </span> -->
+	  <br/>
+	  <b>Abstract</b>: Search structures support the fundamental data
+	  storage primitives on key-value pairs: insert a pair, delete by
+	  key, search by key, and update the value associated with a
+	  key. Concurrent search structures are parallel algorithms to speed
+	  access to search structures on multicore and distributed
+	  servers. These sophisticated algorithms perform fine-grained
+	  synchronization between threads, making them notoriously difficult
+	  to design correctly. In this talk, I will present a framework for
+	  obtaining correctness proofs for concurrent search structures that
+	  are modular, reusable, and amenable to automation. The framework
+	  takes advantage of recent advances in local reasoning techniques
+	  based on concurrent separation logic. I will provide an overview
+	  of these techniques and demonstrate there use for verifying
+	  realistic search structures such as concurrent B-link trees and
+	  log-structured merge trees.
+	  <br/>
+	  <b>Bio</b>: Thomas Wies is an Associate Professor in the Computer
+	  Science Department at New York University and a member of the
+	  Analysis of Computer Systems Group in the Courant Institute of
+	  Mathematical Sciences. He is recipient of an NSF CAREER Award, an
+	  OOPSLA 2014 Best Paper Award, and an ISSRE 2019 Distinguished
+	  Paper Award. His research interests are in Programming Languages
+	  and Formal Methods.
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    Computational Social Choice and Incomplete Information
+	  </span><br/>
+	  <span class="lecturer">
+	    Phokion G. Kolaitis (University of California Santa Cruz and IBM Research)
+	  </span>:
+	  <br/>
+	  <b>Abstract</b>: Computational social choice is an
+	  interdisciplinary field that studies collective decision making
+	  from an algorithmic perspective. Determining the winners under
+	  various voting rules is a mainstream area of research in
+	  computational social choice. Many such rules assume that the
+	  voters provide complete information about their preferences, an
+	  assumption that is often unrealistic because typically only
+	  partial preference information is available.  This situation has
+	  motivated the study of the notions of the necessary winners and
+	  the possible winners with respect to a variety of voting rules.
+	  <br/>
+	  The main aim of this talk is to present an overview of winner
+	  determination under incomplete information and to highlight some
+	  recent advances in this area, including the development of a
+	  framework that aims to create bridges between computational social
+	  choice and data management. This framework infuses relational
+	  database context into social choice and allows for the formulation
+	  of sophisticated queries about voting rules, candidates, winners,
+	  issues, and positions on issues.  We will introduce the necessary
+	  answer semantics and the possible answer semantics to queries and
+	  will explore the computational complexity of query evaluation
+	  under these semantics.
+	  <br/>
+	  <b>Bio</b>: Phokion Kolaitis is a Distinguished Research Professor
+	  at UC Santa Cruz and a Principal Research Staff Member at the IBM
+	  Almaden Research Center. His research interests include principles
+	  of database systems, logic in computer science, and computational
+	  complexity.
+	  <br/>
+	  Kolaitis is a Fellow of the American Association for the
+	  Advancement of Science, a Fellow of the Association for Computing
+	  Machinery, and the recipient of a 1993 Guggenheim Fellowship. He
+	  is also a co-winner of both the 2008 and the 2014 ACM PODS Alberto
+	  O. Mendelzon Test-of-Time Award, the 2013 International Conference
+	  on Database Theory Test-of-Time Award, and the 2020 Alonzo Church
+	  Award for Outstanding Contributions to Logic and Computation.  At
+	  present, Kolaitis serves as President of the Association for
+	  Symbolic Logic.
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    Set of Support, Demodulation, and Paramodulation: Fundamental
+            Concepts in Theorem Proving
+	  </span><br/>
+	  <span class="lecturer">
+	    Maria Paola Bonacina (Università degli Studi di Verona)
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: The ability of distinguishing assumptions and
+	  conjecture, the ability of replacing equals by equals, and the
+	  ability of generating equations from equations, are essential in
+	  theorem proving. By one of those turns in the history of science,
+	  the investigation of these problems began in a short time interval
+	  at the Argonne National Laboratory, around the charismatic figure
+	  of an unsighted scientist, the late Larry Wos, one of the founders
+	  of the field of automated reasoning. Starting from the origins of
+	  these concepts in Larry’s papers, this talk traces their
+	  evolution, unearthing the often forgotten trails that connect
+	  Larry’s original definitions to those that are implemented in
+	  state-of-the-art theorem provers. Along the way, one of the most
+	  fascinating journeys in the history of computer science will
+	  unfold under our eyes.
+	  <br/>
+	  <b>Bio</b>: Maria Paola Bonacina is Professor of Computer Science
+	  at the Università degli Studi di Verona and International Fellow
+	  at the Computer Science Laboratory of SRI International. Maria
+	  Paola received a Laurea and a Doctorate from the Università degli
+	  Studi di Milano, and a PhD from the State University of New York
+	  at Stony Brook. After postdoc's at the Argonne National Laboratory
+	  and INRIA Lorraine, she started her career at the University of
+	  Iowa, where she was first Assistant Professor and then Associate
+	  Professor of Computer Science, receiving NSF RIA and CAREER awards
+	  and a Dean Scholar Award. She was Visiting Professor at the
+	  Technische Universität Dresden and at the University of
+	  Manchester. Her research area is automated reasoning, including
+	  theorem proving, satisfiability modulo theories, and their
+	  applications. Maria Paola serves regularly on the program
+	  committees of the most important conferences in automated
+	  reasoning. She was elected twice president of the board of
+	  trustees of the Conference on Automated Deduction. Maria Paola
+	  loves reading the classics and history, listening to early and
+	  baroque music, going to theatres and museums, and travelling.
+	</li>
+
+	<li>
+	  <span class="lecture">Building Trustworthy, Resilient, and Interpretable AI
+	  </span>
+	  <br/>
+	  <span class="lecturer">Susmit Jha (SRI International)</span>:
+	  <br/>
+	  <span class="materials"><p>
+	    <a href="http://fm.csl.sri.com/SSFT22/NuSCI-June2022-SS22.pdf">Slides</a>
+	  </p></span>
+	  <b>Abstract</b>: This tutorial will discuss methods for building
+	  trustworthy, resilient, and interpretable AI models by combining
+	  symbolic methods developed for automated reasoning with deep
+	  learning models. The increasing adoption of artificial
+	  intelligence and machine learning in systems, including
+	  safety-critical systems, has created a pressing need for
+	  developing scalable techniques that can be used to establish trust
+	  over their safe behavior, resilience to adversarial attacks, and
+	  interpretability to enable human audits. The tutorial comprises
+	  three components: a review of the techniques for trustworthy deep
+	  learning in formal methods and machine learning literature, a
+	  summary of key challenges and open research problems, and an
+	  overview of the TRINITY-AI system being developed an SRI to
+	  address some of these challenges. Time permitting, we will also
+	  discuss the connection between trustworthy machine learning and
+	  creative AI, and how we can use these techniques to generate the
+	  designs of new cyber-physical systems such as air taxis, UUVs, and
+	  underwater vehicles.
+	  <br/>
+	  <b>Bio</b>: Susmit Jha is a Principal Scientist in Computer
+	  Science Laboratory at SRI International. His research (
+	  https://nusci.csl.sri.com/ ) focusses on high assurance machine
+	  learning and automatic synthesis of systems. Before joining SRI,
+	  Susmit was a researcher at Raytheon (UTRC) and Intel, and finished
+	  his PhD at UC Berkeley in 2011.
+	</li>
+
+	<!-- <li>
+	     <span class="lecturer"><b></b></span>:<br/>
+	     <span class="lecture"></span><br/>
+	     <span class="materials">
+	     ()
+	     </span>
+	     <p><b>Abstract</b>:
+	     </p>
+	     </li>
+	-->
+      </ul>
+
+      <h2 id="schedule">
+	<a href="https://docs.google.com/spreadsheets/d/1XP0dUu4bDkgfIp4dj4hSdu2jaWGRPP2KseCDRuEXFRs/edit#gid=0">Schedule</a>
+      </h2>
+
+      <h2 id="logistics">
+	<a href="https://docs.google.com/document/d/1_0-aklhmTPZ7J1OAEO2nRIyobAyeXgvhIcO2QEYaAEI/edit?usp=sharing">Logistics</a>
+      </h2>
+
+      <h2>
+	<a href="https://drive.google.com/drive/folders/1UYx2Qw_VY0LM0HsorWV0FIuqnerF6swh?usp=sharing">Awards Photos</a>
+      </h2>
+
+      <h2 id="prev">Previous Summer Schools on Formal Techniques</h2>
+
+      <p>
+	Information about previous Summer Schools on Formal Techniques can
+	be found at
+	<ul>
+	  <li><a href="../2021/">SSFT21</a></li>
+	  <li><a href="../2019/">SSFT19</a></li>
+	  <li><a href="../2018/">SSFT18</a></li>
+	  <li><a href="../2017/">SSFT17</a></li>
+	  <li><a href="../2016/">SSFT16</a></li>
+	  <li><a href="../2015/">SSFT15</a></li>
+	  <li><a href="../2014/">SSFT14</a></li>
+	  <li><a href="../2013/">SSFT13</a></li>
+	  <li><a href="../2012/">SSFT12</a></li>
+	  <li><a href="../2011/">SSFT11</a></li>
+	</ul>
+      </p>
+      <p>
+	Jay Bosamiya of CMU has blogged about the 2018 Summer School at
+	<a href="https://www.jaybosamiya.com/blog/2018/05/31/ssft/">
+	  https://www.jaybosamiya.com/blog/2018/05/31/ssft/</a>
+      </p>
+
+      <!-- <h2 id="registration">
+	   <a href="https://docs.google.com/forms/d/1U9iP9BCpB1OcMro7IAtKjBn37HsogC5SDYCpdkpnpAM/edit">
+	   Registration
+	   </a>
+	   </h2> -->
+      <h2 id="registration">Registration</h2>
+      <b>Registration for SSFT22 is now closed - check back next year</b>
+
+      <hr width="80%">
+      <p>
+	This year, the school will take place in a hybrid mode: the lectures
+	and labs will be live-streamed and recorded.  We strongly encourage
+	in-person participation so that you can benefit from interactions
+	outside the classroom.  On-site Covid testing will be available.  We
+	have funding from NSF to cover transportation/food/lodging expenses
+	for selected US-based students.  Non-student and non-US in-person
+	participants will be expected to cover their own transportation and
+	will be charged a fee for the school to cover the cost of food and
+	lodging.
+      </p>
+      <p>
+	The nearest airport to the summer school is SFO. Use Supershuttle
+	for ground transportation to/from SFO - we should have a discount
+	code shortly.
+      </p>
+
+	<!-- We expect to provide support for the travel and accommodation for (a
+	     limited number of) students registered at US universities. We
+	     welcome applications from non-US students as well as non-students
+	     (if space permits).  Non-US students will have to cover their own
+	     travel; the cost (which covers meals and lodging) is:
+	     <ul>
+	     <li>US$800 for the summer school (SSFT21)</li>
+	     <li>US$700 for the boot camp (FMiTF)</li>
+	     </ul> -->
+      <!-- Although the summer school is virtual and there is no registration
+	   fee, attendance is restricted to registered participants.  Attendees
+	   who complete the summer school will receive a certificate by mail.
+	   Applications should be submitted together with names of
+	   two references (preferably advisors, professors, or senior
+	   colleagues) using the form below.   -->
+      <!-- </p>
+	   <p>
+	   Applicants are urged to submit their applications before April 30,
+	   2022, since there are only a limited number of spaces available.
+	   Non-US applicants requiring US visas are requested to apply early.
+	   We strongly encourage the participation of women and
+	   under-represented minorities in the summer school. </p>
+	   <hr/> -->
+
+      <!-- <p>
+	   Questions on any aspect of the school can be posted
+	   <a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+	   </p>
+      -->
+      <!-- <p>
+	   <center> <b>Note that all fields are required</b></center>
+	   <form id="registration" method="POST" action="mailto:owre@csl.sri.com">
+	   <table>
+	   <tr>
+	   <td><label>Name</label></td>
+	   <td><input name="name" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Gender</label></td>
+	   <td id="gender">
+	   Male<input class="but" type="radio" checked="checked" name="gender" value="male"/>
+	   Female<input class="but" type="radio" name="gender" value="female"/>
+	   </td>
+	   </tr>
+	   <tr>
+	   <td><label>Minority<sup>&dagger;</sup></label></td>
+           <td id="gender">
+	   Yes<input class="but" type="radio" name="minority" value="yes"/>
+	   No<input class="but" type="radio" checked="checked" name="minority" value="no"/>
+           </td>
+	   </tr>
+	   <tr>
+	   <td><label>Permanent mailing address</label></td>
+	   <td><textarea name="mailaddr" rows="4" cols="79"></textarea></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="email" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Affiliation</label></td>
+	   <td><input name="affiliation" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Education</label></td>
+	   <td><input name="education" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Graduate Advisor</label></td>
+	   <td><input name="advname" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Did you attend last year?</label></td>
+	   <td id="gender">
+	   Yes<input class="but" type="radio" name="attendedbefore" value="yes"/>
+	   No<input class="but" type="radio" checked="checked" name="attendedbefore"
+	   value="no"/>
+	   </td>
+	   </tr>
+	   <tr>
+	   <td><label>Research Interests</label></td>
+	   <td><textarea name="interests" rows="4" cols="79"></textarea></td>
+	   </tr>
+	   <tr>
+	   <td><label>Reference Name</label></td>
+	   <td><input name="refname1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="refemail1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Phone</label></td>
+	   <td><input name="refphone1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Reference Name</label></td>
+	   <td><input name="refname2" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="refemail2" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Phone</label></td>
+	   <td><input name="refphone2" size="80" maxlength="100"/></td>
+	   </tr>
+	   </table>
+	   <center>
+	   <input type="submit" value="Send Information"/>
+	   <input type="reset" value="Clear The Form"/>
+	   </center>
+	   <hr width="80%">
+	   </form>
+	   </p>
+	   <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i>
+	   refers to African Americans, Mexican-Americans, Native Americans
+	   (American Indians, Alaska Natives, and Native Hawaiians),
+	   Pacific Islanders, and mainland Puerto Ricans.
+	   </p> -->
+      <hr width="80%">
+
+      <script src="https://smtpjs.com/v3/smtp.js">
+      </script>
+
+      <script>
+       registration.onsubmit = async (e) => {
+	   e.preventDefault();
+	   let fd = new FormData(registration);
+	   let pairs = "";
+	   for(let [name, value] of fd) {
+	       pairs += `${name} = ${value}\n`;
+	   }
+	   Email.send({
+	   To: 'owre@csl.sri.com',
+	   From: fd.get('email'),
+	   //Bcc: 'owre@csl.sri.com',
+	   //Reply-to: fd.get('email'),
+	   Subject: 'SSFT22 Registration for ' + fd.get('name') + '\n\n',
+	   Body: fd.get('name') + ' wrote\n' + pairs
+	   })
+	   .then(function (message) {
+	   alert("mail sent successfully")
+	   });
+	   alert(pairs);
+	   }
+      </script>
+
+    </section>
+
+    <!-- <section id="Questions" class="body"> -->
+
+    <!--
+	 <section id="Reading" class="body">
+	 <h3>Background reading:</h3>
+	 <ul>
+	 <li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+	 <li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+	 </ul>
+	 </section>
+    -->
+    <!--
+	 <section id="Tools" class="body">
+	 <h3>Tools:</h3>
+	 <ul>
+	 <li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+	 <li><a href="http://z3.codeplex.com/">Z3</a></li>
+	 <li><a href="http://spinroot.com/">SPIN</a></li>
+	 <li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+	 <li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+	 <li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+	 </ul>
+	 </section>
+    -->
+
+  </body>
+</html>

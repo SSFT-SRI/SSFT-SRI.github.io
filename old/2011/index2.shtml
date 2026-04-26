@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>First Summer School on Formal Techniques</title>
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+	<img id="menlogif" src="images/menlo.gif"/>
+	<h1 id="fssft">First Summer School on Formal Techniques</h1>
+	<img id="nsfgif" src="images/nsf.gif"/>
+      </div>
+      <h2 class="strapline">
+	March 22-27, 2011<br>
+	Menlo College, Atherton, CA
+      </h2>
+    </hgroup>
+
+    <nav id="primary">
+      <ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="#">Description</a></li>
+	<li><a href="#">Lecturers</a></li>
+	<li><a href="#">Questions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="description" class="body">
+    <p>
+      This school will focus on the principles and practice of formal
+      verification, emphasizing the hands-on use and development of this
+      technology.  It primarily targets graduate students who are interested
+      in using verification technology in their own research, including
+      areas such as engineering, biology, and mathematics.  At the school,
+      students will participate in exciting projects that build on the tools
+      and techniques presented in the lectures.  We have NSF support for the
+      travel and accommodation for students from US universities, but we
+      welcome applications from graduate students at non-US universities as
+      well.
+    </p>
+  </section>
+
+<section id="Lecturers" class="body">
+<p>
+The lecturers at the school include
+<ul>
+  <li>
+    Leonardo de Moura and Bruno Dutertre: Satisfiability Modulo Theories
+  </li>
+  <li>
+    Jason Baumgartner: Hardware Verification
+  </li>
+  <li>
+    David Monniaux: Static Analysis
+  </li>
+  <li>
+    Ken McMillan: Abstraction, Interpolation, and Composition
+    </li>
+  <li>
+    Neha Rungta and Peter Mehlitz: Java Pathfinder
+    </li>
+  <li>
+    Natarajan Shankar: Interactive Theorem Proving
+  </li>
+</ul>
+</p>
+</section>
+<section id="Registration" class="body">
+<p>
+In addition to lectures and laboratories, we will have invited
+lectures from distinguished researchers.  Please encourage the
+students in your department to apply for admission to the school.
+They can do so at the web site <a href="http://fm.csl.sri.com/MenloSchool">http://fm.csl.sri.com/MenloSchool</a>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+-->
+</div>
+
+</body>

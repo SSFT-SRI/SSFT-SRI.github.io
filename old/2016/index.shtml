@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Sixth Summer School on Formal Techniques</title>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Sixth Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 22 - May 27, 2016<br/>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+<!--      <h5><a
+      href="../2016/">http://fm.csl.sri.com/SSFT16</a>
+      </h5> -->
+    </hgroup>
+
+  </header>
+  <!-- <center> -->
+  <!--   <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a> -->
+  <!-- </center> -->
+
+<section id="description" class="body">
+  <p>
+Techniques based on formal logic, such as model checking,
+satisfiability, static analysis, and automated theorem proving, are
+finding a broad range of applications in modeling, analysis,
+verification, and synthesis.  This school, the sixth in the series,
+will focus on the principles and practice of formal techniques, with a
+strong emphasis on the hands-on use and development of this
+technology.  It primarily targets graduate students and young
+researchers who are interested in developing and using formal
+techniques in their research.  A prior background in formal methods
+is helpful but not required.   Participants at the school will have a
+seriously fun time experimenting with the tools and techniques
+presented in the lectures during laboratory sessions.</p>
+
+<h2>Background Course on Logic</h2>
+<ul>
+<li>
+<span class="lecturer">Natarajan Shankar (SRI CSL) and St&eacute;phane Graham-Lengrand (Ecole Polytechnique)</span>:<br/>
+<span class="lecture">Speaking Logic</span>
+<br/>(<span class="materials">
+<a href="speaklogicV6.pdf">Speaking Logic</a>,
+<a href="Main.pdf">Type Theory</a>,
+<a href="coq-files.tgz">Coq Files</a>,
+<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qVzY4XYAAAAJ&cstart=20&pagesize=80&authuser=1&citation_for_view=qVzY4XYAAAAJ:_B80troHkn4C">Reading</a>,
+<a href="PVScourse.pdf">PVS Course</a>,
+<a href="http://pvs.csl.sri.com">PVS</a>
+</span>)
+
+<br/>
+<b>Abstract</b>:
+Formal logic has become the lingua franca of computing. It is used for
+specifying digital systems, annotating programs with assertions,
+defining the semantics of programming languages, and proving or
+refuting claims about software or hardware systems. Familiarity with
+the language and methods of logic is a foundation for research into
+formal aspects of computing. This course covers the basics of logic
+focusing on the use of logic as a medium for formalization and proof.
+</li>
+</ul>
+
+<h2>Lecturers</h2>
+<p>
+Clark Barrett (NYU/Stanford), Stefano Tonetta (FBK Italy),
+Jean-Christophe Filliatre (LRI Paris), Carolyn Talcott (SRI),
+and Natarajan Shankar (SRI)
+</p>
+
+<ul>
+
+<li>
+<span class="lecturer">Clark Barrett (NYU/Stanford)</span>:<br/>
+<span class="lecture">Satisfiability Modulo Theories</span><br/>
+(<span class="materials"><a href="slides.pdf">Slides</a></span>)
+<br/>
+<b>Abstract</b>:
+I will give an introduction to Satisfiability Modulo Theories (SMT)
+solvers, including the DPLL(T) architecture that combines a Boolean
+satisfiability (SAT) solver with a theory solver, techniques for
+building individual theory solvers, and techniques for theory
+combination.  Lab sessions will explore these ideas by building and
+experimenting with small modules within the CVC4 SMT solver.
+</li>
+
+<li>
+<span class="lecturer">Stefano Tonetta<sup><a href="#fn1" id="ref1">&dagger;</a></sup> (FBK Italy)</span>:<br/>
+<span class="lecture">Advanced model checking for verification and safety assessment</span>
+<br/>
+(<span class="materials"><a href = "https://es-static.fbk.eu/people/tonetta/index.php?n=Events.SSFT16">Slides</a></span>)
+<br/>
+<b>Abstract</b>:
+The course will review the recent developments in model checking for
+finite- and infinite-state transition systems, including IC3 and its
+integration with implicit abstraction. We will then present a formal
+approach to contract-based refinement, and will cover the problem of
+safety analysis, i.e. assessing the response of a system to faults by
+automatically generating Fault Trees.  We will report the results on
+two recent case studies on the application of these techniques: the
+AIR6110 Wheel Brake System, and the NextGen protocol.
+<p>
+The practical sessions will rely on the use of the nuXmv model
+checker, the xSAP platform for safety analysis, and the OCRA system
+for contract refinement.</p>
+</li>
+
+<li>
+<span class="lecturer">Jean-Christophe Filliatre (Paris-Sud, CNRS)</span>:<br/>
+<span class="lecture">An Introduction to Deductive Program Verification</span>
+<br/>(<span class="materials"><a href = "http://why3.lri.fr/ssft-16/">Materials</a></span>)
+<br/>
+<b>Abstract</b>:
+This lecture introduces elementary concepts and techniques related to
+deductive program verification, such as loop invariants, function
+contracts, termination proofs, ghost code, modeling of data
+structures, weakest preconditions, etc. A particular focus is made on
+the use of automated theorem provers in the verification process and
+the tension that may exists between an elegant specification and a
+fully automated proof. The lecture includes many examples using the
+Why3 tool (http://why3.lri.fr/) and lab sessions will invite
+participants to formally verify small yet challenging programs using
+Why3.
+</li>
+
+<li>
+<span class="lecturer">Carolyn Talcott (SRI International Computer Science Laboratory)</span>:<br/>
+<span class="lecture">Pathway Logic:  Using Formal Techniques to Understand How Cells Work</span>
+<br/>(<span class="materials">
+<a href = "https://www.dropbox.com/s/0d9hisbjl444jo3/pl-16fm.key.pdf?dl=0">Slides</a>,
+<a href = "https://www.dropbox.com/s/j1ou2ndjaocjm61/Exercises.zip?dl=0">Exercises</a>,
+<a href = "http:pathway-logic.html">Maude</a></span>)
+<br/>
+<b>Abstract</b>:
+Pathway Logic (PL) is a framework based on rewriting logic for
+developing and analyzing formal executable models of cellular
+processes. The long term objective is better understanding of how
+cells work. Progress towards this goal involves curation of
+experimental knowledge, assembly of models to study a question of
+interest, visualizing the resulting models and using formal reasoning
+techniques to determine properties predicted by the models.
+<p>
+In these lectures we will focus on signal transduction: how cells
+sense their external and internal environment and make decisions. We
+will begin with some background and describe the informal models and
+reasoning often used by biologists.  We will describe the PL
+representation of cellular signaling systems as rewriting logic
+specifications (using the Maude language).  We will explain how
+knowledge is curated as formal objects, called datums, representing
+experimental findings, and the logic used to infer rewrite rules from
+datums.  We will then introduce the Pathway Logic Assistant (PLA) a
+tool for interacting with PL knowledge bases. Using PLA one can search
+a knowledge base or assemble and visualize a model. Once a model is
+assembled one can explore its structure or ask questions such as `how
+can a given state be reached?' (the answer is an execution pathway) or
+`what if I remove this or add that?'.  PLA treats signaling models as
+models of (tiny) distributed systems and using formal techniques such
+as forward/backward collection, search, and model checking to answer
+questions.  We will briefly look under the hood of PLA to see how
+reflection is used to enable Maude to be part of an interactive
+system. Reflection is also used to manage multiple representations of
+the knowledge base and derived models for export/import to integrate
+with other tools and knowledge bases, for example graph drawing tools
+or special purpose model checkers.</p>
+<p>
+The features of PL and PLA will be illustrated with substantial case
+studies.</p>
+</li>
+
+<li>
+<span class="lecturer">Sam Owre and Natarajan Shankar (SRI International Computer Science Laboratory)</span>:<br/>
+<span class="lecture">Specification, Verification, and Interactive Proof</span>
+<br/>(<span class="materials">
+<a href = "pvs-system.pdf">Slides</a>,
+<a href = "pvs-files.tgz">PVS Files</a>,
+<a href = "pvs-exercises.zip">Exercises</a>,
+<a href = "http://pvs.csl.sri.com">PVS</a></span>)
+<br/>
+<b>Abstract</b>:
+Formalization plays a key role in computing in disciplines ranging
+from hardware and distributed computing to programming languages and
+hybrid systems.  In this course, we explore the use of SRI's Prototype
+Verification System (PVS)[http://pvs.csl.sri.com] in formal
+specification and interactive proof construction.  PVS and other proof
+assistants like ACL2, Coq, HOL, HOL Light, Isabelle, and Nuprl, have
+been used to formalize significant tracts of mathematics and verify
+complex hardware and software systems.  In the lectures, we will
+explore the formalization of both introductory and advanced concepts
+from mathematics and computing.  In the lab sessions, we use PVS to
+interactively construct proofs and to define new proof strategies.
+</li>
+</ul>
+
+<h2>Invited Speakers</h2>
+<ul>
+<li>
+<span class="lecturer">Johan van Benthem<sup><a href="#fn2" id="ref2">&Dagger;</a></sup> (Stanford/CWI)</span>:<br/>
+<span class="lecture">Logic, Games, and Computation</span><br/>
+<b>Abstract</b>:
+Logic and human agency form a natural field of investigation, and have
+done so ever since logic started. Influences from many disciplines meet
+at this interface today, ranging from philosophy to computer science,
+economics, and cognitive science. I will discuss some major current
+themes in logic and agency, using games as a unifying paradigm.
+I will give examples of how logic can be used to analyze games,
+but also how games can be used to analyze logic, and finally,
+how both directions connect with the foundations of computation.
+I end with some basic open problems that face us in this setting.
+</li>
+<li>
+<span class="lecturer">Cindy Rubio Gonzalez (UC Davis)</span>:<br/>
+<span class="lecture">Floating-Point Precision Tuning Using Blame Analysis</span><br/>
+<b>Abstract</b>:
+</li>
+<li>
+<span class="lecturer">Maria Paola Bonacina (Universit&agrave; degli Studi di Verona)</span>:<br/>
+<span class="lecture">Ordering-based Strategies for Theorem Proving</span><br/>
+(<span class="materials">
+<a href = "orderingBasedStrat.pdf">Slides</a></span>)
+<br/>
+<b>Abstract</b>:
+After a brief presentation of automated reasoning as a field
+of computer science, the lecture focuses on first-order logic
+as a machine-oriented language and surveys ordering-based
+strategies for first-order theorem proving. It covers some of
+the basic building blocks of a theorem prover, illustrating
+both inference and search aspects, and conveying that reasoning
+is about ignoring what is redundant as much as it is getting
+what is relevant.
+</li>
+</ul>
+<hr/>
+<sup id="fn1">&dagger; Alessandro Cimatti is unable to lecture at the
+summer school. Professor Stefano Tonetta (FBK Italy) has kindly
+agreed to take his place.<a href="#ref1" title="Go back">↩</a></sup>
+<p>
+<sup id="fn2">&Dagger; Professor Sol Feferman is unable to present a
+lecture. We are pleased to announce that Professor Johan van Benthem
+(Amsterdam and Stanford) has kindly agreed to lecture in his place.<a
+href="#ref2" title="Go back">↩</a></sup>
+<hr/>
+<p>
+  <section id="schedule" class="body">
+    <h2><a href="ssft16-schedule.html">Schedule</a></h2>
+
+<p>
+Information about previous Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2014/">SSFT15</a></li>
+<li><a href="../2014/">SSFT14</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2011/">SSFT11</a></li>
+</ul>
+</p>
+
+<p>
+We expect to provide support for the travel and accommodation for a
+limited number of students registered at US universities, but welcome
+applications from non-US students as well as non-students (if space
+permits).  Non-US students will have to cover their own travel and
+will be charged around US$600 for meals and lodging.  Applications
+should be submitted at the website http://fm.csl.sri.com/SSFT16
+</p>
+<p>
+
+Applicants are urged to submit their applications before April 30,
+2016, since there are only a limited number of spaces available.
+Non-US applicants requiring US visas are requested to apply early.  We
+strongly encourage the participation of women and under-represented
+minorities in the summer school.
+
+</p>
+<hr/>
+<p>
+<b>Registration is now closed</b><hr/>
+</p>
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+<!--
+<p>
+  <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked="checked" name="gender" value="male"/>
+    Female<input class="but" type="radio" name="gender" value="female"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes"/>
+    No<input class="but" type="radio" checked="checked" name="minority" value="no"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Did you attend last year?</label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="attendedbefore" value="yes"/>
+    No<input class="but" type="radio" checked="checked" name="attendedbefore" value="no"/>
+  </td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows="4" cols="79"></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size="80" maxlength="100"/></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size="80" maxlength="100"/></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information"/>
+  <input type="reset" value="Clear The Form"/>
+</center>
+<hr width="80%"/>
+</form>
+</p>
+-->
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i>
+refers to African Americans, Mexican-Americans, Native Americans
+(American Indians, Alaska Natives, and Native Hawaiians),
+Pacific Islanders, and mainland Puerto Ricans.
+</p>
+
+</section>
+
+<!-- <section id="Questions" class="body"> -->
+<!--#include virtual="qanda.shtml" -->
+
+<!--
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+-->
+<!--
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+-->
+
+</body>
+</html>

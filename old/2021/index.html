@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tenth Summer School on Formal Techniques</title>
+    <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body id="index" class="home">
+
+    <header id="banner" class="body">
+      <hgroup>
+	<div id="hdiv">
+	  <h1 id="fssft">Tenth Summer School on Formal Techniques</h1>
+	</div>
+	<h2 class="strapline">
+	  May 22-28, 2021
+	  <!-- <br/>
+	       <a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA -->
+	</h2>
+	<!-- <h4>(Colocated with the first <a href="FMiTF.html">Formal Methods in the Field (FMiTF) Bootcamp</a>)</h4> -->
+      </hgroup>
+
+      <p id="toc-nav">
+	Table of Contents
+	<a href="#lecturers">Lecturers</a>
+	<a href="#splogic">Speaking Logic</a>
+	<a href="#invited">Invited Speakers</a>
+	<a href="#schedule">Schedule</a>
+	<a href="#prev">Previous SSFTs</a>
+	<a href="#registration">Registration</a>
+      </p>
+
+    </header>
+    <!-- <center> -->
+    <!--   <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a> -->
+    <!-- </center> -->
+
+    <section id="description" class="body">
+      <p>
+	Techniques based on formal logic, such as model checking,
+	satisfiability, static analysis, and automated theorem proving, are
+	finding a broad range of applications in modeling, analysis,
+	verification, and synthesis. This school, the tenth in the series,
+	will focus on the principles and practices of formal techniques,
+	with a strong emphasis on the hands-on use and development of these
+	technologies. It primarily targets graduate students and young
+	researchers who are interested in studying and using formal
+	techniques in their research. A prior background in formal methods
+	is helpful but not required. Participants at the school can expect
+	to have a seriously fun time experimenting with the tools and
+	techniques presented in the lectures during laboratory sessions.
+      </p>
+      <p>
+	<b>
+	  Due to the pandemic, the Tenth Summer School on Formal
+	  Techniques that was postponed from last year will be virtual this year.</b>
+      </p>
+      <p>
+	<b>
+	  We had an email failure so that some registration emails were not
+	  delivered. If you registered but haven't heard back, please drop
+	  an email to <a href="mailto:summerformal2021@gmail.com">summerformal2021@gmail.com</a>.
+	</b>
+      </p>
+      <p>
+	<b>Virtual Machine (VM) with all the tools installed</b>
+	<br/>
+	Many tools (e.g., PVS) only run on Linux of MacOS.
+	<a href="https://www.virtualbox.org">Virtualbox</a> provides a way for Windows
+	to create a virtual machine running Linux within Windows, without
+	having to dual-boot.  <a href="https://www.vagrantup.com/downloads">Vagrant</a>
+	makes it easy to create a VM.  Install these as instructed here, get the
+	<a href="Vagrantfile">Vagrantfile</a>, dated <b>May 23 2021</b>,
+	put it in a directory, start up a shell, change to that directory,
+	and run "vagrant up".  It will take a couple of hours to set up,
+	depending on your connection speeds and your computer resources.
+      </p>
+      <p>
+	Vagrant command summary - note that aside from "up" and "help", all require a running VM
+	<ul>
+	  <li><tt>vagrant up</tt> : the first time, will create the VM, otherwise run it</li>
+	  <li><tt>vagrant suspend</tt> : suspends the VM, vagrant up will restore the state</li>
+	  <li><tt>vagrant halt</tt> : powers off the VM, halts execution of any processes</li>
+	  <li><tt>vagrant provision</tt> : reprovisions after changing the Vagrantfile</li>
+	  <li><tt>vagrant help</tt> : help with vagrant</li>
+	</ul>
+      </p>
+      <p>
+	Some of the tools take a very long time to build, which seems to
+	cause problems for vagrant.  In particular, the opam installation of
+	z3, ACL2, and Coq all can cause problems.  What seems to work is to
+	let it provision as far as it can, taking note of where it died.
+	Then do "vagrant up", but this time instead of provisioning do a
+	"vagrant ssh" and find the corresponding line in the Vagrantfile,
+	and simply copy that line into the command line, along with any
+	other lines for that tool. Alternatively, you could comment out
+	those lines, build the rest of the VM, and do these manually
+	afterwards.
+      <p>
+	<b>Note:</b>
+	The <a href="Vagrantfile">Vagrantfile</a> may be modified from time
+	to time, the one linked in this page is always the most recent.  To
+	check if it changed, see if the fourth line of yours matches the
+	above date.  If the date is missing, or is earlier, then replace the
+	old one, and run "vagrant provision" if it is already running, or
+	"vagrant up --provision" to start it and install the
+	modifications. It's a bad idea to provision twice in a row, it's
+	faster the second time, but still slow. If you do this, let it
+	complete, or some tools files may end up corrupted.
+      <p>
+	Note that even if you are running Linux or MacOS, you might want to
+	install the tools this way, as it saves you the hassle of figuring
+	out how to install them yourself.</p>
+      <p>
+	More details are in the <a href="vagrant-notes">SSFT21 Vagrant notes</a>.
+      </p>
+
+      <h2 id="lecturers">Lecturers</h2>
+
+      <ul>
+	<li>
+	  <span class="lecture">Algebraic Program Analysis:
+	    Automating Abstract Interpretation</span><br/>
+	  <span class="lecturer">Thomas Reps (University of Wisconsin) </span>
+	  <br/>
+	  <span class="materials">
+	    (see Supplemental Material below)
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: I will lecture about two topics, which constitute
+	  the major parts of -- and the latest chapters of -- a
+	  twenty-five-year quest to raise the level of automation in
+	  abstract interpretation.  They concern two parts of the creation
+	  of correct-by-construction static analyzers.
+	  <br/>
+	  The first talk, "Algebraic program analysis," describes recent
+	  work on fixed-point-finding methods for solving the kinds of
+	  equation systems that arise in abstract interpretation. The second
+	  talk, "Automating abstract interpretation," covers three
+	  approaches that my collaborators and I developed to automate the
+	  construction of the abstract transformers used (on the right-hand
+	  sides) in such equation systems.  In particular, the talk tries to
+	  characterize how they stack up on 4 issues:
+	  <ol>
+	    <li> What formalism is used to express concrete semantics?</li>
+	    <li> What formalism is used to specify the abstract domain?</li>
+	    <li> What is the "engine" at work that applies/constructs abstract transformers
+	      (and, in particular, whether it provides a way to
+	      <ol type="i" >
+		<li> merely apply an abstract transformer, or to </li>
+		<li> compile/synthesize a representation of an abstract
+		  transformer that can be manipulated as an explicit artifact)? </li>
+	      </ol>
+	    </li>
+	    <li> How is the inherent non-compositionality of abstract
+	      interpretation dealt with (if at all)?</li>
+	  </ol>
+	  <br/>
+	  The research on these questions has allowed us to establish
+	  connections between abstract interpretation and several other
+	  areas of computer science, including dynamic descriptive
+	  complexity, automated reasoning/decision procedures, concept
+	  learning, and constraint programming.
+	  <br/>
+	  <p>
+	    <a href="https://drive.google.com/drive/folders/1VzpAXRHr2QjNMTK26P2abJvrFk5SKkKG?usp=sharing"><b>Folder</b></a>
+	  </p>
+	  <p>
+	    <b>Videos:</b>
+	    <ul>
+	      <li><a href="https://youtu.be/gldd7822dJM">Video 1</a></li>
+	      <li><a href="https://youtu.be/4zPc1_I04Qc">Video 2</a></li>
+	      <li><a href="https://youtu.be/PFY9YUvSVN8">Video 3</a></li>
+	      <li><a href="https://youtu.be/-rLpf47jN-0">Video 4</a></li>
+	    </ul>
+	  </p>
+	  <p>
+	    <b>Papers:</b><br/>
+	    Algebraic program analysis:
+	    <ul>
+	      <li><a href="https://www.cs.princeton.edu/~zkincaid/pub/fmcad15.pdf">
+		Compositional Recurrence Analysis</a>,</li>
+	      <li><a href="http://pages.cs.wisc.edu/~reps/#netys18">
+		Program analyses using Newton's method</a>,</li>
+	      <li><a href="http://pages.cs.wisc.edu/~reps/#toplas17">
+		Newtonian program analysis via tensor product</a>,</li>
+	      <li><a href="http://pages.cs.wisc.edu/~reps/#pldi17">
+		Compositional recurrence analysis revisited</a>,</li>
+	      <li><a href="http://pages.cs.wisc.edu/~reps/#popl18">
+		Non-linear reasoning for invariant synthesis</a></li>
+	    </ul>
+	    Automating abstract interpretation:
+	    <ul>
+	      <li><a href="https://research.cs.wisc.edu/wpis/papers/vmcai16-invited.pdf">
+		Paper</a></li>
+	    </ul>
+	  </p>
+	</li>
+
+	<li>
+	  <span class="lecture">SMT-streamlined Software Model Checking</span><br/>
+	  <span class="lecturer">Natasha E. Sharygina (Universita della Svizzera Italiana)</span>
+	  <span class="materials">
+	    <br/>
+	    <ul>
+	      <li><a href="https://drive.google.com/drive/folders/1ecXnFKuHjA7yMc9fEVR5zYWZD1s37hdH?usp=sharing">Folder</a></li>
+	      <li><a href="https://drive.google.com/file/d/1wIjZOCpBmg2lLBfnbLFLgIqEgQ--MEv6/view?usp=sharing">Slides</a></li>
+	      <li><a href="https://youtu.be/l5GkbHhDx-k">Video 1</a></li>
+	      <li><a href="https://youtu.be/t-7ig_wUC4o">Video 2</a></li>
+	      <li><a href="https://youtu.be/7pv-s6u3obE">Video 3</a></li>
+	      <li><a href="https://youtu.be/dw8JrCsEII0">Video 4</a></li>
+	      <li><a href="http://verify.inf.usi.ch/hifrog">HiFrog</a></li>
+	      <li><a href="http://verify.inf.usi.ch/upprover">UpProver</a></li>
+	    </ul>
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: Formal verification using model checking and
+	  related logic-based reasoning is a popular though highly
+	  non-trivial approach when it comes to reasoning about software
+	  correctness. It often requires ingenuity both from the
+	  verification tools developers and their users. In this session I
+	  will present an approach which interleaves SMT-based reasoning
+	  with the basic model checking tasks thus enabling scalable
+	  verification and simplifying the use of the tools for non-experts.
+	  The integrated development of a model checker backed up by the
+	  efficient SMT solver is the key; SMT solving is used not only as a
+	  computational engine of reasoning as in most existing tools, but
+	  also for system modelling and the automated adjustment of its
+	  precision necessary for scalable verification. I will illustrate
+	  the integrated approach using our HiFrog and UpProver projects
+	  which feature a function-summarization-based model checker using
+	  SMT as the modelling and summarization language. Our model checker
+	  supports various encoding precisions through SMT, i.e.,
+	  uninterpreted functions, linear real and integer arithmetic, and
+	  propositional logic. In addition the tool allows optimised
+	  traversal of reachability properties, counter-example-guided
+	  summary refinement, summary compression, and user-provided
+	  summaries. I will describe the use of the tool through the
+	  description of its architecture and a rich set of features and
+	  compare it to our earlier work where we invented the SAT-based
+	  function summarization approach. The presentation will be
+	  complemented by labs which will demonstrate an experimental
+	  evaluation on the practical impact the different SMT precisions
+	  have on program verification.
+	</li>
+
+	<li>
+	  <span class="lecture">Proving Properties of Algorithms, Hardware,
+	    and Software with ACL2 </span><br/>
+	  <span class="lecturer">J Strother Moore and Warren A. Hunt,
+	    Jr. (University of Texas) </span>
+	  <br/>
+	  <span class="materials">
+	    (see Supplemental Material below)
+	  </span>
+	  <p>
+	    <b>Abstract</b>: ACL2, which stands for ``A Computational Logic
+	    for Applicative Common Lisp,'' is a mechanized logic and
+	    functional programming language in which you can model
+	    computational artifacts like algorithms, hardware designs,
+	    programming languages, and programs.  ACL2 supports a robust and
+	    efficient subset of the ANSI standard programming language
+	    Common Lisp and hence can used not only as a specification
+	    language in which to model artifacts but as a prototyping
+	    environment in which models can be tested.  This has made ACL2
+	    very useful to industrial users, especially in microprocessor
+	    design, floating-point analysis, SAT proof checking, real
+	    analysis, computational biology, cryptographic algorithms and
+	    processors, metamathematics, etc.
+	  </p>
+	  <p>
+	    While the theorem prover is automatic, the user has a great deal
+	    of control over how it approaches any given problem.  The most
+	    common control mechanisms are the ``appropriate'' formalizations
+	    of models and properties and the identification of key lemmas.
+	    The ACL2 expert can control proofs in a wide variety of ways,
+	    including writing new proof procedures and using ACL2 to verify
+	    their soundness.  The ACL2 Community Books repository contains
+	    thousands of ``books'' of useful lemmas, some of which provide
+	    verified proof procedures, like SAT checkers and bit blasting.
+	    In these lectures we will introduce ACL2 starting with the
+	    simplest proofs about recursive functions and moving up to
+	    models of simple hardware designs and programming languages.
+	    Lab exercises will emphasize the two main ways users guide
+	    ACL2:, appropriate formalization and identification of key
+	    lemmas.
+	  </p>
+	  <p>
+	    Our aim is not to produce expert users but to position students
+	    to be able to learn more if they're interested.  We assume
+	    students are not allergic to Lisp's parenthesis-laden prefix
+	    notation and are somewhat familiar with Emacs.  We will,
+	    however, confine the lectures and labs to relatively small
+	    feature subsets of both Lisp and Emacs.
+	  </p>
+	  <p>
+	    <b>Supplemental Material:</b> The <a href="https://www.cs.utexas.edu/users/moore/acl2/">
+	      ACL2 home page</a> contains the ACL2 source code, installation
+	    instructions, and extensive user-level documentation.  Not only
+	    should ACL2 be installed, but its regression suite should be
+	    recertified and be locally available.  A full regression
+	    recertification takes about 8 hours and verifies thousands of
+	    books containing over a hundred thousand theorems.  (It is
+	    easier to recertify them all than to recertify the cone of books
+	    needed in the lab exercises.)  Students wishing to get a head
+	    start should buy the book Computer-Aided Reasoning: An Approach,
+	    Matt Kaufmann, Panagiotis Manolios, and J Strother Moore, Kluwer
+	    Academic Publishers, June, 2000. (ISBN 0-7923-7744-3).  The
+	    Kluwer price for the hardback edition is excessive but the book
+	    can be obtained in paperback form from Lulu by following the
+	    <a href="https://www.cs.utexas.edu/users/moore/publications/acl2-books/OrderingInformation.html">
+	      Book 1 link.</a>
+	  </p>
+	  <p>
+	    <b>Slides:</b><br/>
+	    <a href="https://drive.google.com/file/d/1dlz2kLeNtLwPRXdRKextHnLFYPR0VpK2/view?usp=sharing">Introduction to ACL2</a>
+	  </p>
+	  <p>
+	    <b>Notes:</b><br/>
+	    <a href="https://drive.google.com/drive/folders/1vhpIAMJHwvLuZ-ESFuBh8PBL2GfYqL_o?usp=sharing">ACL2 Notes</a>
+	  </p>
+	  <p>
+	  <b>Videos:</b>
+	  <ul>
+	    <li><a href="https://youtu.be/xcXBOkp_w1s">Welcome</a></li>
+	    <li><a href="https://youtu.be/912RcvJrlk0">Video 0</a></li>
+	    <li><a href="https://youtu.be/pVRfeu8MbgE">Video 1</a></li>
+	    <li><a href="https://youtu.be/dtS4MjaWtgs">Video 2</a></li>
+	    <li><a href="https://youtu.be/81pr9bSVoy4">Video 3</a></li>
+	    <li><a href="https://youtu.be/60PPqrARDLc">Video 4</a></li>
+	    <li><a href="https://youtu.be/rqM7WRXx3qc">Video 5</a></li>
+	    <li><a href="https://youtu.be/dE83qdc7cJc">Video 6a</a></li>
+	    <li><a href="https://youtu.be/xFfZQPPPvjo">Video 6b</a></li>
+	    <li><a href="https://youtu.be/19hdVOLtohA">Video 7</a></li>
+	  </ul>
+	  </p>
+	</li>
+
+	<li>
+	  <span class="lecture">Executable Formal Specification and Verification in Maude</span><br/>
+	  <span class="lecturer">Jose Meseguer (University of Illinois at Urbana-Champaign)</span>
+	  <br/>
+	  <b>Abstract</b>: Rewriting Logic is a simple, yet very expressive,
+	  computational logic in which a wide range of concurrent systems,
+	  programming languages, biological systems, and also other logical
+	  formalisms and tools can be specified and analyzed. Maude is a
+	  high-performance declarative language based directly on rewriting
+	  logic. Using Maude, the formal specification of a system as a
+	  rewrite theory can be: (i) excuted and simulated; (ii) model
+	  checked; (iii) symbolically excuted and model checked with
+	  symbolic states/inputs, and (iv) formally analyzed using various
+	  model checking and theorem proving tools in the Maude formal
+	  environment. The lectures will give an introduction to rewriting
+	  logic and to the use of Maude in formal specification and
+	  verification.
+	  <span class="materials">
+	    <ul>
+	      <li>
+		<a href="https://drive.google.com/drive/folders/1bFgv8gTIoUnBo4w2kZhYxtHnkFNcip1B?usp=sharing">Folder</a>
+	      </li>
+	      <li>
+		<a href="https://youtu.be/HcDg0lhGiDc">Video1</a>
+		<a href="https://drive.google.com/file/d/1uExffjXRrIpKvgnOHhFeYr0ep4QOxaSM/view?usp=sharing">Lecture1 slides</a>,
+	      </li>
+	      <li>
+		<a href="https://drive.google.com/file/d/1Yg16-t-4dqjDolJcJh2cKTObQ_NGzGoy/view?usp=sharing">Lecture2</a>,
+		<a href="https://youtu.be/9L3GIoIPu5I">Lecture2 slides</a>
+	      </li>
+	      <li>
+		<a href="https://youtu.be/NjyWGfsY2eE">Video3</a>,
+		<a href="https://drive.google.com/file/d/1kwOFT0IZzHaCy0OtIasWoGUAmnGPFDP5/view?usp=sharing">Lecture3-I slides</a>,
+		<a href="https://drive.google.com/file/d/1Nfb0xSaNNUurNGyEllgJy7XFCkFB-s8X/view?usp=sharing">Lecture3-II slides</a>
+	      </li>
+	      <li>
+		<a href="https://youtu.be/1OB2G2GLODg">Lecture4</a>,
+		<a href="https://drive.google.com/file/d/1Rg0qfr0w2bQeY3GUr7byIlCn0HMqAy_D/view?usp=sharing">Lecture4 slides</a>
+	      </li>
+	      <li><a href="comm.maude">comm.maude</a>
+	      </li>
+	      <li><a href="https://drive.google.com/drive/folders/16CLCDwWJIrqIJDdq6ApwvQxmZquoymgM?usp=sharing">Lab Exercises</a>
+	      </li>
+	      <li>
+		M. Clavel, F. Durán, S. Eker, P. Lincoln, N. Martí-Oliet, J. Meseguer, C. Talcott:
+		<a href="http://maude.cs.illinois.edu/w/images/0/0d/Maude-book.pdf">
+		  All About Maude - A High-Performance Logical Framework,
+		  How to Specify, Program and Verify Systems in Rewriting
+		  Logic
+		</a>. LNCS 4350, Springer (2007)
+	      </li>
+	      <li>
+		F. Durán, S. Eker, S. Escobar, N. Martí-Oliet, J. Meseguer,
+		R. Rubio, C. L. Talcott:
+		<a href="http://maude.cs.illinois.edu/w/images/0/0c/Maude-jlamp.pdf">
+		  Programming and symbolic computation in Maude
+		</a>. J. Log. Algebraic Methods Program. 110 (2020).
+	      </li>
+	      <li>
+		José Meseguer: <a href="http://maude.cs.illinois.edu/w/images/7/70/Maude-tapas.pdf">
+		Symbolic Computation in Maude: Some Tapas</a>. LOPSTR 2020: LNCS 12561, 3-36, 2020
+	      </li>
+	      <li> <a href="https://youtu.be/HcDg0lhGiDc">Video</a></li>
+	    </ul>
+	  </span>
+	  <br/>
+	</li>
+
+	<!-- <li>
+	     <span class="lecture"> </span><br/>
+	     <span class="lecturer"> </span>
+	     <span class="materials">
+	     ()
+	     </span>
+	     <br/>
+	     <b>Abstract</b>:
+	     </li>
+	-->
+      </ul>
+
+      <h2 id="splogic">Speaking Logic: Background Course</h2>
+      The main lectures in the summer school will be preceded by a background course on logic
+      <ul>
+	<li>
+	  <span class="lecturer"><b>Natarajan Shankar and St&eacute;phane Graham-Lengrand (SRI CSL)</b></span>:<br/>
+	  <span class="lecture"><i>Speaking Logic</i></span>
+	  <br/>
+	  <span class="materials">
+	    (<a href="speaklogicV10.pdf">Speaking Logic</a>,
+	    <a href="CAS2017.pdf">PVS Tutorial</a>,
+	    <a href="TypeTheory.pdf">Type Theory</a>)
+	  </span>
+	  <br/>
+	  <b>Abstract</b>: Formal logic has become the lingua franca of
+	  computing. It is used for specifying digital systems, annotating
+	  programs with assertions, defining the semantics of programming
+	  languages, and proving or refuting claims about software or hardware
+	  systems. Familiarity with the language and methods of logic is a
+	  foundation for research into formal aspects of computing. This course
+	  covers the basics of logic focusing on the use of logic as a medium for
+	  formalization and proof.
+	  <br/>
+	  <p>
+	    <b>Videos:</b>
+	    <ul>
+	      <li><a href="https://us02web.zoom.us/rec/share/wlf2eFpwARRpXGOKsOKlCceWPhpqYLeaXLxoYn2Nmicc0dYD5GsZXhHAZhlGeKk.U1Jfoo33VFmTc0ih">Day 1</a>
+		<!-- Passcode: =9vsP35* -->
+	      </li>
+	      <li><a href="https://us02web.zoom.us/rec/share/ylVXzI2W8Xs7sHA67mgEZTWAUpmStSOj8Y7cmA-DN5OZaj4Jy8NsM0muTqlRgcKn.nQEu--8js4nS27fq">Day 2</a>
+		<!-- Passcode: n&9Px+2C -->
+	      </li>
+	    </ul>
+	  </p>
+	</li>
+	    </ul>
+
+	    <h2 id="invited">Invited Speakers</h2>
+	    <ul>
+	      <li>
+		<span class="lecturer"><b>ThanhVu Nguyen (University of Nebraska-Lincoln)</b></span>:<br/>
+		<span class="lecture">
+		  Improving Software Quality using Automatic Invariant Discovery
+		  and Program Repair</span><br/>
+		<p><b>Abstract</b>: Software bugs are a persistent feature of
+		  daily life---crashing web browsers, allowing cyberattacks, and
+		  distorting the results of scientific computations. One approach
+		  to improving software uses program invariants---mathematical
+		  descriptions of program behaviors---to verify code and detect
+		  bugs. In this talk, I present DIG, a dynamic analysis framework
+		  for discovering useful classes of program invariants that appear
+		  in many practical applications. I will also talk about my work
+		  on automatic program repair, which automatically generates fixes
+		  for buggy programs. Finally, I will discuss how invariant
+		  generation and program repair can be applied to solve problems
+		  in several emerging domains including configurable systems and
+		  AI-generated software.</p>
+		<p><b>Bio</b>: ThanhVu Nguyen is an assistant professor in the
+		  Department of Computer Science and Engineering at the University
+		  of Nebraska-Lincoln. His current research is in the intersection
+		  of Software Engineering and Programming Languages. In
+		  particular, he focuses on improving software quality through
+		  dynamic invariant inference, automatic program repair, and
+		  highly-configurable systems analysis.</p>
+		<p>
+		  Dr. Nguyen received his Ph.D. in computer science from the
+		  University of New Mexico-Albuquerque in 2014 and completed a
+		  2-year postdoc at the University of Maryland in 2016. He is a
+		  recipient of the NSF CISE Career Research Initiation Initiative
+		  (CRII) Award, a 10-year Most Influential Paper award (at ICSE
+		  2019), and a 10-year Most Impact Paper Award (at GECCO 2019).
+		</p>
+	      </li>
+
+	      <!-- <li>
+		   <span class="lecturer"><b></b></span>:<br/>
+		   <span class="lecture"></span><br/>
+		   <span class="materials">
+		   ()
+		   </span>
+		   <p><b>Abstract</b>:
+		   </p>
+		   </li>
+	      -->
+	    </ul>
+	    <h2 id="schedule">
+	      <b><a href="https://docs.google.com/spreadsheets/d/1g5qfOlTxBPz8wD1qyYzbsG_N5nuQCu7GyG7TDm-2sG4/edit?usp=gmail">Schedule</a></b>
+	    </h2>
+	    <p>
+	      <b>Videos</b>
+	      <br/>
+	      <ul>
+		<li>
+		  <a href="https://us02web.zoom.us/rec/share/CdXc6F-qBw4ojculm8Duu_uaDuVxeru416H21X0ArHA49KJ4O_qLk04296Pp-vZT.RTuuteQ4MATGc52z">Mon AM Plenary
+		  </a>
+		  <!-- Passcode: AB1?V0@K -->
+		</li>
+		<li>
+		  <a href="https://sri.zoomgov.com/rec/share/-akgxdzbgl-OKi82ILYftXPfcnJNxkIhcTomJxRXAnpqGqFhHTMG4nXBYT7pwEJj.LT3r_4W94fYZ9Wt4">Mon: Reps/Cyphert Lab Session A</a>
+		  <!-- Passcode: 09Xag1Xb -->
+		</li>
+		<li>
+		  <a href="https://us02web.zoom.us/rec/share/PY-1GeeJWCfOhhGBBCDY4kQJ7LlpU6jcITON7GNxVoe_2T7JP-3NFeowujqWVUeM.z3zVZLdEZ82c7Gp2">Mon PM Plenary</a>
+		  <!-- Passcode: F0%?nC^A -->
+	  </li>
+	</ul>
+	</p>
+
+
+      <h2 id="prev">Previous Summer Schools on Formal Techniques</h2>
+
+      <p>
+	Information about previous Summer Schools on Formal Techniques can
+	be found at
+	<ul>
+	  <li><a href="../2019/">SSFT19</a></li>
+	  <li><a href="../2018/">SSFT18</a></li>
+	  <li><a href="../2017/">SSFT17</a></li>
+	  <li><a href="../2016/">SSFT16</a></li>
+	  <li><a href="../2015/">SSFT15</a></li>
+	  <li><a href="../2014/">SSFT14</a></li>
+	  <li><a href="../2013/">SSFT13</a></li>
+	  <li><a href="../2012/">SSFT12</a></li>
+	  <li><a href="../2011/">SSFT11</a></li>
+	</ul>
+      </p>
+      <p>
+	Jay Bosamiya of CMU has blogged about the 2018 Summer School at <a
+									    href="https://www.jaybosamiya.com/blog/2018/05/31/ssft/">
+	https://www.jaybosamiya.com/blog/2018/05/31/ssft/</a>
+      </p>
+
+      <h2 id="registration">Registration</h2>
+
+      <p>
+	<!-- We expect to provide support for the travel and accommodation for (a
+	     limited number of) students registered at US universities. We
+	     welcome applications from non-US students as well as non-students
+	     (if space permits).  Non-US students will have to cover their own
+	     travel; the cost (which covers meals and lodging) is:
+	     <ul>
+	     <li>US$800 for the summer school (SSFT21)</li>
+	     <li>US$700 for the boot camp (FMiTF)</li>
+	     </ul> -->
+	<b>Those who already registered for the 2020 event need not
+	  reregister, and you will be contacted to check if you would like
+	  your registration to be processed.</b>
+	Although the summer school is virtual and there is no registration
+	fee, attendance is restricted to registered participants.  Attendees
+	who complete the summer school will receive a certificate by mail.
+	Applications should be submitted together with names of
+	two references (preferably advisors, professors, or senior
+	colleagues) using the form below.
+      </p>
+      <p>
+	Applicants are urged to submit their applications before April 30,
+	2021, since there are only a limited number of spaces available.
+	<!-- Non-US applicants requiring US visas are requested to apply early. -->
+	We strongly encourage the participation of women and
+	under-represented minorities in the summer school. </p>
+      <hr/>
+
+      <!-- <p>
+	   Questions on any aspect of the school can be posted
+	   <a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+	   </p>
+      -->
+      <p>
+	<form method="POST" action="../../cgi-bin/ssft12_reg.py">
+	  <center> <b>Note that all fields are required</b></center>
+	  <table>
+	    <!-- <tr>
+		 <td><label>Event</label></td>
+		 <td id="event">
+		 SSFT<input class="but" type="checkbox" checked="checked" name="ssft" value="ssft"/>
+		 FMiTF<input class="but" type="checkbox" name="fmitf" value="fmitf"/>
+		 <span>(choose one or both)</span>
+		 </td>
+		 </tr> -->
+	    <tr>
+	      <td><label>Name</label></td>
+	      <td><input name="name" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Gender</label></td>
+	      <td id="gender">
+		Male<input class="but" type="radio" checked="checked" name="gender" value="male"/>
+		Female<input class="but" type="radio" name="gender" value="female"/>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td><label>Minority<sup>&dagger;</sup></label></td>
+              <td id="gender">
+		Yes<input class="but" type="radio" name="minority" value="yes"/>
+		No<input class="but" type="radio" checked="checked" name="minority" value="no"/>
+              </td>
+	    </tr>
+	    <tr>
+	      <td><label>Permanent mailing address</label></td>
+	      <td><textarea name="mailaddr" rows="4" cols="79"></textarea></td>
+	    </tr>
+	    <tr>
+	      <td><label>Email</label></td>
+	      <td><input name="email" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Affiliation</label></td>
+	      <td><input name="affiliation" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Education</label></td>
+	      <td><input name="education" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Graduate Advisor</label></td>
+	      <td><input name="advname" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Did you attend last year?</label></td>
+	      <td id="gender">
+		Yes<input class="but" type="radio" name="attendedbefore" value="yes"/>
+		No<input class="but" type="radio" checked="checked" name="attendedbefore"
+			 value="no"/>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td><label>Research Interests</label></td>
+	      <td><textarea name="interests" rows="4" cols="79"></textarea></td>
+	    </tr>
+	    <tr>
+	      <td><label>Reference Name</label></td>
+	      <td><input name="refname1" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Email</label></td>
+	      <td><input name="refemail1" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Phone</label></td>
+	      <td><input name="refphone1" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Reference Name</label></td>
+	      <td><input name="refname2" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Email</label></td>
+	      <td><input name="refemail2" size="80" maxlength="100"/></td>
+	    </tr>
+	    <tr>
+	      <td><label>Phone</label></td>
+	      <td><input name="refphone2" size="80" maxlength="100"/></td>
+	    </tr>
+	  </table>
+	  <center>
+	    <input type="submit" value="Send Information"/>
+	    <input type="reset" value="Clear The Form"/>
+	  </center>
+	  <hr width="80%">
+	</form>
+      </p>
+      <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i>
+	refers to African Americans, Mexican-Americans, Native Americans
+	(American Indians, Alaska Natives, and Native Hawaiians),
+	Pacific Islanders, and mainland Puerto Ricans.
+      </p>
+      <hr width="80%">
+
+    </section>
+
+    <!-- <section id="Questions" class="body"> -->
+    <!--#include virtual="qanda.shtml" -->
+
+    <!--
+	 <section id="Reading" class="body">
+	 <h3>Background reading:</h3>
+	 <ul>
+	 <li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+	 <li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+	 </ul>
+	 </section>
+    -->
+    <!--
+	 <section id="Tools" class="body">
+	 <h3>Tools:</h3>
+	 <ul>
+	 <li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+	 <li><a href="http://z3.codeplex.com/">Z3</a></li>
+	 <li><a href="http://spinroot.com/">SPIN</a></li>
+	 <li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+	 <li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+	 <li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+	 </ul>
+	 </section>
+    -->
+
+  </body>
+</html>
