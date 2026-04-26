@@ -1,0 +1,94 @@
+fmod NAT-LIST is protecting NAT .
+ sort List .
+ subsorts Nat < List .
+ op nil : -> List .
+ op _;_ : List List -> List [assoc id: nil] .
+ op length : List -> Nat .
+ var L : List .
+ var N : Nat .
+ eq length(nil) = 0 .
+ eq length(N ; L) = s(length(L)) .
+endfm
+
+mod COMM is protecting NAT-LIST . protecting  QID .
+ sorts Oid Class Object Msg Msgs Att Atts Configuration .
+ subsort Qid < Oid .
+ subsort Att < Atts .     *** Atts is set of attribute-value pairs
+ subsort Object < Configuration .
+ subsorts Msg < Msgs < Configuration .
+ op none : -> Msgs [ctor] .
+ op __ : Configuration Configuration -> Configuration
+                       [ctor config assoc comm id: none] .
+ op __ : Msgs Msgs -> Msgs
+                       [ctor config assoc comm id: none] .
+ op null : -> Atts .
+ op _,_ : Atts Atts -> Atts [ctor assoc comm id: null] .
+ op buff:_ : List -> Att [ctor] .
+ op snd:_ : Oid -> Att [ctor] .
+ op rec:_ : Oid -> Att [ctor] .
+ op cnt:_ : Nat -> Att [ctor] .
+ op ack-w:_ : Bool -> Att [ctor] .
+ ops Sender Receiver : -> Class [ctor] .
+ op <_:_|_> : Oid Class Atts -> Object [ctor] .
+ msg to_from_val_cnt_ : Oid Oid Nat Nat -> Msg [ctor] .
+ msg to_from_ack_ : Oid Oid Nat -> Msg [ctor] .
+ op init : Oid Oid List -> Configuration .
+
+ vars N M : Nat . vars L Q : List .  vars A B : Oid .  vars M1 M2 : Msg .
+ var TV : Bool .
+
+ rl [snd] : < A : Sender | buff: (N ; L), rec: B, cnt: M, ack-w: false >
+   =>
+    (to B from A val N cnt M)
+    < A : Sender | buff: L, rec: B, cnt: M, ack-w: true > .
+
+ rl [rec] : < B : Receiver | buff: L, snd: A, cnt: M >
+      (to B from A val N cnt M)
+    =>
+      < B : Receiver | buff: (L ; N), snd: A, cnt: s(M) >
+      (to A from B ack M) .
+
+ rl [ack-rec] : < A : Sender | buff: L, rec: B, cnt: M, ack-w: true >
+    (to A from B ack M)
+    =>
+    < A : Sender | buff: L, rec: B, cnt: s(M), ack-w: false > .
+
+ eq init(A,B,L) = < A : Sender | buff: L, rec: B, cnt: 0, ack-w: false >
+                   < B : Receiver | buff: nil, snd: A, cnt: 0 > .
+endm
+
+red init('a,'b,(1 ; 2 ; 3)) .
+
+red init('a,'b,(1 ; 2 ; 3 ; 4)) .
+
+red init('a,'b,(1 ; 2 ; 3 ; 4 ; 5)) .
+
+***(
+==============================================================
+red init('a,'b,(1 ; 2 ; 3)) .
+
+result Configuration:
+< 'a : Sender | buff: (1 ; 2 ; 3),rec: 'b,cnt: 0,ack-w: false >
+< 'b : Receiver | buff: nil,snd: 'a,cnt: 0 >
+===============================================================
+red init('a,'b,(1 ; 2 ; 3 ; 4)) .
+
+result Configuration:
+< 'a : Sender | buff: (1 ; 2 ; 3 ; 4),rec: 'b,cnt: 0,ack-w: false >
+< 'b : Receiver | buff: nil,snd: 'a,cnt: 0 >
+===============================================================
+red init('a,'b,(1 ; 2 ; 3 ; 4 ; 5)) .
+
+result Configuration:
+< 'a : Sender | buff: (1 ; 2 ; 3 ; 4 ; 5),rec: 'b,cnt: 0,ack-w: false >
+< 'b : Receiver | buff: nil,snd: 'a,cnt: 0 >
+================================================================
+search < 'a : Sender | buff: (1 ; 2 ; 3),rec: 'b,cnt: 0,ack-w: false > < 'b : Receiver | buff: nil,snd: 'a,cnt: 0 > =>! C:Configuration .
+
+Solution 1 (state 9)
+C --> < 'a : Sender | buff: nil,rec: 'b,cnt: 3,ack-w: false >
+      < 'b : Receiver | buff: (1 ; 2 ; 3),snd: 'a,cnt: 3 >
+==================================================================
+search < 'a : Sender | buff: (1 ; 2 ; 3),rec: 'b,cnt: 0,ack-w: false > < 'b : Receiver | buff: nil,snd: 'a,cnt: 0 >  =>! < 'a : Sender | buff: L,rec: 'b,cnt: N,ack-w: TV > C:Configuration < 'b : Receiver | buff: Q,snd: 'a,cnt: M > such that N =/= M .
+
+)

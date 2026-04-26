@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Summer Formal: Third Summer School on Formal Techniques</title>
+  </script>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Third Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 20- May 24, 2013<br>
+	<a href="http://menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+      <h5>After <a
+      href="https://sites.google.com/site/vstte2013/">VSTTE 2013</a>,<br/>
+      May 17 to May 19 at the same location
+      </h5>
+    </hgroup>
+
+  </header>
+
+  <section id="description" class="body">
+    <p>
+      Formal verification techniques such as model checking, satisfiability, and
+      static analysis have matured rapidly in recent years.  This school, the
+      third in the series, will focus on the principles and practice of formal
+      verification, with a strong emphasis on the hands-on use and development of
+      this technology. It primarily targets graduate students and young
+      researchers who are interested in using verification technology in their own
+      research in computing as well as engineering, biology, and mathematics.
+      Students at the school will have the opportunity to experiment with the
+    tools and techniques presented in the lectures.</p>
+    <p>
+      The first (<a href="../2011/">SSFT11</a>) and
+      second (<a href="../2012/">SSFT12</a>) Summer
+      Formal schools were held in May 2011 and 2012.
+    </p>
+    <p>
+      We have NSF support for the travel and accommodation for students from US
+      universities, but welcome applications from graduate students at non-US
+      universities as well (cost will be around $500 to cover boarding/lodging).
+    </p>
+<!-- <section id="Schedule" class="body">
+  <h2><a href="schedule.html">Schedule</a></h2>
+</section> -->
+<hr/>
+
+<section id="Lecturers" class="body">
+  <h2>Lectures</h2>
+<p>
+<ul>
+  <li>
+    <span class="lecturer">Leonardo de Moura (MSR Redmond)</span>:<br/>
+    <span class="lecture">Decision Methods for Arithmetic</span><br/>
+    <b>Abstract</b>: Decision methods for arithmetic are extensively used in the
+    formal verification and analysis of software and cyber-physical
+    systems, computer algebra, and formalized mathematics. In these talks,
+    we will cover several decision methods for fragments of arithmetic
+    such as the elementary theories of algebra and geometry over the Real
+    and Complex numbers. We will also describe the general techniques used
+    in the design of these procedures: saturation, model-based methods,
+    abstract/refine loop, infinitesimals, etc.  We assume only a basic
+    grounding in first-order logic.
+  </li>
+  <li>
+    <span class="lecturer">Cesar Munoz, (NASA Langley Research Center)</span>:<br/>
+    <span class="lecture">Advanced Theorem Proving Techniques in PVS with Applications</span><br/>
+    <b>Abstract</b>: The <a href="http://pvs.csl.sri.com">Prototype
+    Verification System (PVS)</a> is an interactive environment for the
+    specification and verification of systems. PVS provides a strongly
+    typed specification language, which is based on Higher-Order
+    Logic. The type system of PVS supports: sub-typing, dependent-types,
+    abstract data types, parametric types, records, unions, and
+    tuples. The PVS theorem prover includes decision procedures for a
+    variety of theories such as linear arithmetic, propositional logic,
+    and temporal logic.  This seminar will provide a gentle introduction
+    to advanced PVS features, including types for specifications, implicit
+    induction, iterations, rapid prototyping, strategy writing, and
+    computational reflection.
+  </li>
+  <li>
+    <span class="lecturer">Aarti Gupta (NEC Labs)</span>:<br/>
+    <span class="lecture">Static and Dynamic Verification of Concurrent Programs (<a href="lec1-lec2.pdf">slides</a>, <a href="lab.pdf">lab</a>, <a href="ConcurrentStack.java">ConcurrentStack.java</a>)</span>
+    <br/>
+    <b>Abstract</b>: The need to harness the computing power of modern multi-core
+    platforms has driven a resurgence of interest in concurrent
+    programs. However, it is very challenging to develop correct
+    concurrent programs, and in practice programs often exhibit bugs
+    related to subtle synchronization effects. These lectures will
+    describe various static and dynamic techniques underlying automatic
+    verification and debugging of concurrent programs. The emphasis will
+    be on main ideas to reason about synchronizations and interleavings
+    between interacting threads or processes.
+    <p>
+      On the static side, we first review some theoretical results on model
+      checking based on interacting pushdown system (PDS)
+      models. Decidability results here limit the patterns of
+      synchronization allowed. Next, we consider the practice of model
+      checking concurrent programs, where the main challenge is in managing
+      the explosion in interleavings. We consider both explicit and symbolic
+      state space exploration, where various techniques are inspired by
+      successful verification of finite state systems on one hand, and
+      sequential programs on the other.
+    </p>
+    <p>
+      Due to scalability limitations of static verification, there has been
+      increased interest in dynamic techniques for systematically exploring
+      (parts of) concurrent programs. We discuss preemptive context bounding
+      techniques that control the scheduler to dynamically explore other
+      interleavings. We also consider predictive analysis techniques, where
+      a trace-based model derived from dynamic executions is used to predict
+      concurrency bugs.
+    </p>
+  </li>
+  <li>
+    <span class="lecturer">Andrey Rybalchenko (TU Munich)</span>:<br/>
+    <span class="lecture">Program verification and synthesis as Horn-like constraint solving (<a href="http://www7.in.tum.de/~rybal/papers/2013-tutorial-program-verification-as-horn-constraint-solving.pdf">slides</a>,
+    <a href="http://www7.in.tum.de/~rybal/papers/2013-sas-solving-universally-quantified-horn-clauses.pdf">SAS 2013</a>,
+    <a href="http://www7.in.tum.de/~rybal/papers/2013-cav-solving-existentially-quantified-horn-clauses.pdf">CAV 2013</a>,
+    <a href="http://www7.in.tum.de/~rybal/papers/2012-pldi-synthesizing-verifiers-from-proof-rules.pdf">PLDI 2012</a>) </span><br/>
+    <b>Abstract</b>: First, we review how proving reachability and termination
+    properties of transition systems, procedural programs, multi-threaded
+    programs, and higher- order functional programs can be reduced to
+    constraint solving for Horn-like constraints.  This step will cover
+    properties over program variables of scalar and array data types.
+    Second, we show how universal and existential temporal properties can
+    be proved using contraint-based setting equipped with existential
+    quantification.  Third, we present a reduction from reactive program
+    synthesis to existentially quantified Horn-like constraints. Finally,
+    we discuss adequate solving algorithms and tools.
+    <p>
+      The material would cover/export syntax and semantics of Horn clauses
+      over theory literals, basics of temporal proof rules for reasoning
+      about programs, basics of CTL and synthesis together with deductive
+      proof rules, bottom-up inference/ resolution of Horn clauses,
+      Skolemization, abstraction, interpolation.
+    </p>
+  </li>
+  <li>
+    <span class="lecturer">Ernie Cohen</span>:<br/>
+    <span class="lecture">Verified Programming with VCC (<a href="verified programming with VCC.pdf">slides</a>)</span><br/>
+    <b>Abstract</b>: In the last few years it has become practical to write
+    real-world code and prove that it meets its specifications. This
+    course provides an introduction to the joys of verified programming
+    using VCC, a deductive verifier for concurrent C code.
+  </li>
+  <li>
+    <span class="lecturer">Natarajan Shankar (SRI International)</span>:<br/>
+    <span class="lecture">Speaking Logic (<a href="speaklogicV2.pdf">slides</a>)</span><br/>
+    <b>Abstract</b>: Formal logic has become the lingua franca of computing. It
+    is used for specifying digital systems, annotating programs with
+    assertions, defining the semantics of programming languages, and
+    proving or refuting claims about software or hardware systems.
+    Familiarity with the language and methods of logic is a foundation for
+    research into formal aspects of computing.  This course covers the
+    basics of logic focusing on the use of logic as a medium for
+    formalization and proof.
+  </li>
+  <li>
+    <span class="lecturer">Arnaud Venet (ARC-TI)</span>:<br/>
+    <span class="lecture"> Putting Numerical Abstract Domains to Work:
+    A Study of Array-Bound Checking for C Programs (<a href="ArnaudVenet.pdf">slides</a>)</span><br/>
+    <b>Abstract</b>: The inference of numerical invariants was the
+    original application of Abstract Interpretation and remains to
+    date its major achievement. In this lecture, we give a
+    step-by-step description of one of the most important numerical
+    abstract domains, the domain of convex polyhedra introduced by
+    Cousot and Halbwachs in 1978. This domain discovers linear
+    inequality constraints among variables of a program, which are
+    essential to many verification tasks. We focus on a particular
+    problem that is of great practical interest: static array-bound
+    checking. Out-of-bounds array accesses, also known as buffer
+    overflows, account for nearly 50% of all software vulnerabilities
+    reported by CERT and constitute a major source of non-determinism
+    in embedded programs. This class of errors is extremely difficult
+    to eliminate by standard testing procedures because of its near
+    total absence of effects on the observable behavior of
+    programs. It is an ideal target for static analysis and, since
+    pointer arithmetic is prevalent in C programs, numerical domains
+    have a major role to play. We present some lessons and learning
+    from several endeavors to effectively carry out static array-bound
+    checking on real C code, from the mission control software of Mars
+    Exploration Rovers to OpenSSH to auto-coded flight controllers. We
+    describe attempts to push the scalability limits of convex
+    polyhedra or use numerical domains that are unable to express the
+    properties needed when applied out of the box. Despite the number
+    of numerical domains available in the literature, there is still a
+    need for efficient abstractions that can scale to large codes. We
+    present a new approach to inferring linear inequality invariants,
+    the gauge abstraction, which offers a better trade-off among
+    expressiveness, accuracy and scalability for the purposes of
+    array-bound checking.
+  </li>
+  <li>
+    <span class="lecturer">Richard Waldinger (SRI International)</span>:<br/>
+    <span class="lecture">Automatic Deduction Applied: Program Synthesis and Question Answering. (<a href="automatic deduction applied.ppt">slides</a>)</span><br/>
+  </li>
+</ul>
+<hr/>
+</section>
+
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+
+<!-- <p> -->
+<!--   <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py"> -->
+<!-- <center> <b>Note that all fields are required</b></center> -->
+<!-- <table> -->
+<!-- <tr> -->
+<!--   <td><label>Name</label></td> -->
+<!--   <td><input name="name" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Gender</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Male<input class="but" type="radio" checked name="gender" value="male"> -->
+<!--     Female<input class="but" type="radio" name="gender" value="female"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Minority<sup>&dagger;</sup></label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="minority" value="yes"> -->
+<!--     No<input class="but" type="radio" checked name="minority" value="no"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="email" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Affiliation</label></td> -->
+<!--   <td><input name="affiliation" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Education</label></td> -->
+<!--   <td><input name="education" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Graduate Advisor</label></td> -->
+<!--   <td><input name="advname" size=80 maxlength=100></td> -->
+<!-- </tr>  -->
+<!-- <tr> -->
+<!--   <td><label>Did you attend last year?</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="attendedbefore" value="yes"> -->
+<!--     No<input class="but" type="radio" checked name="attendedbefore" value="no"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr>   -->
+<!--   <td><label>Research Interests</label></td> -->
+<!--   <td><textarea name="interests" rows=4 cols=79></textarea></td> -->
+<!-- </tr>  -->
+<!-- <tr>   -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname1" size=80 maxlength=100></td> -->
+<!-- </tr>  -->
+<!-- <tr>   -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail1" size=80 maxlength=100></td> -->
+<!-- </tr>  -->
+<!-- <tr>   -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname2" size=80 maxlength=100></td> -->
+<!-- </tr>  -->
+<!-- <tr>   -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail2" size=80 maxlength=100></td> -->
+<!-- </tr>  -->
+<!-- </table> -->
+<!-- <center> -->
+<!--   <input type="submit" value="Send Information"> -->
+<!--   <input type="reset" value="Clear The Form"> -->
+<!-- </center> -->
+<!-- </p> -->
+<!-- <hr width=80%> -->
+<!-- </form> -->
+
+<!-- <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> refers to blacks, Hispanics, -->
+<!-- American Indians/Alaska Natives, and Native Hawaiians/Other Pacific Islanders.</p> -->
+
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+-->
+</div>
+
+</body>

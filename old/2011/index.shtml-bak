@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>First Summer School on Formal Techniques</title>
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+	<img id="menlogif" src="images/menlo.gif"/>
+	<h1 id="fssft">First Summer School on Formal Techniques</h1>
+	<img id="nsfgif" src="images/nsf.gif"/>
+      </div>
+      <h2 class="strapline">
+	May 23-27, 2011<br>
+	<a
+    href="http://maps.google.com/maps?client=opera&amp;q=menlo+college+atherton&amp;oe=utf-8&amp;channel=suggest&amp;ie=UTF8&amp;hl=en&amp;hq=Menlo+College&amp;hnear=Menlo+College,+1000+El+Camino+Real,+Atherton,+California+94027&amp;ll=37.456124,-122.193031&amp;spn=0.023847,0.036478&amp;z=14&amp;iwloc=A&amp;source=embed"
+    style="color:#0000FF;text-align:left">Menlo College, Atherton, CA</a>
+<!--
+	<iframe width="425" height="350" frameborder="0" scrolling="no"
+		marginheight="0" marginwidth="0"
+		src="http://maps.google.com/maps?client=opera&amp;q=menlo+college+atherton&amp;oe=utf-8&amp;channel=suggest&amp;ie=UTF8&amp;hl=en&amp;hq=Menlo+College&amp;hnear=Menlo+College,+1000+El+Camino+Real,+Atherton,+California+94027&amp;ll=37.456124,-122.193031&amp;spn=0.023847,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed">
+	  </iframe><br />
+	  <small><a
+    href="http://maps.google.com/maps?client=opera&amp;q=menlo+college+atherton&amp;oe=utf-8&amp;channel=suggest&amp;ie=UTF8&amp;hl=en&amp;hq=Menlo+College&amp;hnear=Menlo+College,+1000+El+Camino+Real,+Atherton,+California+94027&amp;ll=37.456124,-122.193031&amp;spn=0.023847,0.036478&amp;z=14&amp;iwloc=A&amp;source=embed"
+    style="color:#0000FF;text-align:left">View Larger Map</a>
+	  </small>
+-->
+      </h2>
+    </hgroup>
+
+    <!-- <nav id="primary"> -->
+    <!--   <ul> -->
+    <!-- 	<li><a href="/">Home</a></li> -->
+    <!-- 	<li><a href="#">Description</a></li> -->
+    <!-- 	<li><a href="#">Lecturers</a></li> -->
+    <!-- 	<li><a href="#">Questions</a></li> -->
+    <!--   </ul> -->
+    <!-- </nav> -->
+  </header>
+
+  <section id="description" class="body">
+    <p>
+Formal verification techniques such as model checking, satisfiability,
+and static analysis have matured rapidly in recent years.  These
+techniques are widely applicable in computing as well as in engineering,
+biology, and mathematics.  This school will focus on the principles and
+practice of formal verification, with a strong emphasis on the hands-on
+use of verification technology.  It primarily targets graduate students
+who are interested in using or developing verification technology in
+their own research.
+    </p>
+
+    <p>
+      We have NSF support for the travel and accommodation for students from
+US universities, but welcome applications from graduate students at non-US
+universities as well.
+    </p>
+  </section>
+
+<section id="Lecturers" class="body">
+<p>
+The lecturers at the school include
+<ul>
+  <li>
+    <span class="lecturer">Leonardo de Moura and Bruno Dutertre</span>:
+    <span class="lecture">Satisfiability Modulo Theories</span>
+  </li>
+  <li>
+    <span class="lecturer">Jason Baumgartner</span>:
+    <span class="lecture">Hardware Verification: Model Checking and Equivalence Checking</span>
+  </li>
+  <li>
+    <span class="lecturer">David Monniaux</span>:
+    <span class="lecture">Static Analysis</span>
+  </li>
+  <li>
+    <span class="lecturer">Ken McMillan</span>:
+    <span class="lecture">Abstraction, Interpolation, and Composition</span>
+  </li>
+  <li>
+    <span class="lecturer">Neha Rungta and Peter Mehlitz</span>:
+    <span class="lecture">Software Verification with Java Pathfinder</span>
+  </li>
+  <li>
+    <span class="lecturer">Natarajan Shankar</span>:
+    <span class="lecture">Interactive Theorem Proving</span>
+  </li>
+</ul>
+</p>
+</section>
+<section id="Registration" class="body">
+<p>
+  Students are invited to apply for admission to the school by filling in
+the form below with name, email, affiliation, education status, graduate
+advisor, research interests, and the names and emails of two references.  We
+especially welcome applications from women and under-represented
+minorities.<sup>&dagger;</sup>
+Applications must be received by Mar 31, 2011.
+</p>
+  <p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+<p><hr width=80%>
+
+<form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft11_reg.py">
+<center> <b>Note that all fields are required</b></center>
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Gender</label></td>
+  <td id="gender">
+    Male<input class="but" type="radio" checked name="gender" value="male">
+    Female<input class="but" type="radio" name="gender" value="female">
+  </td>
+</tr>
+<tr>
+  <td><label>Minority<sup>&dagger;</sup></label></td>
+  <td id="gender">
+    Yes<input class="but" type="radio" name="minority" value="yes">
+    No<input class="but" type="radio" checked name="minority" value="no">
+  </td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="email" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Affiliation</label></td>
+  <td><input name="affiliation" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Education</label></td>
+  <td><input name="education" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Graduate Advisor</label></td>
+  <td><input name="advname" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Advisor email</label></td>
+  <td><input name="advemail" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Research Interests</label></td>
+  <td><textarea name="interests" rows=4 cols=79></textarea></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail1" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Reference Name</label></td>
+  <td><input name="refname2" size=80 maxlength=100></td>
+</tr>
+<tr>
+  <td><label>Email</label></td>
+  <td><input name="refemail2" size=80 maxlength=100></td>
+</tr>
+</table>
+<center>
+  <input type="submit" value="Send Information">
+  <input type="reset" value="Clear The Form">
+</center>
+</p>
+<hr width=80%>
+</form>
+
+<p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> refers to blacks, Hispanics,
+American Indians/Alaska Natives, and Native Hawaiians/Other Pacific Islanders.</p>
+
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+-->
+</div>
+
+</body>

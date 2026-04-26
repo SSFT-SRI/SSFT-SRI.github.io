@@ -1,0 +1,54 @@
+Vagrant is a way of managing virtual machines, it is driven by a Ruby script called Vagrantfile.
+
+Some of these notes are specific to Linux/MacOS hosts, I don't have access to a Windows
+machine.
+
+To use it, first install virtualbox 6.1 from https://www.virtualbox.org, and make sure
+it runs.
+
+Then install vagrant following the instructions at https://www.vagrantup.com/downloads.
+
+Note: if you have earlier versions of virtualbox and/or vagrant, it's my experience that
+you should update to the latest, sometimes by completely uninstalling the old one and
+reinstalling.  Though if you have it already, you may know more about this than I do.
+
+Sometimes I've also had to remove the ~/.vagrant.d directory, as it had cached something
+that kept vagrant from running.
+
+After this, get the Vagrantfile from http://fm.csl.sri.com/SSFT21/Vagrantfile, and put
+it in a directory; vagrant will create a .vagrant subdirectory there.
+
+Then run "vagrant up" in a terminal.  This will take a long time, especially the first
+time.  A window will pop up early on, and you can log into it, but until the terminal
+shows that it's finished, the tools are still being installed (provisioned, in vagrant
+terms).
+
+Once the provisioning is done, you can log into the window with user "vagrant", password
+"vagrant". There are some buttons on the desktop, and you can start a teminal using the
+menu that posp up when you right click on the mouse.
+
+The window is running xubuntu version 20.04 LTS.
+
+Tools installed:
+
+- PVS: you need to click on the Visual Studio Code icon first, which will prompt you to
+  pick a location (choose the default: /home/vagrant).  It will then ask about the NASA
+  library, choose cancel, as it is already installed.  You can then continue running PVS
+  from there, or click on the PVS button if you prefer the Emacs interface.
+  PVS files may be found in ~/summer2021.
+
+- ACL2: Pops up an Emacs window with ACL2 running, and some brief instructions on how to
+  use it.
+
+- hifrog and upprover: these can be run from the terminal.
+
+- Compositional Analyzer: run "analyzer -help".
+
+- Maude: run "maude" from a terminal.
+
+- Coq: run any Emacs, and type M-x compay-coq-tutorial to start up the tutorial, if you
+  don't already know how to use Coq.
+
+- SBCL: run "sbcl" from a terminal.
+
+- Clozure Common Lisp: open a terminal, and type "ccl -h" for help.

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Fifth Summer School on Formal Techniques</title>
+  </script>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+		<h1 id="fssft">Fifth Summer School on Formal Techniques</h1>
+
+      </div>
+      <h2 class="strapline">
+	May 17 - May 22, 2015<br>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+<!--      <h5><a
+      href="../2015/">http://fm.csl.sri.com/SSFT15</a>
+      </h5> -->
+    </hgroup>
+
+  </header>
+  <center>
+    <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a>
+  </center>
+  <section id="description" class="body">
+    <p>
+Techniques based on formal logic, such as model checking,
+satisfiability, static analysis, and automated theorem proving, are
+finding a broad range of applications in modeling, analysis,
+verification, and synthesis.  This school, the fifth in the series,
+will focus on the principles and practice of formal techniques, with a
+strong emphasis on the hands-on use and development of this
+technology.  It primarily targets graduate students and young
+researchers who are interested in developing and using formal
+techniques in their research.  A prior background in formal methods
+is helpful but not required.   Participants at the school will have a
+seriously fun time experimenting with the tools and techniques
+presented in the lectures during laboratory sessions.
+
+<h2>Lecturers</h2>
+
+<ul>
+
+<li>
+<span class="lecturer">Natarajan Shankar (SRI CSL)</span>:<br/>
+<span class="lecture">Speaking Logic</span>
+<br/>(<span class="materials"><a href="http://pvs.csl.sri.com">PVS</a>,
+<a href="PVScourse.pdf">PVS Course</a>,
+<a href="speaklogicV4.pdf">Speaking Logic</a>
+</span>)<br/>
+<b>Abstract</b>:
+Formal logic has become the lingua franca of computing. It
+is used for specifying digital systems, annotating programs with
+assertions, defining the semantics of programming languages, and
+proving or refuting claims about software or hardware systems.
+Familiarity with the language and methods of logic is a foundation
+for research into formal aspects of computing.  This course covers
+the basics of logic focusing on the use of logic as a medium for
+formalization and proof.
+</li>
+
+<li>
+<span class="lecturer">Arie Gurfinkel (SEI CMU, USA)</span>:<br/>
+<span class="lecture"> Building Program Verifiers from Compilers
+ and Theorem Provers</span>
+<br/>(<span class="materials"><a href = "http://arieg.bitbucket.org/ssft15.html">Materials</a></span>)
+<!-- <a href = "http://arieg.bitbucket.org/tools.html">Tools</a> -->
+<br/>
+<b>Abstract</b>:
+Developing an automated program verifier is an extremely difficult
+task. By its very nature, a verifier shares many of the complexities
+of an optimizing compiler and of an efficient automated theorem
+prover. From the compiler perspective, the issues include idiomatic
+syntax, parsing, intermediate representation, static analysis, and
+equivalence preserving program transformations. From the theorem
+proving perspective, the issues include verification logic,
+verification condition generation, synthesizes of sufficient inductive
+invariants, deciding satisfiability, interpolation, and consequence
+generation. Luckily, the cores of both compilers and theorem provers
+are well understood, well-defined, and readily available. In these
+lectures, we examine how to build a state-of-the-art program verifier
+by re-using much of existing compilers and SMT-solvers. The lectures
+are based on the SeaHorn verification framework developed at CMU.
+</li>
+
+<li>
+<span class="lecturer">Cathy Meadows (NRL, USA)</span>:<br/>
+<span class="lecture">Cryptographic Protocol Analysis Modulo Equational
+Theories:  the Maude-NRL Protocol Analyzer</span>
+<br/>(<span class="materials"><a href = "FTSS.2015.lecture1.pdf">Slides 1</a>,
+<a href = "FTSS.2015.lecture2.pdf">Slides 2</a></span>)
+<br/>
+<b>Abstract</b>:
+In this course we give an overview of the Maude-NPA Protocol Analyzer.
+Maude-NPA is a tool for the symbolic analysis for cryptographic
+protocols.  It searches for ways in which an active attacker could
+subvert the protocols' goals, such as authentication or secrecy.
+Maude-NPA is designed to take account of the algebraic properties
+of the crypto systems involved, in order to give a more complete
+representation of both the protocol and the attacker's capabilities.
+We give a presentation of the theory and principles under which Maude-NPA
+operates, and also give the students the opportunity to gain hands-on experience with
+the tool.
+</li>
+
+<li>
+<span class="lecturer">Bart Jacobs (KU Leuven, Belgium)</span>:<br/>
+<span class="lecture">VeriFast: Modular verification of sequential and
+concurrent C and Java programs using separation logic</span>
+(<span class="materials"><a href = "http://www.cs.kuleuven.be/~bartj/verifast/lectures/">Reading materials</a></span>)
+<br/>
+<b>Abstract</b>:
+VeriFast is a tool that takes as input a C or Java program
+module annotated with preconditions, postconditions, loop invariants,
+data structure descriptions and proof hints written in a variant of
+separation logic, and, without further user interaction and usually in
+a matter of seconds, returns either "0 errors found", or a failed
+symbolic execution path. If the tool reports "0 errors found" for all
+modules of a program, this means no execution of the program accesses
+unallocated memory, performs a data race, or violates any of the
+user-specified assertions. The tool operates by symbolically executing
+each function/method, using a separation logic formula to represent
+the state of memory, and using an SMT solver to decide proof
+obligations about data values.
+<p>
+In these lectures, you will learn how to use VeriFast to modularly
+verify sequential and concurrent C and Java programs, and you will
+also learn how VeriFast operates internally, and why, if it reports "0
+errors found", the program does indeed satisfy the specified
+properties.
+</li>
+
+<li>
+<span class="lecturer">Kim Guldstrand Larsen (Aalborg University, Denmark)</span>:<br/>
+<span class="lecture">From Timed Automata to Stochastic Hybrid Games
+-- Model Checking, Performance Evaluation and Synthesis</span>
+<br/>(<span class="materials"><a href = "http://people.cs.aau.dk/~kgl/SSFT2015/">Lecture material</a></span>)
+<br/>
+<b>Abstract</b>:
+Timed automata and games, priced timed automata and energy automata
+have emerged as useful formalisms for modeling real-time and
+energy-aware systems as found in several embedded and cyber-physical
+systems.  During the last 20 years the real-time model checker UPPAAL
+has been developed allowing for efficient verification of hard timing
+constraints of timed automata.  Moreover a number of significant
+branches exists, e.g. UPPAAL CORA providing efficient support for
+optimization, and UPPAAL TIGA allowing for automatic synthesis of
+strategies for given safety and liveness objectives.  Most recently,
+the branch UPPAAL SMC, a highly scalable new engine has been released
+supporting (distributed) statistical model checking (and synthesis) of
+stochastic hybrid automata (and games).
+<p>
+The lecture will review the various branches of UPPAAL and their
+concerted applications to a range of real-time and cyber-physical
+examples including schedulability and performance evaluation of mixed
+criticality systems, modeling and analysis of biological systems,
+energy-aware wireless sensor networks, smart grids and energy aware
+buildings and battery scheduling.  Also, we shall see how other
+branches of UPPAAL may benefit from the new scalable engine of UPPAAL
+SMC in order to improve their performance as well as scope in terms of
+the models that they are supporting. This includes application of
+UPPAAL SMC to counter example generation, refinement checking,
+controller synthesis, and optimization.
+<p>
+The lab sessions will be based on exercises requiring hands-on
+experience with UPPAAL, UPPAAL TIGA and UPPAAL SMC (all down-loadable
+from www.uppaal.org).
+</li>
+
+<li>
+<span class="lecturer">John Harrison, Intel (Portland, USA)</span>:<br/>
+<span class="lecture">HOL Light --- from foundations to applications</span>
+<br/>(<span class="materials"><a href = "http://www.cl.cam.ac.uk/~jrh13/hol-light/index.html">HOL Light</a></span>)
+<br/>
+<b>Abstract</b>:
+The HOL Light theorem prover is a real-world theorem proving
+program with an unusually simple logical kernel. It has been
+used both for applications in formal verification, especially
+of floating-point algorithms, and pure mathematics including
+the Flyspeck project's formal proof of the Kepler conjecture.
+We will describe how the system is built up from its low-level
+foundations and how it can be applied in various areas. In the
+lab exercises we will try to show not only how to perform
+basic formal proofs, but how conceptually simple it is to add
+new "correct by construction" derived rules of inference.
+</li>
+</ul>
+
+<h2>Invited Speakers</h2>
+<ul>
+<li>
+<span class="lecturer">Temesghen Kahsai</span>:<br/>
+<span class="lecture">Trusting outsourced components in flight critical software
+(<a href="ssft15_Teme.pdf">Slides</a>)
+</span><br/>
+<b>Abstract</b>:
+A common practice in the development of complex component-based flight critical
+software systems is to outsource the implementation of some of the components to external
+contractors or assemble them from commercial off-the-shelf (COTS) systems. Those components
+are delivered as black-box systems, although they may have been first prototyped in-house by
+the system integrator. In this talk, I will illustrate a work in progress approach to
+formally analyze flight critical software that has been assembled from COTS or outsourced
+for implementation. Such approach is based on contract-based compositional verification,
+which consists of two stages: a pre- and a post-delivery verification stages. In the first
+stage, verification focuses on generating contracts, a widely used method for organizing the
+integration of component-based systems, for the outsourced component. Contracts specify the
+precise information needed to reason about a component's interaction with other parts of the
+system as well as system-level properties. In the second stage, outsourced components or
+COTS must be checked for conformance to the pre-specified formal contract.
+</li>
+
+<li>
+<span class="lecturer">Dana Scott</span>:<br/>
+<span class="lecture">&lambda;-Calculus Then and Now</span><br/>
+(<span class="materials"><a href="ScottBriefBio.pdf">Scott Bio</a>,
+ <a href="LambdaThenNow.pdf">&lambda;-Calculus: Then and Now</a>,
+ <a href="Timeline.pages.pdf">Timeline</a>,
+ <a href="ScottTypes.pdf">&lambda;-Calculus: Enumeration Operators and Types</a>,<br/>
+ <a href="ScottTypesBlack.pdf">&lambda;-Calculus: Enumeration Operators and Types</a>,
+ <a href="Bibliography.pdf">Bibliography</a></span>) and<br/>
+<span class="lecture">A Stochastic &lambda;-Calculus</span><br/>
+(<span class="materials"><a href="ScottPROGIC2013.pdf">Extended Abstract</a>,
+ <a href="ScottStoBlack.pdf">Stochastic &lambda;-Calculus</a>,
+ <a href="ScottStochastic.pdf">Stochastic &lambda;-Calculus</a></span>)
+<br/>
+<b>Abstract</b>:
+</li>
+
+<li>
+<span class="lecturer">Mariana Raykova</span>:<br/>
+<span class="lecture">Secure Two-Party Computation in Sublinear (Amortized) Time
+<!-- <br/>(<a href="http://pvs.csl.sri.com">PVS</a>) -->
+<!-- (<a href="speaklogicV3.pdf">Slides</a>) -->
+</span><br/>
+<b>Abstract</b>:
+Traditional approaches to generic secure computation begin by
+representing the function f being computed as a circuit. If f depends
+on each of its input bits, this implies a protocol with complexity at
+least linear in the input size. In fact, linear running time is
+inherent for non-trivial functions since each party must “touch” every
+bit of their input lest information about the other party’s input be
+leaked. This seems to rule out many applications of secure computation
+(e.g., database search) in scenarios where inputs are huge.
+<br/>
+Adapting and extending an idea of Ostrovsky and Shoup, we present an
+approach to secure two-party computation that yields protocols running
+in sublinear time, in an amortized sense, for functions that can be
+computed in sublinear time on a random-access machine (RAM). Moreover,
+each party is required to maintain state that is only (essentially)
+linear in its own input size. Our protocol applies generic secure
+two-party computation on top of oblivious RAM (ORAM). We present an
+optimized version of our protocol using Yao’s garbled-circuit approach
+and a recent ORAM construction of Shi et al.
+<br/>
+We describe an implementation of this protocol, and evaluate its
+performance for the task of obliviously searching a database with over
+1 million entries. Because of the cost of our basic steps, our
+solution is slower than Yao on small inputs. However, our
+implementation outperforms Yao already on DB sizes of 218 entries (a
+quite small DB by today’s standards).
+</li>
+</ul>
+<p>
+  <section id="schedule" class="body">
+    <h2><a href="schedule.html">Schedule</a></h2>
+
+<p>
+Information about previous Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2014/">SSFT14</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2011/">SSFT11</a></li>
+</ul>
+</p>
+
+<p>
+We expect to provide support for the travel and accommodation for a
+limited number of students from US universities, but welcome
+applications from non-US students as well as non-students.  Non-US
+students will have to cover their own travel and will be charged
+around &#36;550 for meals and lodging.  Applications should be submitted
+using the form below.
+</p>
+<p>
+Applicants are encouraged to submit their applications before April
+30, 2015, since there are only a limited number of spaces available.
+Non-US applicants requiring US visas are requested to apply early.
+</p>
+<hr/>
+<p>
+<b>Registration is now closed</b><hr/>
+</p>
+<p>
+Questions on any aspect of the school can be posted
+<a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+</p>
+
+<p>
+<!--   <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py"> -->
+<!-- <center> <b>Note that all fields are required</b></center> -->
+<!-- <table> -->
+<!-- <tr> -->
+<!--   <td><label>Name</label></td> -->
+<!--   <td><input name="name" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Gender</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Male<input class="but" type="radio" checked name="gender" value="male"> -->
+<!--     Female<input class="but" type="radio" name="gender" value="female"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Minority<sup>&dagger;</sup></label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="minority" value="yes"> -->
+<!--     No<input class="but" type="radio" checked name="minority" value="no"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="email" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Affiliation</label></td> -->
+<!--   <td><input name="affiliation" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Education</label></td> -->
+<!--   <td><input name="education" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Graduate Advisor</label></td> -->
+<!--   <td><input name="advname" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Did you attend last year?</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="attendedbefore" value="yes"> -->
+<!--     No<input class="but" type="radio" checked name="attendedbefore" value="no"> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Research Interests</label></td> -->
+<!--   <td><textarea name="interests" rows=4 cols=79></textarea></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname1" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail1" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname2" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail2" size=80 maxlength=100></td> -->
+<!-- </tr> -->
+<!-- </table> -->
+<!-- <center> -->
+<!--   <input type="submit" value="Send Information"> -->
+<!--   <input type="reset" value="Clear The Form"> -->
+<!-- </center> -->
+<!-- </p> -->
+<!-- <hr width=80%> -->
+<!-- </form> -->
+
+<!-- <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> -->
+<!-- refers to African Americans, Mexican-Americans, Native Americans -->
+<!-- (American Indians, Alaska Natives, and Native Hawaiians), -->
+<!-- Pacific Islanders, and mainland Puerto Ricans. -->
+<!-- </p> -->
+
+</section>
+<!--
+<section id="Questions" class="body">
+<!--#include virtual="qanda.shtml" -->
+
+<!--
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+-->
+<!--
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+-->
+</div>
+
+</body>

@@ -161,20 +161,21 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 
 Information about previous Summer Schools on Formal Techniques can be found at:
 
-- [[http://ssft-sri.github.io/old/2025][SSFT25]]
-- [[http://fm.csl.sri.com/SSFT24][SSFT24]]
+- [[file:old/2025/][SSFT25]]
+- [[file:old/2024/][SSFT24]]
 - [[http://fm.csl.sri.com/SSFT23][SSFT23]]
-- [[http://fm.csl.sri.com/SSFT22][SSFT22]]
-- [[http://fm.csl.sri.com/SSFT21][SSFT21]]
-- [[http://fm.csl.sri.com/SSFT19][SSFT19]]
-- [[http://fm.csl.sri.com/SSFT18][SSFT18]]
-- [[http://fm.csl.sri.com/SSFT17][SSFT17]]
-- [[http://fm.csl.sri.com/SSFT16][SSFT16]]
-- [[http://fm.csl.sri.com/SSFT15][SSFT15]]
-- [[http://fm.csl.sri.com/SSFT14][SSFT14]]
-- [[http://fm.csl.sri.com/SSFT13][SSFT13]]
-- [[http://fm.csl.sri.com/SSFT12][SSFT12]]
-- [[http://fm.csl.sri.com/SSFT11][SSFT11]]
+- [[file:old/2022/][SSFT22]]
+- [[file:old/2021/][SSFT21]]
+- [[file:old/2020/][SSFT20]]
+- [[file:old/2019/][SSFT19]]
+- [[file:old/2018/][SSFT18]]
+- [[file:old/2017/][SSFT17]]
+- [[file:old/2016/][SSFT16]]
+- [[file:old/2015/][SSFT15]]
+- [[file:old/2014/][SSFT14]]
+- [[file:old/2013/][SSFT13]]
+- [[file:old/2012/][SSFT12]]
+- [[file:old/2011/][SSFT11]]
 
 Jay Bosamiya of CMU has [[https://www.jaybosamiya.com/blog/2018/05/31/ssft/][blogged about the 2018 Summer School]].
 

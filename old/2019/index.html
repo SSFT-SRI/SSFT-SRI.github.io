@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Ninth Summer School on Formal Techniques</title>
+  <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body id="index" class="home">
+
+  <header id="banner" class="body">
+    <hgroup>
+      <div id="hdiv">
+	<h1 id="fssft">Ninth Summer School on Formal Techniques</h1>
+      </div>
+      <h2 class="strapline">
+	May 18 - May 25, 2019<br/>
+	<a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA
+      </h2>
+    </hgroup>
+
+    <p id="toc-nav">
+      Table of Contents
+      <a href="#lecturers">Lecturers</a>
+      <a href="#splogic">Speaking Logic</a>
+      <a href="#invited">Invited Speakers</a>
+      <a href="https://docs.google.com/spreadsheets/d/1iSLgUyeOMR5yk-dBFHylA21aNxCVyhF51d1d4q0XOts/edit?usp=sharing">Schedule</a>
+      <a href="#prev">Previous Summer Schools</a>
+      <!-- <a href="#registration">Registration</a> -->
+    </p>
+
+  </header>
+  <!-- <center> -->
+  <!--   <a href="SSFT.Group.Photo.jpg"><img id="Group Photo" src="SSFT.Group.Photo.jpg" width="648" height="364"/></a> -->
+  <!-- </center> -->
+
+<section id="description" class="body">
+  <p>
+    Techniques based on formal logic, such as model checking,
+    satisfiability, static analysis, and automated theorem proving, are
+    finding a broad range of applications in modeling, analysis,
+    verification, and synthesis. This school, the ninth in the series,
+    will focus on the principles and practices of formal techniques, with
+    a strong emphasis on the hands-on use and development of these
+    technologies. It primarily targets graduate students and young
+    researchers who are interested in studying and using formal techniques
+    in their research. A prior background in formal methods is helpful but
+    not required. Participants at the school can expect to have a
+    seriously fun time experimenting with the tools and techniques
+    presented in the lectures during laboratory sessions.
+  </p>
+
+<h2 id="lecturers">Lecturers</h2>
+
+<ul>
+  <li>
+    <span class="lecture"> Modular Program Verification </span><br/>
+    <span class="lecturer"> Peter M&uuml;ller (ETH Zurich) </span>
+    <span class="materials">
+      (<a href="viper-lecture.pdf">Slides</a>,
+      <a href="http://viper.ethz.ch/">Viper Project page</a>,
+      <a href="http://viper.ethz.ch/tutorial/">Viper Tutorial</a>,
+      <a href="https://docs.google.com/document/d/14S-pL1VDRaJVfI-fjagC77NCamgXlASughNlnYzKaBU/edit#">
+	Assignments</a>)
+    </span>
+    <br/>
+    <b>Abstract</b>: Modular program verification constructs a correctness
+    proof for each program component in isolation, without considering its
+    clients or the implementations of the components it builds on.
+    Modularity makes verification scalable, allows one to give correctness
+    guarantees for individual components such as libraries, and reduces
+    the re-verification effort required by program changes.
+    <br/>
+    Modular verification is especially difficult for heap-manipulating
+    programs, where components may interact in subtle ways through shared
+    memory, and for concurrent programs, where thread interleavings
+    complicate reasoning.
+    <br/>
+    In this series of lectures, I will present a verification approach
+    that addresses these challenges using a notion of access permissions
+    for memory locations.  I will introduce a permission-based program
+    logic (similar to separation logic) and explain how to automate
+    verification in this logic using standard SMT solvers. In particular,
+    I will present the Viper verification infrastructure, which allows one
+    to express verification problems in an intermediate language and
+    provides several back-ends that automate the verification effort.
+  </li>
+
+  <li>
+    <span class="lecture">A principled approach to software design </span><br/>
+    <span class="lecturer"> Daniel Jackson (CSAIL MIT) </span>
+    <span class="materials">
+      (<a href="https://tinyurl.com/djtalks">Slides</a>)
+    </span>
+    <br/>
+    <b>Abstract</b>: Design is about shaping things to fulfill a purpose;
+    engineering is about making them efficient and robust. Software
+    engineering (aka programming) has advanced in large part because we
+    found principles that make good outcomes more likely. For example, if
+    you apply the principles of representation independence, small
+    interfaces and information hiding, you’ll be able to contain
+    modifications more effectively and thus get more maintainable
+    software.
+    <br/>
+    Software design — which, if the word has its standard meaning, is
+    about shaping the behavior of software so that it meets its intended
+    purpose—hasn’t yet reached this stage. Today, it’s done mostly by
+    trial and error, and the principles that exist are primarily for user
+    interfaces. In these lectures, I’ll present a new way to think about
+    software design based on a structure that I call a concept, and will
+    show how a collection of simple principles can explain a variety of
+    design failures in familiar software products.
+  </li>
+
+  <li>
+    <span class="lecture"> Model Checking and its Applications </span><br/>
+    <span class="lecturer"> Orna Grumberg (Technion Israel) </span>
+    <span class="materials">
+      (<a href="lecture1-20-5-2019-SSFM19-repair.pdf">Lecture 1</a>,
+      <a href="Lecture2-21-5-2019-SSFM19-difference.pdf">Lecture 2</a>,
+      <a href="Lecture2-updated-21-5-2019-SSFM19.ppt">Lecture 2 updated</a>)
+    </span>
+    <br/>
+    <b>Abstract</b>: Model checking is a successful automated verification
+    technology that obtains a system model and a specification and returns
+    `yes’ if the system satisfies the specification and `no’ otherwise.
+    <p>
+      As the size and complexity of systems and specifications continuously
+      grow, new tools and technologies are developed to cope with the new
+      challenges.  As a result, we are capable of handling new problems in
+      new application areas.
+    </p>
+    <p>
+      In this series of talks we will present two
+      application areas that benefit from the new technologies. One is
+      program differencing, which identifies the semantic difference between
+      program versions. The other is program repair, which automatically
+      proposes repairs of buggy programs.
+    </p>
+  </li>
+
+  <li>
+    <span class="lecture"> Introduction to Static Analysis from an
+    Abstract Interpretation Perspective </span><br/>
+    <span class="lecturer"> Kwangkeun Yi (Seoul National University) </span>
+    <span class="materials">
+      (<a href="ssft19-kkyi.pdf">Slides</a>,
+      <a href="ssft19-kkyi-supplementary.pdf">Supplementary Note</a>)
+    </span>
+    <br/>
+    <b>Abstract</b>: Static analysis aims at discovering semantic
+    properties of programs without running them. Static analysis plays an
+    important role in all phases of program development, including the
+    verification of specifications, the verification of programs, the
+    synthesis of optimized code, and also the refactoring and maintenance
+    of software applications. It is commonly used in order to certify
+    critical software. It also makes it possible to improve the quality of
+    general purpose software and enables aggressive code optimizations. In
+    this lecture I will give an introduction to static analysis and cover
+    the basics of both theoretical foundations and practical
+    implementations of scalable static analysis tools. Firstly I will
+    cover general frameworks for designing correct static analyses. Then I
+    will cover techniques for scalable implementations of the
+    designs. Lastly I will cover some specialized frameworks for designing
+    static analysis, which are simpler than the general frameworks yet
+    powerful enough for specific cases in hand.
+  </li>
+
+  <li>
+    <span class="lecture"> An overview of Easycrypt and how to prove
+    concrete security of cryptographic primitives </span><br/>
+    <span class="lecturer"> Benjamin Gregoire (INRIA France) </span>
+    <span class="materials">
+      (<a href="gregoir-slides1.pdf">Slides1</a>,
+      <a href="gregoir-slides2.pdf">Slides2</a>,
+      <a href="gregoir-lab1.tgz">Lab1</a>)
+    </span>
+    <br/>
+    <b>Abstract</b>: EasyCrypt is a toolset for reasoning about relational
+    properties of probabilistic computations with adversarial code. Its
+    main application is the construction and verification of game-based
+    cryptographic proofs.  EasyCrypt is used to prove the security of
+    complex cryptographic constructions.
+    <br/>
+    The lectures will present
+    <ol type="a">
+      <li>
+	The code-based game-playing approach to computer-aided cryptographic proofs
+         and the connection to program verification;
+         and the foundations of EasyCrypt: probabilistic relational Hoare
+	 logic;
+      </li>
+      <li>
+	We will present our language Jasmin and how EasyCrypt can be used
+	to prove functional correctness of Jasmin program, but also
+	relational properties like side channel resistance.
+      </li>
+    </ol>
+    The EasyCrypt exercise sessions involved proving
+    <ol type="a">
+      <li> Security against chosen plaintext attacks (IND-CPA) for the Bellare and
+      Rogaway 1993 and the Hashed ElGammal encryption schemes;
+      </li>
+      <li>
+	Functional correctness of Jasmin implementation (using EasyCrypt)
+      </li>
+    </ol>
+  </li>
+
+</ul>
+
+<h2 id="splogic">Speaking Logic: Background Course</h2>
+The main lectures in the summer school will be preceded by a background course on logic
+<ul>
+<li>
+  <span class="lecturer"><b>Natarajan Shankar and St&eacute;phane Graham-Lengrand (SRI CSL)</b></span>:<br/>
+  <span class="lecture"><i>Speaking Logic</i></span>
+  <br/>
+  <span class="materials">
+    (<a href="speaklogicV9.pdf">Speaking Logic</a>,
+    <a href="CAS2017.pdf">PVS Tutorial</a>)
+  </span>
+  <br/>
+  <b>Abstract</b>: Formal logic has become the lingua franca of
+  computing. It is used for specifying digital systems, annotating
+  programs with assertions, defining the semantics of programming
+  languages, and proving or refuting claims about software or hardware
+  systems. Familiarity with the language and methods of logic is a
+  foundation for research into formal aspects of computing. This course
+  covers the basics of logic focusing on the use of logic as a medium for
+  formalization and proof.
+</li>
+</ul>
+
+<h2 id="invited">Invited Speakers</h2>
+<p>
+  The school also includes several distinguished invited talks.
+</p>
+<ul>
+  <li>
+    <span class="lecturer"><b>Michael Beeson (SJSU)</b></span>:<br/>
+    <span class="lecture">Formalizing Geometry</span><br/>
+    <span class="materials">
+      (<a href="http://www.michaelbeeson.com/research/talks/SummerSchool2019.pdf">Slides</a>)
+    </span>
+    <p><b>Abstract</b>: Geometry has been an important testbed of the
+      axiomatic method, logic, and formalization, for over two millennia.
+      This talk will review the history, the axiomatics, and the use of
+      computer-assisted proof-finding and proof-checking in geometry.
+    </p>
+  </li>
+  <li>
+    <span class="lecturer"><b>Peter Neumann and Prashant Mundkur (SRI)</b></span>:<br/>
+    <span class="lecture">CHERI: an ISA-oriented approach for secure systems</span><br/>
+    <span class="materials">
+      (<a href="20190523-ssft-cheri.pdf">CHERI</a>,
+      <a href="sail-riscv-cheri-ssft-2019-slides.pdf">Sail, RISC-V, and CHERI-RISC-V</a>)
+    </span>
+    <p><b>Abstract</b>: This talk discusses one approach of how we might
+      design and implement highly trustworthy hardware-software systems.
+      We discuss problems that must be overcome, some lessons from the
+      past, and recent efforts to apply formal methods systemically.  We
+      consider ongoing efforts relating to the CHERI (Capability Hardware
+      Enhanced RISC Instructions) hardware instruction-set architecture
+      (ISA), its underlying security principles, emerging formal proofs of
+      the satisfaction of critical ISA security properties, and what CHERI
+      hardware could do to enable better total-system security.
+    </p>
+  </li>
+  <li>
+    <span class="lecturer"><b>Maria Paola Bonacina (Università degli Studi di Verona)</b></span>:<br/>
+    <span class="lecture">Overview of automated reasoning and ordering-based strategies</span><br/>
+    <span class="materials">
+      (<a href="overviewAR.pdf">Slides</a>)
+    </span>
+    <!-- <p><b>Abstract</b>:</p> -->
+  </li>
+  <li>
+    <span class="lecturer"><b>St&eacute;phane Graham-Lengrand (SRI CSL)</b></span>:<br/>
+    <span class="lecture">Type Theory at SSFT</span><br/>
+    (<a href="http://www.csl.sri.com/users/sgl/ssft/">Slides and Exercises</a>)
+    <!-- <p><b>Abstract</b>:</p> -->
+  </li>
+  <li>
+    <span class="lecturer"><b>Elaine (Runting) Shi (Cornell and IC3)</b></span>:<br/>
+    <span class="lecture">Rethinking Large-Scale Consensus</span><br/>
+    <span class="materials">
+      (<a href="https://docs.google.com/presentation/d/1V_i6X3-nrwPJ0bC4ghG6n_XbZaIgtHVpBEMX0xitEw8/edit#slide=id.g4be362cf5e_20_0">Slides1</a>,
+      <a href="https://docs.google.com/presentation/d/1_6H7lJALYw-s-f-wIO1F_8mujlEaG1kqwnVisViWqPY/edit#slide=id.g4b1efbffb2_0_3">Slides2</a>)
+    </span>
+    <p><b>Abstract</b>: Although distributed consensus has been studied
+      for three decades, they were not deployed at a large scale until
+      decentralized cryptocurrencies like Bitcoin. In this talk, I will
+      explain why the classical theoretical foundation for distributed
+      systems is insufficient for capturing the robustness and game
+      theoretic properties we care about for new decentralized
+      environments. Specifically, I will demonstrate why almost all
+      classical "synchronous" consensus protocols are underspecified and
+      thus unimplementable in practice. I will then describe a new model
+      called "best-possible partition tolerance" that allows us to achieve
+      <b>honest-majority</b> consensus while providing <b>resilience to
+      network partitions</b> (the combination of which was classically
+      deemed impossible due to a well-known lower bound by Dwork, Lynch,
+      and Stockmeyer).
+    </p>
+  </li>
+  <!-- <li> -->
+  <!--   <span class="lecturer"><b></b></span>:<br/> -->
+  <!--   <span class="lecture"></span><br/> -->
+  <!--   <p><b>Abstract</b>:</p> -->
+  <!-- </li> -->
+</ul>
+
+<h2 id="schedule">
+<a href="https://docs.google.com/spreadsheets/d/1iSLgUyeOMR5yk-dBFHylA21aNxCVyhF51d1d4q0XOts/edit?usp=sharing">Schedule</a>
+</h2>
+
+
+<h2 id="prev">Previous Summer Schools on Formal Techniques</h2>
+
+<p>
+Information about previous Summer Schools on Formal Techniques can
+be found at
+<ul>
+<li><a href="../2018/">SSFT18</a></li>
+<li><a href="../2017/">SSFT17</a></li>
+<li><a href="../2016/">SSFT16</a></li>
+<li><a href="../2015/">SSFT15</a></li>
+<li><a href="../2014/">SSFT14</a></li>
+<li><a href="../2013/">SSFT13</a></li>
+<li><a href="../2012/">SSFT12</a></li>
+<li><a href="../2011/">SSFT11</a></li>
+</ul>
+<p>
+  Jay Bosamiya of CMU has blogged about the 2018 Summer School at <a
+  href="https://www.jaybosamiya.com/blog/2018/05/31/ssft/">
+  https://www.jaybosamiya.com/blog/2018/05/31/ssft/</a>
+</p>
+
+<h2 id="registration">Registration</h2>
+
+<!-- <p> -->
+<!-- We expect to provide support for the travel and accommodation for (a -->
+<!-- limited number of) students registered at US universities. We welcome -->
+<!-- applications from non-US students as well as non-students (if space -->
+<!-- permits).  Non-US students will have to cover their own travel and -->
+<!-- will be charged around US$800 for meals and lodging.  Applications -->
+<!-- should be submitted together with names of two references (preferably -->
+<!-- advisors, professors, or senior colleagues) using the form below.   -->
+<!-- </p> -->
+
+<!-- Applicants are urged to submit their applications before April 30, -->
+<!-- 2019,  since there are only a limited number of spaces available. -->
+<!-- Non-US applicants requiring US visas are requested to apply early.  We -->
+<!-- strongly encourage the participation of women and under-represented -->
+<!-- minorities in the summer school. -->
+
+<!-- </p> -->
+<!-- <hr> -->
+<p>
+<b>Registration for SSFT19 is now closed - check back next year</b><hr/>
+</p>
+
+<!-- <p> -->
+<!-- Questions on any aspect of the school can be posted -->
+<!-- <a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>. -->
+<!-- </p> -->
+
+<!-- <p> -->
+<!--   <form method="POST" action="http://fm.csl.sri.com/cgi-bin/ssft12_reg.py"> -->
+<!-- <center> <b>Note that all fields are required</b></center> -->
+<!-- <table> -->
+<!-- <tr> -->
+<!--   <td><label>Name</label></td> -->
+<!--   <td><input name="name" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Gender</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Male<input class="but" type="radio" checked="checked" name="gender" value="male"/> -->
+<!--     Female<input class="but" type="radio" name="gender" value="female"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Minority<sup>&dagger;</sup></label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="minority" value="yes"/> -->
+<!--     No<input class="but" type="radio" checked="checked" name="minority" value="no"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="email" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Affiliation</label></td> -->
+<!--   <td><input name="affiliation" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Education</label></td> -->
+<!--   <td><input name="education" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Graduate Advisor</label></td> -->
+<!--   <td><input name="advname" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Did you attend last year?</label></td> -->
+<!--   <td id="gender"> -->
+<!--     Yes<input class="but" type="radio" name="attendedbefore" value="yes"/> -->
+<!--     No<input class="but" type="radio" checked="checked" name="attendedbefore" value="no"/> -->
+<!--   </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Research Interests</label></td> -->
+<!--   <td><textarea name="interests" rows="4" cols="79"></textarea></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname1" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail1" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Reference Name</label></td> -->
+<!--   <td><input name="refname2" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!--   <td><label>Email</label></td> -->
+<!--   <td><input name="refemail2" size="80" maxlength="100"/></td> -->
+<!-- </tr> -->
+<!-- </table> -->
+<!-- <center> -->
+<!--   <input type="submit" value="Send Information"/> -->
+<!--   <input type="reset" value="Clear The Form"/> -->
+<!-- </center> -->
+<!-- <hr width="80%"> -->
+<!-- </form> -->
+<!-- </p> -->
+
+<!-- <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i> -->
+<!-- refers to African Americans, Mexican-Americans, Native Americans -->
+<!-- (American Indians, Alaska Natives, and Native Hawaiians), -->
+<!-- Pacific Islanders, and mainland Puerto Ricans. -->
+<!-- </p> -->
+<hr width="80%">
+
+</section>
+
+<!-- <section id="Questions" class="body"> -->
+<!--#include virtual="qanda.shtml" -->
+
+<!--
+<section id="Reading" class="body">
+<h3>Background reading:</h3>
+<ul>
+<li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+<li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+</ul>
+</section>
+-->
+<!--
+<section id="Tools" class="body">
+<h3>Tools:</h3>
+<ul>
+<li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+<li><a href="http://z3.codeplex.com/">Z3</a></li>
+<li><a href="http://spinroot.com/">SPIN</a></li>
+<li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+<li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+<li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+</ul>
+</section>
+-->
+
+</body>
+</html>

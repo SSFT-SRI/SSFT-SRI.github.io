@@ -1,0 +1,225 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# May 23, 2021
+
+# Use vagrant help for general vagrant help.
+# For a complete vagrant reference, please see the online documentation at
+# https://docs.vagrantup.com.
+
+Vagrant.configure("2") do |config|
+
+  config.ssh.forward_agent = true
+
+  config.vagrant.plugins = "vagrant-vbguest"
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "myaylaci/xubuntu2004-desktop"
+  # config.vm.box = "thorerik/xubuntu-20.04-desktop"
+  config.vm.synced_folder ".", "/home/vagrant/synced"
+
+
+  config.vm.provider :virtualbox do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.name = "SSFT21-vm"
+    vb.gui = true
+
+    # Customize the amount of memory on the VM:
+    vb.memory = "6144"
+    vb.cpus = 2
+    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected", "--vram", "128",
+                 "--graphicscontroller", "vmsvga" ]
+  end
+
+  # This has two parts; the first is in root mode, between ROOT_SHELL occurrences
+  # the second is in user mode, between USER_SHELL occurrences.
+  # It would probably be nice to refine this to the individual tools; may do that in the future.
+  config.vm.provision "shell", inline: <<-ROOT_SHELL
+    export DEBIAN_FRONTEND=noninteractive
+    echo "apt update"
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+    echo "Installing apt-get preliminaries"
+    sudo apt-get install -y unzip git emacs tk
+    sudo apt-get install -y libtinfo5
+    sudo apt-get install -y libcairo2-dev libexpat1-dev libgtk-3-dev libgtksourceview-3.0-dev
+    sudo apt-get install -y software-properties-common apt-transport-https wget
+    sudo apt-get install -y net-tools sbcl
+    sudo apt-get -y install opam libgmp-dev libmpfr-dev
+    sudo apt-get -y install m4
+    VBoxClient --vmsvga
+    VBoxClient --draganddrop
+    VBoxClient --seamless
+    VBoxClient --clipboard
+
+    # Install Visual Studio Code
+    echo "installing Visual Studio Code"
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt-get install -y code
+
+    # Script to support PVS Emacs Icon
+    cat > /usr/local/bin/pvs-script <<PVS_SCRIPT
+#!/bin/bash
+if [ -d ~/pvs-7.1.0 ]
+  then ~/pvs-7.1.0/pvs
+  else echo "PVS: you need to click on the Visual Studio Code icon first,\nwhich will prompt you to pick a location (choose the default: /home/vagrant).\nAnd do not install the NASA library, just select it's location (/home/vagrant/pvslib)" | xmessage -nearmouse -file -
+fi
+PVS_SCRIPT
+    chmod a+x /usr/local/bin/pvs-script
+
+    # Script for ACL2 Emacs Icon
+    cat > /usr/local/bin/acl2-emacs <<ACL2_SCRIPT
+#!/bin/bash
+emacs -f run-acl2
+ACL2_SCRIPT
+    chmod a+x /usr/local/bin/acl2-emacs
+
+    # Script for Maude executable
+    cat > /usr/local/bin/maude <<MAUDE_SCRIPT
+#!/bin/sh
+exec /home/vagrant/maude-3.1 "$@"
+MAUDE_SCRIPT
+    chmod a+x /usr/local/bin/maude
+
+    # Script for compositional analyzer executable
+    cat > /usr/local/bin/analyzer <<ANALYZER_SCRIPT
+#!/bin/sh
+exec /home/vagrant/compositionalanalyzer/analyzer.native "$@"
+ANALYZER_SCRIPT
+    chmod a+x /usr/local/bin/analyzer
+
+    echo "Installing HiFrog"
+    (cd /usr/local/bin; sudo wget -q http://verify.inf.usi.ch/sites/default/files/executable/hifrog; sudo chmod a+x hifrog)
+    echo "Installing HiFrog"
+    (cd /usr/local/bin; sudo wget -q http://verify.inf.usi.ch/sites/default/files/executable/upprover; sudo chmod a+x upprover)
+
+    # Clozure CL, loaded later as user, we set the script here in /usr/local/bin/ccl
+    cat > /usr/local/bin/ccl <<CCL_SCRIPT
+#!/bin/sh
+exec /home/vagrant/ccl/lx86cl64 "$@"
+CCL_SCRIPT
+    chmod a+x /usr/local/bin/ccl
+
+ROOT_SHELL
+
+  # The rest of the script is in user mode
+  config.vm.provision "user", type: "shell", privileged: false, inline: <<-USER_SHELL
+    echo "(define-obsolete-function-alias 'string-to-int 'string-to-number \"22.1\")" >> ~/.emacs
+
+    cat > ~/.pvs.lisp <<PVS_PATCH
+(in-package :pvs-xml-rpc)
+
+(defun xmlrpc-pvs-request (json-request client-url)
+  (handler-case
+      (let* ((json:*json-identifier-name-to-lisp* #'identity)
+	     (req-str (bytestring-to-string json-request))
+	     (request (json:decode-json-from-string req-str))
+	     (id (cdr (assoc :id request :test #'string-equal)))
+	     (method (cdr (assoc :method request :test #'string-equal)))
+	     (params (cdr (assoc :params request :test #'string-equal)))
+	     (*print-pretty* nil))
+	(let* ((result (pvs-json:process-json-request method params id client-url))
+	       (jresult (xmlrpc-result result id)))
+	  jresult))
+    (error (c) (xmlrpc-error (format nil "~a" c)))))
+
+(defun bytestring-to-string (str)
+  (let ((octets (map '(simple-array (unsigned-byte 8)) #'char-code str)))
+    (excl:octets-to-string octets)))
+PVS_PATCH
+    curl -L -s http://fm.csl.sri.com/SSFT21/PVS2021.tgz -o PVS2021.tgz; tar xf PVS2021.tgz
+
+    # Install NASA's vscode-pvs
+    echo "Installing vscode-pvs"
+    if [ ! -f /home/vagrant/vscode-pvs ]
+    then (cd /home/vagrant; git clone https://github.com/nasa/vscode-pvs.git)
+         code --install-extension /home/vagrant/vscode-pvs/releases/vscode-pvs*.vsix
+    fi
+
+    echo "Installing Maude"
+    if [ ! -f maude-3.1 ]
+    then curl -s -L http://maude.cs.illinois.edu/w/images/3/38/Maude-3.1-linux.zip -o Maude-3.1-linux.zip
+         unzip Maude-3.1-linux.zip
+         chmod a+x maude-3.1/maude.linux64
+         export MAUDE_LIB=/home/vagrant/maude-3.1
+         echo "export MAUDE_LIB=/home/vagrant/maude-3.1" >> /home/vagrant/.bashrc
+    fi
+
+    echo "Installing CCL"
+    [ ! -d ccl ] && git clone https://github.com/Clozure/ccl.git
+    # Need an earlier version to make the new one
+    curl -L -s https://github.com/Clozure/ccl/releases/download/v1.12/linuxx86.tar.gz -o linuxx86.tar.gz
+    (cd ccl; tar xf ../linuxx86.tar.gz; ./lx86cl64 -e "(progn (rebuild-ccl :full t) (quit))")
+
+    echo "Installing ACL2: takes over 2 hours"
+    [ ! -f acl2-sources/.git ] && git clone https://github.com/acl2/acl2 acl2-sources
+    (cd acl2-sources; git checkout cdae930b0b2da6a1773a9fbd605f0ef31f105001; make LISP=/home/vagrant/ccl/lx86cl64; time nice make -j 15 regression-everything >& make-regression-everything-j-15.log; fgrep "**" make-regression-everything-j-15.log)
+
+    echo "Installing compositional analyzer dependencies. This may take a while, especially z3"
+    opam init -a
+    eval $(opam config env)
+    opam install -y ocamlbuild mlgmpidl merlin
+    opam install -y z3
+    opam -y user-setup install
+    # sudo snap install --classic code
+    echo "Installing the compositional analyzer"
+    code --install-extension freebroccolo.reasonml
+    [ ! -d compositionalanalyzer ] && git clone https://github.com/cyphertjohn/compositionalanalyzer.git
+    (cd compositionalanalyzer; make)
+
+    echo "Installing Coq.  Also takes a long time, especially building coq."
+    opam repo add coq-released https://coq.inria.fr/opam/released
+    opam update && opam upgrade
+    opam install -y coq coq-mathcomp-ssreflect coqide
+    cat >> ~/.emacs <<DOT_EMACS
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(package-refresh-contents)
+(package-install 'proof-general)
+(package-install 'company-coq)
+(add-hook 'coq-mode-hook #'company-coq-mode)
+DOT_EMACS
+
+    echo "Setting desktop icons"
+    mkdir -p $(xdg-user-dir DESKTOP)
+    cp /usr/share/applications/code.desktop $(xdg-user-dir DESKTOP)/
+    chmod a+x $(xdg-user-dir DESKTOP)/code.desktop
+    gio set $(xdg-user-dir DESKTOP)/code.desktop metadata::trusted true
+
+    mkdir -p ~/.local/share/applications
+    if [ ! -f ~/.local/share/applications/pvs.desktop ]
+    then cat > ~/.local/share/applications/pvs.desktop <<PVS_DESKTOP
+[Desktop Entry]
+Name=PVS
+GenericName=Verification System
+Exec=pvs-script
+Icon=emacs
+Type=Application
+Terminal=false
+PVS_DESKTOP
+        chmod a+x ~/.local/share/applications/pvs.desktop
+        ln -s ~/.local/share/applications/pvs.desktop $(xdg-user-dir DESKTOP)
+        gio set $(xdg-user-dir DESKTOP)/pvs.desktop metadata::trusted true
+    fi
+
+    if [ ! -f ~/.local/share/applications/acl2.desktop ]
+    then cat > ~/.local/share/applications/acl2.desktop <<ACL2_DESKTOP
+[Desktop Entry]
+Name=ACL2
+GenericName=Theorem Prover
+Exec=acl2-emacs
+Icon=emacs
+Type=Application
+Terminal=false
+ACL2_DESKTOP
+        chmod a+x ~/.local/share/applications/acl2.desktop
+        ln -s ~/.local/share/applications/acl2.desktop $(xdg-user-dir DESKTOP)
+        gio set $(xdg-user-dir DESKTOP)/acl2.desktop metadata::trusted true
+    fi
+
+USER_SHELL
+
+end

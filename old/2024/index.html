@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8" />
+    <title>Thirteenth Summer School on Formal Techniques</title>
+    <!-- <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Swiss" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body id="index" class="home">
+
+    <header id="banner" class="body">
+      <hgroup>
+	<div id="hdiv">
+	  <h1 id="fssft">Thirteenth Summer School on Formal Techniques</h1>
+	</div>
+	<h2 class="strapline">
+	  May 25-31, 2024
+	  <!-- <br/>
+	       <a href="http://www.menlo.edu"> Menlo College</a>, Atherton, CA -->
+	</h2>
+	<h4>Colocated with the Second
+	  <a href="FMiTF.html">Formal Methods in the Field (FMiTF) Bootcamp</a>
+	  <br/>June 1-2, 2024
+	</h4>
+      </hgroup>
+
+      <p id="toc-nav">
+	Table of Contents
+	<a href="#lecturers">Lecturers</a>
+	<a href="#splogic">Speaking Logic</a>
+	<a href="#bootcamp">Bootcamp</a>
+	<a href="#invited">Invited Speakers</a>
+	<a href="#schedule">Schedule and Zoom</a>
+	<!-- <a href="#schedule">Logistics</a> -->
+	<a href="#prev">Previous SSFTs</a>
+	<a href="#registration">Registration</a>
+      </p>
+
+    </header>
+    <!-- <center>
+	 <a href="group.jpg"><img id="group-photo" src="group.jpg" width="800" height="600"/></a>
+	 </center> -->
+    <hr width="800">
+
+    <section id="description" class="body">
+      <p>
+	Techniques based on formal logic, such as model checking,
+	satisfiability, static analysis, and automated theorem proving, are
+	finding a broad range of applications in modeling, analysis,
+	verification, and synthesis. This school, the thirteenth in the
+	series, will focus on the principles and practice of formal
+	techniques, with a strong emphasis on the hands-on use and
+	development of this technology. It primarily targets graduate
+	students and young researchers who are interested in studying and
+	using formal techniques in their research.  A prior background in
+	formal methods is helpful but not required. Participants at the
+	school can expect to have a seriously fun time experimenting with
+	the tools and techniques presented in the lectures during laboratory
+	sessions.  The main lectures will run from Monday May 27 to Friday
+	May 31. They will be preceded by a background course "Speaking
+	Logic" taught by Natarajan Shankar and St&eacute;phane
+	Graham-Lengrand (SRI CSL) on May 25/26.  The summer school will be
+	immediately followed by a two-day Bootcamp to reinforce some of the
+	skills acquired during the school.  Participants in the Bootcamp
+	will employ formal tools and techniques (including those taught in
+	this and prior summer school editions) under the supervision of the
+	Bootcamp faculty to create verified artifacts.
+      </p>
+      <p>The lecturers at the school include:</p>
+      <ul>
+	<li>Josef Urban - Combining Machine Learning and Theorem Proving</li>
+	<li>Marsha Chechik - Elicitation and Formal Reasoning about Normative Requirements</li>
+	<li>Leonardo de Moura and David Thrane Christiansen - The Lean 4 programming language and theorem prover</li>
+	<li>Cesare Tinelli - Modeling and analyzing reactive systems with logic-based symbolic model checkers</li>
+	<li>Armando Solar-Lezama - Neurosymbolic Programming for Better Learning</li>
+      </ul>
+
+      <h2 id="lecturers">Lectures</h2>
+
+      <ul>
+	<li>
+	  <span class="lecture">
+	    Combining Machine Learning and Theorem Proving
+	  </span><br/>
+	  <span class="lecturer">
+	    Josef Urban (CIIRC)
+	  </span><br/>
+	  <!-- <span class="materials">
+	       <a href="reference.pdf">References</a><br/>
+	       <a href="aLecture1.pdf">Lecture 1</a><br/>
+	       <a href="aLecture2.pdf">Lecture 2</a><br/>
+	       </span><br/> -->
+	  <b>Abstract</b>: The lectures will introduce the main approaches
+	  that combine machine learning with automated theorem proving. This
+	  includes learning to choose relevant facts in large theories,
+	  learning to guide the proof search in automated provers, guiding
+	  the application of tactics in interactive tactical systems,
+	  various forms of conjecturing, and feedback loops interleaving
+	  learning, proving and conjecturing. I will also show some demos of
+	  the systems and mention related tasks such as autoformalization.<br/>
+	  <b>Bio</b>: Dr. Josef Urban is a Distinguished Researcher at Czech
+	  Institute of Informatics, Robotics and Cybernetics (CIIRC),
+	  heading its AI department and formerly also the ERC project
+	  AI4REASON. His main interests are in combining inductive/learning
+	  and deductive/reasoning AI methods over large formal knowledge
+	  bases. His systems have won several theorem proving competitions,
+	  and the methods today assist formal verification in proof
+	  assistants. He received his MSc in Mathematics and PhD in Computer
+	  Science from Charles University in Prague, worked as an assistant
+	  professor in Prague, and as a researcher at University of Miami
+	  and Radboud University Nijmegen. He has also co-founded the
+	  conference on Artificial Intelligence and Theorem Proving (AITP)
+	  and co-organized it since 2016.<br/>
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    Elicitation and Formal Reasoning about Normative Requirements
+	  </span><br/>
+	  <span class="lecturer">
+	    Prof. Marsha Chechik (U. Toronto)
+	  </span><br/>
+	  <!-- <span class="materials">
+	       <a href="https://link.springer.com/chapter/10.1007/978-3-642-39799-8_1">
+	       First-Order Theorem Proving and VAMPIRE</a><br/>
+	       <a href="FOTP.pdf">Slides</a><br/>
+	       <a href="FOTP_Exercises.pdf">Exercises</a><br/>
+	       <a href="VampireCookies.pdf">Vampire Cookies</a><br/>
+	       <a href="Exercises_with_Solutions.pdf">Exercises with Solutions</a>
+	       </span><br/> -->
+	  <b>Abstract</b>: As software and cyber-physical systems
+	  interacting with humans become prevalent in domains such as
+	  healthcare, education and customer service, software engineers
+	  need to consider normative (i.e., social, legal, ethical,
+	  empathetic and cultural) requirements. However, their elicitation
+	  is challenging, as they must reflect the often conflicting or
+	  redundant views of stakeholders ranging from users and operators
+	  to lawyers, ethicists and regulators. I will describe a
+	  tool-supported framework for normative requirements elicitation.
+	  Built on top of LEGOS-a custom bounded satisfiability checker for
+	  first order logic with transitive closure, our framework allows
+	  specification of normative rules for a software system in an
+	  intuitive high-level language called SLEEC, and provides automated
+	  analysis to identify rule conflicts, redundancies, and other
+	  well-formedness concerns.  It also synthesizes feedback enabling
+	  users to understand and resolve problems.<br/>
+	  Our approach has been successfully applied to over a dozen of
+	  realistic case studies from assistive-care robots and tree-disease
+	  detection drones to manufacturing collaborative robots, and
+	  supported teams of ethicists, lawyers, philosophers,
+	  psychologists, safety analysts, and engineers.<br/>
+	  <b>Bio</b>: Dr. Marsha Chechik is a Professor and Bell University Labs
+	  Chair in Software Engineering the Department of Computer Science
+	  at the University of Toronto, where she has been a faculty member
+	  since 1996. She has served as Chair of the Department in 2019-22
+	  and Acting Dean of Faculty of Information in 2022. Her research
+	  interests are in the application of formal methods to improve the
+	  quality of software. She has (co)-authored numerous papers in
+	  formal methods, software specification and verification, computer
+	  safety and security and requirements engineering. She is a member of
+	  IFIP WG 2.9 on Requirements Engineering and an Associate Editor in
+	  Chief of IEEE Transactions on Software Engineering and Journal on
+	  Software and Systems Modeling. She has been Program Committee
+	  Co-Chair of numerous conferences including the 2018 International
+	  Conference in Software Engineering (ICSE18), the 2016
+	  International Conference on Tools and Algorithms for the
+	  Construction and Analysis of Systems (TACAS'16), the 2014
+	  International Conference on Automated Software Engineering
+	  (ASE'14), and the ACM Joint European Software Engineering
+	  Conference and Symposium on the Foundations of Software
+	  Engineering (ESEC/FSE’21), International Conference on Formal
+	  Methods (FM’22), International Conference on Modeling
+	  (MODELS’24). She is an ASE Faculty Fellow and Distinguished Member of
+	  ACM. Over a dozen Ph.D. students completed their degrees under her
+	  supervision and obtained positions in some of the best
+	  universities and research labs in the world.<br/>
+	</li>
+
+	<li>
+	  <span class="lecture">
+	    The Lean 4 programming language and theorem prover
+	  </span><br/>
+	  <span class="lecturer">
+	    Leonardo de Moura and David Thrane Christiansen
+	  </span><br/>
+	  <!-- <span class="materials">
+	       <a href="https://www.tptp.org/">TPTP</a><br/>
+	       </span> -->
+	  <b>Abstract</b>: This course offers a hands-on approach to
+	  learning functional programming and formal
+	  verification. Participants will gain practical experience in
+	  writing and proving properties of functional programs using Lean,
+	  a modern functional programming language and theorem prover. For
+	  more information about Lean, please visit lean-lang.org. The
+	  course is designed for both beginners and those with some
+	  functional programming background. <br/>
+	  <b>Lean Installation</b>: To prepare for the Lean lectures, please
+	  install Lean using the official instructions at
+	  <a href="https://lean-lang.org/lean4/doc/quickstart.html">https://lean-lang.org/lean4/doc/quickstart.html</a>. This
+	  will set up everything you need for the summer school.
+	  <p>
+	  If for some reason you can't follow these instructions, please
+	  make sure that the way you install Lean ends up with an
+	  installation of elan, the Lean toolchain version manager, rather
+	  than a specific version of Lean itself (e.g. from nixpkgs). The
+	  installation of elan worked if you can type "lean +4.7.0
+	  --version" in your home directory, and it prints out "Lean
+	  (version 4.7.0, ...)", and typing lean +nightly-2024-05-19
+	  --version" prints something like "Lean (version
+	  4.9.0-nightly-2024-04-19, ...)".
+	  </p>
+	  <p>
+	  The presentation will mostly be interactive, rather than
+	  slide-based.
+	  </p>
+	  <p>
+	  <b>Bio</b>: Leo is a Senior Principal Applied Scientist in the
+	  Automated Reasoning Group at AWS. In his spare time, he dedicates
+	  himself to serving as the Chief Architect of the Lean FRO, a
+	  non-profit organization that he proudly co-founded alongside
+	  Sebastian Ullrich. He is also honored to hold a position on the
+	  Board of Directors at the Lean FRO, where he actively contributes
+	  to its growth and development. Before joining AWS in 2023, he was
+	  a Senior Principal Researcher in the RiSE group at Microsoft
+	  Research, where he worked for 17 years starting in 2006. Prior to
+	  that, he worked as a Computer Scientist at SRI International. His
+	  research areas are automated reasoning, theorem proving, decision
+	  procedures, SAT and SMT. He is the main architect of several
+	  automated reasoning tools: Lean, Z3, Yices 1.0 and SAL. Leo’s work
+	  in automated reasoning has been acknowledged with a series of
+	  prestigious awards, including the CAV, Haifa, and Herbrand awards,
+	  as well as the Programming Languages Software Award by the
+	  ACM. Leo’s work has also been reported in the New York Times and
+	  many popular science magazines such as Wired, Quanta, and Nature
+	  News.</p>
+	  <b>Bio</b>: David Thrane Christiansen has worked with functional
+	  programming and dependent types in both academia and industry,
+	  with a particular interest in metaprogramming and domain-specific
+	  languages. He is the author of Functional Programming in Lean and,
+	  together with Daniel P. Friedman, The Little Typer. David works
+	  full-time at the Lean FRO on making the process of writing and
+	  maintaining documentation as easy as possible. Before working at
+	  the Lean FRO, he was the Executive Director of the Haskell
+	  Foundation, and he has multiple years of industrial experience
+	  with functional programming and verification at both Deon Digital
+	  and Galois. Before that, David contributed extensively to the
+	  first version of Idris.<br/>
+	</li>
+	<li>
+	  <span class="lecture">
+	    Modeling and analyzing reactive systems with logic-based symbolic model checkers
+	  </span><br/>
+	  <span class="lecturer">
+	    Cesare Tinelli (U. Iowa)
+	  </span><br/>
+	  <b>Abstract</b>: The lectures will introduce a language and
+	  verification environment for modeling and statically analyzing a
+	  variety of reactive computational systems such as embedded
+	  systems. The language is an extension of Lustre, a declarative and
+	  synchronous dataflow programming language for reactive
+	  systems. The verification environment is built around the Kind 2
+	  model checker and supports high-level modeling features such as
+	  assume-guaranteed contracts and mode-based specifications, which
+	  enable the modular and compositional verification of
+	  multi-component systems. The lectures will focus on the
+	  specification and verification of safety properties but discuss
+	  also additional kinds of analysis important in industrial
+	  applications such as contract realizability checking, merit
+	  analysis and blame analysis. They will conclude with a general
+	  description of the main automated reasoning techniques used under
+	  the hood to enable such analyses.  The labs will provide
+	  opportunities to acquire hands-on experience in modeling and
+	  verifying systems in Kind 2 through a number of exercises of
+	  increasing complexity.<br/>
+	  <b>Resources:</b> Kind 2 is open-source software and is available
+	  both in source and precompiled from its
+	  <a href="https://kind2-mc.github.io/kind2/">website</a>. The
+	  website includes an online user manual and many example modelss
+	  that can be executed and analyzed online. Additional resources on
+	  the website include a Kind 2 extension for Visual Studio code,
+	  which will be used in the labs, and several technical publications
+	  on the reasoning techniques Kind 2 is based on, or on applications
+	  of Kind 2. Additional materials will be available at the school.<br/>
+	  <b>Bio</b>: Cesare Tinelli received a Ph.D. in Computer Science
+	  from the University of Illinois at Urbana-Champaign in 1999 and is
+	  currently a F. Wendell Miller Professor of Computer Science at the
+	  University of Iowa. He is best known for his work in automated
+	  reasoning and verification, in particular in or based on
+	  Satisfiability Modulo Theories (SMT), a field he helped establish
+	  through his research and service activities. He received an NSF
+	  CAREER award in 2003, a Haifa Verification Conference award in
+	  2010 for his role in building and promoting the SMT community, and
+	  a CAV Award in 2021 for his pioneering contributions to the
+	  foundations of the theory and practice of SMT.  He is an associate
+	  editor of the Journal of Automated Reasoning and has served in the
+	  program committee of more than 80 automated reasoning and formal
+	  methods conferences and workshops, as well as the steering
+	  committee of CADE, ETAPS, FTP, FroCoS, IJCAR, and SMT. He was the
+	  PC chair of FroCoS'11 and a PC co-chair of TACAS'15 and
+	  CADE-29. He is a founder and coordinator of the SMT-LIB
+	  initiative, an international effort aimed at standardizing
+	  benchmarks and I/O formats for SMT solvers. He has led the
+	  development of the award-winning Darwin theorem prover and the
+	  Kind 1 and Kind 2 model checkers. He has co-led the development of
+	  the widely used and award-winning CVC3 and CVC4 SMT solvers, and
+	  co-leads the development of their successor cvc5.<br/>
+	</li>
+	<li>
+	  <span class="lecture">
+	    Neurosymbolic Programming for Better Learning
+	  </span><br/>
+	  <span class="lecturer">
+	    Armando Solar-Lezama (MIT)
+	  </span><br/>
+	  <b>Abstract</b>: For decades, programming has been the way we get
+	  computers to do what we want, but in recent years, data driven
+	  approaches have started to provide a different path, the ability
+	  to achieve complex functionality through large data-sets of
+	  examples. But data-driven approaches have a number of limitations
+	  compared to more traditional forms of programming. In particular,
+	  several aspects that make programming so useful: modularity, the
+	  ability to develop software incrementally, or the ability to
+	  establish its correctness for inputs beyond those that were used
+	  to develop it and test it.<br/>
+	  In this lecture, I will describe Neurosymbolic Programming, a set
+	  of techniques that combine ideas from programming systems and deep
+	  learning to develop learning systems that combine the benefits of
+	  data-driven learning with some of the features of programming
+	  systems that modern software development relies on.<br/>
+	  <b>Bio</b>: Armando Solar-Lezama is Distinguished Professor of
+	  Computing at the MIT Schwarzman College of Computing. He is the
+	  associate director and COO in the Computer Science and Artificial
+	  Intelligence Laboratory, where he leads the Computer Assisted
+	  Programming Group. Solar-Lezama and his research group focus on
+	  program synthesis, a research area at the intersection of
+	  programming systems and artificial intelligence.  Solar-Lezama
+	  earned a PhD from University of California, Berkeley.<br/>
+	</li>
+	<li>
+	  <span class="lecture">Speaking Logic</span><br/>
+	  <span class="lecturer">Natarajan Shankar and St&eacute;phane Graham-Lengrand (SRI CSL)</span>:<br/>
+	  <span class="materials"><p>
+	    <a href="speaklogicV12.pdf">Speaking Logic</a> - Videos:
+	    <a href="https://youtu.be/2rlabN32Ff4">Speaking Logic Part 1 (2021)</a>,
+	    <a href="https://youtu.be/gpyC83VJ2OE">Propositional Logic</a><br/>
+	    <a href="CAS2017.pdf">PVS Tutorial</a>,<br/>
+	    <a href="TypeTheory.pdf">Type Theory</a>,<br/>
+	    <a href="vscode-pvs-tutorial.pdf">VSCode-PVS Tutorial</a> -
+	    <a href="https://youtu.be/dYI7kypymvI">VSCode-PVS Video</a><br/>
+	    <!-- <a href="pvs-license.html?tgzfile=pvs-strings-ix86-MacOSX-allegro.tgz">PVS Mac (strings branch)</a><br/>
+		 <a href="pvs-license.html?tgzfile=pvs-strings-ix86_64-Linux-allegro.tgz">PVS Linux (strings branch)</a> -->
+	  </p>
+	  </span> <br/>
+	  <b>Abstract</b>: Formal logic has become the lingua franca of
+	  computing. It is used for specifying digital systems, annotating
+	  programs with assertions, defining the semantics of programming
+	  languages, and proving or refuting claims about software or hardware
+	  systems. Familiarity with the language and methods of logic is a
+	  foundation for research into formal aspects of computing. This course
+	  covers the basics of logic focusing on the use of logic as a medium for
+	  formalization and proof.
+	</li>
+      </ul>
+      <h2 id="bootcamp">
+	<a href="FMiTF.html">Formal Methods in the Field (FMiTF) Bootcamp</a>
+	<br/>June 1-2, 2024</h2>
+	<p>
+	  The Formal Methods in the Field Bootcamp will be held following the
+	  summer school from May 29 to the morning of June 2, 2024.  This
+	  edition of the FMiTF Bootcamp will be taught by SRI staff with
+	  expertise spanning a range of tools covering static and dynamic
+	  analyzers, code verifiers, SAT/SMT solvers, interactive proof
+	  assistants, and model checkers.
+	</p>
+
+	<h2 id="invited">Invited Speakers</h2>
+	<ul>
+	  <li>
+	    <span class="lecture">Applied Category Theory for All?
+	    </span><br/>
+	    <span class="lecturer">Valeria de Paiva (Topos Institute, Berkeley)
+	    </span><br/>
+	    <!-- <span class="materials">
+		 </span> -->
+	  </span> <br/>
+	  <b>Abstract</b>: Some might say that Applied Category Theory is a
+	  contradiction in terms. Category Theory is one of the most
+	  abstract branches of pure mathematics, even called by some
+	  mathematicians "abstract nonsense". But exactly because the theory
+	  is so abstract, it can and has been applied in different areas and
+	  from the beginning: math, logic, computer science and many other
+	  subjects. I want to discuss applications to logic and computer
+	  science, some old, some new. This survey is not meant to be
+	  comprehensive, but instead to follow my personal tastes and
+	  interests.
+	  </li>
+	  <li>
+	    <span class="lecture">Invited Fireside Chat
+	    </span><br/>
+	    <span class="lecturer">
+	      Chris Lattner
+	    </span><br/>
+	    <b>Bio</b>: Chris Lattner is a co-founder and the CEO of
+	    Modular, which is building an innovative new developer platform
+	    for AI and heterogenous compute. Modular provides an AI engine
+	    that accelerates PyTorch and TensorFlow inference, as well as
+	    the Mojo🔥 language, which extends Python into systems and
+	    accelerator programming domains. He has also co-founded the LLVM
+	    Compiler infrastructure project, the Clang C++ compiler, the
+	    Swift programming language, the MLIR compiler infrastructure,
+	    the CIRCT project, and has contributed to many other commercial
+	    and open source projects at Apple, Tesla, Google and SiFive.
+	    <!-- <p>
+		 LI: https://www.linkedin.com/in/chris-lattner-5664498a/ More
+		 than you ever wanted to know:
+		 https://nondot.org/sabre/Resume.html
+		 </p>
+		 LI: https://www.linkedin.com/in/chris-lattner-5664498a/ Twitter:
+		 https://twitter.com/clattner_llvm Github:
+		 https://github.com/lattner Web: https://nondot.org/sabre/ -->
+	  </li>
+	</ul>
+
+	<h2 id="schedule">
+	  <a href="https://docs.google.com/spreadsheets/d/1chybeg9KEd5ER7SRAhwkvTABWokF0a8Zf-FqFyvnFnY/edit?usp=sharing">Schedule</a>
+	</h2>
+
+	<h2 id="zoomlinks">Zoom Links</h2>
+	<ul>
+	  <li><a href="https://us02web.zoom.us/j/81018833162?pwd=RzdSR3ZVSG9lY3Byem1BMmFIYlQyUT09">
+	  Channel A (user enshankar@gmail.com: 810 1883 3162 - Passcode: 395516)</a>
+	  </li>
+	  <li><a href="https://us05web.zoom.us/j/82796752509?pwd=gyRXber5uWk1IwD78sCL4GjFMcwhNv.1">
+	  Channel B (user summerformalschool@gmail.com)</a>
+	  </li>
+	  <li><a href="https://us02web.zoom.us/meeting/tZUtduGgrTgrHNYmMUtraLXxfOtenfz_-2O_/ics?icsToken=98tyKuGprjoiEteWsR-FRpwcAoj4WfzztnZcgo1kkTLQFzJSTjvuMM1WN7x5Cued">
+	  Daily</a>
+	</ul>
+
+	<!-- <h2 id="logistics">
+	     <a href="https://docs.google.com/document/d/1aEhFvXypEEhG7QOK7r4xK4ij4LSI-CkUZz0iCO2kkNc/edit?usp=sharing">Logistics</a>
+	     </h2> -->
+	<!--
+	     <h2>
+	     <a href="https://drive.google.com/drive/folders/1UYx2Qw_VY0LM0HsorWV0FIuqnerF6swh?usp=sharing">Awards Photos</a>
+	     </h2> -->
+
+	<h2 id="prev">Previous Summer Schools on Formal Techniques</h2>
+
+	<p>
+	  Information about previous Summer Schools on Formal Techniques can
+	  be found at
+	  <ul>
+	    <li><a href="http://fm.csl.sri.com/SSFT23">SSFT23</a></li>
+	    <li><a href="../2022/">SSFT22</a></li>
+	    <li><a href="../2021/">SSFT21</a></li>
+	    <li><a href="../2019/">SSFT19</a></li>
+	    <li><a href="../2018/">SSFT18</a></li>
+	    <li><a href="../2017/">SSFT17</a></li>
+	    <li><a href="../2016/">SSFT16</a></li>
+	    <li><a href="../2015/">SSFT15</a></li>
+	    <li><a href="../2014/">SSFT14</a></li>
+	    <li><a href="../2013/">SSFT13</a></li>
+	    <li><a href="../2012/">SSFT12</a></li>
+	    <li><a href="../2011/">SSFT11</a></li>
+	  </ul>
+	</p>
+	<p>
+	  Jay Bosamiya of CMU has blogged about the 2018 Summer School at
+	  <a href="https://www.jaybosamiya.com/blog/2018/05/31/ssft/">
+	    https://www.jaybosamiya.com/blog/2018/05/31/ssft/</a>
+	</p>
+	<hr width="80%">
+	<h2 id="registration">
+	     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7prfM2os7FOv0ztcVPEgDJ8tRld1ylvK_5UoLmloVWacsEg/viewform?usp=pp_url">
+	     Registration
+	     </a>
+	</h2>
+	Registration for in-person participation with SSFT24 is now closed.<br/>
+	Applicants are welcome to register for virtual participation.
+
+	<hr width="80%">
+	<p>
+	  This year, the school/bootcamp will take place in a hybrid mode:
+	  the lectures and labs will be live-streamed and recorded. We
+	  strongly encourage in-person participation so that you can benefit
+	  from interactions outside the classroom. We have funding from NSF
+	  to cover transportation/food/lodging expenses for selected
+	  US-based students. Non-student and non-US in-person participants
+	  are expected to cover their own transportation and will be charged
+	  a fee (around $150/day) to cover the cost of food and lodging.</p>
+	<p>
+	  The 2024 Summer School on Formal Techniques will be presented in a
+	  hybrid format. We encourage those students who can attend in
+	  person to do so. Those who cannot be there in person can still
+	  participate virtually but they will need to synchronize with the
+	  Pacific Daylight Savings Time. Applications should be submitted
+	  together with names of two references (preferably advisors,
+	  professors, or senior colleagues).</p>
+	<p>
+	  Applicants are urged to submit their applications before April 30,
+	  2024, since there are only a limited number of spaces available.
+	  Those needing invitation letters for visa purposes are encouraged
+	  to complete their applications as early as possible.  We strongly
+	  encourage the participation of women and under-represented
+	  minorities in the summer school.</p>
+	<p>
+	  The nearest airport to the summer school is SFO. Use Supershuttle
+	  for ground transportation to/from SFO - we should have a discount
+	  code shortly.</p>
+
+	<!-- We expect to provide support for the travel and accommodation for (a
+	     limited number of) students registered at US universities. We
+	     welcome applications from non-US students as well as non-students
+	     (if space permits).  Non-US students will have to cover their own
+	     travel; the cost (which covers meals and lodging) is:
+	     <ul>
+	     <li>US$800 for the summer school (SSFT21)</li>
+	     <li>US$700 for the boot camp (FMiTF)</li>
+	     </ul> -->
+      <!-- Although the summer school is virtual and there is no registration
+	   fee, attendance is restricted to registered participants.  Attendees
+	   who complete the summer school will receive a certificate by mail.
+	   Applications should be submitted together with names of
+	   two references (preferably advisors, professors, or senior
+	   colleagues) using the form below.   -->
+      <!-- </p>
+	   <p>
+	   Applicants are urged to submit their applications before April 30,
+	   2022, since there are only a limited number of spaces available.
+	   Non-US applicants requiring US visas are requested to apply early.
+	   We strongly encourage the participation of women and
+	   under-represented minorities in the summer school. </p>
+	   <hr/> -->
+
+      <!-- <p>
+	   Questions on any aspect of the school can be posted
+	   <a href="http://fm-wiki.csl.sri.com/index.php/Questions">here</a>.
+	   </p>
+      -->
+      <!-- <p>
+	   <center> <b>Note that all fields are required</b></center>
+	   <form id="registration" method="POST" action="mailto:owre@csl.sri.com">
+	   <table>
+	   <tr>
+	   <td><label>Name</label></td>
+	   <td><input name="name" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Gender</label></td>
+	   <td id="gender">
+	   Male<input class="but" type="radio" checked="checked" name="gender" value="male"/>
+	   Female<input class="but" type="radio" name="gender" value="female"/>
+	   </td>
+	   </tr>
+	   <tr>
+	   <td><label>Minority<sup>&dagger;</sup></label></td>
+           <td id="gender">
+	   Yes<input class="but" type="radio" name="minority" value="yes"/>
+	   No<input class="but" type="radio" checked="checked" name="minority" value="no"/>
+           </td>
+	   </tr>
+	   <tr>
+	   <td><label>Permanent mailing address</label></td>
+	   <td><textarea name="mailaddr" rows="4" cols="79"></textarea></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="email" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Affiliation</label></td>
+	   <td><input name="affiliation" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Education</label></td>
+	   <td><input name="education" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Graduate Advisor</label></td>
+	   <td><input name="advname" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Did you attend last year?</label></td>
+	   <td id="gender">
+	   Yes<input class="but" type="radio" name="attendedbefore" value="yes"/>
+	   No<input class="but" type="radio" checked="checked" name="attendedbefore"
+	   value="no"/>
+	   </td>
+	   </tr>
+	   <tr>
+	   <td><label>Research Interests</label></td>
+	   <td><textarea name="interests" rows="4" cols="79"></textarea></td>
+	   </tr>
+	   <tr>
+	   <td><label>Reference Name</label></td>
+	   <td><input name="refname1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="refemail1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Phone</label></td>
+	   <td><input name="refphone1" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Reference Name</label></td>
+	   <td><input name="refname2" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Email</label></td>
+	   <td><input name="refemail2" size="80" maxlength="100"/></td>
+	   </tr>
+	   <tr>
+	   <td><label>Phone</label></td>
+	   <td><input name="refphone2" size="80" maxlength="100"/></td>
+	   </tr>
+	   </table>
+	   <center>
+	   <input type="submit" value="Send Information"/>
+	   <input type="reset" value="Clear The Form"/>
+	   </center>
+	   <hr width="80%">
+	   </form>
+	   </p>
+	   <p><sup>&dagger;</sup>NOTE: <i>Underrepresented minority</i>
+	   refers to African Americans, Mexican-Americans, Native Americans
+	   (American Indians, Alaska Natives, and Native Hawaiians),
+	   Pacific Islanders, and mainland Puerto Ricans.
+	   </p> -->
+      <hr width="80%">
+
+      <script src="https://smtpjs.com/v3/smtp.js">
+      </script>
+
+      <script>
+       registration.onsubmit = async (e) => {
+	   e.preventDefault();
+	   let fd = new FormData(registration);
+	   let pairs = "";
+	   for(let [name, value] of fd) {
+	       pairs += `${name} = ${value}\n`;
+	   }
+	   Email.send({
+	   To: 'owre@csl.sri.com',
+	   From: fd.get('email'),
+	   //Bcc: 'owre@csl.sri.com',
+	   //Reply-to: fd.get('email'),
+	   Subject: 'SSFT23 Registration for ' + fd.get('name') + '\n\n',
+	   Body: fd.get('name') + ' wrote\n' + pairs
+	   })
+	   .then(function (message) {
+	   alert("mail sent successfully")
+	   });
+	   alert(pairs);
+	   }
+      </script>
+
+    </section>
+
+    <!-- <section id="Questions" class="body"> -->
+
+    <!--
+	 <section id="Reading" class="body">
+	 <h3>Background reading:</h3>
+	 <ul>
+	 <li><a href="https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf">https://courses.cs.washington.edu/courses/cse503/11au/readings/shankar-deduction-csur2009.pdf</a></li>
+	 <li><a href="http://www21.in.tum.de/~nipkow/Concrete-Semantics/">http://www21.in.tum.de/~nipkow/Concrete-Semantics/</a></li>
+	 </ul>
+	 </section>
+    -->
+    <!--
+	 <section id="Tools" class="body">
+	 <h3>Tools:</h3>
+	 <ul>
+	 <li><a href="http://pvs.csl.sri.com">PVS</a> (see also <a href="http://sal.csl.sri.com">SAL</a> and <a href="http://yices.csl.sri.com">Yices 1 and 2</a>)</li>
+	 <li><a href="http://z3.codeplex.com/">Z3</a></li>
+	 <li><a href="http://spinroot.com/">SPIN</a></li>
+	 <li><a href="http://isabelle.in.tum.de/">Isabelle</a></li>
+	 <li><a href="http://prosecco.gforge.inria.fr/personal/bblanche/proverif/">ProVerif</a></li>
+	 <li><a href="http://www.prismmodelchecker.org/">PRISM</a></li>
+	 </ul>
+	 </section>
+    -->
+
+  </body>
+</html>
