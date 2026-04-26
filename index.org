@@ -1,0 +1,189 @@
+#+TITLE: Fifteenth Summer School on Formal Techniques
+#+SUBTITLE: May 23-29, 2026
+#+AUTHOR: SSFT
+#+LANGUAGE: en
+#+EXPORT_FILE_NAME: index.html
+#+OPTIONS: toc:1 num:nil
+
+# Edit this file, then run `make build` to regenerate index.html.
+
+* Overview
+:PROPERTIES:
+:CUSTOM_ID: overview
+:END:
+
+Techniques based on formal logic, such as model checking, satisfiability, static analysis, and automated theorem proving, are finding a broad range of applications in modeling, analysis, verification, and synthesis.
+
+This school, the fifteenth in the series, focuses on the principles and practice of formal techniques, with a strong emphasis on the hands-on use and development of this technology. It primarily targets graduate students and young researchers who are interested in studying and using formal techniques in their research. A prior background in formal methods is helpful but not required.
+
+Participants can expect to have a seriously fun time experimenting with the tools and techniques presented in the lectures during the laboratory sessions. The main lectures run from Monday, May 25 to Friday, May 29. They are preceded by a background course, /Speaking Logic/, on May 23 and 24.
+
+Week-long lectures by:
+
+- Aws Albarghouthi, /Compilers for Quantum Computers/
+- Cas Cremers, /Analyzing Cryptographic Protocols with Tamarin/
+- Cesar Munoz, /Developing and Proving Algorithms with PVS/
+- Ruzica Piskac, /Privacy-Preserving Reasoning/
+- Chris Hawblitzel, /Verifying Rust code with Verus/
+
+* Lectures
+:PROPERTIES:
+:CUSTOM_ID: lecturers
+:END:
+
+** Compilers for Quantum Computers
+:PROPERTIES:
+:CUSTOM_ID: quantum-compilers
+:END:
+
+Aws Albarghouthi, University of Wisconsin-Madison
+
+*Abstract.* Quantum computers have the potential to transform drug discovery, materials design, energy production, and beyond. Recent breakthroughs in physical implementations have brought this technology closer to reality. In this course, we will learn about the problem of compiling quantum programs to run on quantum processors. Even though state-of-the-art quantum computers are still experimental and small in scale, the compilation problem is critical for understanding the resources required for running different applications on different emerging hardware and architectures. The course begins with a brief introduction to quantum computing fundamentals and then transitions to two key phases of quantum compilation: circuit optimization, and mapping and routing.
+
+*Bio.* Aws Albarghouthi is an associate professor of computer science at the University of Wisconsin-Madison. He works in programming languages and formal methods, developing new techniques for automatically building reliable and secure software systems. He received his PhD from the University of Toronto in 2015. He has received paper awards at PLDI, FSE, UIST, and FAST, an NSF CAREER award, and multiple industry awards from Meta, Google, and Amazon. He also received the Class of 1955 Teaching Excellence Award, one of the University of Wisconsin's highest teaching honors.
+
+*Materials and references.*
+
+- [[https://qqq-wisc.github.io/][Speaker's papers and tools on the topic]]
+- [[https://quantum.country/][Quantum Country tutorial]]
+
+** Analyzing Cryptographic Protocols with Tamarin
+:PROPERTIES:
+:CUSTOM_ID: tamarin
+:END:
+
+Prof. Dr. Cas Cremers, CISPA Helmholtz Center for Information Security
+
+*Abstract.* The Tamarin prover is a state-of-the-art tool for cryptographic protocol analysis. Protocols are specified using multiset rewriting, and a subset of first-order logic is used to specify protocol properties. Tamarin then supports automated analysis of protocols with respect to their specified properties. Tamarin has a large user community and has been successfully used to analyze numerous industry protocols and standards, leading either to the discovery of subtle attacks or to automated proofs.
+
+*Materials.* This tutorial explains how to use Tamarin to specify and reason about cryptographic protocols. Tamarin is open-source software; the manual, the Tamarin book, source code, and scientific papers are available at [[https://tamarin-prover.com/][tamarin-prover.com]]. For examples of its real-world use, see [[https://hal.archives-ouvertes.fr/hal-03586826/document][this report]].
+
+** Developing and Proving Algorithms with PVS
+:PROPERTIES:
+:CUSTOM_ID: pvs
+:END:
+
+Dr. Cesar Munoz, NASA Langley Research Center
+
+*Abstract.* These lectures provide a practical introduction to specifying, verifying, and validating algorithms using the Prototype Verification System (PVS), an interactive environment for system specification and verification. PVS features a strongly typed specification language based on higher-order logic, with a type system that supports predicate sub-types, dependent types, inductive data types, parametric types, prenex polymorphism, and built-in types and data structures such as numbers, booleans, strings, records, unions, tuples, arrays, sequences, sets, and lists.
+
+The PVS theorem prover includes decision procedures for linear arithmetic, propositional logic, and temporal logic, and users can conservatively extend its deductive capabilities through custom proof strategies. NASALib is a comprehensive library of fundamental mathematics developed in PVS, along with utilities for proving and animating specifications. These lectures focus on the development and verification of algorithms through examples inspired by actual NASA verification projects. The lectures provide a gentle introduction to advanced PVS features, including induction-less induction, modeling with deep and shallow embeddings, and differential testing via model animation.
+
+*Bio.* Dr. Cesar Munoz is a Research Computer Scientist at NASA, leading the Formal Methods Team at NASA Langley Research Center. He earned his PhD in Computer Science from the University of Paris 7, currently Paris Cite University, in France. Dr. Munoz began his NASA career as a contractor in 1999 before transitioning to a civil servant role in 2009. Between 2021 and 2023, he served as Senior Principal Applied Scientist at Amazon Web Services, managing the S3 Automated Reasoning Team. He returned to NASA in 2023 to advance the development and application of formal methods for designing, analyzing, implementing, and verifying safety-critical systems relevant to NASA missions.
+
+Dr. Munoz is a recognized expert in SRI's Prototype Verification System and has developed numerous strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS include Interval Arithmetic, ACCoRD, PVSio, ProofLite, and Extrategies.
+
+** Privacy-Preserving Reasoning
+:PROPERTIES:
+:CUSTOM_ID: privacy-reasoning
+:END:
+
+Prof. Ruzica Piskac, Yale University
+
+*Abstract.* Formal methods offer a vast collection of techniques to analyze and ensure the correctness of software and hardware systems against a given specification. Modern formal methods tools scale to industrial applications, but privacy requirements are not usually considered in their design. For example, automated reasoning tools often assume that the formula to be proved is public, which is a problem if the formula itself reveals information that should remain private to one party. To overcome this issue, we propose privacy-preserving automated reasoning.
+
+In these lectures, students will learn how to incorporate cryptographic primitives into automated reasoning. We will present a privacy-preserving Boolean satisfiability solver that allows mutually distrustful parties to evaluate the conjunction of their input formulas while maintaining privacy. We will also show how to prove unsatisfiability of formulas using zero-knowledge protocols, and discuss how the full formal verification workflow can be applied in privacy-preserving settings.
+
+*Bio.* Ruzica Piskac is a Professor of Computer Science at Yale University, where she leads the Rigorous Software Engineering (ROSE) group. Her research interests span software verification, security and applied cryptography, automated reasoning, and code synthesis. Much of her research has focused on using formal techniques to improve software reliability and trustworthiness. Piskac joined Yale's Department of Computer Science in 2013. She was previously an Independent Research Group Leader at the Max Planck Institute for Software Systems in Germany.
+
+Her research has received a range of professional honors, including multiple Amazon Research Awards, Yale University's Ackerman Award for Teaching and Mentoring, the Facebook Communications and Networking Award, and the Microsoft Research Award for the Software Engineering Innovation Foundation. In 2019, Yale named Piskac the Donna L. Dubinsky Associate Professor of Computer Science. Piskac holds a PhD from the Swiss Federal Institute of Technology, EPFL, where her dissertation won the Patrick Denantes Prize. Her current and recent professional activities include service as Program Chair of the 37th International Conference on Computer Aided Verification and on the Steering Committee of the Formal Methods in Computer-Aided Design conference. Piskac has graduated six PhD students, four of whom are now faculty members.
+
+** Verifying Rust Code with Verus
+:PROPERTIES:
+:CUSTOM_ID: verus
+:END:
+
+Dr. Chris Hawblitzel, Microsoft Research
+
+*Abstract.* The Rust programming language is rapidly gaining acceptance as a modern, type-safe alternative to C and C++ for low-level systems programming. Rust includes an advanced type system, similar to languages like Haskell and ML, that makes formal reasoning more elegant and natural. Most importantly, Rust implements a novel ownership checker that manages aliasing and mutation, allowing safe manual deallocation of unaliased values and prohibiting mutation of aliased values. This ownership methodology is ideal for formal verification: it allows a verifier to reason about values rather than mutable heap locations, making verification of Rust code similar to verification of purely functional high-level languages.
+
+This course introduces Verus, a verifier for Rust code. With Verus, programmers express proofs and specifications using Rust, allowing proofs to take advantage of Rust's type checking and ownership checking. The course describes how to write such specifications and proofs, and how the Verus tool translates them into formulas that can be efficiently checked by an SMT solver. It also describes how to write proofs that take advantage of Rust's ownership to express separation and permissions in a style similar to separation logic, and how to use this style to verify safe Rust code, unsafe Rust code, and concurrent Rust code.
+
+The course includes both lectures and hands-on exercises. Students can install Verus on any Linux, MacOS, or Windows laptop to edit and verify Rust code during the course. No knowledge of Rust is required beforehand.
+
+*Bio.* Chris Hawblitzel is a Senior Principal Researcher at Microsoft Research in Redmond, WA. His research focuses on using programming language techniques and formal verification to enforce the safety and security of systems software. He has worked on projects including the Singularity OS, the Verve verified OS, the Ironclad/IronFleet verified software stack, the Everest verified TLS project, and the Verus verifier for Rust.
+
+He has co-authored papers receiving best paper awards for Verve at PLDI and Verus at OSDI, a CACM research highlight for IronFleet, distinguished paper awards for Vale at USENIX Security and Linear Dafny at OOPSLA, and distinguished artifact awards for Verus-related projects at SOSP, OSDI, and OOPSLA. He received a BA in physics from UC Berkeley in 1993, received a PhD in computer science from Cornell in 2000, taught at Dartmouth College until 2004, and has been a researcher at Microsoft Research since 2005.
+
+* Speaking Logic
+:PROPERTIES:
+:CUSTOM_ID: splogic
+:END:
+
+Natarajan Shankar and Stephane Graham-Lengrand, SRI CSL
+
+Formal logic has become the lingua franca of computing. It is used for specifying digital systems, annotating programs with assertions, defining the semantics of programming languages, and proving or refuting claims about software or hardware systems. Familiarity with the language and methods of logic is a foundation for research into formal aspects of computing. This course covers the basics of logic, focusing on the use of logic as a medium for formalization and proof.
+
+- [[file:materials/speaklogicV14.pdf][Speaking Logic]]
+- Videos: [[https://youtu.be/2rlabN32Ff4][Speaking Logic Part 1 (2021)]], [[https://youtu.be/gpyC83VJ2OE][Propositional Logic]]
+- [[file:materials/PVSTutorial.pdf][PVS Tutorial (WIFT'95)]]
+- [[file:materials/PVScourse.pdf][Specification and Proof with PVS]]
+- [[file:materials/TypeTheory.pdf][Type Theory]]
+- [[file:materials/vscode-pvs-tutorial.pdf][VSCode-PVS Tutorial]] and [[https://youtu.be/dYI7kypymvI][VSCode-PVS Video]]
+- [[https://github.com/nasa/vscode-pvs/tree/pvs8/releases][VSCode-PVS for Mac instructions]]
+- [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
+
+** PVS Documentation
+:PROPERTIES:
+:CUSTOM_ID: pvs-documentation
+:END:
+
+- [[https://pvs.csl.sri.com/doc/pvs-language-reference.pdf][PVS Language Reference]]
+- [[https://pvs.csl.sri.com/doc/pvs-system-guide.pdf][PVS System Guide]]
+- [[https://pvs.csl.sri.com/doc/pvs-prover-guide.pdf][PVS Prover Guide]]
+- [[https://pvs.csl.sri.com/doc/datatypes.pdf][PVS Datatypes]]
+- [[https://pvs.csl.sri.com/doc/interpretations.pdf][PVS Theory Interpretations]]
+- [[https://pvs.csl.sri.com/documentation.html][More PVS documentation]]
+
+* Invited Speakers
+:PROPERTIES:
+:CUSTOM_ID: invited
+:END:
+
+Invited speakers are to be announced.
+
+* Schedule
+:PROPERTIES:
+:CUSTOM_ID: schedule
+:END:
+
+The schedule is available here:
+
+- [[https://docs.google.com/spreadsheets/d/14dgsLv8OJ04YOQm7Sihl9jwvrNulHm91QiFrIj1Dt8Q/edit?usp=sharing][SSFT 2026 schedule]]
+
+* Previous Summer Schools
+:PROPERTIES:
+:CUSTOM_ID: prev
+:END:
+
+Information about previous Summer Schools on Formal Techniques can be found at:
+
+- [[http://ssft-sri.github.io/old/2025][SSFT25]]
+- [[http://fm.csl.sri.com/SSFT24][SSFT24]]
+- [[http://fm.csl.sri.com/SSFT23][SSFT23]]
+- [[http://fm.csl.sri.com/SSFT22][SSFT22]]
+- [[http://fm.csl.sri.com/SSFT21][SSFT21]]
+- [[http://fm.csl.sri.com/SSFT19][SSFT19]]
+- [[http://fm.csl.sri.com/SSFT18][SSFT18]]
+- [[http://fm.csl.sri.com/SSFT17][SSFT17]]
+- [[http://fm.csl.sri.com/SSFT16][SSFT16]]
+- [[http://fm.csl.sri.com/SSFT15][SSFT15]]
+- [[http://fm.csl.sri.com/SSFT14][SSFT14]]
+- [[http://fm.csl.sri.com/SSFT13][SSFT13]]
+- [[http://fm.csl.sri.com/SSFT12][SSFT12]]
+- [[http://fm.csl.sri.com/SSFT11][SSFT11]]
+
+Jay Bosamiya of CMU has [[https://www.jaybosamiya.com/blog/2018/05/31/ssft/][blogged about the 2018 Summer School]].
+
+* Registration
+:PROPERTIES:
+:CUSTOM_ID: registration
+:END:
+
+Registration is available here:
+
+- [[https://forms.gle/rhkCoe9XSnkAAq596][SSFT 2026 registration form]]
+
+The 2026 Summer School on Formal Techniques will take place in a hybrid mode: the lectures and labs will be live-streamed and recorded. We strongly encourage in-person participation so that you can benefit from interactions outside the classroom. We have funding from NSF to cover transportation, food, and lodging expenses for selected US-based students. Non-student and non-US in-person participants are expected to cover their own transportation and will be charged a fee, around $150/day, to cover the cost of food and lodging.
+
+Applicants are urged to submit their applications as early as possible, no later than March 31, 2026, since there are only a limited number of spaces available. Those needing invitation letters for visa purposes should complete their applications as early as possible. We strongly encourage the participation of women and under-represented minorities in the summer school. The Summer School follows the Title IX Sexual Misconduct & Sexual Harassment Policy & Procedures at [[https://menlo.edu/title-ix/][Menlo College]].
