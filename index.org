@@ -22,7 +22,7 @@ Week-long lectures by:
 
 - Aws Albarghouthi, /Compilers for Quantum Computers/
 - Cas Cremers, /Analyzing Cryptographic Protocols with Tamarin/
-- Cesar Munoz, /Developing and Proving Algorithms with PVS/
+- César Muñoz, /Developing and Proving Algorithms with PVS/
 - Ruzica Piskac, /Privacy-Preserving Reasoning/
 - Chris Hawblitzel, /Verifying Rust code with Verus/
 
@@ -63,15 +63,15 @@ Prof. Dr. Cas Cremers, CISPA Helmholtz Center for Information Security
 :CUSTOM_ID: pvs
 :END:
 
-Dr. Cesar Munoz, NASA Langley Research Center
+Dr. César Muñoz, NASA Langley Research Center
 
 *Abstract.* These lectures provide a practical introduction to specifying, verifying, and validating algorithms using the Prototype Verification System (PVS), an interactive environment for system specification and verification. PVS features a strongly typed specification language based on higher-order logic, with a type system that supports predicate sub-types, dependent types, inductive data types, parametric types, prenex polymorphism, and built-in types and data structures such as numbers, booleans, strings, records, unions, tuples, arrays, sequences, sets, and lists.
 
 The PVS theorem prover includes decision procedures for linear arithmetic, propositional logic, and temporal logic, and users can conservatively extend its deductive capabilities through custom proof strategies. NASALib is a comprehensive library of fundamental mathematics developed in PVS, along with utilities for proving and animating specifications. These lectures focus on the development and verification of algorithms through examples inspired by actual NASA verification projects. The lectures provide a gentle introduction to advanced PVS features, including induction-less induction, modeling with deep and shallow embeddings, and differential testing via model animation.
 
-*Bio.* Dr. Cesar Munoz is a Research Computer Scientist at NASA, leading the Formal Methods Team at NASA Langley Research Center. He earned his PhD in Computer Science from the University of Paris 7, currently Paris Cite University, in France. Dr. Munoz began his NASA career as a contractor in 1999 before transitioning to a civil servant role in 2009. Between 2021 and 2023, he served as Senior Principal Applied Scientist at Amazon Web Services, managing the S3 Automated Reasoning Team. He returned to NASA in 2023 to advance the development and application of formal methods for designing, analyzing, implementing, and verifying safety-critical systems relevant to NASA missions.
+*Bio.* Dr. César Muñoz is a Research Computer Scientist at NASA, leading the Formal Methods Team at NASA Langley Research Center. He earned his PhD in Computer Science from the University of Paris 7, currently Paris Cite University, in France. Dr. Muñoz began his NASA career as a contractor in 1999 before transitioning to a civil servant role in 2009. Between 2021 and 2023, he served as Senior Principal Applied Scientist at Amazon Web Services, managing the S3 Automated Reasoning Team. He returned to NASA in 2023 to advance the development and application of formal methods for designing, analyzing, implementing, and verifying safety-critical systems relevant to NASA missions.
 
-Dr. Munoz is a recognized expert in SRI's Prototype Verification System and has developed numerous strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS include Interval Arithmetic, ACCoRD, PVSio, ProofLite, and Extrategies.
+Dr. Muñoz is a recognized expert in SRI's Prototype Verification System and has developed numerous strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS include Interval Arithmetic, ACCoRD, PVSio, ProofLite, and Extrategies.
 
 ** Privacy-Preserving Reasoning
 :PROPERTIES:
@@ -128,7 +128,7 @@ Prof. Mohsen Lesani, UC Santa Cruz
 :CUSTOM_ID: splogic
 :END:
 
-Natarajan Shankar and Stephane Graham-Lengrand, SRI CSL
+Natarajan Shankar and Stéphane Graham-Lengrand, SRI CSL
 
 Formal logic has become the lingua franca of computing. It is used for specifying digital systems, annotating programs with assertions, defining the semantics of programming languages, and proving or refuting claims about software or hardware systems. Familiarity with the language and methods of logic is a foundation for research into formal aspects of computing. This course covers the basics of logic, focusing on the use of logic as a medium for formalization and proof.
 

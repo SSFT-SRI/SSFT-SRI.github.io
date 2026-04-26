@@ -24,20 +24,20 @@
 |       DATE | START | DURATION | TYPE           | TITLE                                          | SPEAKER                                        | DETAILS | NOTE_ID |
 |------------+-------+----------+----------------+------------------------------------------------+------------------------------------------------+---------+---------|
 | 2026-05-23 | 08:30 |       30 | other          | Introductions                                  |                                                |         |         |
-| 2026-05-23 | 09:00 |       60 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-23 | 09:00 |       60 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-23 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-23 | 10:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-23 | 10:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-23 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
-| 2026-05-23 | 13:00 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-23 | 13:00 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-23 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-23 | 15:00 |      180 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
-| 2026-05-24 | 08:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-23 | 15:00 |      180 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
+| 2026-05-24 | 08:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-24 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-24 | 10:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-24 | 10:30 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-24 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
-| 2026-05-24 | 13:00 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-24 | 13:00 |       90 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-24 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-24 | 15:00 |      180 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-24 | 15:00 |      180 | speaking-logic | Speaking Logic                                 | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-25 | 08:30 |          | lecture        | Analyzing Cryptographic Protocols with Tamarin | Cas Cremers                                    |         |         |
 | 2026-05-25 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
 | 2026-05-25 | 10:30 |          | lecture        | Privacy-Preserving Reasoning                   | Ruzica Piskac                                  |         |         |
@@ -47,21 +47,21 @@
 | 2026-05-25 | 15:00 |      180 | lab            | Lab sessions                                   | Cas Cremers/Aws Albarghouthi                   |         |         |
 | 2026-05-26 | 08:30 |          | invited        | Verified Distributed System Generation         | Mohsen Lesani                                  |         |         |
 | 2026-05-26 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-26 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS     | Cesar Munoz                                    |         |         |
+| 2026-05-26 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS     | César Muñoz                                    |         |         |
 | 2026-05-26 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
 | 2026-05-26 | 13:00 |          | lecture        | Verifying Rust Code with Verus                 | Chris Hawblitzel                               |         |         |
 | 2026-05-26 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-26 | 15:00 |      180 | lab            | Lab sessions                                   | Cesar Munoz/Chris Hawblitzel                   |         |         |
+| 2026-05-26 | 15:00 |      180 | lab            | Lab sessions                                   | César Muñoz/Chris Hawblitzel                   |         |         |
 | 2026-05-27 | 08:30 |          | lecture        | Analyzing Cryptographic Protocols with Tamarin | Cas Cremers                                    |         |         |
 | 2026-05-27 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-27 | 10:30 |       90 | speaking-logic | Speaking Logic (TT)                            | Natarajan Shankar and Stephane Graham-Lengrand |         |         |
+| 2026-05-27 | 10:30 |       90 | speaking-logic | Speaking Logic (TT)                            | Natarajan Shankar and Stéphane Graham-Lengrand |         |         |
 | 2026-05-27 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
 | 2026-05-27 | 13:00 |          | lecture        | Compilers for Quantum Computers                | Aws Albarghouthi                               |         |         |
 | 2026-05-27 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
 | 2026-05-27 | 15:00 |      180 | lab            | Lab sessions                                   | Cas Cremers/Ruzica Piskac                      |         |         |
 | 2026-05-28 | 08:30 |          | lecture        | Privacy-Preserving Reasoning                   | Ruzica Piskac                                  |         |         |
 | 2026-05-28 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-28 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS     | Cesar Munoz                                    |         |         |
+| 2026-05-28 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS     | César Muñoz                                    |         |         |
 | 2026-05-28 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
 | 2026-05-28 | 13:00 |          | invited        | Invited talk                                   | Alvin Cheung                                   |         |         |
 | 2026-05-28 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
@@ -69,9 +69,9 @@
 | 2026-05-28 | 18:30 |       30 | other          | Banquet                                        |                                                |         |         |
 | 2026-05-29 | 08:30 |          | lecture        | Verifying Rust Code with Verus                 | Chris Hawblitzel                               |         |         |
 | 2026-05-29 | 10:00 |       30 | break          | Break                                          |                                                |         |         |
-| 2026-05-29 | 10:30 |       90 | lab            | Lab sessions                                   | Cesar Munoz/Chris Hawblitzel                   |         |         |
+| 2026-05-29 | 10:30 |       90 | lab            | Lab sessions                                   | César Muñoz/Chris Hawblitzel                   |         |         |
 | 2026-05-29 | 12:00 |       60 | break          | Lunch                                          |                                                |         |         |
-| 2026-05-29 | 13:00 |       90 | lab            | Lab sessions                                   | Cesar Munoz/Chris Hawblitzel                   |         |         |
+| 2026-05-29 | 13:00 |       90 | lab            | Lab sessions                                   | César Muñoz/Chris Hawblitzel                   |         |         |
 | 2026-05-29 | 14:30 |       30 | break          | Break                                          |                                                |         |         |
 | 2026-05-29 | 15:00 |      180 | other          | Student presentations                          |                                                |         |         |
 
