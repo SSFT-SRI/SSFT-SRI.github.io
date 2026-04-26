@@ -105,6 +105,24 @@ The course includes both lectures and hands-on exercises. Students can install V
 
 He has co-authored papers receiving best paper awards for Verve at PLDI and Verus at OSDI, a CACM research highlight for IronFleet, distinguished paper awards for Vale at USENIX Security and Linear Dafny at OOPSLA, and distinguished artifact awards for Verus-related projects at SOSP, OSDI, and OOPSLA. He received a BA in physics from UC Berkeley in 1993, received a PhD in computer science from Cornell in 2000, taught at Dartmouth College until 2004, and has been a researcher at Microsoft Research since 2005.
 
+* Invited Speakers
+:PROPERTIES:
+:CUSTOM_ID: invited
+:END:
+
+** Verified Distributed System Generation
+:PROPERTIES:
+:CUSTOM_ID: mohsen
+:END:
+
+Prof. Mohsen Lesani, UC Santa Cruz
+
+*Abstract* Distributed systems underpin modern computing. Yet, building distributed systems and interfaces with strong reliability and security guarantees remains elusive. This talk presents our cross-stack research on the automatic generation and verification of distributed systems. I will describe two projects: Hamsaz and Hamraz. Given a class of data objects such as a relational schema annotated with integrity and recency requirements, Hamsaz automatically generates a correct-by-construction replicated class that guarantees integrity, convergence and recency, while minimizing coordination overhead. Given an online service as a class of objects and its end-to-end confidentiality, integrity and availability policies, Hamraz applies information flow type inference to automatically partition, place and replicate the fields and methods of the class across quorum systems, and synthesize trustworthy-by-construction distributed systems. Finally, I will close with an overview of our ongoing work on LLM-assisted generation of verified distributed systems.
+
+*Bio.* Mohsen Lesani is an Associate Professor in the Department of Computer Science and Engineering at the University of California, Santa Cruz, currently on sabbatical at UC Berkeley. He was a postdoctoral researcher at MIT and received his PhD from UCLA. His research spans formal methods and distributed systems. He received the NSF CAREER Award in 2020 and the DARPA YFA in 2022. His research has been recognized as a SIGPLAN Research Highlight and received a distinguished paper award at OOPSLA.
+
+
+
 * Speaking Logic
 :PROPERTIES:
 :CUSTOM_ID: splogic
@@ -135,21 +153,6 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[https://pvs.csl.sri.com/doc/interpretations.pdf][PVS Theory Interpretations]]
 - [[https://pvs.csl.sri.com/documentation.html][More PVS documentation]]
 
-* Invited Speakers
-:PROPERTIES:
-:CUSTOM_ID: invited
-:END:
-
-Invited speakers are to be announced.
-
-* Schedule
-:PROPERTIES:
-:CUSTOM_ID: schedule
-:END:
-
-The schedule is available here:
-
-- [[https://docs.google.com/spreadsheets/d/14dgsLv8OJ04YOQm7Sihl9jwvrNulHm91QiFrIj1Dt8Q/edit?usp=sharing][SSFT 2026 schedule]]
 
 * Previous Summer Schools
 :PROPERTIES:

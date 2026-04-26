@@ -5,4 +5,4 @@ build:
 
 deploy: build
 	git diff --check
-	@printf "Org export complete. Commit and push index.org, index.html, style.css, and build-site.el to publish on GitHub Pages.\n"
+	@printf "Org export complete. Commit and push the Org sources, generated HTML, style.css, and build-site.el to publish on GitHub Pages.\n"

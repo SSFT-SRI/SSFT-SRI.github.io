@@ -35,7 +35,7 @@ jobs:
         run: emacs --batch --quick --load build-site.el
 
       - name: Check generated files
-        run: git diff --exit-code -- index.html
+        run: git diff --exit-code -- index.html schedule.html
 
       - name: Configure Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
@@ -45,7 +45,7 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         run: |
           mkdir _site
-          cp index.html style.css _site/
+          cp index.html schedule.html style.css _site/
           cp -R materials old _site/
 
       - name: Upload Pages artifact
