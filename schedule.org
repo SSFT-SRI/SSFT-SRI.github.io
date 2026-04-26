@@ -1,0 +1,89 @@
+#+TITLE: SSFT 2026 Schedule (TODO)
+#+SUBTITLE: May 23-29, 2026
+#+AUTHOR: SSFT
+#+LANGUAGE: en
+#+EXPORT_FILE_NAME: schedule.html
+#+OPTIONS: toc:nil num:nil
+#+SSFT_SCHEDULE_START_DATE: 2026-05-23
+#+SSFT_SCHEDULE_END_DATE: 2026-05-29
+#+SSFT_SCHEDULE_DAY_START: 08:00
+#+SSFT_SCHEDULE_DAY_END: 18:30
+#+SSFT_SCHEDULE_SLOT_MINUTES: 30
+
+# Edit the "Schedule table", then run `make build`.
+# Lecture and invited-talk rows default to 90 minutes when DURATION is blank.
+# Use DETAILS for short in-cell text.
+# Add a NOTE_ID and matching note under "Schedule notes" for longer Org-formatted cell text.
+
+[[file:index.html][Back to main page]]
+
+#+SSFT_TIMETABLE:
+
+* Schedule table                                                       :noexport:
+
+| DATE       | START | DURATION | TYPE    | TITLE                                           | SPEAKER                   | DETAILS  | NOTE_ID |
+|------------+-------+----------+---------+-------------------------------------------------+---------------------------+----------+---------|
+| 2026-05-23 | 08:00 |       30 | other   | Check-in and setup                              |                           |          |         |
+| 2026-05-23 | 08:30 |       30 | other   | Opening and introductions                       |                           |          |         |
+| 2026-05-23 | 09:00 |       60 | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-23 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-23 | 10:30 |          | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-23 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-23 | 13:00 |          | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-23 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-23 | 15:00 |      180 | lab     | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-24 | 08:30 |          | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-24 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-24 | 10:30 |          | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-24 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-24 | 13:00 |          | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-24 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-24 | 15:00 |      180 | lecture | Speaking Logic                                  | Natarajan Shankar         |          |         |
+| 2026-05-25 | 08:30 |          | lecture | Analyzing Cryptographic Protocols with Tamarin  | Cas Cremers               |          |         |
+| 2026-05-25 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-25 | 10:30 |          | lecture | Analyzing Cryptographic Protocols with Tamarin  | Cas Cremers               |          |         |
+| 2026-05-25 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-25 | 13:00 |          | lecture | Developing and Proving Algorithms with PVS      | Cesar Munoz               |          |         |
+| 2026-05-25 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-25 | 15:00 |      180 | lab     | Lab sessions                                    | Cas Cremers/Aws Albarghouthi                          |          |         |
+| 2026-05-26 | 08:30 |          | lecture | Privacy-Preserving Reasoning                    | Ruzica Piskac             |          |         |
+| 2026-05-26 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-26 | 10:30 |          | lecture | Verifying Rust Code with Verus                  | Chris Hawblitzel          |          |         |
+| 2026-05-26 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-26 | 13:00 |          | lecture | Compilers for Quantum Computers                 |                           |          |         |
+| 2026-05-26 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-26 | 15:00 |      180 | lab     | Lab sessions                                    |                           |          |         |
+| 2026-05-27 | 08:30 |          | lecture | Analyzing Cryptographic Protocols with Tamarin  | Cas Cremers                         |          |         |
+| 2026-05-27 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-27 | 10:30 |          | lecture | Privacy-Preserving Reasoning                    | Ruzica Piskac             |          |         |
+| 2026-05-27 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-27 | 13:00 |          | lecture | Analyzing Cryptographic Protocols with Tamarin  | Cas Cremers               |          |         |
+| 2026-05-27 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-27 | 15:00 |      180 | lab     | Lab sessions                                    | Cas Cremers/Aws Albarghouthi                         |          |         |
+| 2026-05-28 | 08:30 |          | lecture | Verifying Rust Code with Verus                  | Chris Hawblitzel          |          |         |
+| 2026-05-28 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-28 | 10:30 |          | lecture | Compilers for Quantum Computers                 | Aws Albarghouthi          |          |         |
+| 2026-05-28 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-28 | 13:00 |          | invited | Invited talk                                    | TBD                       |          |         |
+| 2026-05-28 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-28 | 15:00 |      180 | lab     | Lab sessions                                    |                           |          |         |
+| 2026-05-29 | 08:30 |          | lecture | Analyzing Cryptographic Protocols with Tamarin  | Cas Cremers               |          |         |
+| 2026-05-29 | 10:00 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-29 | 10:30 |          | lecture | Verifying Rust Code with Verus                  | Chris Hawblitzel          |          |         |
+| 2026-05-29 | 12:00 |       60 | break   | Lunch                                           |                           |          |         |
+| 2026-05-29 | 13:00 |       90 | other   | Student presentations                           |                           |          |         |
+| 2026-05-29 | 14:30 |       30 | break   | Break                                           |                           |          |         |
+| 2026-05-29 | 15:00 |      120 | other   | Student presentations and closing discussion    |                           |          |         |
+
+* Schedule notes                                                       :noexport:
+
+Use the table's =DETAILS= column for short notes. Use this section for longer cell text. Put the heading's =CUSTOM_ID= in the table's =NOTE_ID= column.
+
+** Example lab note
+:PROPERTIES:
+:CUSTOM_ID: example-lab-note
+:END:
+
+This note is rendered in the first Saturday lab cell.
+
+- Change this text to add lab setup, repository links, or room-specific instructions.
