@@ -12,9 +12,10 @@ The live page is generated from `index.org` with Emacs Org mode.
 `make deploy` runs the Org export and a whitespace check. GitHub Pages serves the generated
 `index.html` after the changes are committed and pushed.
 
-The GitHub Actions workflow in `.github/workflows/pages.yml` also runs the Org export with
-`build-site.el`. Pushes to `org` validate the generated HTML; pushes to the publishing branch
-(`main` or `master`) build and deploy the Pages artifact.
+The GitHub Actions workflow in `.github/workflows/pages.yml` deploys the committed
+`index.html` and `schedule.html`. It does not run the Org export; rebuild locally with
+`make build` before committing source changes that should appear on the site. Pushes to the
+publishing branch (`main` or `master`) package and deploy the Pages artifact.
 
 ### Schedule
 

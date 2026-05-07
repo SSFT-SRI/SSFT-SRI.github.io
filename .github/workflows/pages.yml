@@ -1,11 +1,10 @@
-name: Build and deploy site
+name: Deploy site
 
 on:
   push:
     branches:
       - master
       - main
-      - org
   pull_request:
   workflow_dispatch:
 
@@ -19,23 +18,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  package:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install Emacs
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y emacs-nox
-
-      - name: Export Org site
-        run: emacs --batch --quick --load build-site.el
-
-      - name: Check generated files
-        run: git diff --exit-code -- index.html schedule.html
+      - name: Check deployable files
+        run: test -f index.html && test -f schedule.html && test -f style.css
 
       - name: Configure Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
@@ -56,7 +47,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-    needs: build
+    needs: package
     runs-on: ubuntu-latest
     environment:
       name: github-pages
