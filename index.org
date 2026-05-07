@@ -26,6 +26,10 @@ Week-long lectures by:
 - Ruzica Piskac, /Privacy-Preserving Reasoning/
 - Chris Hawblitzel, /Verifying Rust code with Verus/
 
+Invited talks by:
+- Mohsen Lesani, /Verified Distributed System Generation/
+- Alvin Cheung, /Towards Verified and AI-Driven Accelerator Programming/
+
 * Lectures
 :PROPERTIES:
 :CUSTOM_ID: lecturers
@@ -121,7 +125,19 @@ Prof. Mohsen Lesani, UC Santa Cruz
 
 *Bio.* Mohsen Lesani is an Associate Professor in the Department of Computer Science and Engineering at the University of California, Santa Cruz, currently on sabbatical at UC Berkeley. He was a postdoctoral researcher at MIT and received his PhD from UCLA. His research spans formal methods and distributed systems. He received the NSF CAREER Award in 2020 and the DARPA YFA in 2022. His research has been recognized as a SIGPLAN Research Highlight and received a distinguished paper award at OOPSLA.
 
+** Towards Verified and AI-Driven Accelerator Programming
+:PROPERTIES:
+:CUSTOM_ID: cheung
+:END:
 
+Prof. Alvin Cheung & Sahil Bhatia, UC Berkeley
+
+
+*Abstract* Programming and optimizing hardware accelerators is notoriously difficult, requiring deep knowledge of both hardware and domain-specific languages (DSLs). Recent advances in AI, in particular large language models (LLMs), offer a new paradigm: leveraging pretrained models for verified code translation and hardware-aware optimization. In this talk, we will introduce LLMLift and Autocomp, two complementary frameworks that automate accelerator programming through LLM-driven compilation and verification, along with hands-on exercises for the audience to try out our tools.
+
+*Bio* Alvin Cheung is a professor in the EECS department at UC Berkeley, where his group works on data management and programming systems research. Work from his group has received a number of best paper / poster / demo awards in different venues. Alvin is a PECASE awardee, a Sloan fellow, and a recipient of early career research awards from the data management research community, the programming languages research community, and various government agencies and companies.
+
+Sahil Bhatia is a PhD student in EECS at UC Berkeley, advised by Alvin Cheung and Sanjit A. Seshia. His research focuses on verified code generation, with a particular interest in formally verified translation of programs into domain-specific languages (DSLs). He has previously worked on code generation and program synthesis problems at Google X and Microsoft Research.
 
 * Speaking Logic
 :PROPERTIES:
@@ -152,7 +168,17 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[https://pvs.csl.sri.com/doc/datatypes.pdf][PVS Datatypes]]
 - [[https://pvs.csl.sri.com/doc/interpretations.pdf][PVS Theory Interpretations]]
 - [[https://pvs.csl.sri.com/documentation.html][More PVS documentation]]
+* COMMENT Student Presentations
 
+We will have two sessions for the summer school students to present, demo, and share anything of interest in an open forum.
+
+The topics can range from past research presentations, tool demonstrations/walkthroughs, or structured extensions of watercooler chats with other attendees.
+
+This is highly informal and can be as interactive as appropriate.
+
+We can accommodate 5-minute (short) and 10-minute (long) presentations, and are happy to organize less structured fora.
+
+Please fill out [[https://TBD][this form]] to sign up. Try to sign up before May 24th.
 
 * Previous Summer Schools
 :PROPERTIES:
