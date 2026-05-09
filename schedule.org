@@ -54,7 +54,7 @@
 | 2026-05-26 | 15:00 |      180 | lab            | Lab sessions                                           | César Muñoz/Chris Hawblitzel                   |         |         |
 | 2026-05-27 | 08:30 |          | lecture        | Analyzing Cryptographic Protocols with Tamarin         | Cas Cremers                                    |         |         |
 | 2026-05-27 | 10:00 |       30 | break          | Break                                                  |                                                |         |         |
-| 2026-05-27 | 10:30 |       90 | speaking-logic | Speaking Logic (TT)                                    | Stéphane Graham-Lengrand                       |         |         |
+| 2026-05-27 | 10:30 |       90 | invited        | Speaking Logic (TT)                                    | Stéphane Graham-Lengrand                       |         |         |
 | 2026-05-27 | 12:00 |       60 | break          | Lunch                                                  |                                                |         |         |
 | 2026-05-27 | 13:00 |          | lecture        | Compilers for Quantum Computers                        | Aws Albarghouthi                               |         |         |
 | 2026-05-27 | 14:30 |       30 | break          | Break                                                  |                                                |         |         |

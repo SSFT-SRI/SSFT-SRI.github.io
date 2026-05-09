@@ -60,7 +60,16 @@ Prof. Dr. Cas Cremers, CISPA Helmholtz Center for Information Security
 
 *Abstract.* The Tamarin prover is a state-of-the-art tool for cryptographic protocol analysis. Protocols are specified using multiset rewriting, and a subset of first-order logic is used to specify protocol properties. Tamarin then supports automated analysis of protocols with respect to their specified properties. Tamarin has a large user community and has been successfully used to analyze numerous industry protocols and standards, leading either to the discovery of subtle attacks or to automated proofs.
 
-*Materials.* This tutorial explains how to use Tamarin to specify and reason about cryptographic protocols. Tamarin is open-source software; the manual, the Tamarin book, source code, and scientific papers are available at [[https://tamarin-prover.com/][tamarin-prover.com]]. For examples of its real-world use, see [[https://hal.archives-ouvertes.fr/hal-03586826/document][this report]].
+*Bio* Prof. Dr. Cas Cremers is faculty member at the CISPA Helmholtz Center for Information Security in Saarbruecken, Germany.
+
+He obtained his PhD in 2006 from Eindhoven University of Technology in the Netherlands. From 2006 to 2013 he was a postdoctoral researcher, and senior researcher and lecturer, at ETH Zurich in Switzerland. In 2013 he moved to the University of Oxford as an Associate Professor, and became full Professor at the University of Oxford in 2015. In 2018 he joined CISPA in Germany.
+
+His work includes co-developing the Scyther tool and the Tamarin prover for the analysis of security protocols, and working on provable foundations for secure messaging, including the first proofs of the Signal protocol. He contributed to the development of IETF's TLS 1.3 and MLS. He served as PC co-chair of ACM CCS 2022 and 2023. He was awarded the 2026 IACR Levchin Prize for Real-World Cryptography as part of the Tamarin team.
+
+*Materials.* To prepare for the summer school, students are highly recommended to read the first two chapters of the Tamarin book. A PDF of the book can be freely downloaded on the Tamarin website: https://tamarin-prover.com/book/index.html.
+Of course, feel free to read more chapters.
+
+Tamarin is open-source software; the manual, the Tamarin book, source code, and scientific papers are available at [[https://tamarin-prover.com/][tamarin-prover.com]]. For examples of its real-world use, see [[https://hal.archives-ouvertes.fr/hal-03586826/document][this report]].
 
 ** Developing and Proving Algorithms with PVS
 :PROPERTIES:
