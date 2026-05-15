@@ -1,0 +1,8 @@
+;-*-Lisp-*-
+; Exercise 6: Write a strategy called uss-tcc and use it to discharge the proofs of subscribe_j,
+; test_0, test_1, Dos, and test_update. Hint: The strategy does the following: first apply grind,
+; then to each generated subgoal, expand exists_op as many times as needed.
+(defstep uss-tcc ()
+  ;; PUT YOUR PROOF COMMANDS HERE
+  "Proves USS TCCs by using grind and expanding exists_op"
+  "Proving USS TCCs")

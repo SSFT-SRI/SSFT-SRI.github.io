@@ -86,6 +86,8 @@ The PVS theorem prover includes decision procedures for linear arithmetic, propo
 
 Dr. Muñoz is a recognized expert in SRI's Prototype Verification System and has developed numerous strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS include Interval Arithmetic, ACCoRD, PVSio, ProofLite, and Extrategies.
 
+*Materials.* [[file:materials/pvs-class-2026/pvs-class-2026.org][Click here for slides, exercises, etc.]]
+
 ** Privacy-Preserving Reasoning
 :PROPERTIES:
 :CUSTOM_ID: privacy-reasoning

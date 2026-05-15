@@ -1,0 +1,43 @@
+#+TITLE: Emacs and PVS Commands
+#+OPTIONS: toc:nil num:nil
+
+* Emacs Essentials
+:PROPERTIES:
+:CUSTOM_ID: emacs-essentials
+:END:
+
+| Keybinding | Action |
+|------------+--------|
+| ~C-x C-f~ | Load file |
+| ~C-x C-s~ | Save file |
+| ~C-x C-x~ | Exit |
+| ~C-x i~ | Insert file |
+| ~C-x u~ | Undo |
+| ~C-x 2~ | Split screen |
+| ~C-x 1~ | Remove split screen |
+| ~C-x k~ | Cut to end of line |
+| ~C-x y~ | Paste |
+| ~C-a~ | Go to beginning of line |
+| ~C-e~ | Go to end of line |
+| ~C-g~ | Cancel command |
+| ~C-s~ | Incremental find |
+| ~M-%~ | Find and replace |
+| ~M-<~ | Go to beginning of file |
+| ~M->~ | Go to end of file |
+
+* PVS Emacs Commands
+:PROPERTIES:
+:CUSTOM_ID: pvs-emacs-commands
+:END:
+
+| Keybinding | Action |
+|------------+--------|
+| ~M-x tc~ | Type-check |
+| ~M-x tcp~ | Type-check and prove TCCs |
+| ~M-x prt~ | Prove theory |
+| ~M-x pri~ | Prove theories in import chain |
+| ~M-x pr~ | Interactive prover |
+| ~M-x ste~ | Step proof |
+| ~M-x pvsio~ | PVSio evaluator |
+| ~Tab 1~ | Execute proof command (in step proof mode) |
+| ~M-s~ | Auto-completion in prover and PVSio |

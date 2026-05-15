@@ -1,0 +1,37 @@
+#+TITLE: Developing and Proving Algorithms with PVS
+
+By [[https://shemesh.larc.nasa.gov/people/cam][César A. Muñoz]] @ [[https://www.nasa.gov/langley/][NASA Langley Research Center]]
+
+* Lectures
+:PROPERTIES:
+:CUSTOM_ID: lectures
+:END:
+
+- [[file:lecture-1.pdf][Developing and Proving Algorithms with PVS (Part I)]]
+- [[file:lecture-2.pdf][Developing and Proving Algorithms with PVS (Part II)]]
+- [[file:lecture-3.pdf][Developing and Proving Algorithms with PVS (Tips and Tricks)]]
+
+* Exercises
+:PROPERTIES:
+:CUSTOM_ID: exercises
+:END:
+
+- [[file:Exercises/exercises-1.org][Exercises of Part 1]]
+- [[file:Exercises/exercises-2.org][Exercises of Part 2]]
+#+BEGIN_COMMENT
+- Solutions:
+  - [[file:Solutions/UTM0.pvs][UTM0.pvs]]
+  - [[file:Solutions/pvs-strategies][pvs-strategies]]
+  - [[file:Solutions/UTM.pvs][UTM.pvs]]
+#+END_COMMENT
+
+* References
+:PROPERTIES:
+:CUSTOM_ID: references
+:END:
+
+- [[https://pvs.csl.sri.com][PVS]]
+- [[https://shemesh.larc.nasa.gov/fm/pvs/PVS-library/][NASALib]]
+- [[https://shemesh.larc.nasa.gov/fm/VSCode-PVS/][VSCode-PVS]]
+- [[file:Exercises/cheatsheet-prover.org][Prover Cheat Sheet]]
+- [[file:Exercises/cheatsheet-emacs.org][Emacs Cheat Sheet]]

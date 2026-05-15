@@ -1,0 +1,16 @@
+#+TITLE: Exercises: Developing and Proving Algorithms with PVS (Part II)
+#+OPTIONS: toc:nil num:nil
+
+Consider the theories [[file:UTM0.pvs][~UTM0~]], [[file:UTM.pvs][~UTM~]], and the lecture [[file:../lecture-2.pdf][Developing and Proving Algorithms with PVS (Part II)]].
+
+6. Write a strategy called [[file:pvs-strategies#L6][~uss-tcc~]] and use it to discharge the proofs of [[file:UTM0.pvs#L57][~subscribe_j~]], [[file:UTM0.pvs#L104][~test_0~]], [[file:UTM0.pvs#L109][~test_1~]], [[file:UTM0.pvs#L122][~Dos~]], and [[file:UTM0.pvs#L137][~test_update~]]. *Hint*: The strategy does the following: first apply ~grind~, then to each generated subgoal, expand ~exists_op~ as many times as needed.
+
+7. Define the function [[file:UTM.pvs#L34][~in_operational_volume?(uss:USS)(p:Vect3) : bool~]] that returns ~TRUE~ if the point ~p~ is inside the operational volume of ~uss~. *Hint*: Check that:
+   - The vertical component of ~p~, i.e., ~p`z~, is below ~uss`op_alt~.
+   - The horizontal component of ~p~, i.e., ~vect2(p)~, is inside ~uss`op_area~.
+   - Look for the names of the functions in ~NASALib/shapes~ that check if a point is inside a circle, rectangle, and triangle.
+
+8. Define the function [[file:UTM.pvs#L47][~check_flight_plan(uss:USS,ac_id:AircraftId)~]] that returns:
+   - ~NotFound~, if the aircraft ~ac_id~ is not in ~uss~;
+   - ~OK~, if the aircraft is in ~uss~ and every waypoint in its flight plan lies inside the USS operational volume;
+   - ~Failure(wps)~ otherwise, where ~wps~ is the list of waypoints in its flight plan that lie outside the USS operational volume.

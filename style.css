@@ -230,6 +230,18 @@ i {
   background: var(--selection-gold);
 }
 
+.org-left {
+  text-align: left;
+}
+
+.org-center {
+  text-align: center;
+}
+
+.org-right {
+  text-align: right;
+}
+
 .outline-2 {
   clear: both;
   margin: 0 auto;

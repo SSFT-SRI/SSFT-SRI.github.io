@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated from Org source -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exercises: Developing and Proving Algorithms with PVS (Part I)</title>
+<meta name="author" content="Karthik Nukala" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+<main id="content" class="content">
+<header>
+<h1 class="title">Exercises: Developing and Proving Algorithms with PVS (Part I)</h1>
+</header><p>
+Consider the theory <a href="UTM0.pvs"><code>UTM0</code></a> and the lecture <a href="../lecture-1.pdf">Developing and Proving Algorithms with PVS (Part I)</a>.
+</p>
+
+<ol class="org-ol">
+<li>Using <code>remove_op</code>, define the function <a href="UTM0.pvs#L55"><code>unsubscribe</code></a> that unsubscribes any operation of aircraft <code>ac_id</code> from <code>ops</code>.</li>
+<li>Define a type judgement <a href="UTM0.pvs#L67"><code>unsubscribe_j</code></a> for the function <code>unsubscribe</code> stating that <code>result</code>, the output of the function, does not have an operation for aircraft <code>ac_id</code>, the input parameter of the function. Prove the type judgement using <code>remove_op_j</code> as a lemma.</li>
+<li>Fix <a href="UTM0.pvs#L110"><code>test_1</code></a> so that it holds. <b>Hint</b>: What is known about <code>Ac0</code>, <code>Ac1</code>, and <code>Ac2</code>? What should be assumed?</li>
+<li>Fix <a href="UTM0.pvs#L32"><code>subscribe</code></a> so that only one operation per aircraft can be subscribed. After the change, make sure all TCCs and LEMMAS are still valid.</li>
+<li>Define the function <a href="UTM0.pvs#L129"><code>update</code></a> that modifies the operation for a given aircraft. The function does nothing if the aircraft is not subscribed. Write a lemma to test the functionality. <b>Hint</b>: First, define a recursive function on <code>Operations</code> that changes an element in the list. Then, use this function to define <code>update</code>.</li>
+</ol>
+</main>
+</body>
+</html>

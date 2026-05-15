@@ -8,7 +8,6 @@
       org-html-html5-fancy t
       org-html-validation-link nil
       org-html-postamble nil
-      org-html-head "<link rel=\"stylesheet\" href=\"style.css\" />"
       org-html-head-include-default-style nil
       org-html-head-include-scripts nil
       org-html-htmlize-output-type 'css
@@ -392,6 +391,11 @@
       (setq buffer-file-name (expand-file-name source root)
             default-directory root)
       (org-mode)
+      (setq-local org-html-head
+                  (format "<link rel=\"stylesheet\" href=\"%s\" />"
+                          (file-relative-name
+                           (expand-file-name "style.css" root)
+                           (file-name-directory target-path))))
       (setq-local org-export-use-babel nil)
       (ssft-expand-generated-blocks)
       (org-export-to-file 'html target-path))
@@ -401,5 +405,15 @@
 
 (let ((root (file-name-directory (or load-file-name buffer-file-name default-directory))))
   (dolist (page '(("index.org" . "index.html")
-                  ("schedule.org" . "schedule.html")))
+                  ("schedule.org" . "schedule.html")
+                  ("materials/pvs-class-2026/pvs-class-2026.org" .
+                   "materials/pvs-class-2026/pvs-class-2026.html")
+                  ("materials/pvs-class-2026/Exercises/exercises-1.org" .
+                   "materials/pvs-class-2026/Exercises/exercises-1.html")
+                  ("materials/pvs-class-2026/Exercises/exercises-2.org" .
+                   "materials/pvs-class-2026/Exercises/exercises-2.html")
+                  ("materials/pvs-class-2026/Exercises/cheatsheet-prover.org" .
+                   "materials/pvs-class-2026/Exercises/cheatsheet-prover.html")
+                  ("materials/pvs-class-2026/Exercises/cheatsheet-emacs.org" .
+                   "materials/pvs-class-2026/Exercises/cheatsheet-emacs.html")))
     (ssft-export-file root (car page) (cdr page))))

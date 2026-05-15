@@ -1,0 +1,139 @@
+% UAS Service Supplier
+UTM0[AircraftOp:TYPE+,
+     OperationalArea:TYPE+] : THEORY
+BEGIN
+
+  % Type alias
+  AircraftId : TYPE = string
+
+  % Association list of tuples (id,info)
+  Operations : TYPE = list[[AircraftId,AircraftOp]]
+
+  % Record type
+  USS : TYPE = [#
+    max_capacity : posnat,
+    op_alt  : nnreal,
+    op_area : OperationalArea,
+    operations : Operations
+  #]
+
+  mk_uss(capacity:posnat,alt:nnreal,area:OperationalArea) : USS = (#
+    max_capacity := capacity,
+    op_alt  := alt,
+    op_area := area,
+    operations := null
+  #)
+
+  exists_op(ops:Operations)(ac_id:AircraftId) : INDUCTIVE bool =
+    cons?(ops) AND
+    LET (id,op) = car(ops) IN
+      id = ac_id OR exists_op(cdr(ops))(ac_id)
+
+  subscribe(ac_id:AircraftId,op:AircraftOp)
+           (uss:USS) : USS =
+    IF length(uss`operations) < uss`max_capacity THEN
+      uss WITH [
+        `operations := cons((ac_id,op),uss`operations)
+      ]
+    ELSE
+      uss
+    ENDIF
+
+  remove_op(ac_id:AircraftId,ops:Operations)
+    : RECURSIVE Operations =
+    CASES ops OF
+      null : ops,
+      cons(head,rest) :
+        LET (id,op) = head IN
+          IF id = ac_id THEN rest
+          ELSE cons(head,remove_op(ac_id,rest))
+          ENDIF
+    ENDCASES
+    MEASURE length(ops)
+
+  % Exercise 1: Define unsubscribe using remove_op
+  unsubscribe(ac_id:AircraftId)(uss:USS) : USS %=
+
+  subscribe_j : JUDGEMENT
+    subscribe(ac_id:AircraftId,op:AircraftOp)
+             (uss:USS | length(uss`operations) < uss`max_capacity) HAS_TYPE
+     {result:USS | exists_op(result`operations)(ac_id)}
+
+  remove_op_j : RECURSIVE JUDGEMENT
+    remove_op(ac_id:AircraftId,ops:Operations) HAS_TYPE
+    {result:Operations | NOT exists_op(result)(ac_id)}
+
+  % Exercise 2: Define a type judgement unsubscribe_j for the function unsubscribe stating that
+  % the output of the function doesn't have an operation for aircraft ac_id.
+  % Prove the type judgement using `remove_op_j` as a lemma.
+   % unsubscribe_j : JUDGEMENT ...
+
+  IMPORTING structures@Maybe
+
+  find_op(ac_id:AircraftId,ops:Operations)
+    : RECURSIVE Maybe[AircraftOp] =
+    CASES ops OF
+      null : None,
+      cons(head,rest) :
+        LET (id,op) = head IN
+          IF id = ac_id THEN Some(op)
+          ELSE find_op(ac_id,rest)
+          ENDIF
+    ENDCASES
+    MEASURE length(ops)
+
+  get_info(ac_id:AircraftId)(uss:USS)
+    : Maybe[AircraftOp] =
+    find_op(ac_id,uss`operations)
+
+  % Functional infix combinator
+  ;++(uss:USS,f:[USS->USS]) : MACRO USS = f(uss)
+
+  OpAlt  : nnreal
+  OpArea : OperationalArea
+  Ac0,Ac1,Ac2 : AircraftId
+  Op0,Op1,Op2 : AircraftOp
+
+  test_uss : USS =
+    mk_uss(3,OpAlt,OpArea) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac1,Op1) ++
+      subscribe(Ac2,Op2) ++
+      unsubscribe(Ac0)
+
+  test_0 : LEMMA
+    none?(get_info(Ac0)(test_uss))
+
+  % Exercise 3: Fix test_1 so that it holds.
+  % Hint: What is known about `Ac0`, `Ac1`, and `Ac2`? What should be assumed?
+  test_1 : LEMMA
+    %  ... IMPLIES
+    get_info(Ac1)(test_uss) = Some(Op1)
+
+  full_capacity(uss:USS) : bool =
+    length(uss`operations) = uss`max_capacity
+
+  test_dos : USS =
+    mk_uss(3,OpAlt,OpArea) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac0,Op0)
+
+  DoS : LEMMA
+     NOT full_capacity(test_dos)
+
+  % Exercise 4. Fix subscribe so that only one aircraft operation per aircraft can be subscribed.
+  % After the change, make sure all TCCs and LEMMAS are still valid.
+
+  % Exercise 5. Define the function update that modifies the operation for a given aircraft.
+  % The function does nothing if the aircraft is not subscribed. Write a lemma to test the functionality.
+  % Hint: First, define a recursive function on Operations that change an element in the list.
+  % Then, use this function to define update.
+  %
+  % modify_op(ac_id:AircraftId,new_op:AircraftOp,ops:Operations) : RECURSIVE Operations = ...
+  %
+  update(ac_id:AircraftId,op:AircraftOp)(uss:USS) : USS %=
+
+  % test_update : LEMMA ...
+
+END UTM0

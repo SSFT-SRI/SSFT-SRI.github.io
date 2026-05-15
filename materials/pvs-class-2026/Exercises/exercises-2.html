@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated from Org source -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exercises: Developing and Proving Algorithms with PVS (Part II)</title>
+<meta name="author" content="Karthik Nukala" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+<main id="content" class="content">
+<header>
+<h1 class="title">Exercises: Developing and Proving Algorithms with PVS (Part II)</h1>
+</header><p>
+Consider the theories <a href="UTM0.pvs"><code>UTM0</code></a>, <a href="UTM.pvs"><code>UTM</code></a>, and the lecture <a href="../lecture-2.pdf">Developing and Proving Algorithms with PVS (Part II)</a>.
+</p>
+
+<ol class="org-ol">
+<li>Write a strategy called <a href="pvs-strategies#L6"><code>uss-tcc</code></a> and use it to discharge the proofs of <a href="UTM0.pvs#L57"><code>subscribe_j</code></a>, <a href="UTM0.pvs#L104"><code>test_0</code></a>, <a href="UTM0.pvs#L109"><code>test_1</code></a>, <a href="UTM0.pvs#L122"><code>Dos</code></a>, and <a href="UTM0.pvs#L137"><code>test_update</code></a>. <b>Hint</b>: The strategy does the following: first apply <code>grind</code>, then to each generated subgoal, expand <code>exists_op</code> as many times as needed.</li>
+
+<li>Define the function <a href="UTM.pvs#L34"><code>in_operational_volume?(uss:USS)(p:Vect3) : bool</code></a> that returns <code>TRUE</code> if the point <code>p</code> is inside the operational volume of <code>uss</code>. <b>Hint</b>: Check that:
+<ul class="org-ul">
+<li>The vertical component of <code>p</code>, i.e., <code>p`z</code>, is below <code>uss`op_alt</code>.</li>
+<li>The horizontal component of <code>p</code>, i.e., <code>vect2(p)</code>, is inside <code>uss`op_area</code>.</li>
+<li>Look for the names of the functions in <code>NASALib/shapes</code> that check if a point is inside a circle, rectangle, and triangle.</li>
+</ul></li>
+
+<li>Define the function <a href="UTM.pvs#L47"><code>check_flight_plan(uss:USS,ac_id:AircraftId)</code></a> that returns:
+<ul class="org-ul">
+<li><code>NotFound</code>, if the aircraft <code>ac_id</code> is not in <code>uss</code>;</li>
+<li><code>OK</code>, if the aircraft is in <code>uss</code> and every waypoint in its flight plan lies inside the USS operational volume;</li>
+<li><code>Failure(wps)</code> otherwise, where <code>wps</code> is the list of waypoints in its flight plan that lie outside the USS operational volume.</li>
+</ul></li>
+</ol>
+</main>
+</body>
+</html>
