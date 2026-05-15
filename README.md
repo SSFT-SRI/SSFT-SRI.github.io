@@ -1,19 +1,22 @@
 ## Repository/Website for SRI's Summer School for Formal Techniques (SSFT)
 
-The live page is generated from `index.org` with Emacs Org mode.
+The live page is generated from Org sources with Emacs Org mode.
 
 ### Editing
 
-1. Edit `index.org` or `schedule.org`.
+1. Edit any non-ignored `.org` file.
 2. Run `make build`.
-3. Review the generated `index.html` and `schedule.html`.
+3. Review the generated `.html` files.
 4. Commit the Org sources, generated HTML, `style.css`, and any supporting assets.
+
+`make build` exports every `.org` file under the repository, except files inside Git-ignored
+paths. Add `#+SSFT_EXPORT: nil` to an Org file to keep it out of the generated site.
 
 `make deploy` runs the Org export and a whitespace check. GitHub Pages serves the generated
 `index.html` after the changes are committed and pushed.
 
 The GitHub Actions workflow in `.github/workflows/pages.yml` deploys the committed
-`index.html` and `schedule.html`. It does not run the Org export; rebuild locally with
+HTML files. It does not run the Org export; rebuild locally with
 `make build` before committing source changes that should appear on the site. Pushes to the
 publishing branch (`main` or `master`) package and deploy the Pages artifact.
 

@@ -403,17 +403,52 @@
       (ssft-postprocess-index-html target-path)))
   (message "Exported %s" target))
 
+(defun ssft-git-ignored-p (root path)
+  (and (executable-find "git")
+       (eq 0 (call-process "git" nil nil nil
+                            "-C" root "check-ignore" "-q" "--"
+                            (file-relative-name path root)))))
+
+(defun ssft-org-export-disabled-p (source)
+  (with-temp-buffer
+    (insert-file-contents source)
+    (goto-char (point-min))
+    (let ((case-fold-search t))
+      (re-search-forward
+       "^#\\+SSFT_EXPORT:[ \t]*\\(?:nil\\|no\\|false\\)[ \t]*$"
+       nil t))))
+
+(defun ssft-skip-source-directory-p (root directory)
+  (let ((name (file-name-nondirectory (directory-file-name directory))))
+    (or (string-prefix-p "." name)
+        (ssft-git-ignored-p root (file-name-as-directory directory)))))
+
+(defun ssft-exportable-org-source-p (root source)
+  (and (string-suffix-p ".org" source)
+       (not (ssft-git-ignored-p root source))
+       (not (ssft-org-export-disabled-p source))))
+
+(defun ssft-collect-org-sources (root)
+  (let ((root (file-name-as-directory root))
+        sources)
+    (cl-labels ((walk
+                 (directory)
+                 (dolist (entry (directory-files directory t nil t))
+                   (let ((name (file-name-nondirectory entry)))
+                     (unless (member name '("." ".."))
+                       (cond
+                        ((file-directory-p entry)
+                         (unless (ssft-skip-source-directory-p root entry)
+                           (walk entry)))
+                        ((and (file-regular-p entry)
+                              (ssft-exportable-org-source-p root entry))
+                         (push (file-relative-name entry root) sources))))))))
+      (walk root))
+    (sort sources #'string<)))
+
+(defun ssft-html-target-for-source (source)
+  (concat (file-name-sans-extension source) ".html"))
+
 (let ((root (file-name-directory (or load-file-name buffer-file-name default-directory))))
-  (dolist (page '(("index.org" . "index.html")
-                  ("schedule.org" . "schedule.html")
-                  ("materials/pvs-class-2026/pvs-class-2026.org" .
-                   "materials/pvs-class-2026/pvs-class-2026.html")
-                  ("materials/pvs-class-2026/Exercises/exercises-1.org" .
-                   "materials/pvs-class-2026/Exercises/exercises-1.html")
-                  ("materials/pvs-class-2026/Exercises/exercises-2.org" .
-                   "materials/pvs-class-2026/Exercises/exercises-2.html")
-                  ("materials/pvs-class-2026/Exercises/cheatsheet-prover.org" .
-                   "materials/pvs-class-2026/Exercises/cheatsheet-prover.html")
-                  ("materials/pvs-class-2026/Exercises/cheatsheet-emacs.org" .
-                   "materials/pvs-class-2026/Exercises/cheatsheet-emacs.html")))
-    (ssft-export-file root (car page) (cdr page))))
+  (dolist (source (ssft-collect-org-sources root))
+    (ssft-export-file root source (ssft-html-target-for-source source))))
