@@ -20,6 +20,9 @@
 #+SSFT_TIMETABLE:
 
 * Schedule table                                                       :noexport:
+:PROPERTIES:
+:ORDERED:  t
+:END:
 
 |       DATE | START | DURATION | TYPE           | TITLE                                                  | SPEAKER                        | DETAILS | NOTE_ID |
 |------------+-------+----------+----------------+--------------------------------------------------------+--------------------------------+---------+---------|
@@ -60,7 +63,7 @@
 | 2026-05-27 | 13:00 |          | lecture        | Compilers for Quantum Computers (II)                   | Aws Albarghouthi               |         |         |
 | 2026-05-27 | 14:30 |       30 | break          | Break                                                  |                                |         |         |
 | 2026-05-27 | 15:00 |      180 | lab            | Lab sessions                                           | Cas Cremers/Ruzica Piskac      |         |         |
-| 2026-05-28 | 08:30 |          | invited        | Invited talk (TBD)                                     | TBD                            |         |         |
+| 2026-05-28 | 08:30 |          | invited        | Concurrent Separation Logic                            | Thomas Wies                    |         |         |
 | 2026-05-28 | 10:00 |       30 | break          | Break                                                  |                                |         |         |
 | 2026-05-28 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS (II)        | César Muñoz                    |         |         |
 | 2026-05-28 | 12:00 |       60 | break          | Lunch                                                  |                                |         |         |

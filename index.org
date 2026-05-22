@@ -29,6 +29,7 @@ Week-long lectures by:
 Invited talks by:
 - Mohsen Lesani, /Verified Distributed System Generation/
 - Alvin Cheung, /Towards Verified and AI-Driven Accelerator Programming/
+- Thomas Wies, /Concurrent Separation Logic/
 
 * Lectures
 :PROPERTIES:
@@ -149,6 +150,26 @@ Prof. Alvin Cheung & Sahil Bhatia, UC Berkeley
 *Bio* Alvin Cheung is a professor in the EECS department at UC Berkeley, where his group works on data management and programming systems research. Work from his group has received a number of best paper / poster / demo awards in different venues. Alvin is a PECASE awardee, a Sloan fellow, and a recipient of early career research awards from the data management research community, the programming languages research community, and various government agencies and companies.
 
 Sahil Bhatia is a PhD student in EECS at UC Berkeley, advised by Alvin Cheung and Sanjit A. Seshia. His research focuses on verified code generation, with a particular interest in formally verified translation of programs into domain-specific languages (DSLs). He has previously worked on code generation and program synthesis problems at Google X and Microsoft Research.
+
+** Concurrent Separation Logic
+:PROPERTIES:
+:CUSTOM_ID: wies
+:END:
+
+Prof. Thomas Wies, New York University
+
+*Abstract*: Verifying concurrent programs remains a key challenge in
+formal verification. Modern concurrent separation logics provide an
+extensive toolbox of deductive reasoning techniques that help to
+tackle this challenge. In this talk, I will provide a tutorial
+explaining the high-level reasoning principles behind these logics and
+present Raven, a deductive verification tool that helps to automate
+this reasoning.
+
+*Bio*: Thomas Wies is a Professor of Computer Science at the Courant
+Institute of New York University and Chair of the NYU Department of
+Computer Science. He is a recipient of an NSF CAREER Award and
+multiple best paper awards. His research interests are broadly in Programming Languages and Formal Methods.
 
 * Speaking Logic
 :PROPERTIES:
