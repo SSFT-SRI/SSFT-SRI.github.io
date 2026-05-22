@@ -31,6 +31,8 @@ Invited talks by:
 - Alvin Cheung, /Towards Verified and AI-Driven Accelerator Programming/
 - Thomas Wies, /Concurrent Separation Logic/
 
+See [[file:zoom.org][Zoom information]] for Zoom details.
+
 * Lectures
 :PROPERTIES:
 :CUSTOM_ID: lecturers
