@@ -314,13 +314,22 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 </ul>
 </div>
 
-<div id="outline-container-orgc1e2ae1" class="outline-3">
-<h3 id="orgc1e2ae1">Installing PVS/VSCode-PVS, Yices2, and SAL</h3>
-<div class="outline-text-3" id="text-orgc1e2ae1">
+<div id="outline-container-orgcd9ce31" class="outline-3">
+<h3 id="orgcd9ce31">More Exercises</h3>
+<div class="outline-text-3" id="text-orgcd9ce31">
+<p>
+See <a href="problems.html">Problems</a> for some challenging exercises. This will be updated over the course of the week.
+</p>
 </div>
-<div id="outline-container-orgcf28f2c" class="outline-4">
-<h4 id="orgcf28f2c">PVS</h4>
-<div class="outline-text-4" id="text-orgcf28f2c">
+</div>
+
+<div id="outline-container-orgeeda6a2" class="outline-3">
+<h3 id="orgeeda6a2">Installing PVS/VSCode-PVS, Yices2, and SAL</h3>
+<div class="outline-text-3" id="text-orgeeda6a2">
+</div>
+<div id="outline-container-org8d99e74" class="outline-4">
+<h4 id="org8d99e74">PVS</h4>
+<div class="outline-text-4" id="text-org8d99e74">
 <p>
 <a href="https://marketplace.visualstudio.com/items?itemName=paolomasci.vscode-pvs8">New VSCode-PVS (updated for PVS 8.1)</a>
 </p>
@@ -335,9 +344,9 @@ You can try binary releases (for the above platforms) located at <a href="https:
 </div>
 </div>
 
-<div id="outline-container-org72595c4" class="outline-4">
-<h4 id="org72595c4">Yices2 SMT Solver</h4>
-<div class="outline-text-4" id="text-org72595c4">
+<div id="outline-container-orgdce2644" class="outline-4">
+<h4 id="orgdce2644">Yices2 SMT Solver</h4>
+<div class="outline-text-4" id="text-orgdce2644">
 <p>
 For the full summer school experience, you will want the MCSAT (non-linear) solver. At the moment, this will require building from source. Clone the repository from <a href="https://github.com/SRI-CSL/yices2">GitHub</a>, make sure you have the prerequisites (<code>SRI-CSL/libpoly</code>, <code>cuddorg/cudd</code>, and possibly others), and run <code>./configure --enable-mcsat</code> with the path configured appropriately. Then, perform a <code>make</code> and <code>make install</code>.
 </p>
@@ -347,14 +356,14 @@ On a successful build, you should have a <code>yices2/build/&lt;system&gt;/</cod
 </p>
 
 <p>
-We also offer <code>brew</code> and <code>apt</code> packages for Yices2, but they don&rsquo;t come with the MCSAT solver enabled and will not be able to solve nonlinear queries.
+We also offer <code>brew</code> and <code>apt</code> packages for Yices2, but they don&rsquo;t come with the MCSAT solver enabled and will not be able to solve nonlinear queries. If you choose to go this route, please use <code>brew install yices2</code> or <code>apt-get install yices2</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org33eca43" class="outline-4">
-<h4 id="org33eca43">SAL</h4>
-<div class="outline-text-4" id="text-org33eca43">
+<div id="outline-container-org4d722e9" class="outline-4">
+<h4 id="org4d722e9">SAL</h4>
+<div class="outline-text-4" id="text-org4d722e9">
 <p>
 SAL can be built from source, located on <a href="https://github.com/karthiknukala/SAL">GitHub</a>.
 </p>

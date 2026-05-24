@@ -191,6 +191,10 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[https://github.com/nasa/vscode-pvs/tree/pvs8/releases][VSCode-PVS for Mac instructions]]
 - [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
 
+** More Exercises
+
+See [[file:problems.org][Problems]] for some challenging exercises. This will be updated over the course of the week.
+
 ** Installing PVS/VSCode-PVS, Yices2, and SAL
 *** PVS
 
@@ -206,7 +210,7 @@ For the full summer school experience, you will want the MCSAT (non-linear) solv
 
 On a successful build, you should have a =yices2/build/<system>/= folder fully populated (with =bin/=, =lib/=, etc.).
 
-We also offer =brew= and =apt= packages for Yices2, but they don't come with the MCSAT solver enabled and will not be able to solve nonlinear queries.
+We also offer =brew= and =apt= packages for Yices2, but they don't come with the MCSAT solver enabled and will not be able to solve nonlinear queries. If you choose to go this route, please use ~brew install yices2~ or ~apt-get install yices2~.
 
 *** SAL
 

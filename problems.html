@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated from Org source -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bootcamp Problems</title>
+<meta name="author" content="Natarajan Shankar" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<main id="content" class="content">
+<header>
+<h1 class="title">Bootcamp Problems</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org302e8e4">Overview</a></li>
+<li><a href="#orgf5a167c">Recommended Tools</a></li>
+<li><a href="#org0ef80e1">Problems</a>
+<ul>
+<li><a href="#orgeb03b26">Verifying Bit Twiddling Hacks (via Randy Bryant) (Medium)</a></li>
+<li><a href="#orge29258b">Normal Forms (Medium)</a></li>
+<li><a href="#org1da5162">A Checker for Resolution Proofs (Easy)</a></li>
+<li><a href="#org1791f40">Interpolation from Resolution Proofs (Easy)</a></li>
+<li><a href="#org8d7487a">Boolean constraint propagation with two-watched literals (Hard)</a></li>
+<li><a href="#orgb699147">CDCL SAT solver (Hard)</a></li>
+<li><a href="#org6c2ae20">Database Join (Easy)</a></li>
+<li><a href="#org29a8632">Shortest Path Algorithm (Medium)</a></li>
+<li><a href="#org19107e2">Floyd&#x2013;Warshall Algorithm for All-Pairs Shortest Path (Hard)</a></li>
+<li><a href="#org2544737">Model Checking BMP/8N1 protocols (Medium)</a></li>
+<li><a href="#org5790d10">Soundness of Separation Hoare Logic (Medium)</a></li>
+<li><a href="#org5bb4ebb">MaxSeg Sum (Medium)</a></li>
+<li><a href="#orgbed8834">Sorting Algorithms (Medium)</a></li>
+<li><a href="#org826c5bd">IF-Normalization (Easy)</a></li>
+<li><a href="#orgcaa15d6">BDD Construction (Hard)</a></li>
+<li><a href="#org3e22f04">Checker for RUP proofs (Medium)</a></li>
+<li><a href="#org7001372">Checking Stratification</a></li>
+<li><a href="#orgb46aba8">Simple Concurrency Problem</a></li>
+<li><a href="#org872acde">Brzozowski Derivatives</a></li>
+<li><a href="#org0d3fa04">Two-Process Bakery Algorithm using Predicate Abstraction</a></li>
+<li><a href="#org260c857">Interval Analysis by Abstract Interpretation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>
+<a href="index.html">Back to main page</a>
+</p>
+
+<div id="outline-container-org302e8e4" class="outline-2">
+<h2 id="org302e8e4">Overview</h2>
+<div class="outline-text-2" id="text-org302e8e4">
+<p>
+The goal of the Bootcamp is to put the knowledge gained during the summer school to use in solving a big verification problem.
+</p>
+
+<p>
+Here&rsquo;s a list of problems that should be solvable in five hours or less with teams of two or three students. Pick the tool of your choice.
+</p>
+
+<p>
+You can be as abstract or concrete as you wish, but you get more points if you have efficiently executable code. Feel free to attempt more than one problem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5a167c" class="outline-2">
+<h2 id="orgf5a167c">Recommended Tools</h2>
+<div class="outline-text-2" id="text-orgf5a167c">
+<p>
+Some recommendations include:
+</p>
+
+<ol class="org-ol">
+<li>Dafny (<a href="https://github.com/dafny-lang/dafny">https://github.com/dafny-lang/dafny</a>)</li>
+<li>Viper (<a href="https://www.pm.inf.ethz.ch/research/viper.html">https://www.pm.inf.ethz.ch/research/viper.html</a>)</li>
+<li>Why3 (<a href="https://why3.lri.fr/">https://why3.lri.fr/</a>)</li>
+<li>CBMC (<a href="https://www.cprover.org/cbmc/">https://www.cprover.org/cbmc/</a>)</li>
+<li>Creusot (<a href="https://github.com/xldenis/creusot">https://github.com/xldenis/creusot</a>)</li>
+<li>SeaHorn (<a href="https://seahorn.github.io/">https://seahorn.github.io/</a>)</li>
+<li>Frama-C (<a href="https://frama-c.com/">https://frama-c.com/</a>)</li>
+<li>Symbolic Pathfinder (<a href="https://github.com/SymbolicPathFinder/jpf-symbc">https://github.com/SymbolicPathFinder/jpf-symbc</a>)</li>
+<li>Coq (<a href="https://coq.inria.fr/">https://coq.inria.fr/</a>)</li>
+<li>Isabelle/HOL (<a href="https://isabelle.in.tum.de/overview.html">https://isabelle.in.tum.de/overview.html</a>)</li>
+<li>LEAN (<a href="https://leanprover.github.io/">https://leanprover.github.io/</a>)</li>
+<li>SAL/SALLY (<a href="http://sal.csl.sri.com">http://sal.csl.sri.com</a>, <a href="https://sri-csl.github.io/sally/">https://sri-csl.github.io/sally/</a>)</li>
+<li>PVS (<a href="http://pvs.csl.sri.com">http://pvs.csl.sri.com</a>, get VSCode-PVS from VSCode Marketplace)</li>
+<li>UCLID5 (<a href="https://github.com/uclid-org/uclid">https://github.com/uclid-org/uclid</a>)</li>
+<li>Scallop (<a href="https://scallop-lang.github.io/ssft22/index.html">https://scallop-lang.github.io/ssft22/index.html</a>)</li>
+<li>CVC5 (<a href="https://cvc5.github.io/">https://cvc5.github.io/</a>)</li>
+<li>Yices (<a href="http://yices.csl.sri.com">http://yices.csl.sri.com</a>)</li>
+<li>Z3 (<a href="https://github.com/Z3Prover/z3">https://github.com/Z3Prover/z3</a>)</li>
+<li>Alloy (<a href="https://alloytools.org">https://alloytools.org</a>)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0ef80e1" class="outline-2">
+<h2 id="org0ef80e1">Problems</h2>
+<div class="outline-text-2" id="text-org0ef80e1">
+</div>
+<div id="outline-container-orgeb03b26" class="outline-3">
+<h3 id="orgeb03b26">Verifying Bit Twiddling Hacks (via Randy Bryant) (Medium)</h3>
+<div class="outline-text-3" id="text-orgeb03b26">
+<p>
+The CBMC project developed a verifier for C programs based on Bounded Model Checking. The idea is to symbolically simulate the program, using only bounded unrollings of loops and bounded recursions. The program converts C code into a low-level bit representation by &ldquo;bit blasting.&rdquo; It then calls a SAT solver to check whether the desired property (typically specified as an assertion in the program) holds by showing that the Boolean formula encoding its negation is unsatisfiable.
+</p>
+
+<p>
+CBMC can be obtained at: <a href="https://www.cprover.org/cbmc/">https://www.cprover.org/cbmc/</a>.
+</p>
+
+<p>
+Here&rsquo;s an example of a simple C program that verifies that a tricky way of implementing absolute value, matches a &ldquo;reference version&rdquo; i.e., a version that can serve as the specification:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">int abs_ref(int x) {
+
+    return x &lt; 0 ? -x : x;
+
+}
+
+int abs_bits(int x) {
+
+  int m = x&gt;&gt;31;
+
+  return (x^m) + ~m + 1;
+}
+
+int main() {
+
+    int t = rand();
+
+    int ar = abs_ref(t);
+
+    int ab = abs_bits(t);
+
+    int err = ar != ab;
+
+    assert(!err);
+
+}
+</pre>
+</div>
+
+<p>
+Here&rsquo;s an interesting application of CBMC: In the early 2000s, Sean Anderson, a Stanford PhD student, published a website with &ldquo;bit twiddling hacks&rdquo; It&rsquo;s still available at: <a href="https://graphics.stanford.edu/~seander/bithacks.html">https://graphics.stanford.edu/~seander/bithacks.html</a>
+</p>
+
+<p>
+This website gathered a collection of clever tricks people had devised over the years to implement standard operations using low-level bit manipulation tricks. Back in 2005, Bryant checked out the entire collection by translating Anderson&rsquo;s code into a series of functions, writing reference versions of them, and then using his own bit-blasting verifier based on BDDs. The following file contains both Anderson&rsquo;s code and the reference functions: <a href="https://github.com/rebryant/unsat-tutorial/blob/main/project/bryant-bit-hack-2005.c">https://github.com/rebryant/unsat-tutorial/blob/main/project/bryant-bit-hack-2005.c</a>
+</p>
+
+<p>
+It would be interesting to try verifying these functions with CBMC. There will be cases where SAT solvers work very well, but others where they scale exponentially. Also, it would be good to verify the functions that Anderson added after 2005.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge29258b" class="outline-3">
+<h3 id="orge29258b">Normal Forms (Medium)</h3>
+<div class="outline-text-3" id="text-orge29258b">
+<p>
+Define a representation for Boolean formulas constructed from Boolean variables using negation, implication, disjunction, and conjunction. Transform Boolean formulas to Conjunctive Normal Form. Prove that the transformation preserves satisfiability. See if you can do this as an inference system so that you go from a single formula to a set of clauses. For example, if the formula you are checking for satisfiability is say \((p\wedge q) \vee (\neg q \wedge r)\) becomes \(u = v\vee w, w = p\wedge q, x = \neg q \wedge r\), which can be expanded as \(\neg u \vee v \vee w, u \vee \neg v, u \vee \neg w, \neg w \vee p, \neg w \vee q, \neg p \vee \neg q \vee w, \neg x \vee \neg q, \neg x \vee r, q \vee \neg r \vee x\). Your code should be verified and executable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1da5162" class="outline-3">
+<h3 id="org1da5162">A Checker for Resolution Proofs (Easy)</h3>
+<div class="outline-text-3" id="text-org1da5162">
+<p>
+Write a checker for Resolution proofs and show prove its soundness: if there is a proof of \(\bot\), then the original input clause set is unsatisfiable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1791f40" class="outline-3">
+<h3 id="org1791f40">Interpolation from Resolution Proofs (Easy)</h3>
+<div class="outline-text-3" id="text-org1791f40">
+<p>
+Take the previous proof representation and divide the clause set into blue clauses and red clauses, and write an algorithm to construct an interpolant from a proof of unsatisfiability. The algorithm is described in the Shankar 2009 Computing Surveys article referenced in the Speaking Logic notes and is excerpted below.
+</p>
+
+<p>
+Let the input clause set \(K\) be partitioned into red clauses \(K_1\) with atoms \(\mathit{atoms}(K_1)\) and blue clauses \(K_2\) with atoms \(\mathit{atoms}(K_2)\). We show that if \(K\) is unsatisfiable, there is a formula (an interpolant) \(I\) such that \(K_1 \supset I\) and \(K_2\wedge I \supset \bot\). Furthermore, \(\mathit{atoms}(I)\subseteq \mathit{atoms}(K_1)\cap \mathit{atoms}(K_2)\).
+</p>
+
+<p>
+An interpolant \(I_{\Gamma}\) can be constructed for each clause \(\Gamma\) in the proof. The interpolant for the proof is then just \(I_{\bot}\). Each clause \(\Gamma\) in the proof is partitioned into red literals \(\Gamma_1\) and blue literals \(\Gamma_2\), written \(\Gamma_1\vee\Gamma_2\), with \(\mathit{atoms}(\Gamma_2)\subseteq \mathit{atoms}(K_2)\) and \(\mathit{atoms}(\Gamma_1)\cap \mathit{atoms}(K_2) = \emptyset\).
+</p>
+
+<p>
+The interpolant \(I_{\Gamma}\) has the property that \(K_1\vdash \neg\Gamma_1 \supset I_{\Gamma}\) and \(K_2\vdash I_{\Gamma} \supset \Gamma_2\), where \(\neg\Gamma_1\) is the set of negations of formulas in \(\Gamma_1\).
+</p>
+
+<p>
+For input clauses \(\Gamma = \Gamma_1\vee \Gamma_2\) in \(K_1\), the interpolant \(I_{\Gamma} = \Gamma_2\). For input clauses \(\Gamma_2\) in \(K_2\), the interpolant is \(\top\). When resolving \(\Gamma'\), \(\Gamma''\) to get \(\Gamma\),
+</p>
+
+<ol class="org-ol">
+<li>If resolvent \(p\) is in \(\Gamma'_1\) (i.e., \(p\not\in\mathit{atoms}(K_2)\)), then \(I_{\Gamma} = I_{\Gamma'} \vee I_{\Gamma''}\) since \(\neg(p\vee \Gamma'_1) \supset I_{\Gamma'}\supset \Gamma'_2\) and \(\neg(\neg p\vee \Gamma''_1) \supset I_{\Gamma''}\supset \Gamma''_2\).</li>
+<li>If resolvent \(p\) is in \(\Gamma'_2\), then \(I_{\Gamma} = I_{\Gamma'} \wedge I_{\Gamma''}\) since \(\neg(\Gamma'_1\vee\Gamma''_2) \supset I_{\Gamma} \supset (p\vee \Gamma'_2)\wedge (\neg p \vee \Gamma''_2)\supset \Gamma'_2\vee \Gamma''_2\).</li>
+</ol>
+
+<p>
+The interpolant for input clause sets \(K_1 = \{a\vee e [e], \neg a \vee b [b], \neg a \vee c [c] \}\) and \(K_2 = \{\neg b \vee \neg c \vee d [\top], \neg d [\top], \neg e [\top]\}\), with shared atoms \(b, c,\) and \(e\) can be derived by the following resolution steps.
+</p>
+
+<p>
+\[
+</p>
+\begin{array}{|l|l|}\hline
+ a & [e] \\\hline
+ b & [e \vee b] \\\hline
+c  & [e\vee c] \\\hline
+\neg c \vee d & [e\vee b] \\\hline
+d & [(e\vee b)\wedge (e\vee c)] \\\hline
+\bot & [(e\vee b)\wedge (e\vee c)] \\\hline
+ \end{array}
+<p>
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d7487a" class="outline-3">
+<h3 id="org8d7487a">Boolean constraint propagation with two-watched literals (Hard)</h3>
+<div class="outline-text-3" id="text-org8d7487a">
+<p>
+BCP is a step in the CDCL SAT solving algorithm. See <a href="https://ssft-sri.github.io/old/2017/SSFT-Heule1.pdf">Marijn Heule&rsquo;s 2017 lectures</a> for details. Variables \(V\) are positive integers \(2^{15}\). You are given a set \(K\) of \(k\) (below \(2^{16}\)) clauses in the variables \(V\). This can be represented as an array with index below \(2^{16}\) and range that is a finite sequence of clauses. The state consists of a partial assignment \(M\) mapping \(V\) to pairs of truth values and together with the decision level, where the truth value is a Boolean and the decision level is below \(2^{15}\). For each newly added assignment \(\{v \mapsto b\}\) for \(b \in \{ \mathbf{true}, \mathbf{false}\}\) to \(M\), BCP propagates the assignment through the clauses where \(v\) is a watched variable with the opposite polarity to its assignment, i.e., if \(b\) is \(\mathbf{true}\), then the value is propagated through clauses where \(\neg v\) is watched, and if \(b\) is \(\mathbf{false}\), it is propagated through clauses where \(v\) is watched. Each clause has two watched literals, and these literals must be distinct if the clause contains at least two literals, and must either both be unassigned unless there is only one unassigned literal in the clause, in which case, this literal must be watched and the other literal can be assigned (e.g., by an assignment that has not yet been propagated).
+</p>
+
+<p>
+For each variable, maintain two lists of watched clauses, i.e., clauses where a literal in the variable occurs as a watched literal. There is one list \(P\) where the positive literal is watched, and another \(N\) where the negative literal is watched. Lists of clauses are maintained by an array \(W\) that maps each variable to a head clauses where it is watched positively and negatively, respectively, and in each case, whether it is the first or second watched literal. You also maintain arrays KW1 and KW2 for each clause, where KW1 maps the clause index to the index of the first watched literal and the successor clause index in the list, and KW2 maps the clause index to the index of the second watched literal, and the successor in the list. The goal is to propagate a new assignment to these watched literals to either:
+</p>
+
+<ol class="org-ol">
+<li>Find a conflict clause if the watched literal is the only watched literal in the clause, i.e., the other watched literal has already been falsified. For example, if a variable \(v\) is assigned \(\mathbf{true}\), then the list \(N\) is scanned, and if it is assigned \(\mathbf{false}\), the list \(P\) is scanned.</li>
+<li>Pick another unassigned literal in the clause to watch.</li>
+<li>Propagate the other watched literal if there is no unwatched, unassigned literal in the clause.</li>
+</ol>
+
+<p>
+For example, if we set the variable \(v\) to \(\mathbf{true}\), then we identify the head clause for the \(N\) list of the \(v\), and then look at \(W(v)\) to get the index of the head clause \(k = W(v)\).
+</p>
+
+<p>
+Show that
+</p>
+
+<ol class="org-ol">
+<li>BCP only introduces literals into the partial assignment that are implied by the existing assignments and the original set of clauses.</li>
+<li>BCP does not change the set of satisfying assignments for the input set of clauses.</li>
+<li>BCP ensures that the watched literals are both unassigned, or contains the only unassigned literal in the clause, if any.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb699147" class="outline-3">
+<h3 id="orgb699147">CDCL SAT solver (Hard)</h3>
+<div class="outline-text-3" id="text-orgb699147">
+<p>
+Verify a CDCL SAT solver as an inference system as shown in the Speaking Logic course. You need to verify the termination, soundness, and completeness by showing that the inference system is conservative, progressive, and canonizing. The informal proof is in the notes, but the hard part is in representing the partial assignment to support easy backjumping and in proving termination.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c2ae20" class="outline-3">
+<h3 id="org6c2ae20">Database Join (Easy)</h3>
+<div class="outline-text-3" id="text-org6c2ae20">
+<p>
+A database consists of a set of tables. Each table consists of rows that assign fields to values. Define a join operation and verify it. To keep things simple, assume that you have an array \(P\) of records with type <code>[# a: uint32, b : uint32 #]</code> and another array \(Q\) of type <code>[# b: uint32, c : uint32 #]</code>, return an array \(PQ\) with element type <code>[# a, b, c: uint32 #]</code> containing all and only those elements <code>(# a := x, b := y, c := z #)</code> where <code>(# a := x, b := y #)</code> is in \(P\) and <code>(# b := y, c := z #)</code> is in \(Q\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29a8632" class="outline-3">
+<h3 id="org29a8632">Shortest Path Algorithm (Medium)</h3>
+<div class="outline-text-3" id="text-org29a8632">
+<p>
+Dijkstra&rsquo;s shortest path algorithm considers a directed graph with non-negative edge-weights and computes the shortest path from a source vertex to all of the vertices. Write and verify Dijkstra&rsquo;s algorithm. To make things a little more explicit, you are given a graph with \(N\) vertices (numbered \(0\) to \(N-1\)) and an \(N\times N\) edge matrix with non-negative (possibly \(\infty\)) weights, and a source vertex is \(s\). You are to construct an array \(P\) of the smallest path weight from \(s\) to each vertex \(t\). Each entry in \(P\) includes the index of a vertex, say \(t\), and the smallest path weight from \(s\) to \(t\). The \(P\) array is partitioned into a prefix with the dead vertices \(D\) and a suffix \(L\) of live vertices organized in a heap. An index \(i\) labels the location of the cursor separating \(D\) from \(L\). As noted in the Speaking Logic slides (117 and 118), the shortest path from \(s\) to any \(t\) is given by a vector \(P\) such that \(P(s) = 0\) and for any \(v\neq s\), \(P(v) = \mathit{min}_u (P(u) + W(u, v))\). For each vertex \(v\) in \(D\), \(P(v)\) is the shortest path. For each vertex \(v\) in \(L\), \(P(v)\) is the shortest path to \(v\) through an edge from \(D\). For the minimal vertex \(v\in L\), no path through an edge from a vertex \(u\) in \(L\) is going to be smaller than \(P(v)\). Hence \(v\) can be moved to \(D\) and the weights of the remaining vertices in \(L\) can be updated to maintain the invariant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org19107e2" class="outline-3">
+<h3 id="org19107e2">Floyd&#x2013;Warshall Algorithm for All-Pairs Shortest Path (Hard)</h3>
+<div class="outline-text-3" id="text-org19107e2">
+<p>
+Verify the Floyd&#x2013;Warshall algorithm by showing that it contains the shortest path between any two vertices in a weighted directed graph with that does not contain any negative cycles. Alternately, you can show that it computes the shortest cycle-free path. See <a href="https://en.wikipedia.org/wiki/Floyd_Warshall_algorithm">https://en.wikipedia.org/wiki/Floyd_Warshall_algorithm</a> for details.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2544737" class="outline-3">
+<h3 id="org2544737">Model Checking BMP/8N1 protocols (Medium)</h3>
+<div class="outline-text-3" id="text-org2544737">
+<p>
+Repeat the verification of these protocols by Brown and Pike (<a href="https://leepike.github.io/pub_pages/bmp.html">https://leepike.github.io/pub_pages/bmp.html</a>) using SAL.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5790d10" class="outline-3">
+<h3 id="org5790d10">Soundness of Separation Hoare Logic (Medium)</h3>
+<div class="outline-text-3" id="text-org5790d10">
+<p>
+The 2022 lectures from Prof. Ruzica Piskac contain the proof rules and semantics for Separation Logic. Formalize the semantics of separation logic and prove that the rules are sound. If you are using a proof assistant, you have the choice of capturing the state of the computation as a mapping \(S\) of variables to (integer and reference) values, and the heap (store) \(M\) as mapping references to arrays containing (integer or reference) values. A heap fragment is just a (possibly empty) subset of references in the domain of the heap. To model separating conjunction \(P * Q\) over a heap fragment \(H\), you need to partition \(H\) into \(H_1\) and \(H_2\) so that \(P\) is an assertion over heap fragment \(H_1\) and \(Q\) is over heap fragment \(H_2\). Recall that the assertions are of the form \(\textit{acc}(r)\), \(P * Q\), \(P\wedge Q\), and logical assertions (implicitly over empty heaps). The semantics is given by \(S, M, H \models A\) for stack \(S\), store \(M\), heap fragment \(H\), and assertion \(H\). The Hoare rules specific to separation logic constructs are:
+</p>
+
+<ol class="org-ol">
+<li>\(\vdash \{ \mathit{acc}(x)\} x[i] := y; \{x[i] \mapsto y\}\)</li>
+<li>\(\vdash \{ x[i] \mapsto z \} y := x[i]; \{ x[i] \mapsto z * y == z \}\)</li>
+<li>\(\vdash \{ emp\} x := new T; \{\textit{acc}(x)\}\)</li>
+<li>\(\vdash \{ \mathit{acc}(x) \} \mathit{free}(x); \{ emp \}\)</li>
+</ol>
+
+<p>
+Prove these rules sound with respect to semantics. One tricky aspect of the formalization is the state. The easiest way to do this is to employ the de Bruijn representation so that each variable is numbered by its position from the top of the stack. The value type is a disjoint union between integers and references. The type of references is also just the natural numbers (just so we have an unbounded supply of references). Modeling the right-hand side expression of an assignment is another challenge. It is best to view this as some function of the state. The left-hand side of an assignment is either a variable or a dereference.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5bb4ebb" class="outline-3">
+<h3 id="org5bb4ebb">MaxSeg Sum (Medium)</h3>
+<div class="outline-text-3" id="text-org5bb4ebb">
+<p>
+The Speaking Logic lectures contain a treatment of the maximum segment sum problem. Do your own definition of the algorithm and construct a proof for it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbed8834" class="outline-3">
+<h3 id="orgbed8834">Sorting Algorithms (Medium)</h3>
+<div class="outline-text-3" id="text-orgbed8834">
+<p>
+Verify Bubblesort, insertion sort, Quicksort, Heapsort, and Mergesort. You have to show that the output is a ordered permutation of the input. You can assume that the element type is <code>uint32</code>. You can additionally show that your algorithm is stable, i.e., it leaves sorted arrays unchanged. Of these, Heapsort might be the most challenging since you have to verify the reheap procedure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org826c5bd" class="outline-3">
+<h3 id="org826c5bd">IF-Normalization (Easy)</h3>
+<div class="outline-text-3" id="text-org826c5bd">
+<p>
+IF-expressions can be defined by a datatype that has a constructor for IF-expressions with three accessors: condition, thenBranch, and elseBranch, and the truth values: True and False, and variables. An IF-expression is in normal form if the condition part of any IF-expression is always a variable, and there are no redundant IF-expressions of the form \(IF(x, A, A)\). Show that any IF-expression can be converted into normal form. Write a simplifier for normal-form IF-expressions so that no variable is repeated along any branch.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcaa15d6" class="outline-3">
+<h3 id="orgcaa15d6">BDD Construction (Hard)</h3>
+<div class="outline-text-3" id="text-orgcaa15d6">
+<p>
+Write a function that implements the Apply operation on BDDs. We have a table of \(V\) variables that returns an ordering on the variables, i.e., an injection from \(V\) to \(|V|\), and a BDD table \(T\) that maps each node \(N\) to \(\mathit{vars}(N)\), \(left(N)\) and \(right(N)\). Show that any satisfying assignment for the equalities in the new table \(T'\) is a satisfying assignment for the original table and the result of the Apply operation. Recall that the Apply operation applies \(\vee\) or \(\wedge\) to two BDDs. To compute \(M \odot N\), where \(M = ITE(x, M_1, M_2)\) and \(N = ITE(y, N_1, N_2)\) where \(x > y\), we compute \(MN = ITE(x, M_1 \odot N, M_2 \odot N)\). Otherwise, we just compute the \(\odot\) operations on the constants \(0\) and \(1\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e22f04" class="outline-3">
+<h3 id="org3e22f04">Checker for RUP proofs (Medium)</h3>
+<div class="outline-text-3" id="text-org3e22f04">
+<p>
+The LRAT proof format for Reverse Unit Propagating (RUP) proofs requires lemma clauses \(C\) that are obtained from the input clauses and prior lemma clauses by Reverse Unit Propagation. This requires negating the literals in \(C\) and propagating the conjunction of these literals through the given clauses in order to derive new literals until the final clause is falsified. A RUP proof consists of a sequence of clause additions and deletions (which we ignore). The final lemma should be the empty clause which follows. Prove that RUP inference is sound. See Marijn Heule&rsquo;s lectures for details.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7001372" class="outline-3">
+<h3 id="org7001372">Checking Stratification</h3>
+<div class="outline-text-3" id="text-org7001372">
+<p>
+The problem of stratification came up in the lectures on Datalog. Negation and aggregation can only be applied to predicates in a prior stratum. For this to work, the dependencies between predicates have to be stratified. Given a dependency matrix, can you check that the graph is stratified. The dependency matrix shows whether a predicate depends positively or negatively on another predicate so that \(D_{ij}\) is \(0\) if the predicate \(i\) depends on predicate \(j\) positively, and \(1\) if it depends negatively, and \(-1\), otherwise. Check that a dependency matrix is stratified. This could be done by generating inequalities \(x_j + D_{ij} \leq x_j\), if \(D_{ij} \geq 0\). Any solution for this system of inequalities would yield a stratification of the predicates so that no predicate depends on itself through one or more negations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb46aba8" class="outline-3">
+<h3 id="orgb46aba8">Simple Concurrency Problem</h3>
+<div class="outline-text-3" id="text-orgb46aba8">
+<p>
+This problem comes from Andreas Podelski (who got it from a student). You have a fixed but unspecified number of threads <code>numthreads</code>. Each thread executes the following steps in an unbounded loop:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">while * do
+  if global + numthreads &gt; maxint
+    then skip
+    else local = global; global++;
+  assert global &gt; local
+</pre>
+</div>
+
+<p>
+Check if the above program has a race condition. Fix the problems if any by adding atomicity annotations. Prove that the assertion is maintained and that never triggers an arithmetic overflow. Be careful, this problem might not be as simple as it appears.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org872acde" class="outline-3">
+<h3 id="org872acde">Brzozowski Derivatives</h3>
+<div class="outline-text-3" id="text-org872acde">
+<p>
+Look at the Generalized Regular Expression (GRE) formalism described in <a href="https://en.wikipedia.org/wiki/Brzozowski_derivative">https://en.wikipedia.org/wiki/Brzozowski_derivative</a>. Define the syntax and semantics of GREs. Define a function that takes the derivative \(\sigma^{-1}R\) of a GRE \(R\) relative to a token. Define the iterated version that operates over a string, and show that a string \(\rho\) is accepted by a regular expression exactly when \(\varepsilon\in \rho^{-1}R\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d3fa04" class="outline-3">
+<h3 id="org0d3fa04">Two-Process Bakery Algorithm using Predicate Abstraction</h3>
+<div class="outline-text-3" id="text-org0d3fa04">
+<p>
+The algorithm consists of two processes \(P\) and \(Q\) with control variables \(pcp\) and \(pcq\), respectively, and shared variables \({x}\) and \({ y}\). The control states of these processes are either \(\mathtt{sleeping}\), \(\mathtt{trying}\), or \(\mathtt{critical}\). Initially, \({ pcp}\) and \({ pcq}\) are both set to \(\mathtt{sleeping}\) and the control variables satisfy \({ x} = { y} = 0\). The transitions for \(P\) are
+</p>
+
+<p>
+\[
+</p>
+\begin{array}{crl}
+& {\tt pcp} = sleeping \longrightarrow &{ x'} = { y} + 1;\ {pcp'} = {\tt trying} \\
+\mathtt{[]}
+& { pcp} = {\tt trying} \wedge ( { y} = 0 \vee  { x} < { y})
+\longrightarrow & { pcp'} = {\tt critical} \\
+\mathtt{[]}
+& {pcp} = {\tt critical} \longrightarrow & {x'} = 0;\ {\tt pcp'} = {\tt sleeping}
+\end{array}
+<p>
+\]
+</p>
+
+<p>
+Similarly, the transitions for \(Q\) are
+</p>
+
+<p>
+\[
+</p>
+\begin{array}{crl}
+& { pcq} = {\tt sleeping} \longrightarrow  & { y'} = { x} + 1;\ {pcq'} = {\tt trying}\\
+\mathtt{[]}
+& { pcq} = {\tt trying} \wedge ( { x} = 0 \vee  { y} \leq { x})
+\longrightarrow & { pc'} = {\tt critical} \\
+\mathtt{[]}
+& { pcq} = {\tt critical} \longrightarrow & { y'} = 0;\ { pcq'} = {\tt sleeping}
+\end{array}
+<p>
+\]
+</p>
+
+<p>
+Establish for \(P\mathop{\mathtt{[]}} Q\), the interleaving composition of \(P\) and \(Q\), the invariant \(\neg ({ pcp} = {\tt critical} \wedge { pcq} = {\tt critical}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org260c857" class="outline-3">
+<h3 id="org260c857">Interval Analysis by Abstract Interpretation</h3>
+<div class="outline-text-3" id="text-org260c857">
+<p>
+The interval domain consists of intervals of the form \([l, u]\), where \(l\) and \(u\) range over the extended integers. Given a program that operates on integer variables \(x\), \(y\), etc., your analysis should return a sound approximation of the interval ranges for each variable at each program point. You can assume that you have a program defined on the integer variables:
+</p>
+
+<ol class="org-ol">
+<li>Using addition and subtraction</li>
+<li>\(\mathbf{assume}\ b\), where condition \(b\) is an equality or inequality comparisons between variables or between variables and constants</li>
+<li>Iteration \(S^*\), where the exit condition is an equality/inequality comparison</li>
+<li>Choice \(S_1 \mathtt{[]} S_2\)</li>
+<li>Sequencing \(S_1 ; S_2\)</li>
+
+<li>Construct a transfer function from intervals to intervals for the operators \(+\) and \(-\).</li>
+<li>Construct a transfer function for statements from an abstract state to an abstract state.</li>
+<li>Define a widening operation \(\nabla\), where \(I_1 \nabla I_2\) returns an interval such that \(I_1\sqsubseteq I\) and \(I_2 \sqsubseteq I\) so that there are no infinite increasing chains of widenings.</li>
+<li>Implement an abstract interpreter.</li>
+<li>Bonus: Prove that the abstract intepreter is sound.</li>
+</ol>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>
