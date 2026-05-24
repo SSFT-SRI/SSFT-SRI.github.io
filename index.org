@@ -15,7 +15,7 @@
 # Add attendee-facing updates here as list items. Keep the newest items first.
 
 - *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
-- *May 24*: [[#install]]
+- *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
 - *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]].
 
 * Overview
@@ -230,10 +230,11 @@ We also offer =brew= and =apt= packages for Yices2, but they don't come with the
 
 SAL can be built from source, located on [[https://github.com/karthiknukala/SAL][GitHub]].
 
-It requires Bigloo Scheme, which can be built via Homebrew, along with CUDD and Yices2.
+It requires Bigloo Scheme (4.6a+), which can be built via Homebrew, along with CUDD and Yices2.
 
 In your =~/.salrc=, include the following line: ~(sal/set-yices2-command! "<path-to-yices>/yices2/build/<system>/bin/yices")~
 
+Please do not install SAL from any other source, and please do not use an older Bigloo. 
 
 ** PVS Documentation
 :PROPERTIES:
