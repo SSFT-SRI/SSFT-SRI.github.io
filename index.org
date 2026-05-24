@@ -191,6 +191,32 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[https://github.com/nasa/vscode-pvs/tree/pvs8/releases][VSCode-PVS for Mac instructions]]
 - [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
 
+** Installing PVS/VSCode-PVS, Yices2, and SAL
+*** PVS
+
+[[https://marketplace.visualstudio.com/items?itemName=paolomasci.vscode-pvs8][New VSCode-PVS (updated for PVS 8.1)]]
+
+To build from source (MacOS Apple Silicon/x86, Ubuntu aarch64/x86), clone the repository from [[https://github.com/SRI-CSL/PVS][GitHub]] and type ~./configure && make~.
+
+You can try binary releases (for the above platforms) located at [[https://github.com/SRI-CSL/PVS/releases][Github Releases]].
+
+*** Yices2 SMT Solver
+
+For the full summer school experience, you will want the MCSAT (non-linear) solver. At the moment, this will require building from source. Clone the repository from [[https://github.com/SRI-CSL/yices2][GitHub]], make sure you have the prerequisites (=SRI-CSL/libpoly=, =cuddorg/cudd=, and possibly others), and run ~./configure --enable-mcsat~ with the path configured appropriately. Then, perform a ~make~ and ~make install~.
+
+On a successful build, you should have a =yices2/build/<system>/= folder fully populated (with =bin/=, =lib/=, etc.).
+
+We also offer =brew= and =apt= packages for Yices2, but they don't come with the MCSAT solver enabled and will not be able to solve nonlinear queries.
+
+*** SAL
+
+SAL can be built from source, located on [[https://github.com/karthiknukala/SAL][GitHub]].
+
+It requires Bigloo Scheme, which can be built via Homebrew, along with CUDD and Yices2.
+
+In your =~/.salrc=, include the following line: ~(sal/set-yices2-command! "<path-to-yices>/yices2/build/<system>/bin/yices")~
+
+
 ** PVS Documentation
 :PROPERTIES:
 :CUSTOM_ID: pvs-documentation

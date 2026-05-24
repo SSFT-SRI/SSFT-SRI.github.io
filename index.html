@@ -314,6 +314,63 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 </ul>
 </div>
 
+<div id="outline-container-orgc1e2ae1" class="outline-3">
+<h3 id="orgc1e2ae1">Installing PVS/VSCode-PVS, Yices2, and SAL</h3>
+<div class="outline-text-3" id="text-orgc1e2ae1">
+</div>
+<div id="outline-container-orgcf28f2c" class="outline-4">
+<h4 id="orgcf28f2c">PVS</h4>
+<div class="outline-text-4" id="text-orgcf28f2c">
+<p>
+<a href="https://marketplace.visualstudio.com/items?itemName=paolomasci.vscode-pvs8">New VSCode-PVS (updated for PVS 8.1)</a>
+</p>
+
+<p>
+To build from source (MacOS Apple Silicon/x86, Ubuntu aarch64/x86), clone the repository from <a href="https://github.com/SRI-CSL/PVS">GitHub</a> and type <code>./configure &amp;&amp; make</code>.
+</p>
+
+<p>
+You can try binary releases (for the above platforms) located at <a href="https://github.com/SRI-CSL/PVS/releases">Github Releases</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72595c4" class="outline-4">
+<h4 id="org72595c4">Yices2 SMT Solver</h4>
+<div class="outline-text-4" id="text-org72595c4">
+<p>
+For the full summer school experience, you will want the MCSAT (non-linear) solver. At the moment, this will require building from source. Clone the repository from <a href="https://github.com/SRI-CSL/yices2">GitHub</a>, make sure you have the prerequisites (<code>SRI-CSL/libpoly</code>, <code>cuddorg/cudd</code>, and possibly others), and run <code>./configure --enable-mcsat</code> with the path configured appropriately. Then, perform a <code>make</code> and <code>make install</code>.
+</p>
+
+<p>
+On a successful build, you should have a <code>yices2/build/&lt;system&gt;/</code> folder fully populated (with <code>bin/</code>, <code>lib/</code>, etc.).
+</p>
+
+<p>
+We also offer <code>brew</code> and <code>apt</code> packages for Yices2, but they don&rsquo;t come with the MCSAT solver enabled and will not be able to solve nonlinear queries.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33eca43" class="outline-4">
+<h4 id="org33eca43">SAL</h4>
+<div class="outline-text-4" id="text-org33eca43">
+<p>
+SAL can be built from source, located on <a href="https://github.com/karthiknukala/SAL">GitHub</a>.
+</p>
+
+<p>
+It requires Bigloo Scheme, which can be built via Homebrew, along with CUDD and Yices2.
+</p>
+
+<p>
+In your <code>~/.salrc</code>, include the following line: <code>(sal/set-yices2-command! "&lt;path-to-yices&gt;/yices2/build/&lt;system&gt;/bin/yices")</code>
+</p>
+</div>
+</div>
+</div>
+
+
 <div id="outline-container-pvs-documentation" class="outline-3">
 <h3 id="pvs-documentation">PVS Documentation</h3>
 <div class="outline-text-3" id="text-pvs-documentation">
