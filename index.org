@@ -7,6 +7,17 @@
 
 # Edit this file, then run `make build` to regenerate index.html.
 
+* Updates & Quick Links
+:PROPERTIES:
+:CUSTOM_ID: updates
+:END:
+
+# Add attendee-facing updates here as list items. Keep the newest items first.
+
+- *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
+- *May 24*: [[#install]]
+- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]].
+
 * Overview
 :PROPERTIES:
 :CUSTOM_ID: overview
@@ -196,6 +207,9 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 See [[file:problems.org][Problems]] for some challenging exercises. This will be updated over the course of the week.
 
 ** Installing PVS/VSCode-PVS, Yices2, and SAL
+:PROPERTIES:
+:CUSTOM_ID: install
+:END:
 *** PVS
 
 [[https://marketplace.visualstudio.com/items?itemName=paolomasci.vscode-pvs8][New VSCode-PVS (updated for PVS 8.1)]]
