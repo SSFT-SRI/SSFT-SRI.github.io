@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
 - *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
 - *May 24*: [[file:materials/ssft26-lifting.pdf][Alvin Cheung's slides]] available!
 - *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
@@ -65,6 +66,7 @@ Aws Albarghouthi, University of Wisconsin-Madison
 
 - [[https://qqq-wisc.github.io/][Speaker's papers and tools on the topic]]
 - [[https://quantum.country/][Quantum Country tutorial]]
+- [[https://github.com/barghouthi/ssft26][Lab Materials]]
 
 ** Analyzing Cryptographic Protocols with Tamarin
 :PROPERTIES:
