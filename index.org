@@ -13,10 +13,9 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
-
 - *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
 - *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
-- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]].
+- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
 
 * Overview
 :PROPERTIES:
@@ -84,6 +83,8 @@ His work includes co-developing the Scyther tool and the Tamarin prover for the 
 Of course, feel free to read more chapters.
 
 Tamarin is open-source software; the manual, the Tamarin book, source code, and scientific papers are available at [[https://tamarin-prover.com/][tamarin-prover.com]]. For examples of its real-world use, see [[https://hal.archives-ouvertes.fr/hal-03586826/document][this report]].
+
+Lab session/materials located @ https://github.com/cascremers/tamarin-tutorial-ssft2026.
 
 ** Developing and Proving Algorithms with PVS
 :PROPERTIES:
@@ -200,7 +201,7 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[file:materials/TypeTheory.pdf][Type Theory]]
 - [[file:materials/vscode-pvs-tutorial.pdf][VSCode-PVS Tutorial]] and [[https://youtu.be/dYI7kypymvI][VSCode-PVS Video]]
 - [[https://github.com/nasa/vscode-pvs/tree/pvs8/releases][VSCode-PVS for Mac instructions]]
-- [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
+- [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]  
 
 ** More Exercises
 
