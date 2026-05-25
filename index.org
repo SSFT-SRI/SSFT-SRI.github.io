@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
 - *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
 - *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
 - *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
