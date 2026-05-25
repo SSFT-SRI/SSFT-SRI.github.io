@@ -14,9 +14,10 @@
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
 - *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
+- *May 24*: [[file:materials/ssft26-lifting.pdf][Alvin Cheung's slides]] available!
 - *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
 - *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
-- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
+- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:materials/2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
 
 * Overview
 :PROPERTIES:
@@ -165,6 +166,8 @@ Prof. Alvin Cheung & Sahil Bhatia, UC Berkeley
 *Bio* Alvin Cheung is a professor in the EECS department at UC Berkeley, where his group works on data management and programming systems research. Work from his group has received a number of best paper / poster / demo awards in different venues. Alvin is a PECASE awardee, a Sloan fellow, and a recipient of early career research awards from the data management research community, the programming languages research community, and various government agencies and companies.
 
 Sahil Bhatia is a PhD student in EECS at UC Berkeley, advised by Alvin Cheung and Sanjit A. Seshia. His research focuses on verified code generation, with a particular interest in formally verified translation of programs into domain-specific languages (DSLs). He has previously worked on code generation and program synthesis problems at Google X and Microsoft Research.
+
+*Materials* [[file:materials/ssft26-lifting.pdf][Slides]]
 
 ** Concurrent Separation Logic
 :PROPERTIES:
