@@ -217,7 +217,13 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[file:materials/TypeTheory.pdf][Type Theory]]
 - [[file:materials/vscode-pvs-tutorial.pdf][VSCode-PVS Tutorial]] and [[https://youtu.be/dYI7kypymvI][VSCode-PVS Video]]
 - [[https://github.com/nasa/vscode-pvs/tree/pvs8/releases][VSCode-PVS for Mac instructions]]
-- [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]  
+- [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
+
+** Other Resources
+
+- [[http://www.cav2007.org/Docs/Shankar.SMT.pdf][CAV Tutorial on Satisfiability Modulo Theories (July 2007)]]
+- [[https://dl.acm.org/doi/10.1145/1592434.1592437][Automated Deduction for Verification (ACM Computing Surveys)]]
+- [[https://www.csl.sri.com/users/shankar/LEP.html][Little Engines of Proof (Stanford CS359 Fall 2003)]]
 
 ** More Exercises
 
