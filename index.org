@@ -13,6 +13,8 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
+- *May 26*: [[file:materials/pvs-class-2026/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
 - *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
 - *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
 - *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
@@ -148,6 +150,8 @@ The course includes both lectures and hands-on exercises. Students can install V
 *Bio.* Chris Hawblitzel is a Senior Principal Researcher at Microsoft Research in Redmond, WA. His research focuses on using programming language techniques and formal verification to enforce the safety and security of systems software. He has worked on projects including the Singularity OS, the Verve verified OS, the Ironclad/IronFleet verified software stack, the Everest verified TLS project, and the Verus verifier for Rust.
 
 He has co-authored papers receiving best paper awards for Verve at PLDI and Verus at OSDI, a CACM research highlight for IronFleet, distinguished paper awards for Vale at USENIX Security and Linear Dafny at OOPSLA, and distinguished artifact awards for Verus-related projects at SOSP, OSDI, and OOPSLA. He received a BA in physics from UC Berkeley in 1993, received a PhD in computer science from Cornell in 2000, taught at Dartmouth College until 2004, and has been a researcher at Microsoft Research since 2005.
+
+*Materials.* Located [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][here]]!
 
 * Invited Speakers
 :PROPERTIES:
