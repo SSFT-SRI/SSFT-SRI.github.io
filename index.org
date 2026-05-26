@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]! 
 - *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
 - *May 26*: [[file:materials/pvs-class-2026/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
 - *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
@@ -224,6 +225,9 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 - [[file:old/2025/materials/SSFT25PVS.tgz][PVS exercises]]
 
 ** Other Resources
+:PROPERTIES:
+:CUSTOM_ID: more-speaking-logic
+:END:
 
 - [[http://www.cav2007.org/Docs/Shankar.SMT.pdf][CAV Tutorial on Satisfiability Modulo Theories (July 2007)]]
 - [[https://dl.acm.org/doi/10.1145/1592434.1592437][Automated Deduction for Verification (ACM Computing Surveys)]]
