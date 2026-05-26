@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
 - *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
 - *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
 - *May 24*: [[file:materials/ssft26-lifting.pdf][Alvin Cheung's slides]] available!
@@ -121,6 +122,15 @@ In these lectures, students will learn how to incorporate cryptographic primitiv
 *Bio.* Ruzica Piskac is a Professor of Computer Science at Yale University, where she leads the Rigorous Software Engineering (ROSE) group. Her research interests span software verification, security and applied cryptography, automated reasoning, and code synthesis. Much of her research has focused on using formal techniques to improve software reliability and trustworthiness. Piskac joined Yale's Department of Computer Science in 2013. She was previously an Independent Research Group Leader at the Max Planck Institute for Software Systems in Germany.
 
 Her research has received a range of professional honors, including multiple Amazon Research Awards, Yale University's Ackerman Award for Teaching and Mentoring, the Facebook Communications and Networking Award, and the Microsoft Research Award for the Software Engineering Innovation Foundation. In 2019, Yale named Piskac the Donna L. Dubinsky Associate Professor of Computer Science. Piskac holds a PhD from the Swiss Federal Institute of Technology, EPFL, where her dissertation won the Patrick Denantes Prize. Her current and recent professional activities include service as Program Chair of the 37th International Conference on Computer Aided Verification and on the Steering Committee of the Formal Methods in Computer-Aided Design conference. Piskac has graduated six PhD students, four of whom are now faculty members.
+
+*Materials.* The lectures will mainly be based on the following papers:
+ - [[https://www.cs.yale.edu/homes/piskac/papers/2024UsenixSecurity.pdf][ZKSMT: A VM for Proving SMT Theorems in Zero Knowledge]]
+ - [[https://www.cs.yale.edu/homes/piskac/papers/2023CCS.pdf][Ou: Automating the Parallelization of Zero-Knowledge Protocols]]
+ - [[https://www.cs.yale.edu/homes/piskac/papers/2022LuoETALZKUNSAT.pdf][Proving UNSAT in Zero Knowledge]]
+ - [[https://www.cs.yale.edu/homes/piskac/papers/2022LuoETALppSAT.pdf][ppSAT: Towards Two-Party Private SAT Solving]]
+
+*Lecture slides.*
+ - [[file:materials/rpiskac - lecture1.pdf][Lecture 1]]
 
 ** Verifying Rust Code with Verus
 :PROPERTIES:
