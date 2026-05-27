@@ -12,6 +12,7 @@
 
 # Edit the "Schedule table", then run `make build`.
 # Lecture and invited-talk rows default to 90 minutes when DURATION is blank.
+# Event start/end times outside the regular slot size add matching rows automatically.
 # Use DETAILS for short in-cell text.
 # Add a NOTE_ID and matching note under "Schedule notes" for longer Org-formatted cell text.
 
@@ -61,8 +62,9 @@
 | 2026-05-27 | 12:00 |       60 | break          | Lunch                                                  |                                |         |         |
 | 2026-05-27 | 13:00 |          | lecture        | Compilers for Quantum Computers (II)                   | Aws Albarghouthi               |         |         |
 | 2026-05-27 | 14:30 |       30 | break          | Break                                                  |                                |         |         |
-| 2026-05-27 | 15:00 |      180 | lab            | Lab sessions                                           | Cas Cremers/Ruzica Piskac      |         |         |
-| 2026-05-27 | 18:00 |       30 | other          | Student presentations                                  |                                |         |         |
+| 2026-05-27 | 15:00 |      160 | lab            | Lab sessions                                           | Cas Cremers/Ruzica Piskac      |         |         |
+| 2026-05-27 | 17:40 |        5 | other          | Picture day!                                           |                                |         |         |
+| 2026-05-27 | 17:45 |       30 | other          | Student presentations                                  |                                |         |         |
 | 2026-05-28 | 08:30 |          | invited        | Concurrent Separation Logic                            | Thomas Wies                    |         |         |
 | 2026-05-28 | 10:00 |       30 | break          | Break                                                  |                                |         |         |
 | 2026-05-28 | 10:30 |          | lecture        | Developing and Proving Algorithms with PVS (II)        | César Muñoz                    |         |         |
