@@ -1,0 +1,1018 @@
+(UTM0
+ (|exists_op_weak_induction| 0
+  (|exists_op_weak_induction-1| NIL 3986501550 ("" (POSTPONE) NIL NIL) NIL
+   SHOSTAK))
+ (|exists_op_induction| 0
+  (|exists_op_induction-1| NIL 3986501550 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|remove_op_TCC1| 3
+  (|remove_op_TCC1-14| "" 3986834973 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-13| "" 3986755235 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-11| "" 3986754724 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-12| "" 3986754517 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC2-4| "" 3986753721 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-10| "" 3986562487 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-9| "" 3986560820 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-8| "" 3986560665 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-7| "" 3986548188 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-6| "" 3986547790 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-5| "" 3986547608 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-4| "" 3986546646 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-3| "" 3986502290 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-2| "" 3986502095 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-0| "" 3986461892 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50)))
+  (|remove_op_TCC1-1| NIL 3986461449 ("" (TERMINATION-TCC) NIL NIL) NIL NIL
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (49 29 49 50))))
+ (|remove_op_TCC2| 3
+  (|remove_op_TCC2-3| "" 3986834973 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (50 25 50 46)))
+  (|remove_op_TCC2-2| "" 3986755236 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (50 25 50 46)))
+  (|remove_op_TCC2-0| "" 3986754724 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (50 25 50 46)))
+  (|remove_op_TCC2-1| NIL 3986754620 ("" (TERMINATION-TCC) NIL NIL) NIL NIL
+   (|remove_op| TERMINATION "remove_op(ac_id, rest)" "NIL" (50 25 50 46))))
+ (|subscribe_j| 0
+  (|subscribe_j-34| "" 3986837139 ("" (USS-TCC) NIL NIL) NIL SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-32| "" 3986834974
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL)
+   ((|subscribe| CONST-DECL "USS" UTM0 NIL) (USS TYPE-EQ-DECL NIL UTM0 NIL)
+    (|Operations| TYPE-EQ-DECL NIL UTM0 NIL)
+    (|nnreal| TYPE-EQ-DECL NIL |real_types| NIL)
+    (|posnat| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|list| TYPE-DECL NIL |list_adt| NIL)
+    (|AircraftId| TYPE-EQ-DECL NIL UTM0 NIL)
+    (|char| TYPE-EQ-DECL NIL |strings| NIL)
+    (|char?| ADT-RECOGNIZER-DECL "[character -> boolean]" |character_adt| NIL)
+    (|character| TYPE-DECL NIL |character_adt| NIL)
+    (|below| TYPE-EQ-DECL NIL |nat_types| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (< CONST-DECL "bool" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (NOT CONST-DECL "[bool -> bool]" |booleans| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL))
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-31| "" 3986834969
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-30| "" 3986755237
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-29| "" 3986755232
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-28| "" 3986754725
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-27| "" 3986754720
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-26| "" 3986753722
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-25| "" 3986753715
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-24| "" 3986562488
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-23| "" 3986562484
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-22| "" 3986560821
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-21| "" 3986560817
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-20| "" 3986560666
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-19| "" 3986560662
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-18| "" 3986548189
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-17| "" 3986548184
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-16| "" 3986547791
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-15| "" 3986547787
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-14| "" 3986547609
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-13| "" 3986547605
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-12| "" 3986546647
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-11| "" 3986546644
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-10| "" 3986502291
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-9| "" 3986502288
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-7| "" 3986502097
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-5| "" 3986502093
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-8| "" 3986481056
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-6| "" 3986479793
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-4| "" 3986479694
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-3| "" 3986479665
+   ("" (SKEEP)
+    (("" (EXPAND "subscribe")
+      (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-2| "" 3986479532
+   ("" (SKEEP) (("" (EXPAND "exists_op") (("" (POSTPONE) NIL NIL)) NIL)) NIL)
+   NIL SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-0| "" 3986479283 ("" (GRIND) (("" (POSTPONE) NIL NIL)) NIL) NIL
+   SHOSTAK
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13)))
+  (|subscribe_j-1| NIL 3986477621 ("" (JUDGEMENT-TCC) NIL NIL) NIL NIL
+   (|subscribe_j| SUBTYPE "subscribe(ac_id, op)(uss)"
+    "{result: UTM0.USS | UTM0.exists_op(result`operations)(UTM0.ac_id)}"
+    (61 4 61 13))))
+ (|remove_op_j_TCC1| 0
+  (|remove_op_j_TCC1-17| "" 3987435468
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-16| "" 3987435379
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL)
+   ((|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL)) SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-15| "" 3986834974
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL)
+   ((|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL)) SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-14| "" 3986755237
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-13| "" 3986754725
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-12| "" 3986753723
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-11| "" 3986562489
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-10| "" 3986560822
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-9| "" 3986560667
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-8| "" 3986548189
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-7| "" 3986547992
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-6| "" 3986547792
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-5| "" 3986547610
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-4| "" 3986546648
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-3| "" 3986502292
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-2| "" 3986502097
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-0| "" 3986484209
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14)))
+  (|remove_op_j_TCC1-1| NIL 3986482087 ("" (RECURSIVE-JUDGEMENT-TCC) NIL NIL)
+   NIL NIL
+   (|remove_op_j_| SUBTYPE "ops"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (2 11 2 14))))
+ (|remove_op_j_TCC2| 2
+  (|remove_op_j_TCC2-5| "" 3986834975
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-4| "" 3986754726
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-6| "" 3986754642
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC3-2| "" 3986753724
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("1" (POSTPONE) NIL NIL) ("2" (POSTPONE) NIL NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-3| "" 3986560822
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-2| "" 3986560668
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-9| "" 3986548190
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC3-1| "" 3986548009
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC3-0| "" 3986547793
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-0| "" 3986485103
+   ("" (SKEEP*)
+    (("" (TYPEPRED "v(ac_id,rest)")
+      (("" (EXPAND "exists_op" -5) (("" (ASSERT) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40)))
+  (|remove_op_j_TCC2-1| NIL 3986482087 ("" (RECURSIVE-JUDGEMENT-TCC) NIL NIL)
+   NIL NIL
+   (|remove_op_j_| SUBTYPE
+    "cons[[AircraftId, AircraftOp]](head, v(ac_id, rest))"
+    "{result: UTM0.Operations | (booleans.NOT)(UTM0.exists_op(result)(UTM0.ac_id))}"
+    (6 14 6 40))))
+ (|remove_op_j| 0
+  (|remove_op_j-1| NIL 3986482087 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|unsubscribe_j| 11
+  (|unsubscribe_j-19| "" 3986834976
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-18| "" 3986834970
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-17| "" 3986755233
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-16| "" 3986754727
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-15| "" 3986754721
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-14| "" 3986753724
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-13| "" 3986753715
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-11| "" 3986562484
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-9| "" 3986560823
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-7| "" 3986560817
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-5| "" 3986560668
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-3| "" 3986560662
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-12| "" 3986548185
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-10| "" 3986547787
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-8| "" 3986547605
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-6| "" 3986546644
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-4| "" 3986502288
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-2| "" 3986502093
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-0| "" 3986489270
+   ("" (SKEEP*)
+    (("" (LEMMA "remove_op_j")
+      (("" (EXPAND "unsubscribe") (("" (INST?) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15)))
+  (|unsubscribe_j-1| NIL 3986486795 ("" (JUDGEMENT-TCC) NIL NIL) NIL NIL
+   (|unsubscribe_j| SUBTYPE "unsubscribe(ac_id)(uss)"
+    "{result: UTM0.USS | (booleans.NOT)(UTM0.exists_op(result`operations)(UTM0.ac_id))}"
+    (70 4 70 15))))
+ (|test_0| 0 (|test_0-19| "" 3986837096 ("" (USS-TCC) NIL NIL) NIL SHOSTAK)
+  (|test_0-18| "" 3986834970 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-17| "" 3986755233 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-16| "" 3986754721 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-15| "" 3986753716 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-14| "" 3986562485 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-4| "" 3986560818 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-2| "" 3986560663 ("" (GRIND) NIL NIL)
+   ((|get_info| CONST-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|find_op| DEF-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|test_uss| CONST-DECL "USS" UTM0 NIL)
+    (|unsubscribe| CONST-DECL "USS" UTM0 NIL)
+    (|remove_op| DEF-DECL "Operations" UTM0 NIL)
+    (|subscribe| CONST-DECL "USS" UTM0 NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (|mk_uss| CONST-DECL "USS" UTM0 NIL)
+    (/= CONST-DECL "boolean" |notequal| NIL)
+    (|unsubscribe_j| APPLICATION-JUDGEMENT
+     "{result: USS | NOT exists_op(result`operations)(ac_id)}" UTM0 NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL))
+   SHOSTAK)
+  (|test_0-13| "" 3986548185 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-12| "" 3986547943 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-11| "" 3986547923 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-10| "" 3986547788
+   ("" (GRIND)
+    (("1" (POSTPONE) NIL NIL) ("2" (POSTPONE) NIL NIL) ("3" (POSTPONE) NIL NIL)
+     ("4" (POSTPONE) NIL NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_0-9| "" 3986547606 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-8| "" 3986547050 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-7| "" 3986546645 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-6| "" 3986502289 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-5| "" 3986502184 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-3| "" 3986502094 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-0| "" 3986498062 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_0-1| NIL 3986498059 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|test_1| 0 (|test_1-20| "" 3986837109 ("" (USS-TCC) NIL NIL) NIL SHOSTAK)
+  (|test_1-19| "" 3986834971
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   ((|find_op| DEF-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|get_info| CONST-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|test_uss| CONST-DECL "USS" UTM0 NIL)
+    (|unsubscribe| CONST-DECL "USS" UTM0 NIL)
+    (|remove_op| DEF-DECL "Operations" UTM0 NIL)
+    (|subscribe| CONST-DECL "USS" UTM0 NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (|mk_uss| CONST-DECL "USS" UTM0 NIL)
+    (/= CONST-DECL "boolean" |notequal| NIL)
+    (|unsubscribe_j| APPLICATION-JUDGEMENT
+     "{result: USS | NOT exists_op(result`operations)(ac_id)}" UTM0 NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL))
+   SHOSTAK)
+  (|test_1-18| "" 3986755234
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-17| "" 3986754722
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-16| "" 3986753716
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-15| "" 3986562486
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-9| "" 3986560818
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-4| "" 3986560663
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-14| "" 3986548186
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-13| "" 3986547789
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-12| "" 3986547606
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-11| "" 3986547105
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-10| "" 3986546645
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-8| "" 3986502289
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-7| "" 3986502246
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-6| "" 3986502094
+   ("" (GRIND) (("1" (POSTPONE) NIL NIL) ("2" (POSTPONE) NIL NIL)) NIL) NIL
+   SHOSTAK)
+  (|test_1-5| "" 3986500904 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|test_1-2| "" 3986500122
+   ("" (GRIND) (("1" (POSTPONE) NIL NIL) ("2" (POSTPONE) NIL NIL)) NIL) NIL
+   SHOSTAK)
+  (|test_1-3| "" 3986499668
+   ("" (EXPAND "test_uss")
+    (("" (EXPAND "mk_uss")
+      (("" (EXPAND "subscribe" 1 3)
+        (("" (EXPAND "length")
+          (("" (EXPAND "subscribe" 1 2)
+            (("" (EXPAND "length")
+              (("" (EXPAND "length")
+                (("" (EXPAND "subscribe" 1)
+                  (("" (EXPAND "length")
+                    (("" (EXPAND "length")
+                      (("" (EXPAND "length")
+                        (("" (EXPAND "unsubscribe")
+                          (("" (EXPAND "remove_op")
+                            (("" (ASSERT) (("" (POSTPONE) NIL NIL)) NIL)) NIL))
+                          NIL))
+                        NIL))
+                      NIL))
+                    NIL))
+                  NIL))
+                NIL))
+              NIL))
+            NIL))
+          NIL))
+        NIL))
+      NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_1-0| "" 3986499062 ("" (GRIND) (("" (POSTPONE) NIL NIL)) NIL) NIL
+   SHOSTAK)
+  (|test_1-1| NIL 3986499043 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|DoS| 0 (|DoS-16| "" 3986837123 ("" (USS-TCC) NIL NIL) NIL SHOSTAK)
+  (|DoS-17| "" 3986834972
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL)
+   ((|full_capacity| CONST-DECL "bool" UTM0 NIL)
+    (|test_dos| CONST-DECL "USS" UTM0 NIL)
+    (|subscribe| CONST-DECL "USS" UTM0 NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (|mk_uss| CONST-DECL "USS" UTM0 NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL))
+   SHOSTAK)
+  (|DoS-15| "" 3986755234
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-14| "" 3986754723
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-13| "" 3986753717
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-12| "" 3986562486
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-11| "" 3986560819
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-10| "" 3986560664
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-9| "" 3986548186
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-8| "" 3986547789
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-7| "" 3986547607
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-6| "" 3986547117
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-5| "" 3986546646
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-4| "" 3986502290
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-3| "" 3986502267
+   ("" (GRIND) (("" (EXPAND "exists_op") (("" (PROPAX) NIL NIL)) NIL)) NIL) NIL
+   SHOSTAK)
+  (|DoS-2| "" 3986502095
+   ("" (GRIND)
+    (("1" (POSTPONE) NIL NIL) ("2" (POSTPONE) NIL NIL)
+     ("3" (POSTPONE) NIL NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|DoS-0| "" 3986501473 ("" (GRIND) NIL NIL) NIL SHOSTAK)
+  (|DoS-1| NIL 3986501462 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|test_update| 0
+  (|test_update-12| "" 3986837131 ("" (USS-TCC) NIL NIL) NIL SHOSTAK)
+  (|test_update-11| "" 3986834972
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   ((|find_op| DEF-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|get_info| CONST-DECL "Maybe[AircraftOp]" UTM0 NIL)
+    (|modify_op| DEF-DECL "Operations" UTM0 NIL)
+    (|update| CONST-DECL "USS" UTM0 NIL) (|test_uss| CONST-DECL "USS" UTM0 NIL)
+    (|unsubscribe| CONST-DECL "USS" UTM0 NIL)
+    (|remove_op| DEF-DECL "Operations" UTM0 NIL)
+    (|subscribe| CONST-DECL "USS" UTM0 NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (|mk_uss| CONST-DECL "USS" UTM0 NIL)
+    (/= CONST-DECL "boolean" |notequal| NIL)
+    (|unsubscribe_j| APPLICATION-JUDGEMENT
+     "{result: USS | NOT exists_op(result`operations)(ac_id)}" UTM0 NIL)
+    (|real_lt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|exists_op| INDUCTIVE-DECL "bool" UTM0 NIL))
+   SHOSTAK)
+  (|test_update-10| "" 3986755235
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-9| "" 3986754723
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-8| "" 3986753718
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-7| "" 3986562487
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-6| "" 3986560819
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-5| "" 3986560665
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-4| "" 3986548187
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-3| "" 3986547790
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-2| "" 3986547607
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-0| "" 3986547002
+   ("" (GRIND)
+    (("1" (EXPAND "exists_op") (("1" (PROPAX) NIL NIL)) NIL)
+     ("2" (EXPAND "exists_op")
+      (("2" (EXPAND "exists_op") (("2" (PROPAX) NIL NIL)) NIL)) NIL))
+    NIL)
+   NIL SHOSTAK)
+  (|test_update-1| NIL 3986546969 ("" (POSTPONE) NIL NIL) NIL SHOSTAK)))
+

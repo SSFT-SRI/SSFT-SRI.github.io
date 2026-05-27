@@ -1,0 +1,86 @@
+UTM : THEORY
+BEGIN
+
+  IMPORTING shapes@triangle_2D,
+            shapes@circle_2D,
+            shapes@rectangle_2D
+
+  OperationalArea : DATATYPE
+  BEGIN
+    CircularArea(get_circle:Circle_2D): circular_area?
+    RectangularArea(get_rectangle:Rectangle_2D): rectangular_area?
+    TriangularArea(get_triangle:Triangle_2D) : triangular_area?
+  END OperationalArea
+
+  UASClass : TYPE = { SMALL, MEDIUM, LARGE }
+
+  IMPORTING vectors@vect_3D_2D
+  %% Vect3 : TYPE = [# x:real, y:real, z:real #]
+  FlightPlan : TYPE = list[Vect3]
+
+  AircraftOp : TYPE+ = [#
+    uas_class   : UASClass,
+    callsign    : string,
+    operator_id : string,
+    flight_plan : FlightPlan
+  #]
+
+  IMPORTING UTM0[AircraftOp,OperationalArea]
+
+  in_operational_volume?(uss:USS)(p:Vect3) : bool =
+    0 <= p`z <= uss`op_alt AND
+    LET p2 = vect2(p) IN
+    CASES uss`op_area OF
+      CircularArea(shape) : point_in_circle?(shape)(p2),
+      RectangularArea(shape) : point_in_rectangle?(shape)(p2),
+      TriangularArea(shape) : point_in?(shape)(p2)
+    ENDCASES
+
+  check_fp(uss:USS,fp:FlightPlan,wps:list[Vect3])
+    : RECURSIVE list[Vect3] =
+    CASES fp OF
+      null : wps,
+      cons(wp,rest) :
+        IF in_operational_volume?(uss)(wp) THEN
+          check_fp(uss,cdr(fp),wps)
+        ELSE
+          check_fp(uss,cdr(fp),cons(wp,wps))
+        ENDIF
+    ENDCASES
+    MEASURE fp BY <<
+
+  CheckOutput : DATATYPE
+  BEGIN
+    OK       : ok?
+    NotFound : notfound?
+    Failure(waypoints:list[Vect3]) : failure?
+  END CheckOutput
+
+  check_flight_plan(uss:USS,ac_id:AircraftId) : CheckOutput =
+    LET info = get_info(ac_id)(uss) IN
+    IF none?(info) THEN NotFound
+    ELSE LET wps = check_fp(uss,val(info)`flight_plan,null) IN
+      IF null?(wps) THEN OK
+      ELSE Failure(wps)
+      ENDIF
+    ENDIF
+
+  USSC : USS = mk_uss(100, % Max capacity
+                      150, % Operational altitude in m
+                      LET C : Vect2 = (0,0) IN
+                      CircularArea(mk_circle(C,2000)))
+
+  USST : USS = mk_uss(100, % Max capacity
+                      150, % Operational altitude in m
+                      LET P1 : Vect2 = (-2000,-2000),
+                          P2 : Vect2 = (0,2000),
+                          P3 : Vect2 = (2000,-2000) IN
+                      TriangularArea(mk_triangle(P1,P2,P3)))
+
+  USSR : USS = mk_uss(100, % Max capacity
+                      150, % Operational altitude in m
+                      LET P1 : Vect2 = (-2000,2000),
+                          P2 : Vect2 = (2000,2000) IN
+                      RectangularArea(mk_rectangle(P1,P2,4000)))
+
+END UTM
