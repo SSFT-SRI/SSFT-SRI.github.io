@@ -22,6 +22,7 @@
 <li><a href="#overview">Overview</a></li>
 <li><a href="#lecturers">Lectures</a></li>
 <li><a href="#invited">Invited Speakers</a></li>
+<li><a href="#studentpresentations">Student Presentations</a></li>
 <li><a href="#splogic">Speaking Logic</a></li>
 <li><a href="schedule.html">Schedule</a></li>
 <li><a href="#prev">Previous Summer Schools</a></li>
@@ -34,6 +35,7 @@
 <h2 id="updates">Updates &amp; Quick Links</h2>
 <div class="outline-text-2" id="text-updates">
 <ul class="org-ul">
+<li><b>May 27</b>: <a href="#studentpresentations">Student Presentations</a>, ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): <a href="https://forms.gle/3jNM5iXdrKrhbp976">sign up</a></li>
 <li><b>May 26</b>: More SMT background resources posted @ <a href="#more-speaking-logic">Other Resources</a>!</li>
 <li><b>May 26</b>: <a href="https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal">Lab Materials</a> for <i>Verifying Rust Code with Verus</i></li>
 <li><b>May 26</b>: <a href="materials/pvs-class-2026/pvs-class-2026.html">Lab Materials</a> for <i>Developing and Proving Algorithms with PVS</i></li>
@@ -340,6 +342,31 @@ multiple best paper awards. His research interests are broadly in Programming La
 </div>
 </div>
 
+<div id="outline-container-studentpresentations" class="outline-2">
+<h2 id="studentpresentations">Student Presentations</h2>
+<div class="outline-text-2" id="text-studentpresentations">
+<p>
+We will have two sessions for the summer school students to present, demo, and share anything of interest in an open forum.
+</p>
+
+<p>
+The topics can range from past research presentations, tool demonstrations/walkthroughs, or even watercooler conversations you&rsquo;ve had over the week.
+</p>
+
+<p>
+This is highly informal and can be as interactive as you, the presenter, see fit.
+</p>
+
+<p>
+We can accommodate 5-minute (short) and 10-minute (long) presentations.
+</p>
+
+<p>
+Please fill out <a href="https://forms.gle/3jNM5iXdrKrhbp976">this form</a> to sign up!
+</p>
+</div>
+</div>
+
 <div id="outline-container-splogic" class="outline-2">
 <h2 id="splogic">Speaking Logic</h2>
 <div class="outline-text-2" id="text-splogic">
@@ -374,9 +401,9 @@ Formal logic has become the lingua franca of computing. It is used for specifyin
 </div>
 </div>
 
-<div id="outline-container-org6c5660d" class="outline-3">
-<h3 id="org6c5660d">More Exercises</h3>
-<div class="outline-text-3" id="text-org6c5660d">
+<div id="outline-container-org8d0ba11" class="outline-3">
+<h3 id="org8d0ba11">More Exercises</h3>
+<div class="outline-text-3" id="text-org8d0ba11">
 <p>
 See <a href="problems.html">Problems</a> for some challenging exercises. This will be updated over the course of the week.
 </p>
@@ -387,9 +414,9 @@ See <a href="problems.html">Problems</a> for some challenging exercises. This wi
 <h3 id="install">Installing PVS/VSCode-PVS, Yices2, and SAL</h3>
 <div class="outline-text-3" id="text-install">
 </div>
-<div id="outline-container-orgd1f9051" class="outline-4">
-<h4 id="orgd1f9051">PVS</h4>
-<div class="outline-text-4" id="text-orgd1f9051">
+<div id="outline-container-orgee7c22b" class="outline-4">
+<h4 id="orgee7c22b">PVS</h4>
+<div class="outline-text-4" id="text-orgee7c22b">
 <p>
 <a href="https://marketplace.visualstudio.com/items?itemName=paolomasci.vscode-pvs8">New VSCode-PVS (updated for PVS 8.1)</a>
 </p>
@@ -404,9 +431,9 @@ You can try binary releases (for the above platforms) located at <a href="https:
 </div>
 </div>
 
-<div id="outline-container-org620c555" class="outline-4">
-<h4 id="org620c555">Yices2 SMT Solver</h4>
-<div class="outline-text-4" id="text-org620c555">
+<div id="outline-container-org824af6b" class="outline-4">
+<h4 id="org824af6b">Yices2 SMT Solver</h4>
+<div class="outline-text-4" id="text-org824af6b">
 <p>
 For the full summer school experience, you will want the MCSAT (non-linear) solver. At the moment, this will require building from source. Clone the repository from <a href="https://github.com/SRI-CSL/yices2">GitHub</a>, make sure you have the prerequisites (<code>SRI-CSL/libpoly</code>, <code>cuddorg/cudd</code>, and possibly others), and run <code>./configure --enable-mcsat</code> with the path configured appropriately. Then, perform a <code>make</code> and <code>make install</code>.
 </p>
@@ -421,9 +448,9 @@ We also offer <code>brew</code> and <code>apt</code> packages for Yices2, but th
 </div>
 </div>
 
-<div id="outline-container-org45e25fd" class="outline-4">
-<h4 id="org45e25fd">SAL</h4>
-<div class="outline-text-4" id="text-org45e25fd">
+<div id="outline-container-orgaaab140" class="outline-4">
+<h4 id="orgaaab140">SAL</h4>
+<div class="outline-text-4" id="text-orgaaab140">
 <p>
 SAL can be built from source, located on <a href="https://github.com/karthiknukala/SAL">GitHub</a>.
 </p>
@@ -501,10 +528,6 @@ Registration is available here:
 
 <p>
 The 2026 Summer School on Formal Techniques will take place in a hybrid mode: the lectures and labs will be live-streamed and recorded. We strongly encourage in-person participation so that you can benefit from interactions outside the classroom. We have funding from NSF to cover transportation, food, and lodging expenses for selected US-based students. Non-student and non-US in-person participants are expected to cover their own transportation and will be charged a fee, around $150/day, to cover the cost of food and lodging.
-</p>
-
-<p>
-Applicants are urged to submit their applications as early as possible, no later than March 31, 2026, since there are only a limited number of spaces available. Those needing invitation letters for visa purposes should complete their applications as early as possible. We strongly encourage the participation of women and under-represented minorities in the summer school. The Summer School follows the Title IX Sexual Misconduct &amp; Sexual Harassment Policy &amp; Procedures at <a href="https://menlo.edu/title-ix/">Menlo College</a>.
 </p>
 </div>
 </div>

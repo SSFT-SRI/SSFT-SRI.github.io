@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
 - *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]! 
 - *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
 - *May 26*: [[file:materials/pvs-class-2026/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
@@ -206,6 +207,21 @@ Institute of New York University and Chair of the NYU Department of
 Computer Science. He is a recipient of an NSF CAREER Award and
 multiple best paper awards. His research interests are broadly in Programming Languages and Formal Methods.
 
+* Student Presentations
+:PROPERTIES:
+:CUSTOM_ID: studentpresentations
+:END:
+
+We will have two sessions for the summer school students to present, demo, and share anything of interest in an open forum.
+
+The topics can range from past research presentations, tool demonstrations/walkthroughs, or even watercooler conversations you've had over the week.
+
+This is highly informal and can be as interactive as you, the presenter, see fit.
+
+We can accommodate 5-minute (short) and 10-minute (long) presentations.
+
+Please fill out [[https://forms.gle/3jNM5iXdrKrhbp976][this form]] to sign up!
+
 * Speaking Logic
 :PROPERTIES:
 :CUSTOM_ID: splogic
@@ -278,18 +294,6 @@ Please do not install SAL from any other source, and please do not use an older 
 - [[https://pvs.csl.sri.com/doc/datatypes.pdf][PVS Datatypes]]
 - [[https://pvs.csl.sri.com/doc/interpretations.pdf][PVS Theory Interpretations]]
 - [[https://pvs.csl.sri.com/documentation.html][More PVS documentation]]
-* COMMENT Student Presentations
-
-We will have two sessions for the summer school students to present, demo, and share anything of interest in an open forum.
-
-The topics can range from past research presentations, tool demonstrations/walkthroughs, or structured extensions of watercooler chats with other attendees.
-
-This is highly informal and can be as interactive as appropriate.
-
-We can accommodate 5-minute (short) and 10-minute (long) presentations, and are happy to organize less structured fora.
-
-Please fill out [[https://TBD][this form]] to sign up. Try to sign up before May 24th.
-
 * Previous Summer Schools
 :PROPERTIES:
 :CUSTOM_ID: prev
@@ -326,4 +330,3 @@ Registration is available here:
 
 The 2026 Summer School on Formal Techniques will take place in a hybrid mode: the lectures and labs will be live-streamed and recorded. We strongly encourage in-person participation so that you can benefit from interactions outside the classroom. We have funding from NSF to cover transportation, food, and lodging expenses for selected US-based students. Non-student and non-US in-person participants are expected to cover their own transportation and will be charged a fee, around $150/day, to cover the cost of food and lodging.
 
-Applicants are urged to submit their applications as early as possible, no later than March 31, 2026, since there are only a limited number of spaces available. Those needing invitation letters for visa purposes should complete their applications as early as possible. We strongly encourage the participation of women and under-represented minorities in the summer school. The Summer School follows the Title IX Sexual Misconduct & Sexual Harassment Policy & Procedures at [[https://menlo.edu/title-ix/][Menlo College]].
