@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 27*: [[file:videos.org][Lecture videos posted!]]
 - *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
 - *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]! 
 - *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
