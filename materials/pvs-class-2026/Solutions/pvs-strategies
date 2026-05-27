@@ -1,6 +1,0 @@
-;-*-Lisp-*-
-(defstep uss-tcc ()
-  (then (grind)
-	(repeat (expand "exists_op")))
-  "Proves USS TCCs by using grind and expanding exists_op"
-  "Proving USS TCCs")
