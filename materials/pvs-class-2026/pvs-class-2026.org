@@ -20,8 +20,11 @@ By [[https://shemesh.larc.nasa.gov/people/cam][César A. Muñoz]] @ [[https://ww
 - [[file:Exercises/exercises-2.org][Exercises of Part 2]]
 - Solutions:
   - [[file:Solutions/UTM0.pvs][UTM0.pvs]]
-  - [[file:Solutions/pvs-strategies][pvs-strategies]]
   - [[file:Solutions/UTM.pvs][UTM.pvs]]
+
+#+BEGIN_COMMENT
+  - [[file:Solutions/pvs-strategies][pvs-strategies]]
+#+END_COMMENT
 
 * References
 :PROPERTIES:
