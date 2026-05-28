@@ -13,7 +13,6 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
-
 - *May 28*: [[file:materials/rpiskac - lecture2.pdf][Lecture 2 slides]]/[[file:materials/rpiskac - lab session.zip][Lab Materials]] for /Privacy-Preserving Reasoning/ posted!
 - *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
 - *May 27*: [[https://discord.gg/nqYwb9Pq][Discord server/invite]]
@@ -144,8 +143,6 @@ Her research has received a range of professional honors, including multiple Ama
 
 
 *Lab materials.* See [[file:materials/rpiskac - lab session.zip][here]]!
-
-** 
 ** Verifying Rust Code with Verus
 :PROPERTIES:
 :CUSTOM_ID: verus
