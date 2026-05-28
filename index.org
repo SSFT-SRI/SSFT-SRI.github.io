@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
 - *May 27*: [[https://discord.gg/nqYwb9Pq][Discord server/invite]]
 - *May 27*: [[file:videos.org][Lecture videos posted!]]
 - *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
