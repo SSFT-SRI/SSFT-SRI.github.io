@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 29*: [[file:materials/2026-05-sri-summer-school.pptx][Slides]] + [[file:materials/join-fork.rav][code from Raven live-coding]] for /Concurrent Separation Logic/ posted!
 - *May 28*: [[file:materials/rpiskac - lecture2.pdf][Lecture 2 slides]]/[[file:materials/rpiskac - lab session.zip][Lab Materials]] for /Privacy-Preserving Reasoning/ posted!
 - *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
 - *May 27*: [[https://discord.gg/nqYwb9Pq][Discord server/invite]]
@@ -213,6 +214,8 @@ this reasoning.
 Institute of New York University and Chair of the NYU Department of
 Computer Science. He is a recipient of an NSF CAREER Award and
 multiple best paper awards. His research interests are broadly in Programming Languages and Formal Methods.
+
+*Materials.*: [[file:materials/2026-05-sri-summer-school.pptx][Slides]] + [[file:materials/join-fork.rav][code from Raven live-coding]]
 
 * Student Presentations
 :PROPERTIES:

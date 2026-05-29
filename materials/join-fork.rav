@@ -1,0 +1,160 @@
+// The following resource algebra encodes a resource to represent a non-duplicable token. 
+// This is also available in the Raven standard library and could be replaced by the following:
+// module Excl = Library.Excl[Library.UnitRA]
+module Excl : Library.ResourceAlgebra {
+  rep type T = data {
+    case bot
+    case excl
+    case top
+  }
+
+  val id = bot
+
+  func comp(a: T, b: T) returns (res: T) {
+    a == id ? b : (b == id ? a : top)
+  }
+
+  func valid(a: T) returns (res: Bool) {
+    a != top
+  }
+
+  func fpuAllowed(a: T, b: T) returns (res: Bool) {
+    false
+  }
+
+  func frame(a: T, b: T) returns (res: T) {
+   b == id ? a : (a == excl && b == excl ? id : top)
+  }
+}
+
+// Interface used to instantiate the Fork/Join data structure. See below for an example.
+interface Instance  {
+  type R
+
+  pred resource(r: R)
+
+  proc task()
+    returns (r: R)
+    ensures resource(r)
+}
+
+// Implementation and proof of the Fork/Join data structure.
+module ForkJoin[I: Instance] {
+  import I._ 
+
+  type Option = data {
+    case none
+    case some(v: R)
+  }
+
+  // Field 'value' is used as the communication channel between the forked 
+  // worker thread that executes the task and the thread that executes the join.
+  field value: Option
+  // Field 'ex' is used to store the non-duplicable token.
+  ghost field ex: Excl
+
+  // The predicate representing a non-duplicable token associated with reference p.
+  // The 'auto' keyword instructs the verifier to automatically unfold the predicate during verification.
+  auto pred token(p: Ref) {
+    own(p.ex, Excl.excl)
+  }
+
+  // The following lemma shows that tokens are indeed non-duplicable.
+  // The lemma is not used explicitly in the proofs as the SMT solver can infer 
+  // this property automatically from the definition of Excl.
+  lemma token_unique(p: Ref)
+    requires token(p) && token(p)
+    ensures false
+  {
+  }
+
+  // The shared state invariant of the data structure
+  // The invariant forces the worker thread to transfer ownership of resource(r)
+  // into the invariant when it updates p.value to some(r).
+  // In turn, the thread calling 'join' can then trade in token(p) to extract 
+  // resource(r) from the invariant.
+  inv is_forkjoin(p: Ref) {
+    exists o: Option, b: Bool :: own(p.value, o) &&
+      (o == none ? true : (b ? token(p) : resource(o.v) ))
+  }
+
+  // Procedure for the worker thread that executes I.task.
+  proc worker(p: Ref)
+   requires is_forkjoin(p)
+  {
+    val r := task();
+    unfold is_forkjoin(p);
+    p.value := some(r);
+    fold is_forkjoin(p)[b := false];
+  }
+
+  // Procedure that initializes the data structure and then spawns off the worker thread.
+  // It returns the handle 'p' on the data structure and the associated unique token(p)
+  // to be used in the call to 'join'. 
+  proc fork()
+    returns (p: Ref)
+    ensures is_forkjoin(p) && token(p)
+  {
+    p := new (value: none, ex: Excl.excl);
+    fold is_forkjoin(p);
+    spawn worker(p);
+  }
+
+  // Procedure that implements the join and transfer of resource(p) from the invariant to the joining thread.
+  proc join(p: Ref)
+    returns (r: R)
+    requires is_forkjoin(p) && token(p)
+    ensures resource(r)
+  {
+    var o: Option;
+
+    ghost var b0: Bool;
+    unfold is_forkjoin(p)[b0 := b];
+    o := p.value;
+    fold is_forkjoin(p)[b := true];
+
+    if (o == none) {
+      r := join(p);
+      return r;
+    } else {
+      r := o.v;
+      return r;
+    }
+  }
+
+}
+
+
+// Client that uses the data structure
+
+field f: Int
+
+module ClientInstance : Instance {
+  type R = Ref
+
+  pred resource(r: Ref) {
+    own(r.f, 0)
+  }
+
+  proc task() 
+    returns (r: Ref)
+    ensures resource(r)
+  {
+    r := new (f: 0);
+    fold resource(r);
+  }
+}
+
+module FJ = ForkJoin[ClientInstance]
+  
+proc client() 
+  returns (p: Ref)
+  ensures FJ.is_forkjoin(p)
+{
+  p := FJ.fork();
+  // do other stuff
+  var r := FJ.join(p);
+  unfold ClientInstance.resource(r);
+  val y := r.f;
+  // do something with y
+}
