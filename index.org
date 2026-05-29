@@ -13,6 +13,7 @@
 :END:
 
 # Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 29*: [[https://shemesh.larc.nasa.gov/NFM2018/talks/Butler.pdf][Thirty Years of Formal Methods Research At NASA Langley - Ricky Butler (NFM 2018)]]
 - *May 29*: [[file:materials/2026-05-sri-summer-school.pptx][Slides]] + [[file:materials/join-fork.rav][code from Raven live-coding]] for /Concurrent Separation Logic/ posted!
 - *May 28*: [[file:materials/rpiskac - lecture2.pdf][Lecture 2 slides]]/[[file:materials/rpiskac - lab session.zip][Lab Materials]] for /Privacy-Preserving Reasoning/ posted!
 - *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
@@ -116,6 +117,8 @@ The PVS theorem prover includes decision procedures for linear arithmetic, propo
 Dr. Muñoz is a recognized expert in SRI's Prototype Verification System and has developed numerous strategies, libraries, and utilities for PVS, which are publicly available. His contributions to PVS include Interval Arithmetic, ACCoRD, PVSio, ProofLite, and Extrategies.
 
 *Materials.* [[file:materials/pvs-class-2026/pvs-class-2026.org][Click here for slides, exercises, etc.]]
+
+*More!* [[https://shemesh.larc.nasa.gov/NFM2018/talks/Butler.pdf][Thirty Years of Formal Methods Research At NASA Langley - Ricky Butler (NFM 2018)]]
 
 ** Privacy-Preserving Reasoning
 :PROPERTIES:
