@@ -51,36 +51,17 @@ BEGIN
 
   CheckOutput : DATATYPE
   BEGIN
-    OK       : ok?
-    NotFound : notfound?
+    OK : ok?
     Failure(waypoints:list[Vect3]) : failure?
   END CheckOutput
 
-  check_flight_plan(uss:USS,ac_id:AircraftId) : CheckOutput =
-    LET info = get_info(ac_id)(uss) IN
-    IF none?(info) THEN NotFound
-    ELSE LET wps = check_fp(uss,val(info)`flight_plan,null) IN
-      IF null?(wps) THEN OK
-      ELSE Failure(wps)
-      ENDIF
+  check_flight_plan(uss:USS,ac_op:AircraftOp) : CheckOutput =
+    LET wps = check_fp(uss,ac_op`flight_plan,null) IN
+    IF null?(wps) THEN OK
+    ELSE Failure(wps)
     ENDIF
 
-  USSC : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET C : Vect2 = (0,0) IN
-                      CircularArea(mk_circle(C,2000)))
-
-  USST : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET P1 : Vect2 = (-2000,-2000),
-                          P2 : Vect2 = (0,2000),
-                          P3 : Vect2 = (2000,-2000) IN
-                      TriangularArea(mk_triangle(P1,P2,P3)))
-
-  USSR : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET P1 : Vect2 = (-2000,2000),
-                          P2 : Vect2 = (2000,2000) IN
-                      RectangularArea(mk_rectangle(P1,P2,4000)))
+  subscribe(op:AircraftOp)(uss:USS) : USS =
+    subscribe(op`callsign,op)(uss)
 
 END UTM

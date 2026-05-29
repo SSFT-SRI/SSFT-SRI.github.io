@@ -16,13 +16,15 @@ then to each generated subgoal, expand `exists_op` as many times as needed.
     Look for the names of the functions in `NASALib/shapes`
      that check if a point is inside a circle, rectangle, and triangle.
 
-8. Define the function [`check_flight_plan(uss:USS,ac_id:AircraftId)`](UTM.pvs#L47) that
+8. Define the function [`check_flight_plan(uss:USS,ac_op:AircraftOP)`](UTM.pvs#L47) that
    returns
-     - `NotFound`, if the aircraft `ac_id` is not in
-       `uss`, or
-     - `OK`, if the aircraft is in `uss`
-   and every waypoint in its flight plan lies inside the USS
+     - `OK`, if every waypoint in the flight plan of ac_op lies inside the USS
    operational volume, or
    - `Failure(wps)` otherwise, where `wps` is
    the list of waypoints in its flight plan that lie outside the USS
    operational volume.
+
+9. Modify the function `subscribe` in [`UTM.pvs`](UTM.pvs) so that
+   only aircraft operations `ac_op` that satisfy
+   `check_flight_plan(uss,ac_op) = OK` are subscribed.
+   Throw an exception if `check_flight_plan(uss)` returns a Failure.

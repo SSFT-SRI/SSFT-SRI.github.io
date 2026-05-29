@@ -19,10 +19,10 @@ Consider the theory <a href="UTM0.pvs"><code>UTM0</code></a> and the lecture <a 
 
 <ol class="org-ol">
 <li>Using <code>remove_op</code>, define the function <a href="UTM0.pvs#L55"><code>unsubscribe</code></a> that unsubscribes any operation of aircraft <code>ac_id</code> from <code>ops</code>.</li>
-<li>Define a type judgement <a href="UTM0.pvs#L67"><code>unsubscribe_j</code></a> for the function <code>unsubscribe</code> stating that <code>result</code>, the output of the function, does not have an operation for aircraft <code>ac_id</code>, the input parameter of the function. Prove the type judgement using <code>remove_op_j</code> as a lemma.</li>
+<li>Define a type judgement <a href="UTM0.pvs#L67"><code>unsubscribe_j</code></a> for the function <code>unsubscribe</code> stating that <code>result</code>, the output of the function, doesn&rsquo;t have an operation for aircraft <code>ac_id</code>, the input parameter of the function. Prove the type judgement using <code>remove_op_j</code> as a lemma.</li>
 <li>Fix <a href="UTM0.pvs#L110"><code>test_1</code></a> so that it holds. <b>Hint</b>: What is known about <code>Ac0</code>, <code>Ac1</code>, and <code>Ac2</code>? What should be assumed?</li>
 <li>Fix <a href="UTM0.pvs#L32"><code>subscribe</code></a> so that only one operation per aircraft can be subscribed. After the change, make sure all TCCs and LEMMAS are still valid.</li>
-<li>Define the function <a href="UTM0.pvs#L129"><code>update</code></a> that modifies the operation for a given aircraft. The function does nothing if the aircraft is not subscribed. Write a lemma to test the functionality. <b>Hint</b>: First, define a recursive function on <code>Operations</code> that changes an element in the list. Then, use this function to define <code>update</code>.</li>
+<li>Define the function <a href="UTM0.pvs#L129"><code>update</code></a> that modifies the operation for a given aircraft. The function does nothing if the aircraft is not subscribed. Write a lemma to test the functionality. <b>Hint</b>: First, define a recursive function on <code>Operations</code> that change an element in the list. Then, use this function to define <code>update</code>.</li>
 </ol>
 </main>
 </body>

@@ -1,0 +1,7 @@
+{
+  "capacity": -10,
+  "altitude": 120,
+  "area_type": "circular",
+  "center": { "x": 2500.0, "y": 2500.0 },
+  "radius": 1000.0
+}

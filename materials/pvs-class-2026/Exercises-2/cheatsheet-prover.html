@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated from Org source -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PVS Proof Commands</title>
+<meta name="author" content="Karthik Nukala" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+<main id="content" class="content">
+<header>
+<h1 class="title">PVS Proof Commands</h1>
+</header><table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-center">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-center">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>(assert)</code></td>
+<td class="org-center">Decision procedure and auto-rewrites</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(case "&lt;e&gt;")</code></td>
+<td class="org-center">Case analysis on boolean expression <code>&lt;e&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(decompose-equality &lt;fnum&gt;)</code></td>
+<td class="org-center">Decompose equality in formula <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(eval-expr "&lt;e&gt;")</code></td>
+<td class="org-center">Evaluate the ground expression <code>&lt;e&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(eval-formula &lt;fnum&gt;)</code></td>
+<td class="org-center">Evaluate the ground formula in <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(expand "&lt;name&gt;" &lt;fnum&gt; &lt;n&gt;)</code></td>
+<td class="org-center">Expand <code>&lt;n&gt;</code>-th occurrence of <code>&lt;name&gt;</code> in formula number <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(expand* "&lt;nm1&gt;" ... "&lt;nmn&gt;")</code></td>
+<td class="org-center">Expand <code>&lt;nm1&gt;</code> &#x2026; <code>&lt;nmn&gt;</code> everywhere in the sequent</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(flatten &lt;fnum&gt;)</code></td>
+<td class="org-center">Eliminate conjunctions in the antecedent and disjunctions in the consequent</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(grind)</code></td>
+<td class="org-center">A super-duper strategy</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(grind-reals)</code></td>
+<td class="org-center">Grind plus auto-rewrite with real number properties</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(ground)</code></td>
+<td class="org-center">Propositional simplification plus decision procedures</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(help &lt;proof-command&gt;)</code></td>
+<td class="org-center">Display usage information of <code>&lt;proof-command&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(induct "&lt;var&gt;")</code></td>
+<td class="org-center">Inductive proof on variable <code>&lt;var&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(inst? &lt;fnum&gt;)</code></td>
+<td class="org-center">Guess instantiation of quantifier in formula <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(inst &lt;fnum&gt; "&lt;e1&gt;" ... "&lt;en&gt;")</code></td>
+<td class="org-center">Instantiate universal formula in <code>&lt;fnum&gt;</code> with expressions <code>&lt;e1&gt;</code> &#x2026; <code>&lt;en&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(lemma "&lt;name&gt;")</code></td>
+<td class="org-center">Introduce lemma called <code>&lt;name&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(name "&lt;name&gt;" "&lt;e&gt;")</code></td>
+<td class="org-center">Introduce constant <code>&lt;name&gt;</code> and make it equals to expression <code>&lt;e&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(name-replace "&lt;name&gt;" "&lt;e&gt;")</code></td>
+<td class="org-center">Replace <code>&lt;name&gt;</code> by expression <code>&lt;e&gt;</code> everywhere in the sequent</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(replace &lt;fnum&gt;)</code></td>
+<td class="org-center">Left-right replacement of an equality in formula number <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(replace &lt;fnum&gt; :dir rl)</code></td>
+<td class="org-center">Right-left replacement of an equality in formula number <code>&lt;fnum&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(rewrite "&lt;name&gt;")</code></td>
+<td class="org-center">Left-right rewriting of equality lemma <code>&lt;name&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(rewrite &lt;name&gt; :dir rl)</code></td>
+<td class="org-center">Right-left rewriting of equality lemma <code>&lt;name&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(skeep &lt;fnum&gt; :preds? t)</code></td>
+<td class="org-center">Eliminate universal quantifier in formula number <code>&lt;fnum&gt;</code> with skolem constants and introduce their type predicates</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(split &lt;fnum&gt;)</code></td>
+<td class="org-center">Eliminate disjunctions in the antecedent and conjunctions in the consequent</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>(typepred "&lt;e&gt;")</code></td>
+<td class="org-center">Introduce the type predicate of expression <code>&lt;e&gt;</code> into the sequent</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

@@ -20,7 +20,7 @@
 - *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
 - *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]! 
 - *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
-- *May 26*: [[file:materials/pvs-class-2026/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
+- *May 26*: [[file:materials/pvs-class-2026 (1)/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
 - *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
 - *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
 - *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
@@ -336,4 +336,3 @@ Registration is available here:
 - [[https://forms.gle/rhkCoe9XSnkAAq596][SSFT 2026 registration form]]
 
 The 2026 Summer School on Formal Techniques will take place in a hybrid mode: the lectures and labs will be live-streamed and recorded. We strongly encourage in-person participation so that you can benefit from interactions outside the classroom. We have funding from NSF to cover transportation, food, and lodging expenses for selected US-based students. Non-student and non-US in-person participants are expected to cover their own transportation and will be charged a fee, around $150/day, to cover the cost of food and lodging.
-

@@ -1,0 +1,147 @@
+% UAS Service Supplier
+UTM0[AircraftOp:TYPE+,
+     OperationalArea:TYPE+] : THEORY
+BEGIN
+
+  % Type alias
+  AircraftId : TYPE = string
+
+  % Association list of tuples (id,info)
+  Operations : TYPE = list[[AircraftId,AircraftOp]]
+
+  % Record type
+  USS : TYPE = [#
+    max_capacity : posnat,
+    op_alt  : nnreal,
+    op_area : OperationalArea,
+    operations : Operations
+  #]
+
+  mk_uss(capacity:posnat,alt:nnreal,area:OperationalArea) : USS = (#
+    max_capacity := capacity,
+    op_alt  := alt,
+    op_area := area,
+    operations := null
+  #)
+
+  exists_op(ops:Operations)(ac_id:AircraftId) : INDUCTIVE bool =
+    cons?(ops) AND
+    LET (id,op) = car(ops) IN
+      id = ac_id OR exists_op(cdr(ops))(ac_id)
+
+  subscribe(ac_id:AircraftId,op:AircraftOp)
+           (uss:USS) : USS =
+    IF length(uss`operations) < uss`max_capacity AND
+      NOT exists_op(uss`operations)(ac_id) THEN
+      uss WITH [
+        `operations := cons((ac_id,op),uss`operations)
+      ]
+    ELSE
+      uss
+    ENDIF
+
+  remove_op(ac_id:AircraftId,ops:Operations)
+    : RECURSIVE Operations =
+    CASES ops OF
+      null : ops,
+      cons(head,rest) :
+        LET (id,op) = head IN
+          IF id = ac_id THEN remove_op(ac_id,rest)
+          ELSE cons(head,remove_op(ac_id,rest))
+          ENDIF
+    ENDCASES
+    MEASURE length(ops)
+
+  unsubscribe(ac_id:AircraftId)(uss:USS) : USS =
+    uss WITH [
+      `operations := remove_op(ac_id,uss`operations)
+    ]
+
+  subscribe_j : JUDGEMENT
+    subscribe(ac_id:AircraftId,op:AircraftOp)
+             (uss:USS | length(uss`operations) < uss`max_capacity) HAS_TYPE
+     {result:USS | exists_op(result`operations)(ac_id)}
+
+  remove_op_j : RECURSIVE JUDGEMENT
+    remove_op(ac_id:AircraftId,ops:Operations) HAS_TYPE
+    {result:Operations | NOT exists_op(result)(ac_id)}
+
+  unsubscribe_j : JUDGEMENT
+    unsubscribe(ac_id:AircraftId)(uss:USS) HAS_TYPE
+     {result:USS | NOT exists_op(result`operations)(ac_id)}
+
+  IMPORTING structures@Maybe
+
+  find_op(ac_id:AircraftId,ops:Operations)
+    : RECURSIVE Maybe[AircraftOp] =
+    CASES ops OF
+      null : None,
+      cons(head,rest) :
+        LET (id,op) = head IN
+          IF id = ac_id THEN Some(op)
+          ELSE find_op(ac_id,rest)
+          ENDIF
+    ENDCASES
+    MEASURE length(ops)
+
+  get_info(ac_id:AircraftId)(uss:USS)
+    : Maybe[AircraftOp] =
+    find_op(ac_id,uss`operations)
+
+  % Functional infix combinator
+  ;++(uss:USS,f:[USS->USS]) : MACRO USS = f(uss)
+
+  OpAlt  : nnreal
+  OpArea : OperationalArea
+  Ac0,Ac1,Ac2 : AircraftId
+  Op0,Op1,Op2 : AircraftOp
+
+  test_uss : USS =
+    mk_uss(3,OpAlt,OpArea) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac1,Op1) ++
+      subscribe(Ac2,Op2) ++
+      unsubscribe(Ac0)
+
+  test_0 : LEMMA
+    Ac0 /= Ac1 AND Ac0 /= Ac2 IMPLIES
+    none?(get_info(Ac0)(test_uss))
+
+  test_1 : LEMMA
+    Ac1 /= Ac0 AND Ac1 /=Ac2 IMPLIES
+    get_info(Ac1)(test_uss) = Some(Op1)
+
+  full_capacity(uss:USS) : bool =
+    length(uss`operations) = uss`max_capacity
+
+  test_dos : USS =
+    mk_uss(3,OpAlt,OpArea) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac0,Op0) ++
+      subscribe(Ac0,Op0)
+
+  DoS : LEMMA
+     NOT full_capacity(test_dos)
+
+  modify_op(ac_id:AircraftId,new_op:AircraftOp,ops:Operations)
+    : RECURSIVE Operations =
+    CASES ops OF
+      null : ops,
+      cons(head,rest) :
+        LET (id,op) = head IN
+          IF id = ac_id THEN cons((id,new_op),rest)
+          ELSE cons(head,modify_op(ac_id,new_op,rest))
+          ENDIF
+    ENDCASES
+    MEASURE length(ops)
+
+  update(ac_id:AircraftId,op:AircraftOp)(uss:USS) : USS =
+    uss WITH [
+      `operations := modify_op(ac_id,op,uss`operations)
+    ]
+
+  test_update : LEMMA
+    Ac1 /= Ac0 AND Ac1 /=Ac2 IMPLIES
+    get_info(Ac1)(test_uss ++ update(Ac1,Op0)) = Some(Op0)
+
+END UTM0

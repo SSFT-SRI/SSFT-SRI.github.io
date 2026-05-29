@@ -27,15 +27,14 @@ BEGIN
 
   IMPORTING UTM0[AircraftOp,OperationalArea]
 
-  % Exercise 7. Define the function in_operational_volume? that returns TRUE if the point p is inside the
+  % Exercise 6. Define the function in_operational_volume? that returns TRUE if the point p is inside the
   % operational volume of uss. Hint: Check that the vertical component of p, i.e., p`z, is below uss`op_alt, amd
   % the horizontal component of p, i.e., vect2(p), is inside uss`op_area. Look for the names of the functions
   % in NASALib/shapes that check if a point is inside a circle, rectangle, and triangle.
   in_operational_volume?(uss:USS)(p:Vect3) : bool % = ...
 
-  % Exercise 8. Define the function check_flight_plan(uss:USS,ac_id:AircraftId) that
-  % returns NotFound, if the aircraft ac_id is not in uss, or OK, if the aircraft is in uss
-  % and every waypoint in its flight plan lies inside the USS operational volume, or
+  % Exercise 7. Define the function check_flight_plan(uss:USS,ac_op:AircrafOp) such that
+  % it returns OK, if every waypoint in the flight plan of ac_op lies inside the USS operational volume, or
   % Failure(wps) otherwise, where wps is the list of waypoints in its flight plan that lie outside
   % the USS operational volume.
 
@@ -44,24 +43,17 @@ BEGIN
   % check_fp(uss:USS,fp:FlightPlan,wps:list[Vect3])
   %  : RECURSIVE list[Vect3] = ...
 
-  % check_flight_plan(uss:USS,ac_id:AircraftId) : ...
+  % check_flight_plan(uss:USS,ac_op:AircraftOp) : ...
 
-  USSC : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET C : Vect2 = (0,0) IN
-                      CircularArea(mk_circle(C,2000)))
+  % Exercise 8. Define the function check_flight_plan(uss:USS,ac_op:AircrafOp) such that
+  % it returns OK, if every waypoint in the flight plan of ac_op lies inside the USS operational volume, or
+  % Failure(wps) otherwise, where wps is the list of waypoints in its flight plan that lie outside
+  % the USS operational volume.
 
-  USST : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET P1 : Vect2 = (-2000,-2000),
-                          P2 : Vect2 = (0,2000),
-                          P3 : Vect2 = (2000,-2000) IN
-                      TriangularArea(mk_triangle(P1,P2,P3)))
-
-  USSR : USS = mk_uss(100, % Max capacity
-                      150, % Operational altitude in m
-                      LET P1 : Vect2 = (-2000,2000),
-                          P2 : Vect2 = (2000,2000) IN
-                      RectangularArea(mk_rectangle(P1,P2,4000)))
+  % Exercise 9. Modify the function subscribe so that only aircraft operations ac_op that satisfy
+  % check_flight_plan(uss,ac_op) = OK are subscribed. Throw an exception if check_flight_plan(uss)
+  % returns a Failure.
+  subscribe(op:AircraftOp)(uss:USS) : USS =
+    subscribe(op`callsign,op)(uss)
 
 END UTM

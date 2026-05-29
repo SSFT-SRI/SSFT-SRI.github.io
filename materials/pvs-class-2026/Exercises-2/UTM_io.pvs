@@ -1,0 +1,339 @@
+UTM_io : THEORY
+BEGIN
+
+  IMPORTING UTM,
+            PVSioJSON@pvsio_json
+
+  % Performace parameters for different classes of UAS
+  % Small UAS
+  % - vertical speed: 4m/s - 10m/s
+  % - horizontal speed: 5m/s to 10 m/s
+  % - Turn rate: instantaneous
+  % Medium UAS
+  % - vertical speed: 5m/s - 10m/s
+  % - horizontal speed: 10m/s to 15m/s
+  % - turn rate: instantaneous
+  % Large UAS
+  % - vertical speed: 3m/s - 6m/s
+  % - horizontal speed: 15m/s to 20m/s
+  % - turn rate: 30deg/s to 90deg/s
+  %
+  % All flights:
+  % - Start/end at z=0
+  % - Stay within (0,0) to (5000,5000) bounds
+  % - Level-off vertical profiles with max altitude ≤125m
+  % - Waypoint spacing respects class performance (SMALL: short legs, LARGE: long legs with gentle climbs)
+
+  % Exception for JSON parsing errors
+  JSONParseError: SimpleException
+
+  % Extract real from JNum, throw exception if not a number
+  jnum_val(jv: JValue): rat =
+    IF jnum?(jv) THEN rational(jnum(jv))
+    ELSE throw(JSONParseError, "Expected number")
+    ENDIF
+
+  % Extract string from JStr, throw exception if not a string
+  jstr_val(jv: JValue): string =
+    IF jstr?(jv) THEN jstr(jv)
+    ELSE throw(JSONParseError, "Expected string")
+    ENDIF
+
+  % Parse Vect2 from JSON object
+  json2vect2(jv: JValue): Vect2 =
+    LET x_val = jnum_val(jget(jv, "x")),
+        y_val = jnum_val(jget(jv, "y")) IN
+    (# x := x_val, y := y_val #)
+
+  % Parse Circle_2D from JSON (center + radius)
+  json2circle(jv: JValue): Circle_2D =
+    LET center = json2vect2(jget(jv, "center")),
+        radius = jnum_val(jget(jv, "radius")) IN
+    IF radius <= 0 THEN throw(JSONParseError, "Radius must be positive")
+    ELSE mk_circle(center, radius)
+    ENDIF
+
+  % Parse Triangle_2D from JSON (p1, p2, p3)
+  json2triangle(jv: JValue): Triangle_2D =
+    LET p1 = json2vect2(jget(jv, "p1")),
+        p2 = json2vect2(jget(jv, "p2")),
+        p3 = json2vect2(jget(jv, "p3")) IN
+    IF collinear?(p1, p2, p3) THEN throw(JSONParseError, "Triangle points must be non-collinear")
+    ELSE mk_triangle(p1, p2, p3)
+    ENDIF
+
+  % Parse Rectangle_2D from JSON (p1, p2, height)
+  json2rectangle(jv: JValue): Rectangle_2D =
+    LET p1 = json2vect2(jget(jv, "p1")),
+        p2 = json2vect2(jget(jv, "p2")),
+        h  = jnum_val(jget(jv, "height")) IN
+    IF p1 = p2 THEN throw(JSONParseError, "Rectangle points p1 and p2 must be different")
+    ELSIF h = 0 THEN throw(JSONParseError, "Rectangle height must be non-zero")
+    ELSE mk_rectangle(p1, p2, h)
+    ENDIF
+
+  % Parse OperationalArea from JSON based on area_type
+  json2operational_area(jv: JValue): OperationalArea =
+    LET area_type = jstr_val(jget(jv, "area_type")) IN
+    IF area_type = "circular" THEN CircularArea(json2circle(jv))
+    ELSIF area_type = "triangular" THEN TriangularArea(json2triangle(jv))
+    ELSIF area_type = "rectangular" THEN RectangularArea(json2rectangle(jv))
+    ELSE throw(JSONParseError, "Unknown area_type: expected circular, triangular, or rectangular")
+    ENDIF
+
+  % Parse USS from JSON object
+  json2uss(jv: JValue): USS =
+    LET capacity = jnum_val(jget(jv, "capacity")),
+        altitude = jnum_val(jget(jv, "altitude")),
+        area     = json2operational_area(jv) IN
+    IF NOT integer_pred(capacity) THEN throw(JSONParseError, "Capacity must be an integer")
+    ELSIF capacity <= 0 THEN throw(JSONParseError, "Capacity must be positive")
+    ELSIF altitude < 0 THEN throw(JSONParseError, "Operational altitude must be non-negative")
+    ELSE mk_uss(capacity, altitude, area)
+    ENDIF
+
+  % Convenience function to load USS from JSON file
+  uss_from_file(filename: string): USS =
+    json2uss(json_from_file(filename))
+
+  % Malformed JSON files (will throw JSON parsing error)
+  % ┌────────────────────────┬───────────────────────────────────────────┐
+  % │         File           │              JSON Syntax Error            │
+  % ├────────────────────────┼───────────────────────────────────────────┤
+  % │ USS-MALFORMED-01.json  │ Missing comma between fields              │
+  % ├────────────────────────┼───────────────────────────────────────────┤
+  % │ USS-MALFORMED-02.json  │ Trailing comma after last field           │
+  % ├────────────────────────┼───────────────────────────────────────────┤
+  % │ USS-MALFORMED-03.json  │ Missing closing brace                     │
+  % ├────────────────────────┼───────────────────────────────────────────┤
+  % │ USS-MALFORMED-04.json  │ Unquoted string value                     │
+  % ├────────────────────────┼───────────────────────────────────────────┤
+  % │ USS-MALFORMED-05.json  │ Unquoted key name                         │
+  % └────────────────────────┴───────────────────────────────────────────┘
+
+  uss_malformed_01 : USS = uss_from_file("USS-MALFORMED-01.json")
+  uss_malformed_02 : USS = uss_from_file("USS-MALFORMED-02.json")
+  uss_malformed_03 : USS = uss_from_file("USS-MALFORMED-03.json")
+  uss_malformed_04 : USS = uss_from_file("USS-MALFORMED-04.json")
+  uss_malformed_05 : USS = uss_from_file("USS-MALFORMED-05.json")
+
+  % Operational Area ERROR JSON files (will throw JSONParseError)
+  % ┌───────────────────┬─────────────────────────────────┬──────────────────────────────────────────────────────────────────────┐
+  % │       File        │              Error              │                      Exception Message                               │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-01.json │ Negative radius (-500)          │ "Radius must be positive"                                            │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-02.json │ Collinear triangle points       │ "Triangle points must be non-collinear"                              │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-03.json │ p1 = p2 in rectangle            │ "Rectangle points p1 and p2 must be different"                       │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-04.json │ Zero height in rectangle        │ "Rectangle height must be non-zero"                                  │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-05.json │ Non-integer capacity (50.5)     │ "Capacity must be an integer"                                        │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-06.json │ Negative capacity (-10)         │ "Capacity must be positive"                                          │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-07.json │ Negative altitude (-50)         │ "Operational altitude must be non-negative"                          │
+  % ├───────────────────┼─────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-ERROR-08.json │ Unknown area_type ("hexagonal") │ "Unknown area_type: expected circular, triangular, or rectangular"   │
+  % └───────────────────┴─────────────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+
+  uss_error_01 : USS = uss_from_file("USS-ERROR-01.json")
+  uss_error_02 : USS = uss_from_file("USS-ERROR-02.json")
+  uss_error_03 : USS = uss_from_file("USS-ERROR-03.json")
+  uss_error_04 : USS = uss_from_file("USS-ERROR-04.json")
+  uss_error_05 : USS = uss_from_file("USS-ERROR-05.json")
+  uss_error_06 : USS = uss_from_file("USS-ERROR-06.json")
+  uss_error_07 : USS = uss_from_file("USS-ERROR-07.json")
+  uss_error_08 : USS = uss_from_file("USS-ERROR-08.json")
+
+  % Operational Area JSON files
+  % ┌─────────────────────────┬────────────┬──────────────────────────────────────────────────────────────────────┐
+  % │          File           │    Type    │                             Description                              │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-CIRCULAR-01.json    │ Circular   │ Center (2500,2500), radius 2000m, cap 100, alt 120m                  │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-CIRCULAR-02.json    │ Circular   │ Center (1500,1500), radius 1200m, cap 50, alt 100m                   │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-TRIANGULAR-01.json  │ Triangular │ Large triangle spanning most of area, cap 75, alt 110m               │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-TRIANGULAR-02.json  │ Triangular │ Asymmetric triangle, cap 60, alt 90m                                 │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-RECTANGULAR-01.json │ Rectangular│ Vertical side (1000,1000)→(1000,4000), height +3000 (right), cap 80  │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-RECTANGULAR-02.json │ Rectangular│ Horizontal side (500,2500)→(4500,2500), height -2000 (below), cap 90 │
+  % ├─────────────────────────┼────────────┼──────────────────────────────────────────────────────────────────────┤
+  % │ USS-RECTANGULAR-03.json │ Rectangular│ Diagonal side (2000,1000)→(4000,3000), height +1500 (right), cap 120 │
+  % └─────────────────────────┴────────────┴──────────────────────────────────────────────────────────────────────┘
+
+  % Circular operational areas
+  uss_circular_01 : USS = uss_from_file("USS-CIRCULAR-01.json")
+  uss_circular_02 : USS = uss_from_file("USS-CIRCULAR-02.json")
+
+  % Triangular operational areas
+  uss_triangular_01 : USS = uss_from_file("USS-TRIANGULAR-01.json")
+  uss_triangular_02 : USS = uss_from_file("USS-TRIANGULAR-02.json")
+
+  % Rectangular operational areas
+  uss_rectangular_01 : USS = uss_from_file("USS-RECTANGULAR-01.json")
+  uss_rectangular_02 : USS = uss_from_file("USS-RECTANGULAR-02.json")
+  uss_rectangular_03 : USS = uss_from_file("USS-RECTANGULAR-03.json")
+
+  % Parse UASClass from JSON string
+  json2uas_class(jv: JValue): UASClass =
+    IF NOT jstr?(jv) THEN throw(JSONParseError, "Expected string for uas_class")
+    ELSE
+      LET s = jstr(jv) IN
+      IF s = "SMALL" THEN SMALL
+      ELSIF s = "MEDIUM" THEN MEDIUM
+      ELSE LARGE
+      ENDIF
+    ENDIF
+
+  % Parse Vect3 waypoint from JSON object
+  json2vect3(jv: JValue): Vect3 =
+    LET x_val = jnum_val(jget(jv, "x")),
+        y_val = jnum_val(jget(jv, "y")),
+        z_val = jnum_val(jget(jv, "z")) IN
+    (# x := x_val, y := y_val, z := z_val #)
+
+  % Parse list of Vect3 waypoints from list of JValue
+  json2flight_plan_rec(l: list[JValue]): RECURSIVE FlightPlan =
+    IF null?(l) THEN null
+    ELSE cons(json2vect3(car(l)), json2flight_plan_rec(cdr(l)))
+    ENDIF
+  MEASURE l BY <<
+
+  % Parse list of Vect3 waypoints from JSON array
+  json2flight_plan(jv: JValue): FlightPlan =
+    IF NOT jarray?(jv) THEN throw(JSONParseError, "Expected array for flight_plan")
+    ELSE json2flight_plan_rec(jarray(jv))
+    ENDIF
+
+  % Parse AircraftOp from JSON object
+  json2aircraft_op(jv: JValue): AircraftOp =
+    (# uas_class   := json2uas_class(jget(jv, "uas_class")),
+       callsign    := jstr_val(jget(jv, "callsign")),
+       operator_id := jstr_val(jget(jv, "operator_id")),
+       flight_plan := json2flight_plan(jget(jv, "flight_plan"))
+    #)
+
+  % Convenience function to load AircraftOp from JSON file
+  aircraft_op_from_file(filename: string): AircraftOp =
+    json2aircraft_op(json_from_file(filename))
+
+  % JSON files with errors
+  % ┌───────────────┬─────────────────────────────────────────────┬──────────────────────────────────┐
+  % │     File      │                    Error                    │        Exception Message         │
+  % ├───────────────┼─────────────────────────────────────────────┼──────────────────────────────────┤
+  % │ ERROR-01.json │ uas_class is number (123) instead of string │ "Expected string for uas_class"  │
+  % ├───────────────┼─────────────────────────────────────────────┼──────────────────────────────────┤
+  % │ ERROR-02.json │ callsign is number (42) instead of string   │ "Expected string"                │
+  % ├───────────────┼─────────────────────────────────────────────┼──────────────────────────────────┤
+  % │ ERROR-03.json │ flight_plan is string instead of array      │ "Expected array for flight_plan" │
+  % ├───────────────┼─────────────────────────────────────────────┼──────────────────────────────────┤
+  % │ ERROR-04.json │ Waypoint x is string instead of number      │ "Expected number"                │
+  % ├───────────────┼─────────────────────────────────────────────┼──────────────────────────────────┤
+  % │ ERROR-05.json │ operator_id is null instead of string       │ "Expected string"                │
+  % └───────────────┴─────────────────────────────────────────────┴──────────────────────────────────┘
+
+  % ERROR files (will throw JSONParseError)
+  error_01 : AircraftOp = aircraft_op_from_file("ERROR-01.json")
+  error_02 : AircraftOp = aircraft_op_from_file("ERROR-02.json")
+  error_03 : AircraftOp = aircraft_op_from_file("ERROR-03.json")
+  error_04 : AircraftOp = aircraft_op_from_file("ERROR-04.json")
+  error_05 : AircraftOp = aircraft_op_from_file("ERROR-05.json")
+
+  % ┌─────────────────┬────────┬──────────────────────────────────────────────┐
+  % │      File       │ Class  │                Route Summary                 │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ SCOUT-07.json   │ SMALL  │ Center outward NE, cruise 100m               │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ SCOUT-12.json   │ SMALL  │ NE to SW, cruise 110m                        │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ RECON-01.json   │ SMALL  │ W to E along north, cruise 90m               │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ MINI-05.json    │ SMALL  │ NE corner to center, cruise 105m             │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ SURVEY-23.json  │ MEDIUM │ Center to NE, cruise 100m                    │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ INSPECT-08.json │ MEDIUM │ W to center-N, cruise 110m                   │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ MONITOR-14.json │ MEDIUM │ E to center, cruise 120m                     │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ CARGO-01.json   │ LARGE  │ W edge to NE, cruise 100m (gentle gradients) │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ FREIGHT-02.json │ LARGE  │ NE to SW diagonal, cruise 110m               │
+  % ├─────────────────┼────────┼──────────────────────────────────────────────┤
+  % │ HEAVY-03.json   │ LARGE  │ NW to SE, cruise 90m                         │
+  % └─────────────────┴────────┴──────────────────────────────────────────────┘
+
+  % SMALL aircraft
+  scout_07 : AircraftOp = aircraft_op_from_file("SCOUT-07.json")
+  scout_12 : AircraftOp = aircraft_op_from_file("SCOUT-12.json")
+  recon_01 : AircraftOp = aircraft_op_from_file("RECON-01.json")
+  mini_05  : AircraftOp = aircraft_op_from_file("MINI-05.json")
+
+  % MEDIUM aircraft
+  survey_23  : AircraftOp = aircraft_op_from_file("SURVEY-23.json")
+  inspect_08 : AircraftOp = aircraft_op_from_file("INSPECT-08.json")
+  monitor_14 : AircraftOp = aircraft_op_from_file("MONITOR-14.json")
+
+  % LARGE aircraft
+  cargo_01   : AircraftOp = aircraft_op_from_file("CARGO-01.json")
+  freight_02 : AircraftOp = aircraft_op_from_file("FREIGHT-02.json")
+  heavy_03   : AircraftOp = aircraft_op_from_file("HEAVY-03.json")
+
+  % Expected OK
+  circular_survey_23 : CheckOutput =
+    check_flight_plan(uss_circular_01,survey_23)
+
+  % Expected Failure
+  triangular_survey_23 : CheckOutput =
+    check_flight_plan(uss_triangular_02,survey_23)
+
+  % Expected Failure
+  rectangular_survey_23 : CheckOutput =
+    check_flight_plan(uss_rectangular_03,survey_23)
+
+  % Test cases
+  test_circular : USS =
+    uss_circular_01 ++
+    subscribe(scout_07) ++
+    subscribe(scout_12) ++
+    subscribe(recon_01) ++
+    subscribe(mini_05) ++
+    subscribe(survey_23) ++
+    subscribe(inspect_08) ++
+    subscribe(monitor_14) ++
+    subscribe(cargo_01) ++
+    subscribe(freight_02) ++
+    subscribe(heavy_03)
+
+  test_triangular : USS =
+    uss_triangular_02 ++
+    subscribe(scout_07) ++
+    subscribe(scout_12) ++
+    subscribe(recon_01) ++
+    subscribe(mini_05) ++
+    subscribe(survey_23) ++
+    subscribe(inspect_08) ++
+    subscribe(monitor_14) ++
+    subscribe(cargo_01) ++
+    subscribe(freight_02) ++
+    subscribe(heavy_03)
+
+  test_rectangular : USS =
+    uss_rectangular_03 ++
+    subscribe(scout_07) ++
+    subscribe(scout_12) ++
+    subscribe(recon_01) ++
+    subscribe(mini_05) ++
+    subscribe(survey_23) ++
+    subscribe(inspect_08) ++
+    subscribe(monitor_14) ++
+    subscribe(cargo_01) ++
+    subscribe(freight_02) ++
+    subscribe(heavy_03)
+
+END UTM_io

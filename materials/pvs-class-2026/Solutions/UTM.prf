@@ -1,9 +1,34 @@
 (UTM
  (IMP_UTM0_TCC1 0
-  (IMP_UTM0_TCC1-2 "" 3987435674
+  (IMP_UTM0_TCC1-0 "" 3989054892
    ("" (EXISTENCE-TCC)
     (("" (INST 1 "CircularArea(mk_circle((0,0),1))") NIL NIL)) NIL)
    NIL SHOSTAK (IMP_UTM0 EXISTENCE "" "UTM.OperationalArea" (28 2 28 44)))
+  (IMP_UTM0_TCC1-2 "" 3987435674
+   ("" (EXISTENCE-TCC)
+    (("" (INST 1 "CircularArea(mk_circle((0,0),1))") NIL NIL)) NIL)
+   ((|OperationalArea| TYPE-DECL NIL UTM NIL)
+    (|CircularSegment_2D| TYPE-DECL NIL |circular_segment_2D| |shapes|)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (|circle_2D?| CONST-DECL "bool" |circle_2D| |shapes|)
+    (|Circle_2D| TYPE-EQ-DECL NIL |circle_2D| |shapes|)
+    (|circular_area?| ADT-RECOGNIZER-DECL "[OperationalArea -> boolean]" UTM
+     NIL)
+    (|CircularArea| ADT-CONSTRUCTOR-DECL "[Circle_2D -> (circular_area?)]" UTM
+     NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|Vect2| TYPE-EQ-DECL NIL |vectors_2D_def| |vectors|)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nonneg_real| NONEMPTY-TYPE-EQ-DECL NIL |real_types| NIL)
+    (> CONST-DECL "bool" |reals| NIL)
+    (|posreal| NONEMPTY-TYPE-EQ-DECL NIL |real_types| NIL)
+    (|mk_circle| CONST-DECL "Circle_2D" |circle_2D| |shapes|))
+   SHOSTAK (IMP_UTM0 EXISTENCE "" "UTM.OperationalArea" (28 2 28 44)))
   (IMP_UTM0_TCC1-1 NIL 3987435576
    ("" (EXISTENCE-TCC)
     (("" (INST 1 "CircularArea(mk_circle((0,0),1))") NIL NIL)) NIL)
@@ -30,88 +55,66 @@
     (|mk_circle| CONST-DECL "Circle_2D" |circle_2D| |shapes|))
    NIL (IMP_UTM0 EXISTENCE "" "UTM.OperationalArea" (28 2 28 44))))
  (|check_fp_TCC1| 0
-  (|check_fp_TCC1-0| "" 3987436477 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
-   (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (52 27 52 29)))
-  (|check_fp_TCC1-1| NIL 3987436477 ("" (SUBTYPE-TCC) NIL NIL)
-   ((|in_operational_volume| CONST-DECL "bool" UTM NIL)
+  (|check_fp_TCC1-2| "" 3989054893 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
+   (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (45 27 45 29)))
+  (|check_fp_TCC1-0| "" 3987436477 ("" (SUBTYPE-TCC) NIL NIL)
+   ((|in_operational_volume?| CONST-DECL "bool" UTM NIL)
     (|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
     (|real_le_is_total_order| NAME-JUDGEMENT "(total_order?[real])"
      |real_props| NIL))
-   NIL (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (52 27 52 29))))
+   SHOSTAK (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (45 27 45 29)))
+  (|check_fp_TCC1-1| NIL 3987436477 ("" (SUBTYPE-TCC) NIL NIL)
+   ((|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
+    (|real_le_is_total_order| NAME-JUDGEMENT "(total_order?[real])"
+     |real_props| NIL))
+   NIL (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (45 27 45 29))))
  (|check_fp_TCC2| 0
-  (|check_fp_TCC2-0| "" 3987436478 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+  (|check_fp_TCC2-2| "" 3989054894 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
    (|check_fp| TERMINATION "check_fp(uss, cdr[Vect3](fp), wps)" "NIL"
-    (52 10 52 35)))
-  (|check_fp_TCC2-1| NIL 3987436477 ("" (TERMINATION-TCC) NIL NIL)
-   ((|in_operational_volume| CONST-DECL "bool" UTM NIL)
+    (45 10 45 35)))
+  (|check_fp_TCC2-0| "" 3987436478 ("" (TERMINATION-TCC) NIL NIL)
+   ((|in_operational_volume?| CONST-DECL "bool" UTM NIL)
     (|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
+    (|real_le_is_total_order| NAME-JUDGEMENT "(total_order?[real])"
+     |real_props| NIL)
+    (<< ADT-DEF-DECL "(strict_well_founded?[list])" |list_adt| NIL))
+   SHOSTAK
+   (|check_fp| TERMINATION "check_fp(uss, cdr[Vect3](fp), wps)" "NIL"
+    (45 10 45 35)))
+  (|check_fp_TCC2-1| NIL 3987436477 ("" (TERMINATION-TCC) NIL NIL)
+   ((|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
     (|real_le_is_total_order| NAME-JUDGEMENT "(total_order?[real])"
      |real_props| NIL)
     (<< ADT-DEF-DECL "(strict_well_founded?[list])" |list_adt| NIL))
    NIL
    (|check_fp| TERMINATION "check_fp(uss, cdr[Vect3](fp), wps)" "NIL"
-    (52 10 52 35))))
+    (45 10 45 35))))
  (|check_fp_TCC3| 0
-  (|check_fp_TCC3-0| "" 3987436479 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
-   (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (54 27 54 29)))
-  (|check_fp_TCC3-1| NIL 3987436477 ("" (SUBTYPE-TCC) NIL NIL)
-   ((|in_operational_volume| CONST-DECL "bool" UTM NIL)
+  (|check_fp_TCC3-2| "" 3989054895 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
+   (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (47 27 47 29)))
+  (|check_fp_TCC3-0| "" 3987436479 ("" (SUBTYPE-TCC) NIL NIL)
+   ((|in_operational_volume?| CONST-DECL "bool" UTM NIL)
     (|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|))
-   NIL (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (54 27 54 29))))
+   SHOSTAK (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (47 27 47 29)))
+  (|check_fp_TCC3-1| NIL 3987436477 ("" (SUBTYPE-TCC) NIL NIL)
+   ((|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)) NIL
+   (|check_fp| SUBTYPE "fp" "(list_adt[Vect3].cons?)" (47 27 47 29))))
  (|check_fp_TCC4| 0
-  (|check_fp_TCC4-0| "" 3987436480 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
+  (|check_fp_TCC4-2| "" 3989054895 ("" (TERMINATION-TCC) NIL NIL) NIL SHOSTAK
    (|check_fp| TERMINATION
-    "check_fp(uss, cdr[Vect3](fp), cons[Vect3](wp, wps))" "NIL" (54 10 54 44)))
-  (|check_fp_TCC4-1| NIL 3987436477 ("" (TERMINATION-TCC) NIL NIL)
-   ((|in_operational_volume| CONST-DECL "bool" UTM NIL)
+    "check_fp(uss, cdr[Vect3](fp), cons[Vect3](wp, wps))" "NIL" (47 10 47 44)))
+  (|check_fp_TCC4-0| "" 3987436480 ("" (TERMINATION-TCC) NIL NIL)
+   ((|in_operational_volume?| CONST-DECL "bool" UTM NIL)
     (|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
+    (<< ADT-DEF-DECL "(strict_well_founded?[list])" |list_adt| NIL))
+   SHOSTAK
+   (|check_fp| TERMINATION
+    "check_fp(uss, cdr[Vect3](fp), cons[Vect3](wp, wps))" "NIL" (47 10 47 44)))
+  (|check_fp_TCC4-1| NIL 3987436477 ("" (TERMINATION-TCC) NIL NIL)
+   ((|vect2| CONST-DECL "Vect2" |vect_3D_2D| |vectors|)
     (<< ADT-DEF-DECL "(strict_well_founded?[list])" |list_adt| NIL))
    NIL
    (|check_fp| TERMINATION
     "check_fp(uss, cdr[Vect3](fp), cons[Vect3](wp, wps))" "NIL"
-    (54 10 54 44))))
- (|check_flight_plan_TCC1| 0
-  (|check_flight_plan_TCC1-0| "" 3987438589 ("" (SUBTYPE-TCC) NIL NIL) NIL
-   SHOSTAK
-   (|check_flight_plan| SUBTYPE "info" "(Maybe[AircraftOp].some?)"
-    (62 36 62 40)))
-  (|check_flight_plan_TCC1-1| NIL 3987438589 ("" (SUBTYPE-TCC) NIL NIL)
-   ((|get_info| CONST-DECL "Maybe[AircraftOp]" UTM0 NIL)
-    (|string| TYPE-EQ-DECL NIL |strings| NIL)
-    (|FlightPlan| TYPE-EQ-DECL NIL UTM NIL) (|UASClass| TYPE-DECL NIL UTM NIL)
-    (|AircraftOp| NONEMPTY-TYPE-EQ-DECL NIL UTM NIL)
-    (|OperationalArea| TYPE-DECL NIL UTM NIL))
-   NIL
-   (|check_flight_plan| SUBTYPE "info" "(Maybe[AircraftOp].some?)"
-    (62 36 62 40))))
- (USST_TCC1 0
-  (USST_TCC1-0 "" 3987440296 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
-   (USST SUBTYPE "(P1, P2, P3)" "NonCollinearPoints" (78 49 78 57)))
-  (USST_TCC1-1 NIL 3987440293 ("" (SUBTYPE-TCC) NIL NIL)
-   ((|real_minus_real_is_real| APPLICATION-JUDGEMENT "real" |reals| NIL)
-    (|real_plus_real_is_real| APPLICATION-JUDGEMENT "real" |reals| NIL)
-    (|real_times_real_is_real| APPLICATION-JUDGEMENT "real" |reals| NIL) NIL
-    (|det| CONST-DECL "real" |det_2D| |vectors|)
-    (|non_collinear?| CONST-DECL "bool" |angle_2D| |shapes|)
-    (NIL APPLICATION-JUDGEMENT "above(n)" |exp2| NIL)
-    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
-    (|even_minus_even_is_even| APPLICATION-JUDGEMENT "even_int" |integers| NIL)
-    (|even_plus_even_is_even| APPLICATION-JUDGEMENT "even_int" |integers| NIL)
-    (|int_times_even_is_even| APPLICATION-JUDGEMENT "even_int" |integers| NIL)
-    (|times_i16_u16| APPLICATION-JUDGEMENT "int32" |integertypes| NIL)
-    (|nzint_times_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL)
-    (|times_u16_i16| APPLICATION-JUDGEMENT "int32" |integertypes| NIL)
-    (|times_u16_u16| APPLICATION-JUDGEMENT "uint32" |integertypes| NIL)
-    (|posint_times_posint_is_posint| APPLICATION-JUDGEMENT "posint" |integers|
-     NIL))
-   NIL (USST SUBTYPE "(P1, P2, P3)" "NonCollinearPoints" (78 49 78 57))))
- (USSR_TCC1 0
-  (USSR_TCC1-0 "" 3987440312 ("" (SUBTYPE-TCC) NIL NIL) NIL SHOSTAK
-   (USSR SUBTYPE "P2" "{B: vectors_2D_def.Vect2 | B /= UTM.P1}" (84 54 84 56)))
-  (USSR_TCC1-1 NIL 3987440293 ("" (SUBTYPE-TCC) NIL NIL)
-   ((/= CONST-DECL "boolean" |notequal| NIL)
-    (NIL APPLICATION-JUDGEMENT "above(n)" |exp2| NIL))
-   NIL
-   (USSR SUBTYPE "P2" "{B: vectors_2D_def.Vect2 | B /= UTM.P1}"
-    (84 54 84 56)))))
+    (47 10 47 44)))))
 

@@ -10,7 +10,8 @@ Consider the theories [[file:UTM0.pvs][~UTM0~]], [[file:UTM.pvs][~UTM~]], and th
    - The horizontal component of ~p~, i.e., ~vect2(p)~, is inside ~uss`op_area~.
    - Look for the names of the functions in ~NASALib/shapes~ that check if a point is inside a circle, rectangle, and triangle.
 
-8. Define the function [[file:UTM.pvs#L47][~check_flight_plan(uss:USS,ac_id:AircraftId)~]] that returns:
-   - ~NotFound~, if the aircraft ~ac_id~ is not in ~uss~;
-   - ~OK~, if the aircraft is in ~uss~ and every waypoint in its flight plan lies inside the USS operational volume;
+8. Define the function [[file:UTM.pvs#L47][~check_flight_plan(uss:USS,ac_op:AircraftOp)~]] that returns:
+   - ~OK~, if every waypoint in the flight plan of ~ac_op~ lies inside the USS operational volume, or
    - ~Failure(wps)~ otherwise, where ~wps~ is the list of waypoints in its flight plan that lie outside the USS operational volume.
+
+9. Modify the function ~subscribe~ in [[file:UTM.pvs][~UTM.pvs~]] so that only aircraft operations ~ac_op~ that satisfy ~check_flight_plan(uss,ac_op) = OK~ are subscribed. Throw an exception if ~check_flight_plan(uss)~ returns a ~Failure~.

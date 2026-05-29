@@ -1,0 +1,8 @@
+{
+  "capacity": 90,
+  "altitude": 105,
+  "area_type": "rectangular",
+  "p1": { "x": 500.0, "y": 2500.0 },
+  "p2": { "x": 4500.0, "y": 2500.0 },
+  "height": -2000.0
+}

@@ -1,0 +1,8 @@
+{
+  "uas_class": "SMALL",
+  "callsign": "MISSING-OP",
+  "operator_id": null,
+  "flight_plan": [
+    { "x": 2500.0, "y": 2500.0, "z": 0.0 }
+  ]
+}

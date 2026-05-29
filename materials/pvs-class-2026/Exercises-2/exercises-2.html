@@ -27,12 +27,13 @@ Consider the theories <a href="UTM0.pvs"><code>UTM0</code></a>, <a href="UTM.pvs
 <li>Look for the names of the functions in <code>NASALib/shapes</code> that check if a point is inside a circle, rectangle, and triangle.</li>
 </ul></li>
 
-<li>Define the function <a href="UTM.pvs#L47"><code>check_flight_plan(uss:USS,ac_id:AircraftId)</code></a> that returns:
+<li>Define the function <a href="UTM.pvs#L47"><code>check_flight_plan(uss:USS,ac_op:AircraftOp)</code></a> that returns:
 <ul class="org-ul">
-<li><code>NotFound</code>, if the aircraft <code>ac_id</code> is not in <code>uss</code>;</li>
-<li><code>OK</code>, if the aircraft is in <code>uss</code> and every waypoint in its flight plan lies inside the USS operational volume;</li>
+<li><code>OK</code>, if every waypoint in the flight plan of <code>ac_op</code> lies inside the USS operational volume, or</li>
 <li><code>Failure(wps)</code> otherwise, where <code>wps</code> is the list of waypoints in its flight plan that lie outside the USS operational volume.</li>
 </ul></li>
+
+<li>Modify the function <code>subscribe</code> in <a href="UTM.pvs"><code>UTM.pvs</code></a> so that only aircraft operations <code>ac_op</code> that satisfy <code>check_flight_plan(uss,ac_op) = OK</code> are subscribed. Throw an exception if <code>check_flight_plan(uss)</code> returns a <code>Failure</code>.</li>
 </ol>
 </main>
 </body>
