@@ -4,32 +4,10 @@
 #+LANGUAGE: en
 #+EXPORT_FILE_NAME: index.html
 #+OPTIONS: toc:1 num:nil
+#+SSFT_HERO_IMAGE: Picture_Day/DSCF1832.JPG
+#+SSFT_HERO_ALT: SSFT 2026 summer school participants
 
 # Edit this file, then run `make build` to regenerate index.html.
-
-* Updates & Quick Links
-:PROPERTIES:
-:CUSTOM_ID: updates
-:END:
-
-# Add attendee-facing updates here as list items. Keep the newest items first.
-- *May 29*: [[https://shemesh.larc.nasa.gov/NFM2018/talks/Butler.pdf][Thirty Years of Formal Methods Research At NASA Langley - Ricky Butler (NFM 2018)]]
-- *May 29*: [[file:materials/2026-05-sri-summer-school.pptx][Slides]] + [[file:materials/join-fork.rav][code from Raven live-coding]] for /Concurrent Separation Logic/ posted!
-- *May 28*: [[file:materials/rpiskac - lecture2.pdf][Lecture 2 slides]]/[[file:materials/rpiskac - lab session.zip][Lab Materials]] for /Privacy-Preserving Reasoning/ posted!
-- *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
-- *May 27*: [[https://discord.gg/nqYwb9Pq][Discord server/invite]]
-- *May 27*: [[file:videos.org][Lecture videos posted!]]
-- *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
-- *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]! 
-- *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
-- *May 26*: [[file:materials/pvs-class-2026 (1)/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
-- *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
-- *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
-- *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
-- *May 24*: [[file:materials/ssft26-lifting.pdf][Alvin Cheung's slides]] available!
-- *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
-- *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
-- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:materials/2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
 
 * Overview
 :PROPERTIES:
@@ -331,6 +309,30 @@ Information about previous Summer Schools on Formal Techniques can be found at:
 - [[file:old/2011/][SSFT11]]
 
 Jay Bosamiya of CMU has [[https://www.jaybosamiya.com/blog/2018/05/31/ssft/][blogged about the 2018 Summer School]].
+
+* Updates & Quick Links
+:PROPERTIES:
+:CUSTOM_ID: updates
+:END:
+
+# Add attendee-facing updates here as list items. Keep the newest items first.
+- *May 29*: [[https://shemesh.larc.nasa.gov/NFM2018/talks/Butler.pdf][Thirty Years of Formal Methods Research At NASA Langley - Ricky Butler (NFM 2018)]]
+- *May 29*: [[file:materials/2026-05-sri-summer-school.pptx][Slides]] + [[file:materials/join-fork.rav][code from Raven live-coding]] for /Concurrent Separation Logic/ posted!
+- *May 28*: [[file:materials/rpiskac - lecture2.pdf][Lecture 2 slides]]/[[file:materials/rpiskac - lab session.zip][Lab Materials]] for /Privacy-Preserving Reasoning/ posted!
+- *May 28*: [[file:videos.org][Lecture videos 5/27 posted!]]
+- *May 27*: [[https://discord.gg/nqYwb9Pq][Discord server/invite]]
+- *May 27*: [[file:videos.org][Lecture videos posted!]]
+- *May 27*: [[#studentpresentations]], ~30 minutes on Wednesday (5/27) and longer on Friday (5/29): [[https://forms.gle/3jNM5iXdrKrhbp976][sign up]]
+- *May 26*: More SMT background resources posted @ [[#more-speaking-logic]]!
+- *May 26*: [[https://github.com/verus-lang/event-sites/tree/main/2026-summer-formal][Lab Materials]] for /Verifying Rust Code with Verus/
+- *May 26*: [[file:materials/pvs-class-2026/pvs-class-2026.html][Lab Materials]] for /Developing and Proving Algorithms with PVS/
+- *May 26*: [[file:materials/rpiskac - lecture1.pdf][Lecture 1 slides]]/background readings for /Privacy-Preserving Reasoning/ posted!
+- *May 25*: [[https://github.com/barghouthi/ssft26][Lab Materials]] for /Foundations of Quantum Computing/
+- *May 25*: [[https://github.com/cascremers/tamarin-tutorial-ssft2026][Lab Materials]] for /Analyzing Cryptographic Protocols with Tamarin/
+- *May 24*: [[file:materials/ssft26-lifting.pdf][Alvin Cheung's slides]] available!
+- *May 24*: [[file:problems.org][Challenge/Bootcamp problems]]
+- *May 24*: [[#install]] - please do not find install instructions from old websites. We're having trouble accessing our web portals and could not update them to reflect the state of the latest release. Sorry!
+- *May 23:* Start of SSFT26! See [[file:schedule.org][schedule]] and [[file:zoom.org][Zoom information]]. In-person lectures held in Brawner Hall @ Menlo College (No. 12 on the [[file:materials/2025-Menlo-College-Campus-Map.pdf][Menlo College Map]])
 
 * Registration
 :PROPERTIES:
