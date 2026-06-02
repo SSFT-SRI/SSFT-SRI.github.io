@@ -18,6 +18,8 @@
                       (content "main" "content")
                       (postamble "footer" "postamble")))
 
+(defconst ssft-style-version "20260602-photo2")
+
 (cl-defstruct ssft-event date start end title speaker type location description)
 
 (defun ssft-keyword (name default)
@@ -31,6 +33,18 @@
            nil t)
           (string-trim (match-string-no-properties 1))
         default))))
+
+(defun ssft-keyword-in-file (file name default)
+  (with-temp-buffer
+    (insert-file-contents file)
+    (ssft-keyword name default)))
+
+(defun ssft-html-attribute (value)
+  (replace-regexp-in-string
+   "\""
+   "&quot;"
+   (org-html-encode-plain-text (or value ""))
+   t t))
 
 (defun ssft-time-to-minutes (time)
   (unless (string-match "\\`\\([0-9][0-9]?\\):\\([0-9][0-9]\\)\\'" time)
@@ -376,9 +390,21 @@
         (goto-char start)
         (insert "#+BEGIN_EXPORT html\n" html "\n#+END_EXPORT")))))
 
-(defun ssft-postprocess-index-html (target)
+(defun ssft-postprocess-index-html (target hero-image hero-alt)
   (with-temp-buffer
     (insert-file-contents target)
+    (when (and hero-image (not (string-empty-p hero-image)))
+      (save-excursion
+        (goto-char (point-min))
+        (when (search-forward "</header>" nil t)
+          (goto-char (match-beginning 0))
+          (insert
+           "\n<figure class=\"title-photo\" style=\"width: min(2040px, 100%); margin: 1.15rem auto 0;\">"
+           "<img src=\"" (ssft-html-attribute hero-image) "\""
+           " alt=\"" (ssft-html-attribute hero-alt) "\""
+           " style=\"display: block; width: 100%; height: auto; object-fit: contain; border: 1px solid #bdbdbd;\""
+           " loading=\"eager\" decoding=\"async\" />"
+           "</figure>\n"))))
     (save-excursion
       (goto-char (point-min))
       (when (search-forward "<nav id=\"table-of-contents\"" nil t)
@@ -407,22 +433,29 @@
 
 (defun ssft-export-file (root source target)
   (message "Exporting %s -> %s" source target)
-  (let ((target-path (expand-file-name target root)))
+  (let* ((source-path (expand-file-name source root))
+         (target-path (expand-file-name target root))
+         (index-source-p (string= source "index.org"))
+         (hero-image (when index-source-p
+                       (ssft-keyword-in-file source-path "SSFT_HERO_IMAGE" nil)))
+         (hero-alt (when index-source-p
+                     (ssft-keyword-in-file source-path "SSFT_HERO_ALT" ""))))
     (with-temp-buffer
-      (insert-file-contents (expand-file-name source root))
+      (insert-file-contents source-path)
       (setq buffer-file-name (expand-file-name source root)
             default-directory root)
       (org-mode)
       (setq-local org-html-head
-                  (format "<link rel=\"stylesheet\" href=\"%s\" />"
+                  (format "<link rel=\"stylesheet\" href=\"%s?v=%s\" />"
                           (file-relative-name
                            (expand-file-name "style.css" root)
-                           (file-name-directory target-path))))
+                           (file-name-directory target-path))
+                          ssft-style-version))
       (setq-local org-export-use-babel nil)
       (ssft-expand-generated-blocks)
       (org-export-to-file 'html target-path))
-    (when (string= source "index.org")
-      (ssft-postprocess-index-html target-path)))
+    (when index-source-p
+      (ssft-postprocess-index-html target-path hero-image hero-alt)))
   (message "Exported %s" target))
 
 (defun ssft-git-ignored-p (root path)
